@@ -130,14 +130,22 @@
   { "q": "Durkheim menekankan bahwa faktor sosial dapat memengaruhi...", "choices": ["Psikologi individu", "Ilmu alam", "Perang", "Ekonomi global"], "answer": 0 },
   { "q": "Siapa yang dikenal sebagai Bapak Sosiologi?", "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Max Weber"], "answer": 2 }
 ];
-
+  let QUESTIONS_ORIGINAL = []; // salinan untuk referensi
   let idx=0, score=0, timer=null, remaining=0;
-  const basePoint=500, bonusPerSecond=20, defaultTime=60;
+  let wrongQuestions = []; 
+  let secondRound = false;
+
+  const basePoint=500, bonusPerSecond=20, defaultTime=15;
 
   function gotoScreen(id){
     document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    if(id==='quiz'){idx=0;score=0;document.getElementById('score').textContent=0;renderQuestion();}
+    if(id==='quiz'){
+      QUESTIONS_ORIGINAL = JSON.parse(JSON.stringify(QUESTIONS));
+      idx=0; score=0; secondRound=false; wrongQuestions=[];
+      document.getElementById('score').textContent=0;
+      renderQuestion();
+    }
     if(id==='viewer') renderViewer();
     if(id==='editor') document.getElementById('jsonArea').value=JSON.stringify(QUESTIONS,null,2);
   }
@@ -153,23 +161,26 @@
 
   function renderQuestion(){
     if(idx>=QUESTIONS.length){
-      document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score}`;
-      document.getElementById('choices').innerHTML='';
-      document.getElementById('progress').textContent = `${QUESTIONS.length}/${QUESTIONS.length}`;
-      document.getElementById('timer').textContent='-';
-      return;
+      if(!secondRound && wrongQuestions.length>0){
+        // masuk ronde kedua
+        secondRound = true;
+        QUESTIONS = wrongQuestions.map(i=>QUESTIONS_ORIGINAL[i]);
+        idx=0;
+        wrongQuestions=[];
+        renderQuestion();
+        return;
+      } else {
+        document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score}`;
+        document.getElementById('choices').innerHTML='';
+        document.getElementById('progress').textContent = `Selesai`;
+        document.getElementById('timer').textContent='-';
+        return;
+      }
     }
 
-    // clone biar aman
     const q = JSON.parse(JSON.stringify(QUESTIONS[idx]));
-
-    // simpan jawaban benar sebelum acak
     const correctText = q.choices[q.answer];
-
-    // acak pilihan
     q.choices = shuffleArray(q.choices);
-
-    // update index jawaban benar sesuai posisi baru
     q.answer = q.choices.indexOf(correctText);
 
     document.getElementById('qtext').textContent=q.q;
@@ -192,7 +203,12 @@
     document.getElementById('timer').textContent=remaining+"s";
     timer=setInterval(()=>{
       remaining--;
-      if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);} 
+      if(remaining<=0){
+        clearInterval(timer);
+        remaining=0;
+        lockAnswers();
+        setTimeout(nextQuestion,1000);
+      } 
       document.getElementById('timer').textContent=remaining+"s";
     },1000);
   }
@@ -207,6 +223,10 @@
     if(choiceIdx===q.answer){
       score+=basePoint+(remaining*bonusPerSecond);
       document.getElementById('score').textContent=score;
+    } else {
+      if(!secondRound){ // hanya catat salah di ronde pertama
+        wrongQuestions.push(idx);
+      }
     }
     setTimeout(nextQuestion,1200);
   }
@@ -214,7 +234,6 @@
   function lockAnswers(){
     const wrap=document.getElementById('choices');
     const nodes=Array.from(wrap.children);
-    // tandai jawaban benar
     if(nodes.length){
       nodes.forEach((n,i)=>{
         if(i===QUESTIONS[idx].answer) n.classList.add('correct');
@@ -227,7 +246,7 @@
   function renderViewer(){
     const list=document.getElementById('questionList');
     list.innerHTML='';
-    QUESTIONS.forEach((q,i)=>{
+    QUESTIONS_ORIGINAL.forEach((q,i)=>{
       const d=document.createElement('div');
       d.style.marginBottom='12px';
       d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
@@ -236,22 +255,37 @@
   }
 
   function saveJSON(){
-    try{QUESTIONS=JSON.parse(document.getElementById('jsonArea').value);alert('Disimpan!');}
+    try{
+      QUESTIONS=JSON.parse(document.getElementById('jsonArea').value);
+      alert('Disimpan!');
+    }
     catch(e){alert('Format JSON salah');}
   }
 
   function downloadJSON(){
-    const blob=new Blob([JSON.stringify(QUESTIONS,null,2)],{type:'application/json'});
-    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='quiz.json';a.click();
+    const blob=new Blob([JSON.stringify(QUESTIONS_ORIGINAL,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='quiz.json';
+    a.click();
   }
 
   function loadFile(){
     const f=document.getElementById('fileInput').files[0];
     if(!f) return;
     const r=new FileReader();
-    r.onload=e=>{try{QUESTIONS=JSON.parse(e.target.result);alert('Impor berhasil');}catch{alert('Format salah')};};
+    r.onload=e=>{
+      try{
+        QUESTIONS=JSON.parse(e.target.result);
+        QUESTIONS_ORIGINAL=JSON.parse(JSON.stringify(QUESTIONS));
+        alert('Impor berhasil');
+      }catch{
+        alert('Format salah');
+      }
+    };
     r.readAsText(f);
   }
 </script>
+
 </body>
 </html>
