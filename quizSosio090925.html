@@ -39,6 +39,7 @@
   <!-- Quiz Screen -->
   <div id="quiz" class="screen">
     <div class="card fade-in">
+      <h2 id="roundInfo">Ronde 1</h2>
       <h2 id="qtext">-</h2>
       <div id="choices"></div>
       <div class="toolbar">
@@ -80,83 +81,27 @@
 
 <script>
   let QUESTIONS = [
-  { "q": "Revolusi Prancis berlangsung pada tahun...", "choices": ["1776–1783", "1789–1799", "1804–1815", "1815–1830"], "answer": 1 },
-  { "q": "Penyebab utama Revolusi Prancis adalah...", "choices": ["Pajak hanya ditanggung rakyat", "Kemenangan perang", "Kekayaan negara berlebih", "Perkembangan teknologi"], "answer": 0 },
-  { "q": "Siapa raja Prancis yang digulingkan pada Revolusi Prancis?", "choices": ["Louis XIV", "Louis XV", "Louis XVI", "Napoleon"], "answer": 2 },
-  { "q": "Dokumen penting yang lahir pada Revolusi Prancis adalah...", "choices": ["Magna Charta", "Bill of Rights", "Deklarasi Hak Asasi Manusia dan Warga Negara", "Piagam Madinah"], "answer": 2 },
-  { "q": "Revolusi Prancis berakhir dengan kudeta oleh...", "choices": ["Robespierre", "Napoleon Bonaparte", "Raja Louis XVI", "Karl Marx"], "answer": 1 },
-  { "q": "Salah satu dampak Revolusi Prancis adalah lahirnya gagasan modern tentang...", "choices": ["Feodalisme", "Monarki absolut", "Demokrasi", "Kapitalisme"], "answer": 2 },
-  { "q": "Periode pemerintahan yang penuh eksekusi pada Revolusi Prancis disebut...", "choices": ["Pemerintahan Damai", "Pemerintahan Teror", "Pemerintahan Liberal", "Pemerintahan Nasional"], "answer": 1 },
-  { "q": "Revolusi Industri pertama kali terjadi di negara...", "choices": ["Prancis", "Jerman", "Inggris", "Amerika Serikat"], "answer": 2 },
-  { "q": "Tokoh yang menyempurnakan mesin uap adalah...", "choices": ["Isaac Newton", "James Watt", "Robert Owen", "Thomas Edison"], "answer": 1 },
-  { "q": "Mesin tekstil spinning mule dan power loom berperan dalam...", "choices": ["Industri baja", "Industri tekstil", "Industri transportasi", "Industri makanan"], "answer": 1 },
-  { "q": "Urbanisasi besar-besaran pada Revolusi Industri terjadi karena...", "choices": ["Bencana alam", "Perang dunia", "Penduduk desa pindah ke kota untuk bekerja", "Krisis politik"], "answer": 2 },
-  { "q": "Proses Bessemer digunakan untuk produksi...", "choices": ["Baja", "Kain", "Kertas", "Uap"], "answer": 0 },
-  { "q": "Negara yang kemudian melampaui Inggris dalam industri pada abad ke-20 adalah...", "choices": ["Italia", "Amerika Serikat", "Spanyol", "Belanda"], "answer": 1 },
-  { "q": "Auguste Comte dikenal sebagai...", "choices": ["Bapak Kapitalisme", "Bapak Sosiologi", "Bapak Demokrasi", "Bapak Psikologi"], "answer": 1 },
-  { "q": "Teori positivisme dikembangkan oleh...", "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Max Weber"], "answer": 2 },
-  { "q": "Tahap perkembangan masyarakat menurut Comte yang menjelaskan dengan agama adalah...", "choices": ["Metafisik", "Positif", "Teologis", "Materialis"], "answer": 2 },
-  { "q": "Tahap positif menurut Comte menjelaskan fenomena sosial berdasarkan...", "choices": ["Mitos", "Abstraksi", "Ilmu pengetahuan", "Filsafat moral"], "answer": 2 },
-  { "q": "Karl Marx menekankan konflik antara...", "choices": ["Bangsawan dan raja", "Borjuis dan proletar", "Guru dan murid", "Pemerintah dan rakyat"], "answer": 1 },
-  { "q": "Konsep alienasi menurut Marx berarti...", "choices": ["Pekerja menikmati hasil kerjanya", "Pekerja terasing dari hasil kerjanya", "Pekerja bebas dari kapitalisme", "Pekerja menjadi pemilik modal"], "answer": 1 },
-  { "q": "Menurut Marx, dasar dari suprastruktur adalah...", "choices": ["Politik", "Ekonomi", "Budaya", "Agama"], "answer": 1 },
-  { "q": "Durkheim menyebut pola, aturan, norma sebagai...", "choices": ["Nilai moral", "Fakta sosial", "Konflik sosial", "Solidaritas"], "answer": 1 },
-  { "q": "Solidaritas mekanis terjadi di masyarakat...", "choices": ["Modern", "Tradisional", "Kapitalis", "Industri"], "answer": 1 },
-  { "q": "Solidaritas organis terjadi di masyarakat...", "choices": ["Agraris", "Tradisional", "Modern", "Feodal"], "answer": 2 },
-  { "q": "Durkheim meneliti fenomena sosial berupa...", "choices": ["Urbanisasi", "Bunuh diri", "Revolusi", "Alienasi"], "answer": 1 },
-  { "q": "Contoh fenomena sosial menurut Comte adalah...", "choices": ["Alienasi", "Urbanisasi", "Solidaritas", "Demokrasi"], "answer": 1 },
-  { "q": "Contoh fenomena sosial menurut Marx adalah...", "choices": ["Kesenjangan sosial-ekonomi", "Solidaritas mekanis", "Positivisme", "Metafisik"], "answer": 0 },
-  { "q": "Contoh fenomena sosial menurut Durkheim adalah...", "choices": ["Kriminalitas", "Alienasi", "Urbanisasi", "Kapitalisme"], "answer": 0 },
-  { "q": "Siapa yang dieksekusi pada masa Pemerintahan Teror?", "choices": ["Robespierre", "Louis XVI", "Marie Antoinette", "Semua benar"], "answer": 3 },
-  { "q": "Revolusi Industri didukung oleh Revolusi...", "choices": ["Amerika", "Pertanian", "Prancis", "Teknologi informasi"], "answer": 1 },
-  { "q": "Transportasi yang berkembang pesat pada Revolusi Industri adalah...", "choices": ["Mobil", "Pesawat", "Kapal uap dan kereta api", "Sepeda motor"], "answer": 2 },
-  { "q": "Lahirnya nasionalisme di Eropa dipengaruhi oleh...", "choices": ["Revolusi Industri", "Revolusi Prancis", "Perang Salib", "Revolusi Amerika"], "answer": 1 },
-  { "q": "Salah satu kelemahan Raja Louis XVI adalah...", "choices": ["Lemah dalam kepemimpinan", "Suka berperang", "Tidak punya anak", "Pro-demokrasi"], "answer": 0 },
-  { "q": "Kelas borjuis menurut Marx adalah...", "choices": ["Pemilik modal", "Kaum pekerja", "Petani kecil", "Kaum bangsawan"], "answer": 0 },
-  { "q": "Kaum proletar menurut Marx adalah...", "choices": ["Pemilik modal", "Buruh pekerja", "Pedagang", "Raja"], "answer": 1 },
-  { "q": "Siapa yang memprediksi revolusi proletar?", "choices": ["Auguste Comte", "Karl Marx", "Émile Durkheim", "Napoleon"], "answer": 1 },
-  { "q": "Menurut Durkheim, kriminalitas adalah...", "choices": ["Kesalahan individu", "Fakta sosial", "Hasil kapitalisme", "Konflik kelas"], "answer": 1 },
-  { "q": "Sosiologi sebagai ilmu pertama kali dicetuskan oleh...", "choices": ["Émile Durkheim", "Auguste Comte", "Karl Marx", "Max Weber"], "answer": 1 },
-  { "q": "Positivisme menekankan bahwa sosiologi dipelajari dengan...", "choices": ["Mitos", "Metode ilmiah", "Tradisi", "Filsafat moral"], "answer": 1 },
-  { "q": "Revolusi Prancis dimulai ketika rakyat membentuk...", "choices": ["Majelis Nasional", "Partai Buruh", "Uni Eropa", "Majelis Konstituante"], "answer": 0 },
-  { "q": "Ratu Prancis yang dieksekusi saat Revolusi adalah...", "choices": ["Victoria", "Catherine", "Marie Antoinette", "Isabella"], "answer": 2 },
-  { "q": "Napoleon menyebarkan ide revolusi ke seluruh...", "choices": ["Asia", "Eropa", "Afrika", "Amerika"], "answer": 1 },
-  { "q": "Urbanisasi pada Revolusi Industri menyebabkan...", "choices": ["Pertanian maju", "Kota tumbuh modern", "Pajak berkurang", "Feodalisme kuat"], "answer": 1 },
-  { "q": "Kondisi kerja pada Revolusi Industri umumnya...", "choices": ["Ringan", "Nyaman", "Berbahaya", "Sangat singkat"], "answer": 2 },
-  { "q": "Konsep basis dan suprastruktur dikemukakan oleh...", "choices": ["Durkheim", "Marx", "Comte", "Napoleon"], "answer": 1 },
-  { "q": "Solidaritas sosial adalah teori yang dikembangkan oleh...", "choices": ["Marx", "Comte", "Durkheim", "Weber"], "answer": 2 },
-  { "q": "Revolusi Industri membawa dampak global berupa...", "choices": ["Kembali ke feodalisme", "Masyarakat industri modern", "Kemunduran teknologi", "Hilangnya urbanisasi"], "answer": 1 },
-  { "q": "Revolusi Prancis memberi inspirasi lahirnya konsep...", "choices": ["Demokrasi modern", "Kapitalisme murni", "Feodalisme", "Militerisme"], "answer": 0 },
-  { "q": "Durkheim menekankan bahwa faktor sosial dapat memengaruhi...", "choices": ["Psikologi individu", "Ilmu alam", "Perang", "Ekonomi global"], "answer": 0 },
-  { "q": "Siapa yang dikenal sebagai Bapak Sosiologi?", "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Max Weber"], "answer": 2 }
-];
-  let QUESTIONS_ORIGINAL = []; // salinan untuk referensi
-  let idx=0, score=0, timer=null, remaining=0;
-  let wrongQuestions = []; 
-  let secondRound = false;
+    { "q": "Revolusi Prancis berlangsung pada tahun...", "choices": ["1776–1783", "1789–1799", "1804–1815", "1815–1830"], "answer": 1 },
+    { "q": "Penyebab utama Revolusi Prancis adalah...", "choices": ["Pajak hanya ditanggung rakyat", "Kemenangan perang", "Kekayaan negara berlebih", "Perkembangan teknologi"], "answer": 0 }
+  ];
 
+  let QUESTIONS_ORIGINAL = JSON.parse(JSON.stringify(QUESTIONS));
+  let idx=0, score=0, timer=null, remaining=0;
   const basePoint=500, bonusPerSecond=20, defaultTime=15;
+  let wrongQuestions=[], secondRound=false;
+  let maxScore = QUESTIONS.length*(basePoint+(defaultTime*bonusPerSecond));
 
   function gotoScreen(id){
     document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     if(id==='quiz'){
-      QUESTIONS_ORIGINAL = JSON.parse(JSON.stringify(QUESTIONS));
-      idx=0; score=0; secondRound=false; wrongQuestions=[];
-      document.getElementById('score').textContent=0;
+      idx=0;score=0;wrongQuestions=[];secondRound=false;
+      QUESTIONS = JSON.parse(JSON.stringify(QUESTIONS_ORIGINAL));
+      maxScore = QUESTIONS.length*(basePoint+(defaultTime*bonusPerSecond));
       renderQuestion();
     }
     if(id==='viewer') renderViewer();
-    if(id==='editor') document.getElementById('jsonArea').value=JSON.stringify(QUESTIONS,null,2);
-  }
-
-  function shuffleArray(arr){
-    let a=[...arr];
-    for(let i=a.length-1;i>0;i--){
-      const j=Math.floor(Math.random()*(i+1));
-      [a[i],a[j]]=[a[j],a[i]];
-    }
-    return a;
+    if(id==='editor') document.getElementById('jsonArea').value=JSON.stringify(QUESTIONS_ORIGINAL,null,2);
   }
 
   function renderQuestion(){
@@ -167,22 +112,23 @@
         QUESTIONS = wrongQuestions.map(i=>QUESTIONS_ORIGINAL[i]);
         idx=0;
         wrongQuestions=[];
+        document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
         renderQuestion();
         return;
       } else {
-        document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score}`;
-        document.getElementById('choices').innerHTML='';
+        // selesai total
+        let percent = Math.round((score / maxScore) * 100);
+        document.getElementById('qtext').textContent = 
+          `Selesai! Skor akhir: ${score} / ${maxScore}`;
+        document.getElementById('choices').innerHTML =
+          `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%</div>`;
         document.getElementById('progress').textContent = `Selesai`;
         document.getElementById('timer').textContent='-';
+        document.getElementById('roundInfo').textContent='';
         return;
       }
     }
-
-    const q = JSON.parse(JSON.stringify(QUESTIONS[idx]));
-    const correctText = q.choices[q.answer];
-    q.choices = shuffleArray(q.choices);
-    q.answer = q.choices.indexOf(correctText);
-
+    const q=QUESTIONS[idx];
     document.getElementById('qtext').textContent=q.q;
     const wrap=document.getElementById('choices');
     wrap.innerHTML='';
@@ -190,10 +136,11 @@
       const div=document.createElement('div');
       div.className='choice fade-in';
       div.textContent=`${String.fromCharCode(65+i)}. ${c}`;
-      div.onclick=()=>{selectAnswer(i,q);};
+      div.onclick=()=>{selectAnswer(i);};
       wrap.appendChild(div);
     });
     document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
+    document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
     startTimer(defaultTime);
   }
 
@@ -203,18 +150,14 @@
     document.getElementById('timer').textContent=remaining+"s";
     timer=setInterval(()=>{
       remaining--;
-      if(remaining<=0){
-        clearInterval(timer);
-        remaining=0;
-        lockAnswers();
-        setTimeout(nextQuestion,1000);
-      } 
+      if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);} 
       document.getElementById('timer').textContent=remaining+"s";
     },1000);
   }
 
-  function selectAnswer(choiceIdx,q){
+  function selectAnswer(choiceIdx){
     clearInterval(timer);
+    const q=QUESTIONS[idx];
     const nodes=Array.from(document.getElementById('choices').children);
     nodes.forEach((n,i)=>{
       if(i===q.answer) n.classList.add('correct');
@@ -224,21 +167,19 @@
       score+=basePoint+(remaining*bonusPerSecond);
       document.getElementById('score').textContent=score;
     } else {
-      if(!secondRound){ // hanya catat salah di ronde pertama
-        wrongQuestions.push(idx);
-      }
+      // simpan soal salah
+      let originalIndex = QUESTIONS_ORIGINAL.findIndex(orig => orig.q === q.q);
+      if(originalIndex !== -1) wrongQuestions.push(originalIndex);
     }
     setTimeout(nextQuestion,1200);
   }
 
   function lockAnswers(){
-    const wrap=document.getElementById('choices');
-    const nodes=Array.from(wrap.children);
-    if(nodes.length){
-      nodes.forEach((n,i)=>{
-        if(i===QUESTIONS[idx].answer) n.classList.add('correct');
-      });
-    }
+    const q=QUESTIONS[idx];
+    const nodes=Array.from(document.getElementById('choices').children);
+    nodes.forEach((n,i)=>{
+      if(i===q.answer) n.classList.add('correct');
+    });
   }
 
   function nextQuestion(){idx++;renderQuestion();}
@@ -255,37 +196,22 @@
   }
 
   function saveJSON(){
-    try{
-      QUESTIONS=JSON.parse(document.getElementById('jsonArea').value);
-      alert('Disimpan!');
-    }
+    try{QUESTIONS_ORIGINAL=JSON.parse(document.getElementById('jsonArea').value);alert('Disimpan!');}
     catch(e){alert('Format JSON salah');}
   }
 
   function downloadJSON(){
     const blob=new Blob([JSON.stringify(QUESTIONS_ORIGINAL,null,2)],{type:'application/json'});
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='quiz.json';
-    a.click();
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='quiz.json';a.click();
   }
 
   function loadFile(){
     const f=document.getElementById('fileInput').files[0];
     if(!f) return;
     const r=new FileReader();
-    r.onload=e=>{
-      try{
-        QUESTIONS=JSON.parse(e.target.result);
-        QUESTIONS_ORIGINAL=JSON.parse(JSON.stringify(QUESTIONS));
-        alert('Impor berhasil');
-      }catch{
-        alert('Format salah');
-      }
-    };
+    r.onload=e=>{try{QUESTIONS_ORIGINAL=JSON.parse(e.target.result);alert('Impor berhasil');}catch{alert('Format salah')};};
     r.readAsText(f);
   }
 </script>
-
 </body>
 </html>
