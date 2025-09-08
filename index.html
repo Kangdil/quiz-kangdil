@@ -1,69 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz Kangdil</title>
   <style>
-    body {
+    /* === HALAMAN UTAMA (TETAP HIJAU SEPERTI SEMULA) === */
+    body{
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74b8a5, #8ad4c6);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin: 0;
+      background: linear-gradient(135deg, #74b8a5, #8ad4c6);
+      min-height:100vh;
+      display:flex; justify-content:center; align-items:center;
     }
-
-    nav {
+    nav{
       background: white;
       padding: 25px 40px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       text-align: center;
     }
-
-    nav h1 {
-      margin-bottom: 8px;
-      font-size: 1.6em;
-      color: #444;
+    nav h1{ margin-bottom:8px; font-size:1.6em; color:#444; }
+    nav h2{ margin-bottom:20px; font-size:.5em; color:#444; }
+    nav ul{ list-style:none; padding:0; margin:0; }
+    nav ul li{ margin:12px 0; }
+    nav ul li a{
+      display:inline-block; width:200px;
+      text-decoration:none; font-size:1.1em; font-weight:bold;
+      color:#333; background:#f3f3f3; padding:12px 20px; border-radius:12px;
+      transition:all .3s ease;
     }
-    
-    nav h2 {
-      margin-bottom: 20px;
-      font-size: 0.5em;
-      color: #444;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    nav ul li a:hover{
+      background:#74b8a5; color:white; transform:translateX(8px);
+      box-shadow:0 6px 12px rgba(0,0,0,.2);
     }
 
-    nav ul li {
-      margin: 12px 0;
+    /* === MODAL RPG === */
+    .modal{
+      display:none; position:fixed; inset:0; z-index:5;
+      background:#000; color:#fff;
+      flex-direction:column; justify-content:space-between; align-items:center;
     }
+    .battle-bg{
+      flex:1; width:100%;
+      position:relative; overflow:hidden;
+      display:flex; justify-content:center; align-items:center;
+    }
+    canvas#bgCanvas{
+      position:absolute; inset:0; width:100%; height:100%; z-index:0;
+      image-rendering: pixelated;
+    }
+    .enemy-area{ z-index:1; text-align:center; position:relative; }
+    .enemy-area img{ width:176px; height:176px; object-fit:contain; image-rendering: pixelated; }
+    .enemy-name{ font-size:1.2em; margin-top:8px; color:#fff; }
 
-    nav ul li a {
-      display: inline-block;
-      width: 200px;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #333;
-      background: #f3f3f3;
-      padding: 12px 20px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
+    .battle-ui{
+      background:#222; width:100%; box-sizing:border-box;
+      padding:10px; color:#fff;
     }
+    .bar-row{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+    .bar-label{ min-width:68px; }
+    .hp-bar, .pp-bar{
+      height:12px; background:#555; border-radius:6px; overflow:hidden; margin-top:3px; width:220px;
+    }
+    .hp-fill{ height:100%; background:#4caf50; width:100%; transition:width .25s; }
+    .pp-fill{ height:100%; background:#3da9fc; width:100%; transition:width .25s; }
 
-    nav ul li a:hover {
-      background: #74b8a5;
-      color: white;
-      transform: translateX(8px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    .actions{ margin-top:6px; display:flex; flex-wrap:wrap }
+    .actions button{
+      background:#74b8a5; border:none; padding:8px 12px; margin:3px;
+      border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;
     }
+    .actions button:hover:enabled{ background:#5a9482; }
+    .actions button:disabled{ opacity:.5; cursor:not-allowed; }
+
+    .log-box{
+      background:#111; border-top:2px solid #555;
+      padding:8px; font-size:.9em; height:110px; overflow-y:auto; line-height:1.35;
+    }
+    .inventory-box{ background:#333; padding:8px; font-size:.9em; margin-top:6px; }
+    .inventory-box button{
+      display:block; width:100%; margin:2px 0;
+      background:#555; border:none; padding:6px 8px; border-radius:4px; color:#fff; cursor:pointer;
+      text-align:left;
+    }
+    .inventory-box button:hover{ background:#777; }
+
+    /* === ANIMASI HIT / PSI / ITEM === */
+    .shake{ animation:shake .28s; }
+    @keyframes shake{
+      0%{transform:translateX(0)} 25%{transform:translateX(-5px)}
+      50%{transform:translateX(5px)} 75%{transform:translateX(-5px)}
+      100%{transform:translateX(0)}
+    }
+    .flash-red::after{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background:rgba(255,60,60,.45); animation:flash .18s ease;
+    }
+    @keyframes flash{ from{opacity:.9} to{opacity:0} }
+    .psi-pulse{ position:absolute; inset:0; background: radial-gradient(circle at 50% 60%, rgba(255,255,255,.45), rgba(255,255,255,0) 60%); animation:pulse .40s ease-out; pointer-events:none; }
+    @keyframes pulse{ from{opacity:.9} to{opacity:0} }
+    .sparkle{ position:absolute; width:8px; height:8px; border-radius:50%; background:#fff; box-shadow:0 0 10px #fff, 0 0 20px #fff; animation:spark .5s ease-out forwards; }
+    @keyframes spark{ from{ transform:translate(0,0); opacity:1 } to{ transform:translate(0,-30px); opacity:0 } }
+
+    /* === WIN / LOSE SCREEN === */
+    .end-modal{
+      display:none; position:fixed; inset:0; z-index:7;
+      background:rgba(0,0,0,0.9);
+      color:#fff; align-items:center; justify-content:center; text-align:center;
+    }
+    .end-card{
+      background:#1c1f24; padding:24px 28px; border-radius:16px;
+      box-shadow:0 12px 30px rgba(0,0,0,.4); min-width:280px; max-width:90vw;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .end-title{ font-size:1.8rem; margin-bottom:6px; }
+    .score-big{ font-size:1.35rem; margin:2px 0 8px; }
+    .score-line{ opacity:.9; margin:2px 0; }
+    .end-actions{ margin-top:10px; }
+    .end-actions button{
+      background:#74b8a5; border:none; padding:10px 16px; margin:6px;
+      border-radius:10px; color:#fff; font-weight:bold; cursor:pointer;
+    }
+    .end-actions button:hover{ background:#5a9482; }
   </style>
 </head>
 <body>
@@ -73,9 +132,565 @@
     <ul>
       <li><a href="quizSosio090925.html">PH Sosiologi 01</a></li>
       <li><a href="quizBindo090925.html">PH B. Indo 01</a></li>
-      <!-- Tambah item baru cukup copy baris ini -->
-      <!-- <li><a href="page4.html">Halaman 4</a></li> -->
+      <li><a href="#" id="openRpg">Main RPG</a></li>
     </ul>
   </nav>
+
+  <!-- MODAL RPG -->
+  <div class="modal" id="rpgModal">
+    <div class="battle-bg" id="battleStage">
+      <canvas id="bgCanvas"></canvas>
+      <div class="enemy-area" id="enemyArea">
+        <img id="enemyImg" src="" alt="Musuh">
+        <div class="enemy-name" id="enemyName"></div>
+      </div>
+    </div>
+    <div class="battle-ui">
+      <div class="bar-row">
+        <div class="bar-label"><strong>HP</strong></div>
+        <div class="hp-bar"><div id="playerHp" class="hp-fill"></div></div>
+        <div class="bar-label"><strong>PP</strong></div>
+        <div class="pp-bar"><div id="playerPp" class="pp-fill"></div></div>
+        <div id="statusText" style="margin-left:auto;opacity:.85;"></div>
+      </div>
+
+      <div class="actions">
+        <button onclick="doAttack()">Attack</button>
+        <button onclick="doPSI('fire')">PSI Fire (-10PP)</button>
+        <button onclick="doPSI('freeze')">PSI Freeze (-12PP)</button>
+        <button onclick="doPSI('thunder')">PSI Thunder (-8PP)</button>
+        <button onclick="toggleInventory()">Item</button>
+        <button onclick="tryRun()">Run</button>
+        <button onclick="closeRpg()">Quit</button>
+      </div>
+
+      <div class="inventory-box" id="inventoryBox" style="display:none;"></div>
+      <div class="log-box" id="log"></div>
+    </div>
+  </div>
+
+  <!-- WIN / LOSE SCREEN -->
+  <div class="end-modal" id="winModal">
+    <div class="end-card">
+      <div class="end-title">YOU WIN!</div>
+      <div class="score-big" id="scoreTotal">Score: 0</div>
+      <div class="score-line" id="scoreDetail"></div>
+      <div class="end-actions">
+        <button onclick="backToMenu()">Kembali ke Menu</button>
+        <button onclick="nextBattle()">Lanjut Battle</button>
+      </div>
+    </div>
+  </div>
+  <div class="end-modal" id="loseModal">
+    <div class="end-card">
+      <div class="end-title">YOU LOSE!</div>
+      <div class="score-big" id="scoreTotalLose">Score: 0</div>
+      <div class="score-line" id="scoreDetailLose"></div>
+      <div class="end-actions">
+        <button onclick="backToMenu()">Kembali ke Menu</button>
+        <button onclick="retryBattle()">Coba Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ========= GAME STATE ========= */
+    const openRpg = document.getElementById("openRpg");
+    const rpgModal = document.getElementById("rpgModal");
+    const enemyNameEl = document.getElementById("enemyName");
+    const enemyImgEl = document.getElementById("enemyImg");
+    const enemyArea = document.getElementById("enemyArea");
+    const stage = document.getElementById("battleStage");
+    const logEl = document.getElementById("log");
+    const playerHpEl = document.getElementById("playerHp");
+    const playerPpEl = document.getElementById("playerPp");
+    const invBox = document.getElementById("inventoryBox");
+    const statusText = document.getElementById("statusText");
+    const winModal = document.getElementById("winModal");
+    const loseModal = document.getElementById("loseModal");
+    const scoreTotalEl = document.getElementById("scoreTotal");
+    const scoreDetailEl = document.getElementById("scoreDetail");
+    const scoreTotalLoseEl = document.getElementById("scoreTotalLose");
+    const scoreDetailLoseEl = document.getElementById("scoreDetailLose");
+
+    const PSI_COST = { fire:10, freeze:12, thunder:8 };
+    let player, enemy, turn, frozen=0, guard=0, battlesWon=0, turnCount=0, damageDealt=0;
+
+    // Anti-spam attack state
+    let attackChain = 0; // berturut-turut attack
+
+    // Musuh dengan gambar (sumber bebas pakai dari OpenGameArt — bisa kamu ganti link kalau mau)
+    const enemies = [
+      { name:"Slime Hijau", hp:60,  attack:7,  psi:["none"],              items:[{name:"Goo Jelly",heal:15}], img:"https://media.tenor.com/TVdvv_3wKY8AAAAj/glorp-bouncing-slime.gif", pp:0 },
+      { name:"Bat",         hp:65,  attack:8,  psi:["thunder"],           items:[{name:"Wing Dust",heal:15}], img:"https://cdn.lospec.com/gallery/bat-anim-901611.gif", pp:12 },
+      { name:"Goblin",      hp:90,  attack:11, psi:["thunder"],           items:[{name:"Rusty Bread",heal:20}], img:"https://opengameart.org/sites/default/files/Goblin_idle.gif", pp:18 },
+      { name:"Skeleton",    hp:95,  attack:12, psi:["freeze"],            items:[{name:"Bone Broth",heal:20}], img:"https://static.vecteezy.com/system/resources/previews/019/040/586/non_2x/an-8-bit-retro-styled-pixel-art-illustration-of-a-skeleton-free-png.png", pp:16 },
+      { name:"Zombie",      hp:110, attack:12, psi:["freeze"],            items:[{name:"Rotten Meat",heal:25}], img:"https://pbs.twimg.com/media/DPz20a4VAAIu89H.png", pp:20 },
+      { name:"Dark Mage",   hp:120, attack:14, psi:["fire","freeze"],     items:[{name:"Black Crystal",heal:30}], img:"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/333eb6f2-4048-400b-a3fa-943d35ec1ede/ddsxb35-f1b37e32-9c43-4c62-8797-621a069e2502.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzM2ViNmYyLTQwNDgtNDAwYi1hM2ZhLTk0M2QzNWVjMWVkZVwvZGRzeGIzNS1mMWIzN2UzMi05YzQzLTRjNjItODc5Ny02MjFhMDY5ZTI1MDIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MxDTUsKdp6BXsQRZmGF_NbUvFtzcDYVDU-gdWkYOwj0", pp:28 },
+      { name:"Witch",       hp:105, attack:11, psi:["fire","thunder"],    items:[{name:"Brew",heal:25}], img:"https://static.vecteezy.com/system/resources/previews/019/040/590/non_2x/an-8-bit-retro-styled-pixel-art-illustration-of-a-witch-free-png.png", pp:26 },
+      { name:"Orc",         hp:140, attack:16, psi:["fire"],              items:[{name:"Cooked Pork",heal:30}], img:"https://opengameart.org/sites/default/files/orc_0.png", pp:14 },
+      { name:"Bandit",      hp:100, attack:15, psi:["none"],              items:[{name:"Jerky",heal:22}], img:"https://img.itch.zone/aW1nLzY0NDUzODYuZ2lm/original/1Bf5ON.gif", pp:0 },
+      { name:"Wolf",        hp:85,  attack:13, psi:["thunder"],           items:[{name:"Raw Meat",heal:18}], img:"https://cdnb.artstation.com/p/assets/images/images/035/838/193/original/beatriz-conrado-happyjoy.gif?1616023466", pp:10 },
+      { name:"Cactus Bot",  hp:130, attack:14, psi:["thunder","fire"],    items:[{name:"Coolant",heal:28}], img:"https://opengameart.org/sites/default/files/cactus_0.png", pp:24 },
+      { name:"Ghost",       hp:75,  attack:10, psi:["freeze","thunder"], items:[{name:"Ectoplasm",heal:20}], img:"https://static.vecteezy.com/system/resources/thumbnails/028/651/918/small/pixel-art-cartoon-halloween-ghost-character-png.png", pp:22 },
+      { name:"Knight",      hp:150, attack:18, psi:["none"],              items:[{name:"Tonic",heal:35}], img:"https://png.pngtree.com/png-vector/20240316/ourmid/pngtree-knight-in-pixel-art-style-png-image_11974686.png", pp:0 },
+      { name:"Wisp",        hp:70,  attack:9,  psi:["thunder","fire"],    items:[{name:"Glow Dew",heal:16}], img:"https://img.itch.zone/aW1nLzM1NjA3MjgucG5n/315x250%23c/BODNMo.png", pp:22 },
+      { name:"Spider",      hp:80,  attack:12, psi:["freeze"],            items:[{name:"Silk",heal:18}], img:"https://static.vecteezy.com/system/resources/previews/019/040/574/non_2x/retro-cartoon-brown-tarantula-free-png.png", pp:16 }
+    ];
+
+    // Item random pool
+    const ITEM_POOL = [
+      { type:"heal",   name:"Burger",    heal:30,  desc:"+30 HP" },
+      { type:"heal",   name:"Cola",      heal:20,  desc:"+20 HP" },
+      { type:"heal",   name:"Steak",     heal:50,  desc:"+50 HP" },
+      { type:"pp",     name:"Ether",     pp:15,    desc:"+15 PP" },
+      { type:"pp",     name:"Super Ether",pp:30,    desc:"+30 PP" },
+      { type:"bomb",   name:"Bomb",      dmg:28,   desc:"-28 HP musuh" },
+      { type:"guard",  name:"Guard",     factor:0.5, turns:1, desc:"Kurangi 50% dmg berikutnya" },
+      { type:"smoke",  name:"Smoke",     reduce:0.25, turns:2, desc:"Turunkan peluang PSI musuh" }
+    ];
+
+    // SFX public-domain/CC0 (bukan audio Mother 3 asli)
+    const SFX_MAP = {
+      hit:    "https://cdn.pixabay.com/download/audio/2022/03/15/audio_5d9bde6b8c.mp3?filename=retro-impact-1-14436.mp3",
+      psi:    "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c1b6712a4f.mp3?filename=retro-magic-14437.mp3",
+      heal:   "https://cdn.pixabay.com/download/audio/2022/03/15/audio_8f3f4e0d7a.mp3?filename=powerup-14441.mp3",
+      item:   "https://cdn.pixabay.com/download/audio/2022/03/15/audio_0cf3fa19b9.mp3?filename=menu-select-90656.mp3",
+      run:    "https://cdn.pixabay.com/download/audio/2022/03/15/audio_1f2a1d6f2b.mp3?filename=blip-131856.mp3",
+      defeat: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_5c3a3b225c.mp3?filename=win-game-2011-140381.mp3"
+    };
+    let audioCache = {};
+    function playSfx(key){
+      const url = SFX_MAP[key]; if(!url) return;
+      let a = audioCache[key];
+      if(!a){ a = new Audio(url); audioCache[key]=a; }
+      a.currentTime = 0; a.play().catch(()=>{});
+    }
+
+    function randomItems(n=4){
+      const pool = [...ITEM_POOL];
+      const out=[];
+      while(out.length<n && pool.length){
+        const i = Math.floor(Math.random()*pool.length);
+        out.push(pool.splice(i,1)[0]);
+      }
+      return out;
+    }
+
+    function pickEnemy(){
+      const rand = enemies[Math.floor(Math.random()*enemies.length)];
+      return {...rand, maxHp: rand.hp, maxPp: rand.pp, psiChanceBase: 0.45, psiChanceMod: 0};
+    }
+
+    function setActionsEnabled(enabled){
+      document.querySelectorAll(".actions button").forEach(b => b.disabled = !enabled);
+    }
+
+    function initRpg(){
+      player = { hp:120, maxHp:120, pp:36, maxPp:36, attack:16, items:randomItems(), status:{}, psi:["fire","freeze","thunder"], score:0 };
+      enemy = pickEnemy(); frozen = 0; guard = 0; turnCount = 0; damageDealt = 0; attackChain = 0;
+
+      enemyNameEl.textContent = enemy.name;
+      enemyImgEl.src = enemy.img;
+      updateBars();
+      turn = "player";
+      logEl.innerHTML = `Musuh <b>${enemy.name}</b> muncul!`;
+      statusText.textContent = "";
+      renderInventory();
+
+      // Pattern background per battle
+      pickPatternAndPalette();
+      resizeCanvas(true);
+      startBgAnim();
+      setActionsEnabled(true);
+    }
+
+    function log(msg){
+      logEl.innerHTML += "<br>" + msg;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+    function updateBars(){
+      playerHpEl.style.width = (player.hp/player.maxHp*100) + "%";
+      playerPpEl.style.width = (player.pp/player.maxPp*100) + "%";
+    }
+
+    function markPulse(){ const d=document.createElement("div"); d.className="psi-pulse"; stage.appendChild(d); setTimeout(()=>d.remove(), 420); }
+    function enemyFlash(){ enemyImgEl.classList.add("shake"); enemyArea.classList.add("flash-red"); setTimeout(()=>{ enemyImgEl.classList.remove("shake"); enemyArea.classList.remove("flash-red"); }, 220); }
+    function playerShake(){ stage.classList.add("shake"); setTimeout(()=>stage.classList.remove("shake"), 280); }
+    function sparkleAt(){ const sp=document.createElement("div"); sp.className="sparkle"; sp.style.left=(stage.clientWidth/2)+"px"; sp.style.top=(stage.clientHeight*0.65)+"px"; stage.appendChild(sp); setTimeout(()=>sp.remove(), 520); }
+
+    function openLose(total){
+      scoreTotalLoseEl.textContent = `Score: ${total}`;
+      scoreDetailLoseEl.textContent = `Coba strategi lain & manfaatkan PSI/Item!`;
+      loseModal.style.display = "flex";
+    }
+
+    function checkGameOver(){
+      if(player.hp <= 0){
+        log("Kamu kalah...");
+        playSfx("defeat");
+        turn="done"; setActionsEnabled(false);
+        stopBgAnim();
+        // score akhir (penalti)
+        const total = Math.max(0, Math.floor(damageDealt/2) + battlesWon*50 - turnCount*2);
+        openLose(total);
+      }
+    }
+
+    function enemyTurn(){
+      if(enemy.hp <= 0) return;
+      setActionsEnabled(false);
+
+      setTimeout(()=>{
+        if(frozen > 0){
+          log(`Kamu beku, giliranmu terlewat!`);
+          frozen--; turn="player"; setActionsEnabled(true); return;
+        }
+
+        // Pilih aksi: item (darurat), psi, atau serang
+        let action = "attack";
+        const lowHp = enemy.hp < enemy.maxHp*0.4;
+        const canUseItem = enemy.items.length>0;
+        const hasPsi = enemy.psi.some(p=>p!=="none");
+        const canUsePsi = enemy.pp>0 && hasPsi;
+        
+        let roll = Math.random();
+        const psiChance = Math.max(0, (enemy.psiChanceBase + enemy.psiChanceMod));
+        if(lowHp && canUseItem && roll < 0.15){ action = "item"; }
+        else if(canUsePsi && roll < psiChance){ action = "psi"; }
+        else { action = "attack"; }
+
+        if(action === "attack"){
+          let dmg = enemy.attack;
+          if(guard>0){ dmg = Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+          // Anti-spam counter: jika player barusan spam (attackChain>=2), musuh dapat bonus kecil
+          if(attackChain>=2) dmg += 4;
+          player.hp = Math.max(0, player.hp - dmg);
+          playerShake(); playSfx("hit");
+          updateBars();
+          log(`${enemy.name} menyerang! Player -${dmg} HP`);
+        }
+        else if(action === "psi"){
+          const choices = enemy.psi.filter(p=>{
+            if(p==="fire")   return enemy.pp>=10;
+            if(p==="freeze") return enemy.pp>=12;
+            if(p==="thunder")return enemy.pp>=8;
+            return false;
+          });
+          if(choices.length===0){
+            // fallback serang
+            let dmg = enemy.attack;
+            if(guard>0){ dmg = Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+            player.hp = Math.max(0, player.hp - dmg);
+            playerShake(); playSfx("hit");
+            updateBars(); log(`${enemy.name} menyerang! Player -${dmg} HP`);
+          } else {
+            const chosen = choices[Math.floor(Math.random()*choices.length)];
+            if(chosen==="fire"){
+              enemy.pp -= 10;
+              let dmg=24; if(guard>0){ dmg=Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+              player.hp=Math.max(0,player.hp-dmg); markPulse(); playerShake(); playSfx("psi");
+              updateBars(); log(`${enemy.name} pakai 🔥 PSI Fire ke KAMU! -${dmg} HP`);
+            } else if(chosen==="freeze"){
+              enemy.pp -= 12;
+              let dmg=18; if(guard>0){ dmg=Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+              player.hp=Math.max(0,player.hp-dmg); frozen=1; markPulse(); playerShake(); playSfx("psi");
+              updateBars(); log(`${enemy.name} pakai ❄️ PSI Freeze ke KAMU! -${dmg} HP & Kamu beku 1 turn`);
+            } else if(chosen==="thunder"){
+              enemy.pp -= 8;
+              let dmg=Math.floor(10+Math.random()*28);
+              if(guard>0){ dmg=Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+              player.hp=Math.max(0,player.hp-dmg); markPulse(); playerShake(); playSfx("psi");
+              updateBars(); log(`${enemy.name} pakai ⚡ PSI Thunder ke KAMU! -${dmg} HP`);
+            }
+          }
+        }
+        else if(action === "item"){
+          const item = enemy.items.shift();
+          if(item){
+            enemy.hp = Math.min(enemy.maxHp, enemy.hp + item.heal);
+            playSfx("item");
+            log(`${enemy.name} menggunakan ${item.name}, HP +${item.heal}`);
+          } else {
+            let dmg = enemy.attack;
+            if(guard>0){ dmg = Math.floor(dmg*(1-guard)); guard=0; statusText.textContent=""; }
+            player.hp = Math.max(0, player.hp - dmg);
+            playerShake(); playSfx("hit");
+            updateBars(); log(`${enemy.name} menyerang! Player -${dmg} HP`);
+          }
+        }
+
+        checkGameOver();
+        if(player.hp > 0){ turn="player"; setActionsEnabled(true); }
+      }, 850);
+    }
+
+    function ensureTurn(){ return turn === "player"; }
+
+    function calcAttackDamage(base){
+      // Nerf spam attack berturut-turut
+      // 1st = 100%, 2nd = 70%, 3rd+ turun → min 25%
+      let mult = 1.0;
+      if(attackChain === 1) mult = 0.7;
+      else if(attackChain >= 2) mult = Math.max(0.25, 1 - 0.6 - (attackChain-2)*0.05);
+      return Math.max(1, Math.floor(base * mult));
+    }
+
+    function doAttack(){
+      if(!ensureTurn()) return;
+      const base = player.attack;
+      const dmg = calcAttackDamage(base);
+      enemy.hp = Math.max(0, enemy.hp - dmg);
+      damageDealt += dmg;
+      attackChain++; // berturut-turut
+      enemyFlash(); playSfx("hit");
+      log(`Player menyerang! ${enemy.name} -${dmg} HP ${attackChain>1?`(combo-${attackChain})`:''}`);
+      postPlayerAction();
+    }
+
+    function doPSI(kind){
+      if(!ensureTurn()) return;
+      const cost = PSI_COST[kind] || 0;
+      if(player.pp < cost){ log("PP tidak cukup!"); return; }
+      player.pp -= cost; updateBars();
+
+      let dmg = 0;
+      if(kind === "fire"){   dmg = 25; log("🔥 Kamu pakai PSI Fire!"); }
+      if(kind === "freeze"){ dmg = 18; frozen = 1; log("❄️ Kamu pakai PSI Freeze! (Musuh berkurang HP, musuh bisa skip 1 turn)"); }
+      if(kind === "thunder"){dmg = Math.floor(10 + Math.random()*30); log("⚡ Kamu pakai PSI Thunder!"); }
+
+      enemy.hp = Math.max(0, enemy.hp - dmg);
+      damageDealt += dmg;
+      markPulse(); enemyFlash(); playSfx("psi");
+      log(`${enemy.name} -${dmg} HP`);
+      attackChain = 0; // reset chain saat tidak attack biasa
+      postPlayerAction();
+    }
+
+    function postPlayerAction(){
+      updateBars();
+      turnCount++;
+      if(enemy.hp<=0){ onWin(); return; }
+      turn="enemy"; setActionsEnabled(false); enemyTurn();
+    }
+
+    function tryRun(){
+      if(!ensureTurn()) return;
+      playSfx("run");
+      if(Math.random()<0.55){ log("Kamu berhasil kabur!"); stopBgAnim(); rpgModal.style.display="none"; }
+      else { log("Gagal kabur!"); turn="enemy"; setActionsEnabled(false); enemyTurn(); }
+    }
+
+    function toggleInventory(){ invBox.style.display = invBox.style.display === "none" ? "block" : "none"; }
+
+    function renderInventory(){
+      invBox.innerHTML = "";
+      player.items.forEach((item,idx)=>{
+        const btn = document.createElement("button");
+        btn.textContent = `${item.name} — ${item.desc}`;
+        btn.onclick = ()=>useItem(idx);
+        invBox.appendChild(btn);
+      });
+    }
+
+    function useItem(i){
+      if(!ensureTurn()) return;
+      const item = player.items[i]; if(!item) return;
+      playSfx("item"); sparkleAt();
+
+      if(item.type==="heal"){ player.hp = Math.min(player.maxHp, player.hp + item.heal); log(`Kamu pakai ${item.name}, HP +${item.heal}`); }
+      else if(item.type==="pp"){ player.pp = Math.min(player.maxPp, player.pp + item.pp); log(`Kamu pakai ${item.name}, PP +${item.pp}`); }
+      else if(item.type==="bomb"){ const dmg = item.dmg; enemy.hp = Math.max(0, enemy.hp - dmg); damageDealt += dmg; enemyFlash(); log(`💣 ${item.name} meledak! ${enemy.name} -${dmg} HP`); }
+      else if(item.type==="guard"){ guard = item.factor; statusText.textContent = "Guard ↑ (1 hit)"; log(`🛡️ ${item.name} aktif! Serangan berikutnya berkurang 50%`); }
+      else if(item.type==="smoke"){ enemy.psiChanceMod -= item.reduce; log(`💨 ${item.name}! Peluang PSI musuh turun sementara`); setTimeout(()=>{ enemy.psiChanceMod += item.reduce; }, item.turns*2000); }
+
+      player.items.splice(i,1);
+      renderInventory();
+      updateBars(); attackChain = 0;
+
+      if(enemy.hp<=0){ onWin(); return; }
+      turn="enemy"; setActionsEnabled(false); enemyTurn();
+    }
+
+    function onWin(){
+      log(`${enemy.name} dikalahkan!`);
+      playSfx("defeat");
+      turn="done"; setActionsEnabled(false);
+      battlesWon++;
+      // hitung skor
+      const base = 120;
+      const enemyVal = Math.floor(enemy.maxHp/2);
+      const hpBonus = Math.floor(player.hp/2);
+      const ppBonus = Math.floor(player.pp/2);
+      const speedBonus = Math.max(0, 32 - turnCount)*2;
+      const total = base + enemyVal + hpBonus + ppBonus + speedBonus;
+
+      scoreTotalEl.textContent = `Score: ${total}`;
+      scoreDetailEl.textContent = `Base 120 + Musuh ${enemyVal} + HP ${hpBonus} + PP ${ppBonus} + Cepat ${speedBonus} (Turn: ${turnCount})`;
+      winModal.style.display = "flex";
+      stopBgAnim();
+    }
+
+    function retryBattle(){ loseModal.style.display = "none"; initRpg(); }
+
+    function backToMenu(){
+      winModal.style.display="none"; loseModal.style.display="none";
+      rpgModal.style.display="none"; stopBgAnim();
+    }
+    function nextBattle(){ winModal.style.display="none"; initRpg(); }
+
+    document.getElementById("openRpg").addEventListener("click", e=>{ e.preventDefault(); rpgModal.style.display = "flex"; initRpg(); });
+    function closeRpg(){ rpgModal.style.display = "none"; stopBgAnim(); }
+
+    window.closeRpg   = closeRpg;
+    window.toggleInventory = toggleInventory;
+    window.doAttack   = doAttack;
+    window.doPSI      = doPSI;
+    window.tryRun     = tryRun;
+    window.backToMenu = backToMenu;
+    window.nextBattle = nextBattle;
+    window.retryBattle = retryBattle;
+
+    /* ========= BACKGROUND ENGINE =========
+       Lebih mirip EarthBound/Mother 3: pola pixelated, tanpa rotasi liar, banyak variasi.
+       Kita gabungkan >=10 PATTERN x >=10 PALETTE => >=100 kombinasi.
+    */
+    const mainCanvas = document.getElementById("bgCanvas");
+    const mainCtx = mainCanvas.getContext("2d");
+    const off = document.createElement("canvas");
+    const octx = off.getContext("2d", { willReadFrequently:true });
+
+    let animId, t = 0;
+    let CURRENT_PATTERN = "checker";
+    let CURRENT_PALETTE = "violet"; // default
+
+    const PATTERNS = [
+      "checker","wave","swirl","stripesH","stripesV","dots","zigzag","concentric","diamonds","scallop","steps","grid","chevron","ripple","rings","sawH","sawV","plaid","weave","maze"
+    ];
+
+    // Palet terbatas (2–3 warna) biar mirip EarthBound
+    const PALETTES = {
+      violet:  [ HSL(270,60,18), HSL(285,60,34), HSL(300,65,50) ],
+      ocean:   [ HSL(200,60,18), HSL(210,65,34), HSL(220,70,50) ],
+      ember:   [ HSL(15,70,20),  HSL(20,70,34),  HSL(28,75,50)  ],
+      mint:    [ HSL(150,55,20), HSL(160,60,34), HSL(170,65,50) ],
+      mono:    [ HSL(220,6,12),  HSL(220,6,30),  HSL(220,6,55)  ],
+      dusk:    [ HSL(250,45,20), HSL(260,48,34), HSL(270,52,48) ],
+      citrus:  [ HSL(35,75,22),  HSL(40,80,36),  HSL(48,85,52)  ],
+      berry:   [ HSL(330,55,22), HSL(340,58,36), HSL(350,60,52) ],
+      lagoon:  [ HSL(175,55,20), HSL(185,58,34), HSL(195,62,50) ],
+      royal:   [ HSL(225,45,20), HSL(235,48,34), HSL(245,52,50) ],
+      moss:    [ HSL(95,45,20),  HSL(105,48,34), HSL(115,52,50) ],
+      sand:    [ HSL(40,30,24),  HSL(40,30,38),  HSL(40,30,54)  ]
+    };
+    const PALETTE_KEYS = Object.keys(PALETTES);
+
+    function HSL(H,S,L){ return {H,S,L}; }
+    function hslToRgb(h, s, l){
+      let r, g, b;
+      if (s === 0){ r = g = b = l; }
+      else{
+        const hue2rgb = (p, q, t) => {
+          if(t < 0) t += 1; if(t > 1) t -= 1;
+          if(t < 1/6) return p + (q - p) * 6 * t;
+          if(t < 1/2) return q;
+          if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+          return p;
+        };
+        const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        const p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+      }
+      return { r: Math.round(r*255), g: Math.round(g*255), b: Math.round(b*255) };
+    }
+
+    function pickPatternAndPalette(){
+      CURRENT_PATTERN = PATTERNS[Math.floor(Math.random()*PATTERNS.length)];
+      CURRENT_PALETTE = PALETTE_KEYS[Math.floor(Math.random()*PALETTE_KEYS.length)];
+    }
+
+    function resizeCanvas(force=false){
+      const parent = mainCanvas.parentElement;
+      const w = parent.clientWidth;
+      const h = parent.clientHeight;
+      if(force || mainCanvas.width !== w || mainCanvas.height !== h){
+        mainCanvas.width = w; mainCanvas.height = h;
+        const scale = Math.max(1, Math.floor(Math.min(w,h) / 140));
+        off.width  = Math.max(160, Math.floor(w / scale));
+        off.height = Math.max(120, Math.floor(h / scale));
+      }
+    }
+    window.addEventListener("resize", ()=>resizeCanvas(true));
+
+    function startBgAnim(){ cancelAnimationFrame(animId); loopBg(); }
+    function stopBgAnim(){ cancelAnimationFrame(animId); }
+    function loopBg(){ drawBackground(); t++; animId = requestAnimationFrame(loopBg); }
+
+    function drawBackground(){
+      const w = off.width, h = off.height;
+      const img = octx.createImageData(w, h);
+      const cx = w*0.5, cy = h*0.5;
+      const time = t*0.04;
+      const pal = PALETTES[CURRENT_PALETTE];
+
+      for(let y=0; y<h; y++){
+        for(let x=0; x<w; x++){
+          const dx = x - cx, dy = y - cy;
+          const r = Math.sqrt(dx*dx + dy*dy);
+          const th = Math.atan2(dy, dx);
+
+          let v = 0; // -1..1
+          switch(CURRENT_PATTERN){
+            case "checker":{
+              const size = 10; const ox = Math.sin(time*1.2) * 4; const oy = Math.cos(time*0.9) * 4;
+              const c = ((Math.floor((x+ox)/size) + Math.floor((y+oy)/size)) & 1);
+              const shimmer = Math.sin((x+time*8)*0.08) * Math.cos((y-time*6)*0.08);
+              v = (c ? 0.4 : -0.4) + 0.25*shimmer; break; }
+            case "wave":{
+              const a = Math.sin((y*0.12) + time*2.0); const b = Math.sin((x*0.10) + time*1.6); v = (a + b) * 0.5; break; }
+            case "swirl":{
+              const band = Math.sin(r*0.18 + Math.sin(th*3 + time*1.0)*0.9); v = band; break; }
+            case "stripesH":{ v = Math.sin((y*0.18) + time*2.2); break; }
+            case "stripesV":{ v = Math.sin((x*0.18) + time*2.0); break; }
+            case "dots":{
+              const grid = 12; const gx = (x + Math.sin(time*1.2)*6) % grid; const gy = (y + Math.cos(time*1.0)*6) % grid; const isDot = (gx<2 && gy<2); v = isDot ? 0.6 : -0.2; break; }
+            case "zigzag":{ const zz = Math.sin(y*0.1 + Math.sin(x*0.15 + time*1.5)*2); v = zz; break; }
+            case "concentric":{ v = Math.sin(r*0.22 - time*2.2); break; }
+            case "diamonds":{
+              const s=8; const u = Math.abs(((x>>0)%s)-(s/2)) + Math.abs(((y>>0)%s)-(s/2)); v = Math.sin((u*0.7)+time*2); break; }
+            case "scallop":{ v = Math.sin((x*0.16)+time*1.2)+Math.sin((y*0.16)+time*1.2); v*=0.5; break; }
+            case "steps":{ v = (((x+Math.sin(time)*12)>>4)+((y+Math.cos(time)*12)>>4))&1 ? .5 : -.5; break; }
+            case "grid":{ v = ((x>>4)&1) ^ ((y>>4)&1) ? 0.5: -0.5; v += Math.sin((x+y+time*10)*0.02)*0.2; break; }
+            case "chevron":{ v = Math.sin((y + (Math.floor(x/8)%2)*4)*0.25 + time*2); break; }
+            case "ripple":{ v = Math.sin((r*0.3 + Math.sin(th*2))*1.2 - time*1.8); break; }
+            case "rings":{ v = Math.sin((r*0.25) - time*2.4); break; }
+            case "sawH":{ v = ((y + time*18)%24)/24 * 2 - 1; break; }
+            case "sawV":{ v = ((x + time*18)%24)/24 * 2 - 1; break; }
+            case "plaid":{ v = Math.sin(x*0.15+time*1.6) + Math.sin(y*0.20+time*1.1); v*=0.5; break; }
+            case "weave":{ v = Math.sin(x*0.12+Math.sin(y*0.06+time)*3) * Math.cos(y*0.12+Math.cos(x*0.06+time)*3); break; }
+            case "maze":{ v = (((x^y) + Math.floor(time*18))>>4)&1 ? .45 : -.45; break; }
+          }
+
+          // Kuantisasi ke 2-3 warna palet
+          let idxPalette = 0;
+          if(v < -0.15) idxPalette = 0; else if(v < 0.35) idxPalette = 1; else idxPalette = 2;
+          const c = pal[idxPalette];
+          const {r:R,g:G,b:B} = hslToRgb(c.H/360,c.S/100,c.L/100);
+          const idx = (y*w+x)*4; img.data[idx]=R; img.data[idx+1]=G; img.data[idx+2]=B; img.data[idx+3]=255;
+        }
+      }
+      octx.putImageData(img,0,0);
+
+      // Upscale TANPA smoothing (pixel look)
+      const mw = mainCanvas.width, mh = mainCanvas.height;
+      mainCtx.save();
+      mainCtx.clearRect(0,0,mw,mh);
+      mainCtx.imageSmoothingEnabled = false;
+      mainCtx.drawImage(off, 0, 0, mw, mh);
+      mainCtx.restore();
+    }
+  </script>
 </body>
 </html>
