@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz PH B. Indo 01</title>
+  <style>
+    body{margin:0;font-family:sans-serif;background:#0f1724;color:#e6eef6;display:flex;align-items:center;justify-content:center;height:100vh}
+    .screen{display:none;width:100%;max-width:960px;padding:20px}
+    .active{display:block}
+    .card{background:rgba(255,255,255,0.05);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+    h1,h2{margin:0 0 16px 0}
+    button{padding:10px 16px;border:none;border-radius:8px;background:#6ee7b7;color:#042028;font-weight:600;cursor:pointer;margin:4px}
+    button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#e6eef6}
+    .choice{padding:10px;border-radius:8px;background:rgba(255,255,255,0.05);margin:6px 0;cursor:pointer;transition:all .3s ease}
+    .choice:hover{background:rgba(255,255,255,0.1)}
+    .choice.correct{background:#16a34a!important;animation:pulse .5s ease}
+    .choice.wrong{background:#dc2626!important;animation:shake .3s ease}
+    .toolbar{margin-top:20px;display:flex;justify-content:space-between;align-items:center}
+    .scoreboard{font-weight:700}
+    pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;padding:12px;border-radius:8px;max-height:300px;overflow:auto}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+    .fade-in{animation:fade .4s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <!-- Main Menu -->
+  <div id="menu" class="screen active">
+    <div class="card">
+      <h1>Quiz PH Sosiologi 09-09-25</h1>
+      <button onclick="gotoScreen('quiz')">Mulai Quiz</button>
+      <button onclick="gotoScreen('viewer')">Lihat Soal</button>
+      <button onclick="gotoScreen('editor')">Impor/Ekspor JSON</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz" class="screen">
+    <div class="card fade-in">
+      <h2 id="roundInfo">Ronde 1</h2>
+      <h2 id="qtext">-</h2>
+      <div id="choices"></div>
+      <div class="toolbar">
+        <span id="progress">0/0</span>
+        <span class="scoreboard">Skor: <span id="score">0</span></span>
+        <span id="timer">0s</span>
+      </div>
+      <div style="text-align:right;margin-top:10px">
+        <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Viewer Screen -->
+  <div id="viewer" class="screen">
+    <div class="card">
+      <h2>Daftar Soal</h2>
+      <div id="questionList"></div>
+      <div class="toolbar">
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editor Screen -->
+  <div id="editor" class="screen">
+    <div class="card">
+      <h2>Editor JSON</h2>
+      <textarea id="jsonArea" style="width:100%;height:200px;background:#0f1724;color:#e6eef6;border:1px solid #333;border-radius:8px;padding:8px"></textarea>
+      <div class="toolbar">
+        <button onclick="saveJSON()">Simpan</button>
+        <button onclick="downloadJSON()">Ekspor</button>
+        <input type="file" id="fileInput" />
+        <button onclick="loadFile()">Impor</button>
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  let QUESTIONS = [
+  {
+    "q": "Paragraf pembuka teks 'Belalang Anggrek' berisi penjelasan umum tentang nama ilmiah dan ciri umum belalang anggrek. Bagian ini termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Paragraf yang menjelaskan bagian tubuh belalang anggrek, seperti kepala, toraks, dan abdomen, termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 1
+  },
+  {
+    "q": "Paragraf yang menjelaskan manfaat belalang anggrek sebagai pembasmi hama dan hewan peliharaan termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Belalang anggrek merupakan predator polifagus atau pemakan beberapa jenis mangsa.' termasuk jenis kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Simpulan", "Perintah"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Tubuh belalang anggrek berwarna putih dengan aksen merah muda lembut.' termasuk jenis kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Simpulan", "Perintah"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Kunang-kunang merupakan jenis serangga yang dapat mengeluarkan cahaya saat malam hari.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Simpulan", "Fakta"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Tubuh kunang-kunang betina lebih besar dibandingkan jantan.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Simpulan", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Sayap depan berfungsi melindungi sayap belakang sehingga teksturnya lebih keras.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Perintah", "Simpulan"],
+    "answer": 1
+  },
+  {
+    "q": "Paragraf pertama teks 'Kunang-Kunang' yang menjelaskan jumlah spesies dan penyebaran habitatnya termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Paragraf yang menjelaskan kunang-kunang sebagai bioindikator kesehatan ekosistem termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Penutup"],
+    "answer": 2
+  },
+  {
+    "q": "Dalam teks 'Sungai Sa’ua', paragraf yang berisi penjelasan umum lokasi dan kondisi sungai termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Penutup"],
+    "answer": 0
+  },
+  {
+    "q": "Paragraf yang menjelaskan aktivitas warga mencari ikan di Sungai Sa’ua menggunakan jaring dan pancing termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Penutup"],
+    "answer": 1
+  },
+  {
+    "q": "Paragraf penutup teks 'Sungai Sa’ua' yang menyimpulkan ekosistem sungai masih berfungsi normal meski ada tanda kemunduran termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Penutup"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Taman Nasional Lorentz memiliki 34 tipe vegetasi.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Taman Nasional Lorentz ditetapkan sebagai warisan dunia oleh UNESCO pada tahun 1999.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 2
+  },
+  {
+    "q": "Paragraf pembuka teks 'Taman Nasional Lorentz' yang menjelaskan luas dan lokasi kawasan termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Paragraf yang menjelaskan keanekaragaman satwa di Taman Nasional Lorentz termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Kesimpulan"],
+    "answer": 1
+  },
+  {
+    "q": "Paragraf yang menyimpulkan pentingnya menjaga Taman Nasional Lorentz termasuk struktur teks laporan hasil observasi …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Penutup"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat definisi dalam teks laporan hasil observasi umumnya ditandai dengan kata …",
+    "choices": ["adalah / merupakan", "yang / yaitu", "karena / sehingga", "agar / supaya"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat deskripsi dalam teks laporan hasil observasi biasanya berisi …",
+    "choices": ["Pengertian umum", "Ciri-ciri khusus atau detail objek", "Simpulan akhir", "Pandangan pribadi penulis"],
+    "answer": 1
+  },
+  {
+    "q": "Manakah kalimat berikut yang merupakan kalimat definisi?",
+    "choices": ["Kunang-kunang hidup di tempat lembab.", "Kunang-kunang adalah serangga penghasil cahaya.", "Kunang-kunang berwarna gelap.", "Kunang-kunang membantu penyerbukan."],
+    "answer": 1
+  },
+  {
+    "q": "Manakah kalimat berikut yang merupakan kalimat deskripsi?",
+    "choices": ["Belalang anggrek adalah jenis belalang sembah.", "Belalang anggrek memiliki tubuh putih dengan aksen merah muda.", "Belalang anggrek merupakan predator polifagus.", "Belalang anggrek adalah hewan insektivora."],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Toraks belalang anggrek terdiri atas tiga pasang kaki.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Perintah", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Habitat kunang-kunang adalah daerah lembab seperti rawa dan hutan bakau.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Simpulan", "Fakta"],
+    "answer": 0
+  },
+  {
+    "q": "Imbuhan di- selalu ditulis …",
+    "choices": ["Terpisah dari kata dasarnya", "Serangkai dengan kata dasarnya", "Di awal kalimat saja", "Hanya untuk kata benda"],
+    "answer": 1
+  },
+  {
+    "q": "Kata depan di selalu ditulis …",
+    "choices": ["Serangkai dengan kata sesudahnya", "Terpisah dari kata sesudahnya", "Dengan huruf kapital", "Hanya untuk kata kerja"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat yang benar penulisannya adalah …",
+    "choices": ["Belalang anggrek hidup diIndonesia.", "Kunang-kunang ditemukan di rawa-rawa.", "Sungai Sa’ua diamati dipinggirannya.", "Taman Nasional Lorentz ditetapkan di tahun 1999."],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat yang salah penulisannya adalah …",
+    "choices": ["Taman Nasional Lorentz berada di Papua.", "Observasi dilakukan di sekolah.", "Ikan ditangkap dijala.", "Belalang anggrek ditetapkan sebagai predator."],
+    "answer": 2
+  },
+  {
+    "q": "Kutipan tidak langsung harus ditulis …",
+    "choices": ["Persis seperti sumbernya", "Dengan bahasa sendiri", "Tanpa menyebut sumber", "Dengan tanda petik"],
+    "answer": 1
+  },
+  {
+    "q": "Format penulisan daftar pustaka yang benar adalah …",
+    "choices": ["Nama penulis, judul, kota, penerbit, tahun.", "Judul, kota, penerbit, tahun.", "Nama penulis, kota, tahun, judul.", "Tahun, nama penulis, judul."],
+    "answer": 0
+  },
+  {
+    "q": "Jika mengutip dari internet, hal yang harus dicantumkan adalah …",
+    "choices": ["Tautan dan tanggal akses", "Judul dan nama teman", "Nama sekolah", "Hanya tahun"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat kutipan berikut yang benar adalah …",
+    "choices": ["Menurut Borror & White (1970:37) kunang-kunang tidak memiliki sinar dingin.", "Kunang-kunang adalah serangga bercahaya (Borror, 1970:37).", "Essig menyatakan bahwa kunang-kunang hidup di air (Essig, 1958:78).", "Kunang-kunang disebut serangga bercahaya oleh teman saya."],
+    "answer": 1
+  },
+  {
+    "q": "Daftar pustaka dari buku karya Anik Wijayanti tahun 2020 berjudul 'Kajian Habitat dan Aktivitas Kemunculan Kunang-Kunang' dari IPB ditulis …",
+    "choices": ["Wijayanti, Anik. 2020. Kajian Habitat dan Aktivitas Kemunculan Kunang-Kunang. IPB.", "Anik Wijayanti. Kajian Habitat Kunang-Kunang. 2020.", "Wijayanti, A. Kajian Habitat Kunang-Kunang. IPB, 2020.", "Kajian Habitat Kunang-Kunang oleh Anik Wijayanti (2020)."],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Kunang-kunang adalah bioindikator kesehatan ekosistem.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Opini", "Simpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Cahaya kunang-kunang berfungsi menarik pasangan.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Bagian teks laporan hasil observasi yang memuat informasi umum disebut …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Simpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Bagian teks laporan hasil observasi yang memuat penjelasan detail tentang ciri-ciri objek disebut …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat", "Simpulan"],
+    "answer": 1
+  },
+  {
+    "q": "Bagian teks laporan hasil observasi yang memuat kegunaan atau fungsi objek disebut …",
+    "choices": ["Pernyataan umum/klasifikasi", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Pendahuluan"],
+    "answer": 2
+  },
+  {
+    "q": "Manakah kalimat berikut yang termasuk deskripsi manfaat?",
+    "choices": ["Belalang anggrek memiliki tubuh berwarna putih.", "Kunang-kunang digunakan sebagai bioindikator kesehatan lingkungan.", "Sungai Sa’ua terletak di Nias Selatan.", "Taman Nasional Lorentz mencakup seluruh ekosistem Papua."],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Belalang anggrek mengalami metamorfosis tidak sempurna.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Ooteka adalah sarang berbentuk buih putih tempat belalang betina meletakkan telur.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Opini", "Simpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Tubuh kunang-kunang terdiri atas kepala, toraks, dan abdomen.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Opini", "Simpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Tubuh kunang-kunang betina lebih besar dibandingkan jantan.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Penggunaan cahaya buatan mengganggu ritual kawin kunang-kunang.' termasuk kalimat …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 3
+  },
+  {
+    "q": "Paragraf yang menyimpulkan ekosistem Sungai Sa’ua masih berfungsi normal meski ada kerusakan termasuk …",
+    "choices": ["Pernyataan umum", "Deskripsi bagian", "Deskripsi manfaat/simpulan", "Pendahuluan"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Habitat kunang-kunang Malaysia hilang akibat konversi hutan bakau menjadi perkebunan sawit.' termasuk …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Observatorium Bosscha adalah observatorium astronomi terbesar di Indonesia.' termasuk …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Observatorium Bosscha digunakan untuk meneliti fenomena langit.' termasuk …",
+    "choices": ["Definisi", "Deskripsi", "Fakta", "Opini"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Buku karya Essig tahun 1958 berjudul College Entomology diterbitkan oleh MacMillan.' adalah contoh …",
+    "choices": ["Kutipan", "Daftar pustaka", "Catatan kaki", "Referensi tidak langsung"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Essig (1958:78) menyatakan bahwa spesies kunang-kunang sering ditemukan di daerah lembab.' adalah contoh …",
+    "choices": ["Kutipan langsung", "Kutipan tidak langsung", "Definisi", "Daftar pustaka"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Sungai Sa’ua tercemar akibat pembuangan sampah.' termasuk bagian …",
+    "choices": ["Pernyataan umum", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Kunang-kunang membantu petani dalam proses penyerbukan.' termasuk bagian …",
+    "choices": ["Pernyataan umum", "Deskripsi bagian", "Deskripsi manfaat", "Kesimpulan"],
+    "answer": 2
+  }
+];
+
+
+  let QUESTIONS_ORIGINAL = JSON.parse(JSON.stringify(QUESTIONS));
+  let idx=0, score=0, timer=null, remaining=0;
+  const basePoint=500, bonusPerSecond=20, defaultTime=15;
+  let wrongQuestions=[], secondRound=false;
+  let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
+  let maxScore = 0;
+  let currentQuestion=null;
+
+  function shuffleArray(arr){
+    for(let i=arr.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [arr[i],arr[j]]=[arr[j],arr[i]];
+    }
+    return arr;
+  }
+
+  function gotoScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    if(id==='quiz'){
+      idx=0;score=0;wrongQuestions=[];secondRound=false;
+      correctRound1=0;correctRound2=0;
+      QUESTIONS = JSON.parse(JSON.stringify(QUESTIONS_ORIGINAL));
+      totalQuestionsCount = QUESTIONS.length;
+      maxScore = QUESTIONS.length*(basePoint+(defaultTime*bonusPerSecond));
+      renderQuestion();
+    }
+    if(id==='viewer') renderViewer();
+    if(id==='editor') document.getElementById('jsonArea').value=JSON.stringify(QUESTIONS_ORIGINAL,null,2);
+  }
+
+  function renderQuestion(){
+    if(idx>=QUESTIONS.length){
+      if(!secondRound && wrongQuestions.length>0){
+        secondRound = true;
+        QUESTIONS = wrongQuestions.map(i=>QUESTIONS_ORIGINAL[i]);
+        idx=0;
+        wrongQuestions=[];
+        document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
+        renderQuestion();
+        return;
+      } else {
+        let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
+        let percent = Math.round(nilai);
+
+        document.getElementById('qtext').textContent = 
+          `Selesai! Skor akhir: ${score} / ${maxScore}`;
+        document.getElementById('choices').innerHTML =
+          `<div style="margin-top:10px;font-weight:bold;">
+            Nilai: ${percent}%<br>
+            (Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})
+          </div>`;
+        document.getElementById('progress').textContent = `Selesai`;
+        document.getElementById('timer').textContent='-';
+        document.getElementById('roundInfo').textContent='';
+        return;
+      }
+    }
+
+    const q=QUESTIONS[idx];
+    // simpan question + jawaban yang diacak
+    let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
+    optionObjs=shuffleArray(optionObjs);
+    currentQuestion={q:q.q, options:optionObjs};
+
+    document.getElementById('qtext').textContent=q.q;
+    const wrap=document.getElementById('choices');
+    wrap.innerHTML='';
+    optionObjs.forEach((opt,i)=>{
+      const div=document.createElement('div');
+      div.className='choice fade-in';
+      div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
+      div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
+      wrap.appendChild(div);
+    });
+    document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
+    document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
+    startTimer(defaultTime);
+  }
+
+  function startTimer(sec){
+    clearInterval(timer);
+    remaining=sec;
+    document.getElementById('timer').textContent=remaining+"s";
+    timer=setInterval(()=>{
+      remaining--;
+      if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);} 
+      document.getElementById('timer').textContent=remaining+"s";
+    },1000);
+  }
+
+  function selectAnswer(isCorrect,clickedNode){
+    clearInterval(timer);
+    const nodes=Array.from(document.getElementById('choices').children);
+    nodes.forEach((n,i)=>{
+      if(currentQuestion.options[i].isCorrect) n.classList.add('correct');
+    });
+    if(!isCorrect) clickedNode.classList.add('wrong');
+
+    if(isCorrect){
+      score+=basePoint+(remaining*bonusPerSecond);
+      document.getElementById('score').textContent=score;
+      if(secondRound) correctRound2++; else correctRound1++;
+    } else {
+      if(!secondRound){
+        let originalIndex = QUESTIONS_ORIGINAL.findIndex(orig => orig.q === currentQuestion.q);
+        if(originalIndex !== -1) wrongQuestions.push(originalIndex);
+      }
+    }
+    setTimeout(nextQuestion,1200);
+  }
+
+  function lockAnswers(){
+    const nodes=Array.from(document.getElementById('choices').children);
+    nodes.forEach((n,i)=>{
+      if(currentQuestion.options[i].isCorrect) n.classList.add('correct');
+    });
+  }
+
+  function nextQuestion(){idx++;renderQuestion();}
+
+  function renderViewer(){
+    const list=document.getElementById('questionList');
+    list.innerHTML='';
+    QUESTIONS_ORIGINAL.forEach((q,i)=>{
+      const d=document.createElement('div');
+      d.style.marginBottom='12px';
+      d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
+      list.appendChild(d);
+    });
+  }
+
+  function saveJSON(){
+    try{QUESTIONS_ORIGINAL=JSON.parse(document.getElementById('jsonArea').value);alert('Disimpan!');}
+    catch(e){alert('Format JSON salah');}
+  }
+
+  function downloadJSON(){
+    const blob=new Blob([JSON.stringify(QUESTIONS_ORIGINAL,null,2)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='quiz.json';a.click();
+  }
+
+  function loadFile(){
+    const f=document.getElementById('fileInput').files[0];
+    if(!f) return;
+    const r=new FileReader();
+    r.onload=e=>{try{QUESTIONS_ORIGINAL=JSON.parse(e.target.result);alert('Impor berhasil');}catch{alert('Format salah')};};
+    r.readAsText(f);
+  }
+</script>
+</body>
+</html>
