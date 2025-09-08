@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quizizz Style Template</title>
+  <style>
+    body{margin:0;font-family:sans-serif;background:#0f1724;color:#e6eef6;display:flex;align-items:center;justify-content:center;height:100vh}
+    .screen{display:none;width:100%;max-width:960px;padding:20px}
+    .active{display:block}
+    .card{background:rgba(255,255,255,0.05);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+    h1,h2{margin:0 0 16px 0}
+    button{padding:10px 16px;border:none;border-radius:8px;background:#6ee7b7;color:#042028;font-weight:600;cursor:pointer;margin:4px}
+    button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#e6eef6}
+    .choice{padding:10px;border-radius:8px;background:rgba(255,255,255,0.05);margin:6px 0;cursor:pointer;transition:all .3s ease}
+    .choice:hover{background:rgba(255,255,255,0.1)}
+    .choice.correct{background:#16a34a!important;animation:pulse .5s ease}
+    .choice.wrong{background:#dc2626!important;animation:shake .3s ease}
+    .toolbar{margin-top:20px;display:flex;justify-content:space-between;align-items:center}
+    .scoreboard{font-weight:700}
+    pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;padding:12px;border-radius:8px;max-height:300px;overflow:auto}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+    .fade-in{animation:fade .4s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <!-- Main Menu -->
+  <div id="menu" class="screen active">
+    <div class="card">
+      <h1>Menu Utama</h1>
+      <button onclick="gotoScreen('quiz')">Mulai Quiz</button>
+      <button onclick="gotoScreen('viewer')">Lihat Soal</button>
+      <button onclick="gotoScreen('editor')">Impor/Ekspor JSON</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz" class="screen">
+    <div class="card fade-in">
+      <h2 id="qtext">-</h2>
+      <div id="choices"></div>
+      <div class="toolbar">
+        <span id="progress">0/0</span>
+        <span class="scoreboard">Skor: <span id="score">0</span></span>
+        <span id="timer">0s</span>
+      </div>
+      <div style="text-align:right;margin-top:10px">
+        <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Viewer Screen -->
+  <div id="viewer" class="screen">
+    <div class="card">
+      <h2>Daftar Soal</h2>
+      <div id="questionList"></div>
+      <div class="toolbar">
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editor Screen -->
+  <div id="editor" class="screen">
+    <div class="card">
+      <h2>Editor JSON</h2>
+      <textarea id="jsonArea" style="width:100%;height:200px;background:#0f1724;color:#e6eef6;border:1px solid #333;border-radius:8px;padding:8px"></textarea>
+      <div class="toolbar">
+        <button onclick="saveJSON()">Simpan</button>
+        <button onclick="downloadJSON()">Ekspor</button>
+        <input type="file" id="fileInput" />
+        <button onclick="loadFile()">Impor</button>
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  let QUESTIONS = [
+    { q: "Ibu kota Indonesia adalah...", choices: ["Bandung","Jakarta","Surabaya","Medan"], answer: 1 },
+    { q: "2 + 2 = ?", choices: ["3","4","22","5"], answer: 1 }
+  ];
+  let idx=0, score=0, timer=null, remaining=0;
+  const basePoint=500, bonusPerSecond=20, defaultTime=15;
+
+  function gotoScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    if(id==='quiz'){idx=0;score=0;renderQuestion();}
+    if(id==='viewer') renderViewer();
+    if(id==='editor') document.getElementById('jsonArea').value=JSON.stringify(QUESTIONS,null,2);
+  }
+
+  function renderQuestion(){
+    if(idx>=QUESTIONS.length){
+      document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score}`;
+      document.getElementById('choices').innerHTML='';
+      document.getElementById('progress').textContent = `${QUESTIONS.length}/${QUESTIONS.length}`;
+      document.getElementById('timer').textContent='-';
+      return;
+    }
+    const q=QUESTIONS[idx];
+    document.getElementById('qtext').textContent=q.q;
+    const wrap=document.getElementById('choices');
+    wrap.innerHTML='';
+    q.choices.forEach((c,i)=>{
+      const div=document.createElement('div');
+      div.className='choice fade-in';
+      div.textContent=`${String.fromCharCode(65+i)}. ${c}`;
+      div.onclick=()=>{selectAnswer(i);};
+      wrap.appendChild(div);
+    });
+    document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
+    startTimer(defaultTime);
+  }
+
+  function startTimer(sec){
+    clearInterval(timer);
+    remaining=sec;
+    document.getElementById('timer').textContent=remaining+"s";
+    timer=setInterval(()=>{
+      remaining--;
+      if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);} 
+      document.getElementById('timer').textContent=remaining+"s";
+    },1000);
+  }
+
+  function selectAnswer(choiceIdx){
+    clearInterval(timer);
+    const q=QUESTIONS[idx];
+    const nodes=Array.from(document.getElementById('choices').children);
+    nodes.forEach((n,i)=>{
+      if(i===q.answer) n.classList.add('correct');
+      if(i===choiceIdx && choiceIdx!==q.answer) n.classList.add('wrong');
+    });
+    if(choiceIdx===q.answer){
+      score+=basePoint+(remaining*bonusPerSecond);
+      document.getElementById('score').textContent=score;
+    }
+    setTimeout(nextQuestion,1200);
+  }
+
+  function lockAnswers(){
+    const q=QUESTIONS[idx];
+    const nodes=Array.from(document.getElementById('choices').children);
+    nodes.forEach((n,i)=>{
+      if(i===q.answer) n.classList.add('correct');
+    });
+  }
+
+  function nextQuestion(){idx++;renderQuestion();}
+
+  function renderViewer(){
+    const list=document.getElementById('questionList');
+    list.innerHTML='';
+    QUESTIONS.forEach((q,i)=>{
+      const d=document.createElement('div');
+      d.style.marginBottom='12px';
+      d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
+      list.appendChild(d);
+    });
+  }
+
+  function saveJSON(){
+    try{QUESTIONS=JSON.parse(document.getElementById('jsonArea').value);alert('Disimpan!');}
+    catch(e){alert('Format JSON salah');}
+  }
+
+  function downloadJSON(){
+    const blob=new Blob([JSON.stringify(QUESTIONS,null,2)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='quiz.json';a.click();
+  }
+
+  function loadFile(){
+    const f=document.getElementById('fileInput').files[0];
+    if(!f) return;
+    const r=new FileReader();
+    r.onload=e=>{try{QUESTIONS=JSON.parse(e.target.result);alert('Impor berhasil');}catch{alert('Format salah')};};
+    r.readAsText(f);
+  }
+</script>
+</body>
+</html>
