@@ -116,17 +116,21 @@
         renderQuestion();
         return;
       } else {
-        // selesai total
-        let percent = Math.round((score / maxScore) * 100);
-        document.getElementById('qtext').textContent = 
-          `Selesai! Skor akhir: ${score} / ${maxScore}`;
-        document.getElementById('choices').innerHTML =
-          `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%</div>`;
-        document.getElementById('progress').textContent = `Selesai`;
-        document.getElementById('timer').textContent='-';
-        document.getElementById('roundInfo').textContent='';
-        return;
-      }
+  // selesai total
+  let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
+  let percent = Math.round(nilai);
+
+  document.getElementById('qtext').textContent = 
+    `Selesai! Skor akhir: ${score} / ${maxScore}`;
+  document.getElementById('choices').innerHTML =
+    `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%<br>
+    (Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})</div>`;
+  document.getElementById('progress').textContent = `Selesai`;
+  document.getElementById('timer').textContent='-';
+  document.getElementById('roundInfo').textContent='';
+  return;
+}
+
     }
     const q=QUESTIONS[idx];
     document.getElementById('qtext').textContent=q.q;
