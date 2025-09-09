@@ -74,16 +74,23 @@
     let maxScore = 0;
     let currentQuestion=null;
 
-    function startQuiz(type){
-      const response = await fetch('quizzes/' + type + '.json');
-      QUESTIONS = await response.json();
-      idx=0; score=0; wrongQuestions=[]; secondRound=false;
-      correctRound1=0; correctRound2=0;
-      totalQuestionsCount = QUESTIONS.length;
-      maxScore = QUESTIONS.length*(basePoint+(defaultTime*bonusPerSecond));
-      renderQuestion();
-      gotoScreen('quiz');
-    }
+    async function startQuiz(type){
+    const response = await fetch('quizzes/' + type + '.json');
+    QUESTIONS = await response.json();
+    
+    idx = 0;
+    score = 0;
+    wrongQuestions = [];
+    secondRound = false;
+    correctRound1 = 0;
+    correctRound2 = 0;
+    
+    totalQuestionsCount = QUESTIONS.length;
+    maxScore = QUESTIONS.length * (basePoint + (defaultTime * bonusPerSecond));
+    
+    renderQuestion();
+    gotoScreen('quiz');
+}
 
     function gotoScreen(id){
       document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
