@@ -1,0 +1,242 @@
+[
+{
+    "q": "Siapa yang dikenal sebagai Bapak Sosiologi?",
+    "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Max Weber"],
+    "answer": 2
+  },
+  {
+    "q": "Teori positivisme yang dicetuskan Auguste Comte menekankan bahwa sosiologi harus dipelajari dengan …",
+    "choices": ["Spekulasi", "Metode ilmiah", "Opini masyarakat", "Dogma agama"],
+    "answer": 1
+  },
+  {
+    "q": "Tahap perkembangan masyarakat menurut Comte yang menjelaskan fenomena dengan ilmu pengetahuan disebut tahap …",
+    "choices": ["Teologis", "Metafisik", "Positif", "Tradisional"],
+    "answer": 2
+  },
+  {
+    "q": "Tahap metafisik menurut Auguste Comte ditandai dengan …",
+    "choices": ["Penjelasan religius", "Penjelasan abstrak dan rasional", "Penjelasan berdasarkan ilmu pengetahuan", "Penjelasan berdasarkan adat"],
+    "answer": 1
+  },
+  {
+    "q": "Menurut Karl Marx, sejarah manusia adalah sejarah …",
+    "choices": ["Perdagangan", "Perjuangan kelas", "Pemerintahan", "Budaya"],
+    "answer": 1
+  },
+  {
+    "q": "Dalam teori Marx, kaum pemilik modal disebut …",
+    "choices": ["Proletar", "Borjuis", "Feodal", "Bangsawan"],
+    "answer": 1
+  },
+  {
+    "q": "Dalam teori Marx, kaum pekerja disebut …",
+    "choices": ["Borjuis", "Proletar", "Kapitalis", "Petani"],
+    "answer": 1
+  },
+  {
+    "q": "Konsep Marx tentang keterasingan pekerja dari hasil kerjanya disebut …",
+    "choices": ["Solidaritas", "Alienasi", "Kapitalisasi", "Reifikasi"],
+    "answer": 1
+  },
+  {
+    "q": "Konsep basis dan suprastruktur menurut Karl Marx menekankan bahwa …",
+    "choices": ["Politik menentukan ekonomi", "Ekonomi menentukan politik, hukum, budaya", "Budaya menentukan ekonomi", "Agama menentukan ekonomi"],
+    "answer": 1
+  },
+  {
+    "q": "Menurut Marx, sistem kapitalisme pada akhirnya akan digantikan oleh …",
+    "choices": ["Feodalisme", "Sosialisme/komunisme", "Demokrasi liberal", "Monarki absolut"],
+    "answer": 1
+  },
+  {
+    "q": "Menurut Durkheim, pola, aturan, nilai, dan norma yang mengendalikan individu disebut …",
+    "choices": ["Fakta sosial", "Fakta psikologis", "Opini publik", "Nilai pribadi"],
+    "answer": 0
+  },
+  {
+    "q": "Solidaritas mekanis menurut Durkheim terjadi pada masyarakat …",
+    "choices": ["Tradisional", "Modern", "Perkotaan", "Demokratis"],
+    "answer": 0
+  },
+  {
+    "q": "Solidaritas organis menurut Durkheim terjadi pada masyarakat …",
+    "choices": ["Tradisional", "Modern", "Komunal", "Agraris"],
+    "answer": 1
+  },
+  {
+    "q": "Durkheim meneliti fenomena sosial yang dipengaruhi faktor sosial, bukan hanya psikologis, yaitu …",
+    "choices": ["Kriminalitas", "Urbanisasi", "Bunuh diri", "Kemiskinan"],
+    "answer": 2
+  },
+  {
+    "q": "Revolusi Prancis dimulai pada tahun …",
+    "choices": ["1776", "1789", "1799", "1815"],
+    "answer": 1
+  },
+  {
+    "q": "Penyebab utama Revolusi Prancis adalah …",
+    "choices": ["Perang Saudara", "Ketidaksetaraan sosial-ekonomi dan utang negara", "Invasi asing", "Wabah penyakit"],
+    "answer": 1
+  },
+  {
+    "q": "Siapa raja Prancis yang digulingkan dalam Revolusi Prancis?",
+    "choices": ["Napoleon Bonaparte", "Louis XVI", "Louis XIV", "Robespierre"],
+    "answer": 1
+  },
+  {
+    "q": "Deklarasi Hak Asasi Manusia dan Warga Negara dikeluarkan pada tahun …",
+    "choices": ["1776", "1789", "1799", "1804"],
+    "answer": 1
+  },
+  {
+    "q": "Siapa tokoh Revolusi Prancis yang dieksekusi selama Pemerintahan Teror?",
+    "choices": ["Napoleon Bonaparte", "Louis XIV", "Robespierre", "Voltaire"],
+    "answer": 2
+  },
+  {
+    "q": "Revolusi Prancis berakhir melalui kudeta oleh …",
+    "choices": ["Robespierre", "Louis XVI", "Napoleon Bonaparte", "Voltaire"],
+    "answer": 2
+  },
+  {
+    "q": "Salah satu dampak Revolusi Prancis adalah lahirnya gagasan …",
+    "choices": ["Monarki absolut", "Liberalisme, demokrasi, dan nasionalisme", "Feodalisme", "Imperialisme"],
+    "answer": 1
+  },
+  {
+    "q": "Revolusi Industri berawal di negara …",
+    "choices": ["Prancis", "Jerman", "Inggris", "Amerika Serikat"],
+    "answer": 2
+  },
+  {
+    "q": "Penemuan mesin uap dikaitkan dengan tokoh …",
+    "choices": ["James Watt", "Thomas Edison", "Alexander Graham Bell", "Nikola Tesla"],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi tekstil ditandai dengan ditemukannya …",
+    "choices": ["Spinning mule dan power loom", "Radio dan telepon", "Komputer dan internet", "Mesin cetak"],
+    "answer": 0
+  },
+  {
+    "q": "Proses Bessemer berkaitan dengan produksi …",
+    "choices": ["Besi", "Baja", "Tekstil", "Uap"],
+    "answer": 1
+  },
+  {
+    "q": "Dampak sosial Revolusi Industri yang paling menonjol adalah …",
+    "choices": ["Urbanisasi besar-besaran", "Kembali ke desa", "Peningkatan feodalisme", "Berakhirnya demokrasi"],
+    "answer": 0
+  },
+  {
+    "q": "Negara yang menjadi pelopor Revolusi Industri selain Inggris adalah …",
+    "choices": ["India", "Jerman, Prancis, dan Amerika Serikat", "Cina", "Rusia"],
+    "answer": 1
+  },
+  {
+    "q": "Fenomena sosial urbanisasi dapat menimbulkan masalah …",
+    "choices": ["Kemajuan teknologi", "Kemiskinan, kriminalitas, dan pergeseran nilai", "Solidaritas mekanis", "Kesetaraan gender"],
+    "answer": 1
+  },
+  {
+    "q": "Fenomena sosial kriminalitas menurut Durkheim adalah …",
+    "choices": ["Fenomena psikologis individu", "Fakta sosial yang mencerminkan kondisi moral masyarakat", "Hasil dari teknologi", "Fenomena ekonomi saja"],
+    "answer": 1
+  },
+  {
+    "q": "Fenomena sosial menurut Marx tentang kesenjangan sosial terlihat dari …",
+    "choices": ["Kerja sama antar kelas", "Jurang kaya-miskin dan eksploitasi buruh", "Solidaritas mekanis", "Kehidupan religius"],
+    "answer": 1
+  },
+  {
+    "q": "Fenomena bunuh diri yang diteliti Durkheim menunjukkan bahwa …",
+    "choices": ["Faktor psikologis paling dominan", "Faktor sosial sangat memengaruhi perilaku individu", "Ekonomi satu-satunya penyebab", "Budaya tidak berpengaruh"],
+    "answer": 1
+  },
+  {
+    "q": "Revolusi Industri memicu lahirnya masyarakat …",
+    "choices": ["Agraris", "Feodal", "Industri modern", "Tradisional"],
+    "answer": 2
+  },
+  {
+    "q": "Urbanisasi adalah …",
+    "choices": ["Perpindahan penduduk desa ke kota", "Perpindahan penduduk kota ke desa", "Migrasi antar negara", "Pertumbuhan desa"],
+    "answer": 0
+  },
+  {
+    "q": "Solidaritas sosial dalam masyarakat modern menurut Durkheim bersifat …",
+    "choices": ["Mekanis", "Organis", "Tradisional", "Komunal"],
+    "answer": 1
+  },
+  {
+    "q": "Tahap teologis menurut Comte ditandai dengan …",
+    "choices": ["Penjelasan berdasarkan agama", "Penjelasan berdasarkan ilmu pengetahuan", "Penjelasan berdasarkan ekonomi", "Penjelasan berdasarkan teknologi"],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi Prancis melahirkan nilai penting berupa …",
+    "choices": ["Kesetaraan, kebebasan, dan perlawanan terhadap penindasan", "Feodalisme", "Monarki absolut", "Komunisme"],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi Industri menyebabkan kondisi kerja …",
+    "choices": ["Ringan dan nyaman", "Keras dengan lingkungan buruk", "Bebas tanpa aturan", "Singkat dan efisien"],
+    "answer": 1
+  },
+  {
+    "q": "Alienasi menurut Marx berarti …",
+    "choices": ["Kesadaran kelas", "Keterasingan pekerja dari hasil kerja", "Kebersamaan sosial", "Kesejahteraan buruh"],
+    "answer": 1
+  },
+  {
+    "q": "Pemerintahan Teror dalam Revolusi Prancis ditandai dengan …",
+    "choices": ["Banyak orang dieksekusi", "Kemenangan Napoleon", "Perjanjian damai", "Kemajuan industri"],
+    "answer": 0
+  },
+  {
+    "q": "Napoleon Bonaparte menyebarkan ide-ide Revolusi Prancis ke …",
+    "choices": ["Asia", "Afrika", "Seluruh Eropa", "Amerika"],
+    "answer": 2
+  },
+  {
+    "q": "Fenomena sosial kesenjangan ekonomi dapat dilihat dari …",
+    "choices": ["Distribusi pendapatan yang merata", "Jurang kaya dan miskin yang lebar", "Solidaritas tinggi", "Tidak adanya konflik"],
+    "answer": 1
+  },
+  {
+    "q": "Revolusi Industri berdampak pada lahirnya …",
+    "choices": ["Feodalisme", "Masyarakat industri modern", "Monarki absolut", "Perdagangan kuno"],
+    "answer": 1
+  },
+  {
+    "q": "Durkheim menekankan bahwa sosiologi harus dipelajari melalui …",
+    "choices": ["Opini publik", "Fakta sosial", "Spekulasi", "Dogma agama"],
+    "answer": 1
+  },
+  {
+    "q": "Menurut Comte, tahap positif adalah tahap ketika …",
+    "choices": ["Masyarakat menjelaskan fenomena dengan ilmu pengetahuan", "Masyarakat masih mengandalkan agama", "Masyarakat percaya takhayul", "Masyarakat menolak ilmu pengetahuan"],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi Prancis mendorong lahirnya …",
+    "choices": ["Demokrasi modern dan hak asasi manusia", "Feodalisme", "Komunisme Soviet", "Kapitalisme industri"],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi Industri mendorong …",
+    "choices": ["Urbanisasi dan tumbuhnya kota modern", "Kembali ke pedesaan", "Monarki absolut", "Masyarakat feodal"],
+    "answer": 0
+  },
+  {
+    "q": "Tokoh sosiologi yang menekankan pentingnya fakta sosial adalah …",
+    "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Max Weber"],
+    "answer": 1
+  },
+  {
+    "q": "Tokoh sosiologi yang menekankan konflik kelas adalah …",
+    "choices": ["Karl Marx", "Émile Durkheim", "Auguste Comte", "Herbert Spencer"],
+    "answer": 0
+  }
+]
