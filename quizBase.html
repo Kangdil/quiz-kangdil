@@ -75,22 +75,28 @@
     let currentQuestion=null;
 
     async function startQuiz(type){
+  try {
     const response = await fetch('quizzes/' + type + '.json');
+    if(!response.ok) throw new Error('File not found or fetch failed');
     QUESTIONS = await response.json();
-    
+
     idx = 0;
     score = 0;
     wrongQuestions = [];
     secondRound = false;
     correctRound1 = 0;
     correctRound2 = 0;
-    
     totalQuestionsCount = QUESTIONS.length;
     maxScore = QUESTIONS.length * (basePoint + (defaultTime * bonusPerSecond));
-    
+
     renderQuestion();
     gotoScreen('quiz');
+  } catch(err) {
+    alert('Error loading quiz: ' + err.message);
+    console.error(err);
+  }
 }
+
 
     function gotoScreen(id){
       document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
