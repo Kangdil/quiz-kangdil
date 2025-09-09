@@ -75,7 +75,7 @@
     let currentQuestion=null;
 
     function startQuiz(type){
-      QUESTIONS = JSON.parse(JSON.stringify(await fetch(type + '.json');));
+      QUESTIONS = JSON.parse(JSON.stringify(await fetch('quizzes/' + type + '.json');));
       idx=0; score=0; wrongQuestions=[]; secondRound=false;
       correctRound1=0; correctRound2=0;
       totalQuestionsCount = QUESTIONS.length;
