@@ -1,221 +1,320 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Quiz Modular All-in-One</title>
-  <style>
-    body { margin:0; font-family:sans-serif; background:#0f1724; color:#e6eef6; display:flex; align-items:center; justify-content:center; height:100vh; }
-    .screen { display:none; width:100%; max-width:960px; padding:20px; }
-    .active { display:block; }
-    .card { background:rgba(255,255,255,0.05); padding:20px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.5); }
-    h1,h2 { margin:0 0 16px 0; }
-    button { padding:10px 16px; border:none; border-radius:8px; background:#6ee7b7; color:#042028; font-weight:600; cursor:pointer; margin:4px; }
-    button.ghost { background:transparent; border:1px solid rgba(255,255,255,0.2); color:#e6eef6; }
-    .choice { padding:10px; border-radius:8px; background:rgba(255,255,255,0.05); margin:6px 0; cursor:pointer; transition:all .3s ease; }
-    .choice:hover { background:rgba(255,255,255,0.1); }
-    .choice.correct { background:#16a34a!important; animation:pulse .5s ease; }
-    .choice.wrong { background:#dc2626!important; animation:shake .3s ease; }
-    .toolbar { margin-top:20px; display:flex; justify-content:space-between; align-items:center; }
-    .scoreboard { font-weight:700; }
-    pre { white-space:pre-wrap; word-break:break-word; background:#0b1220; padding:12px; border-radius:8px; max-height:300px; overflow:auto; }
-    @keyframes shake {0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
-    @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
-    .fade-in { animation:fade .4s ease; }
-    @keyframes fade { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Quiz Modular All-in-One</title>
+<style>
+  html,body {
+    margin:0;
+    height:100%;
+    overflow:hidden;
+    font-family:sans-serif;
+    background:#0f1724;
+    color:#e6eef6;
+  }
+  canvas#glcanvas, canvas#leaves {
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    display:block;
+    z-index:0;
+  }
+  .screen {
+    display:none;
+    width:100%;
+    max-width:960px;
+    padding:20px;
+    z-index:10;
+    position:relative;
+    margin:auto;
+  }
+  .active { display:block; }
+  .card {
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.5);
+  }
+  h1,h2 { margin:0 0 16px 0; }
+  button {
+    padding:10px 16px;
+    border:none;
+    border-radius:8px;
+    background:#6ee7b7;
+    color:#042028;
+    font-weight:600;
+    cursor:pointer;
+    margin:4px;
+  }
+  button.ghost {
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.2);
+    color:#e6eef6;
+  }
+  .choice {
+    padding:10px;
+    border-radius:8px;
+    background:rgba(255,255,255,0.05);
+    margin:6px 0;
+    cursor:pointer;
+    transition:all .3s ease;
+  }
+  .choice:hover { background:rgba(255,255,255,0.1); }
+  .choice.correct { background:#16a34a!important; animation:pulse .5s ease; }
+  .choice.wrong { background:#dc2626!important; animation:shake .3s ease; }
+  .toolbar { margin-top:20px; display:flex; justify-content:space-between; align-items:center; }
+  .scoreboard { font-weight:700; }
+  @keyframes shake {0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+  @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+</style>
 </head>
 <body>
 
-  <!-- Menu utama -->
-  <div id="menu" class="screen active">
-    <div class="card">
-      <h1>Quiz All-in-One</h1>
-      <p>Pilih quiz yang ingin dimainkan:</p>
-      <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
-      <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
+<!-- BACKGROUND -->
+<canvas id="glcanvas"></canvas>
+<canvas id="leaves"></canvas>
+
+<!-- Menu utama -->
+<div id="menu" class="screen active">
+  <div class="card">
+    <h1>Quiz All-in-One</h1>
+    <p>Pilih quiz yang ingin dimainkan:</p>
+    <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
+    <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
+  </div>
+</div>
+
+<!-- Quiz Screen -->
+<div id="quiz" class="screen">
+  <div class="card">
+    <h2 id="roundInfo">Ronde 1</h2>
+    <h2 id="qtext">-</h2>
+    <div id="choices"></div>
+    <div class="toolbar">
+      <span id="progress">0/0</span>
+      <span class="scoreboard">Skor: <span id="score">0</span></span>
+      <span id="timer">0s</span>
+    </div>
+    <div style="text-align:right;margin-top:10px">
+      <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
     </div>
   </div>
+</div>
 
-  <!-- Quiz Screen -->
-  <div id="quiz" class="screen">
-    <div class="card fade-in">
-      <h2 id="roundInfo">Ronde 1</h2>
-      <h2 id="qtext">-</h2>
-      <div id="choices"></div>
-      <div class="toolbar">
-        <span id="progress">0/0</span>
-        <span class="scoreboard">Skor: <span id="score">0</span></span>
-        <span id="timer">0s</span>
-      </div>
-      <div style="text-align:right;margin-top:10px">
-        <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
-      </div>
+<!-- Viewer Screen -->
+<div id="viewer" class="screen">
+  <div class="card">
+    <h2>Daftar Soal</h2>
+    <div id="questionList"></div>
+    <div class="toolbar">
+      <button onclick="gotoScreen('menu')">Kembali</button>
     </div>
   </div>
+</div>
 
-  <!-- Viewer Screen -->
-  <div id="viewer" class="screen">
-    <div class="card">
-      <h2>Daftar Soal</h2>
-      <div id="questionList"></div>
-      <div class="toolbar">
-        <button onclick="gotoScreen('menu')">Kembali</button>
-      </div>
-    </div>
-  </div>
+<script>
+// ===== QUIZ LOGIC (tetap dari kamu) =====
+let QUESTIONS = [], QUESTIONS_BINDO = [], QUESTIONS_SUNDA = [];
+let idx=0, score=0, timer=null, remaining=0;
+const basePoint=500, bonusPerSecond=20, defaultTime=90;
+let wrongQuestions=[], secondRound=false;
+let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
+let maxScore = 0;
+let currentQuestion=null;
 
-  <script>
-    let QUESTIONS = [], QUESTIONS_BINDO = [], QUESTIONS_SUNDA = [];
-    let idx=0, score=0, timer=null, remaining=0;
-    const basePoint=500, bonusPerSecond=20, defaultTime=90;
-    let wrongQuestions=[], secondRound=false;
-    let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
-    let maxScore = 0;
-    let currentQuestion=null;
-
-    async function startQuiz(type){
+async function startQuiz(type){
   try {
     const response = await fetch('quizzes/' + type + '.json');
     if(!response.ok) throw new Error('File not found or fetch failed');
     QUESTIONS = await response.json();
-
-    idx = 0;
-    score = 0;
-    wrongQuestions = [];
-    secondRound = false;
-    correctRound1 = 0;
-    correctRound2 = 0;
+    idx = 0; score = 0; wrongQuestions = []; secondRound = false;
+    correctRound1 = 0; correctRound2 = 0;
     totalQuestionsCount = QUESTIONS.length;
     maxScore = QUESTIONS.length * (basePoint + (defaultTime * bonusPerSecond));
-
-    renderQuestion();
-    gotoScreen('quiz');
-  } catch(err) {
-    alert(response);
-    console.error(err);
-  }
+    renderQuestion(); gotoScreen('quiz');
+  } catch(err) { alert("Gagal load quiz"); console.error(err); }
 }
-
-
-    function gotoScreen(id){
-      document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      if(id==='viewer') renderViewer();
-    }
-
-    function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
-
-    function renderQuestion(){
+function gotoScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='viewer') renderViewer();
+}
+function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+function renderQuestion(){
   if(idx>=QUESTIONS.length){
-    // ... kode selesai quiz
-    return;
+    if(!secondRound && wrongQuestions.length>0){
+      secondRound = true;
+      QUESTIONS = wrongQuestions.map(i=>QUESTIONS[i]);
+      idx=0; wrongQuestions=[];
+      document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
+      renderQuestion(); return;
+    } else {
+      let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
+      let percent = Math.round(nilai);
+      document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score} / ${maxScore}`;
+      document.getElementById('choices').innerHTML = `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})</div>`;
+      document.getElementById('progress').textContent = "Selesai";
+      document.getElementById('timer').textContent='-';
+      document.getElementById('roundInfo').textContent='';
+      return;
+    }
   }
-
-  const q = QUESTIONS[idx];
-  currentQuestion = { q: q.q, options: shuffleArray(q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}))) };
-
-  // Set teks
-  document.getElementById('qtext').textContent = q.q;
-
-  // Set gambar jika ada
-  const imgEl = document.getElementById('qimage');
-  if(q.img){
-    imgEl.src = q.img;
-    imgEl.style.display = "block";
-  } else {
-    imgEl.style.display = "none";
-  }
-
-  // Set pilihan
-  const wrap = document.getElementById('choices');
-  wrap.innerHTML = '';
-  currentQuestion.options.forEach((opt,i)=>{
-    const div = document.createElement('div');
-    div.className = 'choice fade-in';
-    div.textContent = `${String.fromCharCode(65+i)}. ${opt.text}`;
-    div.onclick = ()=>{ selectAnswer(opt.isCorrect, div); };
+  const q=QUESTIONS[idx];
+  let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
+  optionObjs=shuffleArray(optionObjs);
+  currentQuestion={q:q.q, options:optionObjs};
+  document.getElementById('qtext').textContent=q.q;
+  const wrap=document.getElementById('choices');
+  wrap.innerHTML='';
+  optionObjs.forEach((opt,i)=>{
+    const div=document.createElement('div');
+    div.className='choice';
+    div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
+    div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
     wrap.appendChild(div);
   });
-
-  // Progress bar & info
-  document.getElementById('progress').textContent = `${idx+1}/${QUESTIONS.length}`;
-  document.getElementById('progressBar').style.width = `${(idx/QUESTIONS.length)*100}%`;
+  document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
   document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
-
-  // Timer
   startTimer(defaultTime);
 }
+function startTimer(sec){
+  clearInterval(timer); remaining=sec;
+  document.getElementById('timer').textContent=remaining+"s";
+  timer=setInterval(()=>{
+    remaining--;
+    if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);}
+    document.getElementById('timer').textContent=remaining+"s";
+  },1000);
+}
+function selectAnswer(isCorrect,clickedNode){
+  clearInterval(timer);
+  const nodes=Array.from(document.getElementById('choices').children);
+  nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
+  if(!isCorrect) clickedNode.classList.add('wrong');
+  if(isCorrect){
+    score+=basePoint+(remaining*bonusPerSecond);
+    if(secondRound) correctRound2++; else correctRound1++;
+  } else { if(!secondRound){ wrongQuestions.push(idx); } }
+  document.getElementById('score').textContent=score;
+  setTimeout(nextQuestion,1200);
+}
+function lockAnswers(){
+  const nodes=Array.from(document.getElementById('choices').children);
+  nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
+}
+function nextQuestion(){ idx++; renderQuestion(); }
+function renderViewer(){
+  const list=document.getElementById('questionList'); list.innerHTML='';
+  [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{
+    const d=document.createElement('div');
+    d.style.marginBottom='12px';
+    d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
+    list.appendChild(d);
+  });
+}
+const params = new URLSearchParams(window.location.search);
+const quizType = params.get('quiz');
+if(quizType!==null){ startQuiz(quizType); }
 
+// ===== BACKGROUND BLUR + DROPLETS (WebGL) =====
+const bgURL = "https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg";
+const glCanvas = document.getElementById("glcanvas");
+const gl = glCanvas.getContext("webgl");
+function resize(){
+  glCanvas.width=innerWidth; glCanvas.height=innerHeight;
+  gl.viewport(0,0,glCanvas.width,glCanvas.height);
+  leavesCanvas.width=innerWidth; leavesCanvas.height=innerHeight;
+}
+window.addEventListener("resize",resize); resize();
 
-      const q=QUESTIONS[idx];
-      let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
-      optionObjs=shuffleArray(optionObjs);
-      currentQuestion={q:q.q, options:optionObjs};
+// Shaders
+const vsSrc=`attribute vec2 a;varying vec2 v;void main(){v=a*0.5+0.5;gl_Position=vec4(a,0,1);}`;
+const fsSrc=`precision mediump float;uniform sampler2D u;uniform vec2 res;varying vec2 v;
+uniform vec3 drops[50];uniform int n;void main(){vec2 uv=v;float blur=4.0/res.x;
+vec4 col=vec4(0.0);for(int x=-2;x<=2;x++){for(int y=-2;y<=2;y++){col+=texture2D(u,uv+vec2(x,y)*blur);}}
+col/=25.0;for(int i=0;i<50;i++){if(i>=n)break;vec2 d=uv-drops[i].xy;float r=drops[i].z/res.x;
+if(length(d)<r){col=texture2D(u,uv);}}gl_FragColor=col;}`;
+function compile(src,type){let s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);return s;}
+let prog=gl.createProgram();
+gl.attachShader(prog,compile(vsSrc,gl.VERTEX_SHADER));
+gl.attachShader(prog,compile(fsSrc,gl.FRAGMENT_SHADER));
+gl.linkProgram(prog); gl.useProgram(prog);
+const buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const loc=gl.getAttribLocation(prog,"a");gl.enableVertexAttribArray(loc);
+gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+const uTex=gl.getUniformLocation(prog,"u");
+const uRes=gl.getUniformLocation(prog,"res");
+const uDrops=gl.getUniformLocation(prog,"drops");
+const uN=gl.getUniformLocation(prog,"n");
 
-      document.getElementById('qtext').textContent=q.q;
-      const wrap=document.getElementById('choices');
-      wrap.innerHTML='';
-      optionObjs.forEach((opt,i)=>{
-        const div=document.createElement('div');
-        div.className='choice fade-in';
-        div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
-        div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
-        wrap.appendChild(div);
-      });
-      document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
-      document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
-      startTimer(defaultTime);
-    }
+const tex=gl.createTexture();const img=new Image();img.crossOrigin="anonymous";img.src=bgURL;
+img.onload=()=>{gl.bindTexture(gl.TEXTURE_2D,tex);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,img);};
+let drops=[];
+function renderBG(){
+  gl.viewport(0,0,glCanvas.width,glCanvas.height);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  gl.uniform1i(uTex,0);
+  gl.uniform2f(uRes,glCanvas.width,glCanvas.height);
+  let arr=new Float32Array(50*3);
+  for(let i=0;i<drops.length&&i<50;i++){
+    arr[i*3]=drops[i].x; arr[i*3+1]=drops[i].y; arr[i*3+2]=drops[i].r;
+  }
+  gl.uniform3fv(uDrops,arr);
+  gl.uniform1i(uN,drops.length);
+  gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  requestAnimationFrame(renderBG);
+}
+renderBG();
+glCanvas.addEventListener("click",e=>{
+  const r=glCanvas.getBoundingClientRect();
+  drops.push({x:(e.clientX-r.left)/glCanvas.width,
+              y:1-(e.clientY-r.top)/glCanvas.height,
+              r:80+Math.random()*50});
+  if(drops.length>50)drops.shift();
+});
 
-    function startTimer(sec){
-      clearInterval(timer);
-      remaining=sec;
-      document.getElementById('timer').textContent=remaining+"s";
-      timer=setInterval(()=>{
-        remaining--;
-        if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);}
-        document.getElementById('timer').textContent=remaining+"s";
-      },1000);
-    }
-
-    function selectAnswer(isCorrect,clickedNode){
-      clearInterval(timer);
-      const nodes=Array.from(document.getElementById('choices').children);
-      nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
-      if(!isCorrect) clickedNode.classList.add('wrong');
-      if(isCorrect){ score+=basePoint+(remaining*bonusPerSecond); if(secondRound) correctRound2++; else correctRound1++; }
-      else{ if(!secondRound){ wrongQuestions.push(idx); } }
-      document.getElementById('score').textContent=score;
-      setTimeout(nextQuestion,1200);
-    }
-
-    function lockAnswers(){
-      const nodes=Array.from(document.getElementById('choices').children);
-      nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
-    }
-
-    function nextQuestion(){ idx++; renderQuestion(); }
-
-    function renderViewer(){
-      const list=document.getElementById('questionList');
-      list.innerHTML='';
-      [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{
-        const d=document.createElement('div');
-        d.style.marginBottom='12px';
-        d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
-        list.appendChild(d);
-      });
-    }
-    
-    const params = new URLSearchParams(window.location.search);
-    const quizType = params.get('quiz'); // 'Bindo' atau 'Sunda'
-
-    if(quizType!==null){
-      // console.log(quizType);
-      startQuiz(quizType);
-    }
-    
-  </script>
+// ===== LEAVES FALL =====
+const leavesCanvas=document.getElementById("leaves");
+const Lctx=leavesCanvas.getContext("2d");
+const leafImg=new Image();leafImg.crossOrigin="anonymous";
+leafImg.src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Decorative-Elements-PNG/Leaf_PNG_Clipart.png";
+let leaves=[];
+function spawnLeaf(){
+  leaves.push({x:Math.random()*leavesCanvas.width,y:-50,
+    vx:-20+Math.random()*40,vy:30+Math.random()*60,
+    rot:Math.random()*6.28,vrot:(Math.random()-0.5)*0.02,
+    scale:0.2+Math.random()*0.5});
+}
+for(let i=0;i<6;i++) spawnLeaf();
+function updateLeaves(dt){
+  if(Math.random()<0.05) spawnLeaf();
+  for(let i=leaves.length-1;i>=0;i--){
+    let p=leaves[i];
+    p.x+=p.vx*dt; p.y+=p.vy*dt; p.rot+=p.vrot*dt*60;
+    if(p.y>leavesCanvas.height+100) leaves.splice(i,1);
+  }
+}
+function drawLeaves(){
+  Lctx.clearRect(0,0,leavesCanvas.width,leavesCanvas.height);
+  for(let p of leaves){
+    Lctx.save();Lctx.translate(p.x,p.y);Lctx.rotate(p.rot);
+    const s=p.scale*0.5;
+    Lctx.drawImage(leafImg,-50*s,-50*s,100*s,100*s);
+    Lctx.restore();
+  }
+}
+let last=performance.now();
+function loop(now){
+  const dt=(now-last)/1000; last=now;
+  updateLeaves(dt); drawLeaves();
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
 </body>
 </html>
