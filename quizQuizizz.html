@@ -74,18 +74,6 @@
     let maxScore = 0;
     let currentQuestion=null;
 
-    // ==== JSON QUIZ B.INDO ====
-    QUESTIONS_BINDO = [
-      {"q":"Apa ibu kota Indonesia?","choices":["Jakarta","Bandung","Surabaya","Medan"],"answer":0},
-      {"q":"Bahasa resmi Indonesia?","choices":["Indonesia","Sunda","Jawa","Melayu"],"answer":0}
-    ];
-
-    // ==== JSON QUIZ B.SUNDA ====
-    QUESTIONS_SUNDA = [
-      {"q":"Karajaan munggaran di Tatar Sunda nyaéta…","choices":["Salakanagara","Tarumanagara","Kendan","Galuh"],"answer":0},
-      {"q":"Raja Tarumanagara anu kawentar ku prasasti pembangunan saluran cai nyaéta…","choices":["Jayasinghawarman","Purnawarman","Indrawarman","Linggawarman"],"answer":1}
-    ];
-
     function startQuiz(type){
       QUESTIONS = JSON.parse(JSON.stringify(await fetch(type + '.json');));
       idx=0; score=0; wrongQuestions=[]; secondRound=false;
@@ -184,6 +172,14 @@
         list.appendChild(d);
       });
     }
+    
+    const params = new URLSearchParams(window.location.search);
+    const quizType = params.get('quiz'); // 'Bindo' atau 'Sunda'
+
+    if(quizType!==null){
+      startQuiz(quizType)
+    }
+    
   </script>
 </body>
 </html>
