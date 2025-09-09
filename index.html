@@ -1,89 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quiz Kangdil — RPG debug</title>
-<style>
-  :root{ --nav-w:400px; --glass: rgba(255,255,255,0.92); --shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Kangdil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: black;
+    }
 
-  html,body{height:100%; margin:0; font-family:Inter, system-ui, Arial, monospace;}
-  /* TEXT BACKGROUND */
-  #text-bg{
-    position:fixed; inset:0; z-index:-3;
-    color:#000; opacity:0.055; pointer-events:none;
-    font-family: "Courier New", monospace; font-size:11px; line-height:1.05;
-    white-space:pre-wrap; padding:24px;
-    display:block; overflow:hidden;
-    background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.02));
-  }
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      image-rendering: pixelated;
+      z-index: -1;
+      display: block;
+    }
 
-  /* RPG canvas (will be executed inline) */
-  #rpg-canvas{
-    position:fixed; inset:0; width:100vw; height:100vh;
-    z-index:-2; display:block;
-    background: transparent;
-  }
+    nav {
+      background: white;
+      padding: 25px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-  /* Quiz UI */
-  nav{
-    background: var(--glass);
-    padding:22px 28px;
-    border-radius:16px;
-    box-shadow: var(--shadow);
-    text-align:center;
-    max-width: var(--nav-w);
-    margin:36px auto;
-    position:relative;
-    z-index:3;
-  }
-  nav h1{ margin:0 0 6px; font-size:1.5rem; color:#2b2b2b; }
-  nav h2{ margin:0 0 16px; font-size:0.85rem; color:#4a4a4a; font-weight:500; }
-  nav ul{ list-style:none; padding:0; margin:0; }
-  nav li{ margin:10px 0; }
-  nav a{
-    display:inline-block; width:220px; text-decoration:none;
-    background:#f3f3f3; color:#222; font-weight:700; padding:10px 14px;
-    border-radius:10px; transition:all .18s ease;
-  }
-  nav a:hover{ transform:translateX(6px); background:#74b8a5; color:white; box-shadow:0 6px 12px rgba(0,0,0,0.12); }
+    nav h1 {
+      margin-bottom: 8px;
+      font-size: 1.6em;
+      color: #444;
+    }
+    
+    nav h2 {
+      margin-bottom: 20px;
+      font-size: 0.7em;
+      color: #444;
+    }
 
-  /* Show script panel */
-  details#script-panel{
-    position:fixed; right:18px; bottom:18px; z-index:4;
-    width:360px; max-height:60vh; overflow:auto;
-    background: white; border-radius:10px; box-shadow:var(--shadow);
-    font-size:12px;
-  }
-  details#script-panel summary{
-    padding:10px 12px; cursor:pointer; font-weight:700; user-select:none;
-  }
-  #script-display{
-    padding:10px 12px; overflow:auto; white-space:pre; background:#fafafa; border-top:1px solid #eee; font-family:monospace;
-    max-height:55vh;
-  }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  /* Joystick: hidden on pointer devices, shown on touch devices */
-  #joystick{ display:none; position:fixed; left:18px; bottom:18px; width:100px; height:100px; border-radius:50%; background: rgba(255,255,255,0.12); z-index:5; }
-  #stick{ position:absolute; left:35px; top:35px; width:30px; height:30px; border-radius:50%; background: rgba(255,255,255,0.85); }
+    nav ul li {
+      margin: 12px 0;
+    }
 
-  /* show joystick only on touch/coarse-pointer devices */
-  @media (pointer: coarse){
-    #joystick{ display:block; }
-  }
+    nav ul li a {
+      display: inline-block;
+      width: 200px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      background: #f3f3f3;
+      padding: 12px 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
 
-  /* small helpful footer note when script errors appear */
-  #debug-note{ position:fixed; left:18px; top:18px; z-index:5; background:rgba(255,255,255,0.9); padding:6px 10px; border-radius:8px; font-size:12px; box-shadow:var(--shadow); }
-</style>
+    nav ul li a:hover {
+      background: #74b8a5;
+      color: white;
+      transform: translateX(8px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <!-- Text background (we will fill it with the script text programmatically) -->
-  <div id="text-bg" aria-hidden="true"></div>
+  <canvas id="bg-canvas" width="256" height="256"></canvas>
 
-  <!-- Canvas used by the inline RPG -->
-  <canvas id="rpg-canvas"></canvas>
-
-  <!-- Quiz UI nav (unchanged) -->
   <nav>
     <h1>Quiz Kangdil</h1>
     <h2>Website & soal-soal dibuat oleh ChatGPT dan disusun oleh Kangdil</h2>
@@ -93,149 +91,61 @@
     </ul>
   </nav>
 
-  <!-- Mobile joystick (appears only on touch devices) -->
-  <div id="joystick"><div id="stick"></div></div>
-
-  <!-- Small note to help debugging (open console if black screen) -->
-  <div id="debug-note">If the page is black: open DevTools → Console to see errors.</div>
-
-  <!-- COLLAPSIBLE panel to show the script as text -->
-  <details id="script-panel">
-    <summary>Show RPG Script (inline, editable)</summary>
-    <pre id="script-display" tabindex="0" aria-label="RPG script content"></pre>
-  </details>
-
-  <!-- THE SCRIPT SOURCE (type="text/plain" so it is visible as text and not executed immediately) -->
-  <script id="rpg-source" type="text/plain">
-/* --- rpg.js (inline debug version) ---
-   Minimal Mother-ish debug: draws semi-transparent green background
-   and a yellow player block. Supports keyboard arrows + touch joystick.
-   This script is intentionally simple so you can see it visually and debug.
-*/
-(function(){
-  console.log("RPG (inline) starting...");
-  const canvas = document.getElementById("rpg-canvas");
-  if(!canvas){ console.warn("rpg-canvas not found."); return; }
-  const ctx = canvas.getContext("2d");
-
-  // resize
-  function resizeCanvas(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
-
-  // input & player
-  let keys = {};
-  let player = { x: 200, y: 200, size: 36, speed: 3 };
-
-  window.addEventListener("keydown", e => { keys[e.key] = true; });
-  window.addEventListener("keyup", e => { keys[e.key] = false; });
-
-  // mobile joystick (only active if #joystick exists)
-  const joystick = document.getElementById("joystick");
-  if(joystick){
-    const stick = document.getElementById("stick");
-    let dragging = false;
-
-    joystick.addEventListener("touchstart", e => { dragging = true; e.preventDefault(); }, { passive:false });
-    joystick.addEventListener("touchend", e => {
-      dragging = false;
-      if(stick){ stick.style.left = "35px"; stick.style.top = "35px"; }
-      keys = {};
-      e.preventDefault();
-    }, { passive:false });
-
-    joystick.addEventListener("touchmove", e => {
-      if(!dragging) return;
-      e.preventDefault();
-      const rect = joystick.getBoundingClientRect();
-      const touch = e.touches[0];
-      const dx = touch.clientX - (rect.left + rect.width/2);
-      const dy = touch.clientY - (rect.top + rect.height/2);
-      const max = rect.width/2 - 15;
-      const dist = Math.min(Math.sqrt(dx*dx + dy*dy), max);
-      const angle = Math.atan2(dy, dx);
-      const stickX = rect.width/2 - 15 + dist * Math.cos(angle);
-      const stickY = rect.height/2 - 15 + dist * Math.sin(angle);
-      if(stick){ stick.style.left = stickX + "px"; stick.style.top = stickY + "px"; }
-
-      // translate into arrow keys (basic)
-      keys = {};
-      if (dy < -10) keys["ArrowUp"] = true;
-      if (dy > 10) keys["ArrowDown"] = true;
-      if (dx < -10) keys["ArrowLeft"] = true;
-      if (dx > 10) keys["ArrowRight"] = true;
-    }, { passive:false });
-  }
-
-  // game loop
-  function gameLoop(){
-    // clear (transparent background so the text background remains slightly visible)
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    // draw a semi-transparent green background (so the text-bg shows through)
-    ctx.fillStyle = "rgba(76,175,80,0.80)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
-
-    // player movement
-    if(keys["ArrowUp"]) player.y -= player.speed;
-    if(keys["ArrowDown"]) player.y += player.speed;
-    if(keys["ArrowLeft"]) player.x -= player.speed;
-    if(keys["ArrowRight"]) player.x += player.speed;
-
-    // clamp player to viewport
-    player.x = Math.max(0, Math.min(canvas.width - player.size, player.x));
-    player.y = Math.max(0, Math.min(canvas.height - player.size, player.y));
-
-    // draw player (yellow)
-    ctx.fillStyle = "yellow";
-    ctx.fillRect(player.x, player.y, player.size, player.size);
-
-    requestAnimationFrame(gameLoop);
-  }
-  gameLoop();
-})();
-  </script>
-
-  <!-- BOOTSTRAP: display the script text and then execute it by copying into a real script tag -->
   <script>
-    (function(){
-      // read the code from the text/plain block
-      const srcEl = document.getElementById('rpg-source');
-      const code = srcEl ? srcEl.textContent.trim() : '';
+  const canvas = document.getElementById("bg-canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.imageSmoothingEnabled = false;
 
-      // show the code in the UI panel
-      const out = document.getElementById('script-display');
-      if(out) out.textContent = code;
+  const img = new Image();
+  img.crossOrigin = "anonymous";
+  img.src = "https://kangdil.github.io/quiz-kangdil/earthboundbg.png";
 
-      // fill the text background with repeated code so it becomes a "text background"
-      const bg = document.getElementById('text-bg');
-      if(bg){
-        // build a repeating string that's long enough to cover the page
-        let repeated = code + "\n\n/* --- repeat --- */\n\n";
-        // repeat until a decent size
-        while(bg.textContent.length < 8000){
-          bg.textContent += repeated;
+  img.onload = () => {
+    let t = 0;
+    const sliceW = 16;
+    const sliceH = 16;
+
+    function loop() {
+      t += 0.05;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Calculate scale factor for "cover"
+      const scale = Math.max(
+        canvas.width / img.width,
+        canvas.height / img.height
+      );
+      const drawW = img.width * scale;
+      const drawH = img.height * scale;
+      const offsetXBase = (canvas.width - drawW) / 2;
+      const offsetYBase = (canvas.height - drawH) / 2;
+
+      for (let y = 0; y < img.height; y += sliceH) {
+        for (let x = 0; x < img.width; x += sliceW) {
+          const offsetX = Math.sin((y / 40) + t) * 4;
+          const offsetY = Math.cos((x / 40) + t) * 4;
+
+          ctx.drawImage(
+            img,
+            x, y, sliceW, sliceH, // source block
+            Math.floor(offsetXBase + x * scale + offsetX),
+            Math.floor(offsetYBase + y * scale + offsetY),
+            sliceW * scale, sliceH * scale
+          );
         }
       }
 
-      // Execute the code: create a real script element and append it
-      try {
-        if(code){
-          const s = document.createElement('script');
-          s.textContent = code;
-          // append after short timeout so DOM finishes painting (helps debugging)
-          setTimeout(()=> document.body.appendChild(s), 8);
-          console.log("RPG inline script appended and executed.");
-        } else {
-          console.warn("No RPG code found in #rpg-source.");
-        }
-      } catch(err){
-        console.error("Failed to run RPG inline script:", err);
-      }
-    })();
+      requestAnimationFrame(loop);
+    }
+    loop();
+  };
+
+  // Resize handler
+  function resize() {
+    canvas.width = 256; // still render small
+    canvas.height = 256;
+  }
+  resize();
+  window.addEventListener("resize", resize);
   </script>
 </body>
 </html>
