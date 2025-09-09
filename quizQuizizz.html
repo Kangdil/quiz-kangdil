@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Modular All-in-One</title>
+  <style>
+    body { margin:0; font-family:sans-serif; background:#0f1724; color:#e6eef6; display:flex; align-items:center; justify-content:center; height:100vh; }
+    .screen { display:none; width:100%; max-width:960px; padding:20px; }
+    .active { display:block; }
+    .card { background:rgba(255,255,255,0.05); padding:20px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.5); }
+    h1,h2 { margin:0 0 16px 0; }
+    button { padding:10px 16px; border:none; border-radius:8px; background:#6ee7b7; color:#042028; font-weight:600; cursor:pointer; margin:4px; }
+    button.ghost { background:transparent; border:1px solid rgba(255,255,255,0.2); color:#e6eef6; }
+    .choice { padding:10px; border-radius:8px; background:rgba(255,255,255,0.05); margin:6px 0; cursor:pointer; transition:all .3s ease; }
+    .choice:hover { background:rgba(255,255,255,0.1); }
+    .choice.correct { background:#16a34a!important; animation:pulse .5s ease; }
+    .choice.wrong { background:#dc2626!important; animation:shake .3s ease; }
+    .toolbar { margin-top:20px; display:flex; justify-content:space-between; align-items:center; }
+    .scoreboard { font-weight:700; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#0b1220; padding:12px; border-radius:8px; max-height:300px; overflow:auto; }
+    @keyframes shake {0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+    @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+    .fade-in { animation:fade .4s ease; }
+    @keyframes fade { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
+  </style>
+</head>
+<body>
+
+  <!-- Menu utama -->
+  <div id="menu" class="screen active">
+    <div class="card">
+      <h1>Quiz All-in-One</h1>
+      <p>Pilih quiz yang ingin dimainkan:</p>
+      <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
+      <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz" class="screen">
+    <div class="card fade-in">
+      <h2 id="roundInfo">Ronde 1</h2>
+      <h2 id="qtext">-</h2>
+      <div id="choices"></div>
+      <div class="toolbar">
+        <span id="progress">0/0</span>
+        <span class="scoreboard">Skor: <span id="score">0</span></span>
+        <span id="timer">0s</span>
+      </div>
+      <div style="text-align:right;margin-top:10px">
+        <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Viewer Screen -->
+  <div id="viewer" class="screen">
+    <div class="card">
+      <h2>Daftar Soal</h2>
+      <div id="questionList"></div>
+      <div class="toolbar">
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let QUESTIONS = [], QUESTIONS_BINDO = [], QUESTIONS_SUNDA = [];
+    let idx=0, score=0, timer=null, remaining=0;
+    const basePoint=500, bonusPerSecond=20, defaultTime=90;
+    let wrongQuestions=[], secondRound=false;
+    let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
+    let maxScore = 0;
+    let currentQuestion=null;
+
+    // ==== JSON QUIZ B.INDO ====
+    QUESTIONS_BINDO = [
+      {"q":"Apa ibu kota Indonesia?","choices":["Jakarta","Bandung","Surabaya","Medan"],"answer":0},
+      {"q":"Bahasa resmi Indonesia?","choices":["Indonesia","Sunda","Jawa","Melayu"],"answer":0}
+    ];
+
+    // ==== JSON QUIZ B.SUNDA ====
+    QUESTIONS_SUNDA = [
+      {"q":"Karajaan munggaran di Tatar Sunda nyaéta…","choices":["Salakanagara","Tarumanagara","Kendan","Galuh"],"answer":0},
+      {"q":"Raja Tarumanagara anu kawentar ku prasasti pembangunan saluran cai nyaéta…","choices":["Jayasinghawarman","Purnawarman","Indrawarman","Linggawarman"],"answer":1}
+    ];
+
+    function startQuiz(type){
+      QUESTIONS = JSON.parse(JSON.stringify(await fetch(type + '.json');));
+      idx=0; score=0; wrongQuestions=[]; secondRound=false;
+      correctRound1=0; correctRound2=0;
+      totalQuestionsCount = QUESTIONS.length;
+      maxScore = QUESTIONS.length*(basePoint+(defaultTime*bonusPerSecond));
+      renderQuestion();
+      gotoScreen('quiz');
+    }
+
+    function gotoScreen(id){
+      document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      if(id==='viewer') renderViewer();
+    }
+
+    function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+
+    function renderQuestion(){
+      if(idx>=QUESTIONS.length){
+        if(!secondRound && wrongQuestions.length>0){
+          secondRound = true;
+          QUESTIONS = wrongQuestions.map(i=>QUESTIONS[i]);
+          idx=0; wrongQuestions=[];
+          document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
+          renderQuestion();
+          return;
+        } else {
+          let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
+          let percent = Math.round(nilai);
+          document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score} / ${maxScore}`;
+          document.getElementById('choices').innerHTML = `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})</div>`;
+          document.getElementById('progress').textContent = `Selesai`;
+          document.getElementById('timer').textContent='-';
+          document.getElementById('roundInfo').textContent='';
+          return;
+        }
+      }
+
+      const q=QUESTIONS[idx];
+      let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
+      optionObjs=shuffleArray(optionObjs);
+      currentQuestion={q:q.q, options:optionObjs};
+
+      document.getElementById('qtext').textContent=q.q;
+      const wrap=document.getElementById('choices');
+      wrap.innerHTML='';
+      optionObjs.forEach((opt,i)=>{
+        const div=document.createElement('div');
+        div.className='choice fade-in';
+        div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
+        div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
+        wrap.appendChild(div);
+      });
+      document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
+      document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
+      startTimer(defaultTime);
+    }
+
+    function startTimer(sec){
+      clearInterval(timer);
+      remaining=sec;
+      document.getElementById('timer').textContent=remaining+"s";
+      timer=setInterval(()=>{
+        remaining--;
+        if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);}
+        document.getElementById('timer').textContent=remaining+"s";
+      },1000);
+    }
+
+    function selectAnswer(isCorrect,clickedNode){
+      clearInterval(timer);
+      const nodes=Array.from(document.getElementById('choices').children);
+      nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
+      if(!isCorrect) clickedNode.classList.add('wrong');
+      if(isCorrect){ score+=basePoint+(remaining*bonusPerSecond); if(secondRound) correctRound2++; else correctRound1++; }
+      else{ if(!secondRound){ wrongQuestions.push(idx); } }
+      document.getElementById('score').textContent=score;
+      setTimeout(nextQuestion,1200);
+    }
+
+    function lockAnswers(){
+      const nodes=Array.from(document.getElementById('choices').children);
+      nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
+    }
+
+    function nextQuestion(){ idx++; renderQuestion(); }
+
+    function renderViewer(){
+      const list=document.getElementById('questionList');
+      list.innerHTML='';
+      [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{
+        const d=document.createElement('div');
+        d.style.marginBottom='12px';
+        d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
+        list.appendChild(d);
+      });
+    }
+  </script>
+</body>
+</html>
