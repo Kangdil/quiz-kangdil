@@ -1,124 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Kangdil</title>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Quiz Kangdil — RPG debug</title>
+<style>
+  :root{ --nav-w:400px; --glass: rgba(255,255,255,0.92); --shadow: 0 8px 20px rgba(0,0,0,0.15); }
 
-    /* RPG canvas as background */
-    #rpg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1; /* keep it in the background */
-      background: black;
-    }
+  html,body{height:100%; margin:0; font-family:Inter, system-ui, Arial, monospace;}
+  /* TEXT BACKGROUND */
+  #text-bg{
+    position:fixed; inset:0; z-index:-3;
+    color:#000; opacity:0.055; pointer-events:none;
+    font-family: "Courier New", monospace; font-size:11px; line-height:1.05;
+    white-space:pre-wrap; padding:24px;
+    display:block; overflow:hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.02));
+  }
 
-    /* Quiz UI */
-    nav {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 25px 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      text-align: center;
-      max-width: 400px;
-      margin: 40px auto;
-      position: relative;
-      z-index: 1;
-    }
+  /* RPG canvas (will be executed inline) */
+  #rpg-canvas{
+    position:fixed; inset:0; width:100vw; height:100vh;
+    z-index:-2; display:block;
+    background: transparent;
+  }
 
-    nav h1 {
-      margin-bottom: 8px;
-      font-size: 1.6em;
-      color: #444;
-    }
-    
-    nav h2 {
-      margin-bottom: 20px;
-      font-size: 0.8em;
-      color: #444;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 12px 0;
-    }
-
-    nav ul li a {
-      display: inline-block;
-      width: 200px;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #333;
-      background: #f3f3f3;
-      padding: 12px 20px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background: #74b8a5;
-      color: white;
-      transform: translateX(8px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    /* On-screen joystick (mobile) */
-    #joystick {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      width: 100px;
-      height: 100px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      touch-action: none;
-      z-index: 10;
-    }
-
-    #stick {
-      position: absolute;
-      top: 35px;
-      left: 35px;
-      width: 30px;
-      height: 30px;
-      background: rgba(255,255,255,0.7);
-      border-radius: 50%;
-    }
-  </style>
-</head>
-<body>
-  <!-- RPG Background -->
-  <canvas id="rpg-canvas"></canvas>
-
-  <!-- Quiz UI -->
-  <nav>
-    <h1>Quiz Kangdil</h1>
-    <h2>Website & soal-soal dibuat oleh ChatGPT dan disusun oleh Kangdil</h2>
-    <ul>
-      <li><a href="quizSosio090925.html">PH Sosiologi 01</a></li>
-      <li><a href="quizBindo090925.html">PH B. Indo 01</a></li>
-    </ul>
-  </nav>
-
-  <!-- Mobile Joystick -->
-  <div id="joystick"><div id="stick"></div></div>
-
-  <!-- RPG script from GitHub -->
-  <script src="https://kangdil.github.io/quiz-kangdil/menu%20rpg.js"></script>
-</body>
-</html>
+  /* Quiz UI */
+  nav{
+    background: var(--glass);
+    padding:22px 28px;
+    border-radius:16px;
+    box-shadow: var(--shadow);
+    text-align:center;
+    max-width: var(--nav-w);
+    margin:36px auto;
+    position:relative;
+    z-index:3;
+  }
+  nav h1{ margin:0 0 6px; font-size:1.5rem; color:#2b2b
