@@ -107,25 +107,46 @@
     function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
 
     function renderQuestion(){
-      if(idx>=QUESTIONS.length){
-        if(!secondRound && wrongQuestions.length>0){
-          secondRound = true;
-          QUESTIONS = wrongQuestions.map(i=>QUESTIONS[i]);
-          idx=0; wrongQuestions=[];
-          document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
-          renderQuestion();
-          return;
-        } else {
-          let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
-          let percent = Math.round(nilai);
-          document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score} / ${maxScore}`;
-          document.getElementById('choices').innerHTML = `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})</div>`;
-          document.getElementById('progress').textContent = `Selesai`;
-          document.getElementById('timer').textContent='-';
-          document.getElementById('roundInfo').textContent='';
-          return;
-        }
-      }
+  if(idx>=QUESTIONS.length){
+    // ... kode selesai quiz
+    return;
+  }
+
+  const q = QUESTIONS[idx];
+  currentQuestion = { q: q.q, options: shuffleArray(q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}))) };
+
+  // Set teks
+  document.getElementById('qtext').textContent = q.q;
+
+  // Set gambar jika ada
+  const imgEl = document.getElementById('qimage');
+  if(q.img){
+    imgEl.src = q.img;
+    imgEl.style.display = "block";
+  } else {
+    imgEl.style.display = "none";
+  }
+
+  // Set pilihan
+  const wrap = document.getElementById('choices');
+  wrap.innerHTML = '';
+  currentQuestion.options.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className = 'choice fade-in';
+    div.textContent = `${String.fromCharCode(65+i)}. ${opt.text}`;
+    div.onclick = ()=>{ selectAnswer(opt.isCorrect, div); };
+    wrap.appendChild(div);
+  });
+
+  // Progress bar & info
+  document.getElementById('progress').textContent = `${idx+1}/${QUESTIONS.length}`;
+  document.getElementById('progressBar').style.width = `${(idx/QUESTIONS.length)*100}%`;
+  document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
+
+  // Timer
+  startTimer(defaultTime);
+}
+
 
       const q=QUESTIONS[idx];
       let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
