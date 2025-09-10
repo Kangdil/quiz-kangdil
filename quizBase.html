@@ -257,9 +257,7 @@ function renderViewer(){
 }
 
 // auto-start kalau ada ?quiz=Bindo/Sunda
-const params = new URLSearchParams(window.location.search);
-const quizType = params.get('quiz');
-if(quizType!==null){ startQuiz(quizType); }
+restart();
 </script>
 </body>
 </html>
