@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Quiz Modular All-in-One</title>
 <style>
   body {
@@ -15,12 +15,7 @@
     justify-content:center;
     height:100vh;
   }
-  .screen {
-    display:none;
-    width:100%;
-    max-width:960px;
-    padding:20px;
-  }
+  .screen { display:none; width:100%; max-width:960px; padding:20px; }
   .active { display:block; }
   .card {
     background:rgba(255,255,255,0.05);
@@ -39,11 +34,7 @@
     cursor:pointer;
     margin:4px;
   }
-  button.ghost {
-    background:transparent;
-    border:1px solid rgba(255,255,255,0.2);
-    color:#e6eef6;
-  }
+  button.ghost { background:transparent; border:1px solid rgba(255,255,255,0.2); color:#e6eef6; }
   .choice {
     padding:10px;
     border-radius:8px;
@@ -57,57 +48,61 @@
   .choice.wrong { background:#dc2626!important; animation:shake .3s ease; }
   .toolbar { margin-top:20px; display:flex; justify-content:space-between; align-items:center; }
   .scoreboard { font-weight:700; }
-  img.qimg {
-    max-width:100%;
-    max-height:300px;
-    margin:12px 0;
+  pre {
+    white-space:pre-wrap; word-break:break-word;
+    background:#0b1220; padding:12px; border-radius:8px;
+    max-height:300px; overflow:auto;
+  }
+  .qimg {
+    max-width:100%; max-height:240px;
+    display:block; margin:0 auto 16px auto;
     border-radius:8px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.4);
   }
   @keyframes shake {0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
   @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+  .fade-in { animation:fade .4s ease; }
+  @keyframes fade { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
 </style>
 </head>
 <body>
-
-<!-- Menu utama -->
-<div id="menu" class="screen active">
-  <div class="card">
-    <h1>Quiz All-in-One</h1>
-    <p>Pilih quiz yang ingin dimainkan:</p>
-    <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
-    <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
-  </div>
-</div>
-
-<!-- Quiz Screen -->
-<div id="quiz" class="screen">
-  <div class="card">
-    <h2 id="roundInfo">Ronde 1</h2>
-    <h2 id="qtext">-</h2>
-    <img id="qimg" class="qimg" style="display:none"/>
-    <div id="choices"></div>
-    <div class="toolbar">
-      <span id="progress">0/0</span>
-      <span class="scoreboard">Skor: <span id="score">0</span></span>
-      <span id="timer">0s</span>
-    </div>
-    <div style="text-align:right;margin-top:10px">
-      <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
+  <!-- Menu utama -->
+  <div id="menu" class="screen active">
+    <div class="card">
+      <h1>Quiz All-in-One</h1>
+      <p>Pilih quiz yang ingin dimainkan:</p>
+      <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
+      <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
     </div>
   </div>
-</div>
 
-<!-- Viewer Screen -->
-<div id="viewer" class="screen">
-  <div class="card">
-    <h2>Daftar Soal</h2>
-    <div id="questionList"></div>
-    <div class="toolbar">
-      <button onclick="gotoScreen('menu')">Kembali</button>
+  <!-- Quiz Screen -->
+  <div id="quiz" class="screen">
+    <div class="card fade-in">
+      <h2 id="roundInfo">Ronde 1</h2>
+      <img id="qimg" class="qimg" src="" alt="Soal" style="display:none;" />
+      <h2 id="qtext">-</h2>
+      <div id="choices"></div>
+      <div class="toolbar">
+        <span id="progress">0/0</span>
+        <span class="scoreboard">Skor: <span id="score">0</span></span>
+        <span id="timer">0s</span>
+      </div>
+      <div style="text-align:right;margin-top:10px">
+        <button class="ghost" onclick="gotoScreen('menu')">Menu</button>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Viewer Screen -->
+  <div id="viewer" class="screen">
+    <div class="card">
+      <h2>Daftar Soal</h2>
+      <div id="questionList"></div>
+      <div class="toolbar">
+        <button onclick="gotoScreen('menu')">Kembali</button>
+      </div>
+    </div>
+  </div>
 
 <script>
 let QUESTIONS = [], QUESTIONS_BINDO = [], QUESTIONS_SUNDA = [];
@@ -123,19 +118,32 @@ async function startQuiz(type){
     const response = await fetch('quizzes/' + type + '.json');
     if(!response.ok) throw new Error('File not found or fetch failed');
     QUESTIONS = await response.json();
-    idx = 0; score = 0; wrongQuestions = []; secondRound = false;
-    correctRound1 = 0; correctRound2 = 0;
+    idx = 0; score = 0; wrongQuestions = [];
+    secondRound = false; correctRound1 = 0; correctRound2 = 0;
     totalQuestionsCount = QUESTIONS.length;
     maxScore = QUESTIONS.length * (basePoint + (defaultTime * bonusPerSecond));
-    renderQuestion(); gotoScreen('quiz');
-  } catch(err) { alert("Gagal load quiz"); console.error(err); }
+    renderQuestion();
+    gotoScreen('quiz');
+  } catch(err) {
+    alert("Gagal load quiz: " + err.message);
+    console.error(err);
+  }
 }
+
 function gotoScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   if(id==='viewer') renderViewer();
 }
-function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+
+function shuffleArray(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+
 function renderQuestion(){
   if(idx>=QUESTIONS.length){
     if(!secondRound && wrongQuestions.length>0){
@@ -143,53 +151,70 @@ function renderQuestion(){
       QUESTIONS = wrongQuestions.map(i=>QUESTIONS[i]);
       idx=0; wrongQuestions=[];
       document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
-      renderQuestion(); return;
+      renderQuestion();
+      return;
     } else {
       let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
       let percent = Math.round(nilai);
       document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score} / ${maxScore}`;
-      document.getElementById('qimg').style.display="none";
-      document.getElementById('choices').innerHTML = `<div style="margin-top:10px;font-weight:bold;">Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})</div>`;
+      document.getElementById('choices').innerHTML =
+        `<div style="margin-top:10px;font-weight:bold;">
+          Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})
+        </div>`;
       document.getElementById('progress').textContent = "Selesai";
       document.getElementById('timer').textContent='-';
       document.getElementById('roundInfo').textContent='';
+      document.getElementById('qimg').style.display="none";
       return;
     }
   }
+
   const q=QUESTIONS[idx];
   let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
   optionObjs=shuffleArray(optionObjs);
   currentQuestion={q:q.q, options:optionObjs};
+
   document.getElementById('qtext').textContent=q.q;
+
   // tampilkan gambar kalau ada
+  const imgEl=document.getElementById('qimg');
   if(q.img){
-    document.getElementById('qimg').src=q.img;
-    document.getElementById('qimg').style.display="block";
+    imgEl.src=q.img;
+    imgEl.style.display="block";
+    imgEl.onerror=()=>{ imgEl.style.display="none"; };
   } else {
-    document.getElementById('qimg').style.display="none";
+    imgEl.style.display="none";
   }
+
   const wrap=document.getElementById('choices');
   wrap.innerHTML='';
   optionObjs.forEach((opt,i)=>{
     const div=document.createElement('div');
-    div.className='choice';
+    div.className='choice fade-in';
     div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
     div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
     wrap.appendChild(div);
   });
+
   document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
   document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
   startTimer(defaultTime);
 }
+
 function startTimer(sec){
-  clearInterval(timer); remaining=sec;
+  clearInterval(timer);
+  remaining=sec;
   document.getElementById('timer').textContent=remaining+"s";
   timer=setInterval(()=>{
     remaining--;
-    if(remaining<=0){clearInterval(timer);remaining=0;lockAnswers();setTimeout(nextQuestion,1000);}
+    if(remaining<=0){
+      clearInterval(timer);remaining=0;
+      lockAnswers();setTimeout(nextQuestion,1000);
+    }
     document.getElementById('timer').textContent=remaining+"s";
   },1000);
 }
+
 function selectAnswer(isCorrect,clickedNode){
   clearInterval(timer);
   const nodes=Array.from(document.getElementById('choices').children);
@@ -198,24 +223,32 @@ function selectAnswer(isCorrect,clickedNode){
   if(isCorrect){
     score+=basePoint+(remaining*bonusPerSecond);
     if(secondRound) correctRound2++; else correctRound1++;
-  } else { if(!secondRound){ wrongQuestions.push(idx); } }
+  } else {
+    if(!secondRound){ wrongQuestions.push(idx); }
+  }
   document.getElementById('score').textContent=score;
   setTimeout(nextQuestion,1200);
 }
+
 function lockAnswers(){
   const nodes=Array.from(document.getElementById('choices').children);
   nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
 }
+
 function nextQuestion(){ idx++; renderQuestion(); }
+
 function renderViewer(){
-  const list=document.getElementById('questionList'); list.innerHTML='';
+  const list=document.getElementById('questionList');
+  list.innerHTML='';
   [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{
     const d=document.createElement('div');
     d.style.marginBottom='12px';
-    d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')} ${q.img ? "<br><img src='"+q.img+"' style='max-width:200px'>" : ""}`;
+    d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
     list.appendChild(d);
   });
 }
+
+// auto-start kalau ada ?quiz=Bindo/Sunda
 const params = new URLSearchParams(window.location.search);
 const quizType = params.get('quiz');
 if(quizType!==null){ startQuiz(quizType); }
