@@ -1,40 +1,180 @@
 [
   {
     "q": "Buyut dina kulawarga Sunda téh nyaéta…",
-    "choices": [
-      "Kakeknya orangtua",
-      "Mertua",
-      "Cucu",
-      "Minantu"
-    ],
+    "choices": ["Kakeknya orangtua", "Mertua", "Cucu", "Minantu"],
     "answer": 0
   },
   {
     "q": "Salaki téh hartina…",
-    "choices": [
-      "Suami",
-      "Istri",
-      "Anak",
-      "Mertua"
-    ],
+    "choices": ["Suami", "Istri", "Anak", "Mertua"],
     "answer": 0
   },
   {
     "q": "Pamajikan téh hartina…",
-    "choices": [
-      "Istri",
-      "Suami",
-      "Cucu",
-      "Saudara"
-    ],
+    "choices": ["Istri", "Suami", "Cucu", "Saudara"],
     "answer": 0
   },
   {
     "q": "Budak dina basa Sunda hartina…",
-    "choices": [
-      "Anak",
-      "Suami",
-      "Istri",
+    "choices": ["Anak", "Suami", "Istri", "Cucu"],
+    "answer": 0
+  },
+  {
+    "q": "Dulur atawa Sadulur téh hartina…",
+    "choices": ["Saudara adik kakak", "Mertua", "Menantu", "Buyut"],
+    "answer": 0
+  },
+  {
+    "q": "Cikal nyaéta…",
+    "choices": ["Budak panggedé / anak pertama", "Budak pangleutikna", "Budak panengah", "Cucu"],
+    "answer": 0
+  },
+  {
+    "q": "Bungsu nyaéta…",
+    "choices": ["Budak pangleutikna", "Budak panggedé", "Budak panengah", "Menantu"],
+    "answer": 0
+  },
+  {
+    "q": "Pangais bungsu nyaéta…",
+    "choices": ["Budak panengah", "Budak panggedé", "Budak pangleutikna", "Buyut"],
+    "answer": 0
+  },
+  {
+    "q": "Lanceukna hartina…",
+    "choices": ["Kakak", "Adik", "Cucu", "Mertua"],
+    "answer": 0
+  },
+  {
+    "q": "Adina hartina…",
+    "choices": ["Adik", "Kakak", "Cucu", "Buyut"],
+    "answer": 0
+  },
+  {
+    "q": "Mitoh nyaéta…",
+    "choices": ["Mertua", "Menantu", "Kakak ipar", "Besan"],
+    "answer": 0
+  },
+  {
+    "q": "Minantu nyaéta…",
+    "choices": ["Menantu", "Mertua", "Saudara", "Cucu"],
+    "answer": 0
+  },
+  {
+    "q": "Lanceuk beuteung nyaéta…",
+    "choices": ["Kakak ipar", "Kakak sepupu", "Kakak kandung", "Paman"],
+    "answer": 0
+  },
+  {
+    "q": "Adi beuteung nyaéta…",
+    "choices": ["Adik ipar", "Adik sepupu", "Adik kandung", "Anak"],
+    "answer": 0
+  },
+  {
+    "q": "Besan nyaéta…",
+    "choices": ["Antara mertua jeung mertua", "Menantu jeung mertua", "Kakak ipar jeung adik ipar", "Cucu jeung buyut"],
+    "answer": 0
+  },
+  {
+    "q": "Incu hartina…",
+    "choices": ["Cucu", "Buyut", "Menantu", "Saudara"],
+    "answer": 0
+  },
+  {
+    "q": "Kapi lanceuk nyaéta…",
+    "choices": ["Kakak sepupu", "Adik sepupu", "Kakak ipar", "Paman"],
+    "answer": 0
+  },
+  {
+    "q": "Kapi adi nyaéta…",
+    "choices": ["Adik sepupu", "Kakak sepupu", "Adik ipar", "Keponakan"],
+    "answer": 0
+  },
+  {
+    "q": "Uwa nyaéta…",
+    "choices": ["Paman", "Tante", "Sepupu", "Menantu"],
+    "answer": 0
+  },
+  {
+    "q": "Bibi nyaéta…",
+    "choices": ["Tante", "Paman", "Mertua", "Besan"],
+    "answer": 0
+  },
+  {
+    "q": "Suan nyaéta…",
+    "choices": ["Keponakan / anak ti kakak", "Keponakan / anak ti adik", "Cucu", "Sepupu"],
+    "answer": 0
+  },
+  {
+    "q": "Alo nyaéta…",
+    "choices": ["Keponakan / anak ti adik", "Keponakan / anak ti kakak", "Menantu", "Cucu"],
+    "answer": 0
+  },
+  {
+    "q": "Bao nyaéta…",
+    "choices": ["Indung bapakna buyut", "Mertua", "Kakek", "Paman"],
+    "answer": 0
+  },
+  {
+    "q": "Saha nu disebut karuhun?",
+    "choices": ["Leluhur", "Cucu", "Buyut", "Sepupu"],
+    "answer": 0
+  },
+  {
+    "q": "Urutan silsilah: Karuhun > Kait Siwur > Udeg-Udeg > … > Bao. Naha nu leungit?",
+    "choices": ["Jangga Wareng", "Buyut", "Incu", "Mitoh"],
+    "answer": 0
+  },
+  {
+    "q": "Saha nu disebut budak panggedé?",
+    "choices": ["Cikal", "Bungsu", "Pangais bungsu", "Incu"],
+    "answer": 0
+  },
+  {
+    "q": "Saha nu disebut budak pangleutikna?",
+    "choices": ["Bungsu", "Cikal", "Pangais bungsu", "Menantu"],
+    "answer": 0
+  },
+  {
+    "q": "Upami budak panengah dina basa Sunda mah disebut…",
+    "choices": ["Pangais bungsu", "Cikal", "Incu", "Buyut"],
+    "answer": 0
+  },
+  {
+    "q": "Upami 'Suami' dina basa Sunda disebut…",
+    "choices": ["Salaki", "Pamajikan", "Menantu", "Besan"],
+    "answer": 0
+  },
+  {
+    "q": "Upami 'Istri' dina basa Sunda disebut…",
+    "choices": ["Pamajikan", "Salaki", "Mitoh", "Cikal"],
+    "answer": 0
+  },
+  {
+    "q": "Keponakan ti adik disebut…",
+    "choices": ["Alo", "Suan", "Incu", "Menantu"],
+    "answer": 0
+  },
+  {
+    "q": "Keponakan ti kakak disebut…",
+    "choices": ["Suan", "Alo", "Incu", "Cucu"],
+    "answer": 0
+  },
+  {
+    "q": "Saha nu disebut 'Besan' dina adat Sunda?",
+    "choices": ["Hiji kolot jeung kolot séjén anu anakna nikah", "Menantu jeung mertua", "Kakak ipar jeung adik ipar", "Buyut jeung incu"],
+    "answer": 0
+  },
+  {
+    "q": "Upami indung bapakna buyut disebut…",
+    "choices": ["Bao", "Karuhun", "Mertua", "Paman"],
+    "answer": 0
+  },
+  {
+    "q": "Anakna anak disebut…",
+    "choices": ["Incu / Cucu", "Buyut", "Suan", "Alo"],
+    "answer": 0
+  }
+    ]      "Istri",
       "Cucu"
     ],
     "answer": 0
