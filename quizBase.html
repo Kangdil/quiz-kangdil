@@ -118,7 +118,7 @@ async function restartQuiz(){
     const quizType = params.get('quiz');
     if(quizType!==null){ startQuiz(quizType); }
     else{startQuiz("PH_Sosio_01"); }
-  }
+  } finally {startQuiz("PH_Sosio_01"); }
 }
 
 async function startQuiz(type){
