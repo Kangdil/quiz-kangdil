@@ -179,4 +179,40 @@
   },
   {
     "q": "Tipe habitat berbeda mencerminkan keanekaragaman...",
-    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "King]()
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
+    "answer": 2
+  },
+  {
+    "q": "Hutan hujan, savana, dan padang pasir adalah contoh...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Spesies"],
+    "answer": 2
+  },
+  {
+    "q": "Kesimpulan: Tingkat keanekaragaman hayati adalah...",
+    "choices": ["Gen, model, ekosistem", "Gen, spesies, ekosistem", "Kingdom, genus, spesies", "Gen, famili, kingdom", "Jenis, ekosistem, varietas"],
+    "answer": 1
+  },
+  {
+    "q": "Kenapa keanekaragaman gen penting?",
+    "choices": [
+      "Membantu spesies bertahan terhadap perubahan",
+      "Menunjukkan jumlah spesies",
+      "Menentukan ekosistem unik",
+      "Menambah kingdom",
+      "Menentukan iklim"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa keanekaragaman ekosistem penting?",
+    "choices": [
+      "Menunjukkan variasi genetik",
+      "Menambah varietas jenis",
+      "Menggambarkan keberagaman lingkungan & fungsi ekosistem",
+      "Menentukan jumlah individu",
+      "Menentukan kingdom"
+    ],
+    "answer": 2
+  }
+]
+
