@@ -70,8 +70,9 @@
     <div class="card">
       <h1>Quiz All-in-One</h1>
       <p>Pilih quiz yang ingin dimainkan:</p>
-      <button onclick="startQuiz('Bindo')">Mulai Quiz B. Indonesia</button>
-      <button onclick="startQuiz('Sunda')">Mulai Quiz B. Sunda</button>
+      <button onclick="const params = new URLSearchParams(window.location.search);
+const quizType = params.get('quiz');
+if(quizType!==null){ startQuiz(quizType); }else{startQuiz("PH_Sosio_01");}">Ulang</button>
     </div>
   </div>
 
