@@ -112,8 +112,7 @@
   {
     "q": "Gambar ini menunjukkan manfaat bagi manusia sebagai...",
     "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
-    "answer": 2,
-    "img": "https://www.perhutani.co.id/wp-content/uploads/2022/03/Jati.jpg"
+    "answer": 2
   },
   {
    "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
