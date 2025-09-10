@@ -1,222 +1,217 @@
 [
   {
-    "q": "Ilmu yang mempelajari pengelompokan dan penamaan makhluk hidup disebut...",
+    "q": "Keanekaragaman hayati adalah...",
     "choices": [
-      "Taksonomi",
-      "Ekologi",
-      "Morfologi",
-      "Anatomi",
-      "Genetika"
+      "Perbedaan bentuk tubuh antar hewan",
+      "Variasi yang terdapat pada makhluk hidup di bumi",
+      "Jumlah spesies di suatu daerah",
+      "Kumpulan makhluk dilindungi",
+      "Perbedaan iklim suatu ekosistem"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Tingkat keanekaragaman yang menunjukkan variasi gen dalam satu spesies disebut...",
+    "choices": ["Jenis", "Gen", "Ekosistem", "Populasi", "Kingdom"],
+    "answer": 1
+  },
+  {
+    "q": "Contoh keanekaragaman gen pada hewan adalah...",
+    "choices": [
+      "Anjing pudel, herder, bulldog",
+      "Harimau dan singa",
+      "Mangrove dan terumbu karang",
+      "Hutan hujan dan savana",
+      "Jagung dan gandum"
     ],
     "answer": 0
   },
   {
-    "q": "Kelompok makhluk hidup yang terbentuk dari hasil pengklasifikasian disebut...",
+    "q": "Tingkat keanekaragaman jenis ditunjukkan oleh...",
     "choices": [
-      "Spesies",
-      "Takson",
-      "Genus",
-      "Kingdom",
-      "Filum"
+      "Variasi gen dalam populasi",
+      "Perbedaan spesies dalam satu wilayah",
+      "Perbedaan habitat",
+      "Varietas dalam satu jenis",
+      "Strata biologis"
     ],
     "answer": 1
   },
   {
-    "q": "Urutan tingkatan takson menurut Linnaeus dari tertinggi sampai terendah adalah...",
+    "q": "Contoh keanekaragaman jenis adalah...",
     "choices": [
-      "Spesies – Genus – Familia – Ordo – Classis – Filum – Kingdom",
-      "Kingdom – Filum – Classis – Ordo – Familia – Genus – Spesies",
-      "Kingdom – Classis – Ordo – Filum – Familia – Genus – Spesies",
-      "Filum – Kingdom – Classis – Ordo – Familia – Genus – Spesies",
-      "Genus – Spesies – Familia – Ordo – Filum – Kingdom – Classis"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Tujuan utama klasifikasi makhluk hidup adalah...",
-    "choices": [
-      "Menyederhanakan objek studi",
-      "Mengetahui hubungan kekerabatan",
-      "Memberi nama makhluk hidup",
-      "Mengelompokkan berdasarkan persamaan ciri",
-      "Semua jawaban benar"
-    ],
-    "answer": 4
-  },
-  {
-    "q": "Klasifikasi sistem alami menggunakan dasar...",
-    "choices": [
-      "Habitat dan manfaat organisme",
-      "Persamaan dan perbedaan morfologi",
-      "Struktur alat reproduksi",
-      "Perbedaan genetik",
-      "Ukuran tubuh organisme"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Contoh klasifikasi sistem alami adalah...",
-    "choices": [
-      "Tumbuhan berbiji satu dan berbiji dua",
-      "Tumbuhan pangan dan tanaman obat",
-      "Hewan darat dan hewan laut",
-      "Hewan bertulang belakang dan tidak bertulang belakang",
-      "Tanaman hias dan tanaman industri"
+      "Harimau dan singa",
+      "Anjing pudel dan bulldog",
+      "Padi dan jagung",
+      "Hutan hujan tropis dan savana",
+      "Jagung lokal dan hibrida"
     ],
     "answer": 0
   },
   {
-    "q": "Sistem artifisial (buatan) pertama kali dikembangkan oleh...",
+    "q": "Tingkat keanekaragaman ekosistem mencakup...",
     "choices": [
-      "Aristoteles",
-      "Charles Darwin",
-      "Robert Whittaker",
-      "Carl Woese",
-      "Jean Baptiste Lamarck"
-    ],
-    "answer": 0
-  },
-  {
-    "q": "Tokoh yang mengelompokkan tumbuhan berdasarkan alat reproduksi adalah...",
-    "choices": [
-      "Aristoteles",
-      "Carolus Linnaeus",
-      "Ernst Haeckel",
-      "Robert Whittaker",
-      "Herbert Copeland"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Sistem filogenetik didasarkan pada...",
-    "choices": [
-      "Habitat dan kegunaan",
-      "Kekerabatan evolusioner",
-      "Bentuk morfologi luar",
-      "Ukuran tubuh organisme",
-      "Cara reproduksi"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Ahli yang pertama kali menghubungkan klasifikasi dengan teori evolusi adalah...",
-    "choices": [
-      "Aristoteles",
-      "Carolus Linnaeus",
-      "Charles Darwin",
-      "Robert Whittaker",
-      "Carl Woese"
+      "Varietas tanaman dalam satu genus",
+      "Spesies berbeda di satu komunitas",
+      "Berbagai habitat & komunitas dalam satu wilayah",
+      "Perbedaan gen dalam populasi",
+      "Varietas dalam satu spesies"
     ],
     "answer": 2
   },
   {
-    "q": "Sistem dua kingdom membagi makhluk hidup menjadi...",
+    "q": "Contoh keanekaragaman ekosistem adalah...",
     "choices": [
-      "Monera dan Protista",
-      "Animalia dan Plantae",
-      "Protista dan Animalia",
-      "Plantae dan Fungi",
-      "Protista dan Monera"
+      "Hutan hujan tropis dan savana",
+      "Jagung dan gandum",
+      "Kerbau darat dan air",
+      "Mangga arumanis dan manalagi",
+      "Monyet dan orangutan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keanekaragaman gen membawa keuntungan seperti...",
+    "choices": [
+      "Variasi sifat dalam satu spesies",
+      "Jumlah ekosistem yang tinggi",
+      "Perbedaan bentuk antar spesies",
+      "Memperluas kingdom",
+      "Gen identik antar individu"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Indonesia disebut negara megabiodiversitas karena...",
+    "choices": [
+      "Hanya satu ekosistem",
+      "Banyak spesies dan ekosistem unik",
+      "Satu pulau besar",
+      "Tanpa hewan endemik",
+      "Hanya flora saja"
     ],
     "answer": 1
   },
   {
-    "q": "Sistem tiga kingdom menurut Ernst Haeckel terdiri atas...",
+    "q": "Keanekaragaman hayati tingkat jenis terlihat dari...",
     "choices": [
-      "Animalia, Plantae, Monera",
-      "Animalia, Plantae, Protista",
-      "Animalia, Protista, Fungi",
-      "Plantae, Protista, Fungi",
-      "Monera, Protista, Animalia"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Kingdom yang ditambahkan dalam sistem empat kingdom adalah...",
-    "choices": [
-      "Fungi",
-      "Protista",
-      "Monera",
-      "Archaebacteria",
-      "Eubacteria"
+      "Varietas berbeda satu spesies",
+      "Ekosistem berbeda",
+      "Spesies berbeda dalam komunitas",
+      "Varietas satu tanaman",
+      "Tingkat kingdom"
     ],
     "answer": 2
   },
   {
-    "q": "Robert H. Whittaker pada tahun 1969 mengusulkan sistem...",
-    "choices": [
-      "Dua kingdom",
-      "Tiga kingdom",
-      "Empat kingdom",
-      "Lima kingdom",
-      "Enam kingdom"
-    ],
-    "answer": 3
+    "q": "Perhatikan gambar: menunjukkan keanekaragaman tingkat...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
+    "answer": 0,
+    "img": "https://images.dreamstime.com/stock-photo-diversity-dog-breeds-illustrates-dog-variety-many-breeds-royalty-free-image-631940-1040824.jpg"
   },
   {
-    "q": "Kingdom Fungi memiliki ciri...",
-    "choices": [
-      "Eukariotik, autotrof, berklorofil",
-      "Eukariotik, heterotrof, tidak berklorofil, dinding sel dari kitin",
-      "Prokariotik, autotrof, tidak memiliki klorofil",
-      "Eukariotik, multiseluler, dinding sel dari selulosa",
-      "Eukariotik, autotrof, hidup berkoloni"
-    ],
+    "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Populasi"],
+    "answer": 0,
+    "img": "https://images.stockcake.com/i/diverse-dog-group_964824_964480.jpg"
+  },
+  {
+    "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
+    "answer": 2,
+    "img": "https://commons.wikimedia.org/wiki/File:Biomes_of_the_World_-_Retouched.png"
+  },
+  {
+    "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Kingdom"],
+    "answer": 2,
+    "img": "https://www.shutterstock.com/image-vector/biomes-color-map-main-world-vector-1786551896.jpg"
+  },
+  {
+    "q": "Keanekaragaman jenis juga dikenal sebagai...",
+    "choices": ["Varietas", "Spesies", "Genetik", "Ekosistem", "Strata biologis"],
     "answer": 1
   },
   {
-    "q": "Kingdom Plantae memiliki dinding sel yang tersusun dari...",
-    "choices": [
-      "Kitin",
-      "Selulosa",
-      "Protein",
-      "Pektin",
-      "Lignin"
-    ],
+    "q": "Variasi antara spesies berbeda disebut...",
+    "choices": ["Variasi genetik", "Keanekaragaman jenis", "Ekosistem", "Varietas", "Kingdom"],
     "answer": 1
   },
   {
-    "q": "Kingdom Animalia dicirikan oleh...",
+    "q": "Mangrove dan terumbu karang adalah contoh...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Spesies", "Strata lingkungan"],
+    "answer": 2
+  },
+  {
+    "q": "Varietas lokal dan hibrida dalam satu tanaman menunjukkan...",
+    "choices": ["Keanekaragaman gen", "Jenis", "Ekosistem", "Spesies", "Kingdom"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh keanekaragaman gen pada tumbuhan adalah...",
+    "choices": ["Mangga manalagi & arumanis", "Jagung & padi", "Harimau & singa", "Hutan hujan & tundra", "Savana & padang rumput"],
+    "answer": 0
+  },
+  {
+    "q": "Macan tutul, singa, harimau adalah contoh...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Domestikasi", "Varietas"],
+    "answer": 1
+  },
+  {
+    "q": "Hutan hujan tropis di Indonesia dan savana di Afrika adalah contoh...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Keragaman global", "Spesies"],
+    "answer": 2
+  },
+  {
+    "q": "Padi, jagung, gandum menunjukkan keanekaragaman...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
+    "answer": 1
+  },
+  {
+    "q": "Perbedaan gen dalam populasi disebut...",
+    "choices": ["Ekosistem", "Gen", "Jenis", "Varietas", "Kingdom"],
+    "answer": 1
+  },
+  {
+    "q": "Spesies berbeda dalam komunitas disebut...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
+    "answer": 1
+  },
+  {
+    "q": "Tipe habitat berbeda mencerminkan keanekaragaman...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
+    "answer": 2
+  },
+  {
+    "q": "Hutan hujan, savana, dan padang pasir adalah contoh...",
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Spesies"],
+    "answer": 2
+  },
+  {
+    "q": "Kesimpulan: Tingkat keanekaragaman hayati adalah...",
+    "choices": ["Gen, model, ekosistem", "Gen, spesies, ekosistem", "Kingdom, genus, spesies", "Gen, famili, kingdom", "Jenis, ekosistem, varietas"],
+    "answer": 1
+  },
+  {
+    "q": "Kenapa keanekaragaman gen penting?",
     "choices": [
-      "Sel eukariotik, tidak berklorofil, dapat bergerak aktif",
-      "Sel prokariotik, autotrof, tidak memiliki dinding sel",
-      "Sel eukariotik, autotrof, berklorofil",
-      "Sel eukariotik, berfotosintesis, memiliki dinding sel",
-      "Sel prokariotik, heterotrof, memiliki dinding sel"
+      "Membantu spesies bertahan terhadap perubahan",
+      "Menunjukkan jumlah spesies",
+      "Menentukan ekosistem unik",
+      "Menambah kingdom",
+      "Menentukan iklim"
     ],
     "answer": 0
   },
   {
-    "q": "Contoh hewan invertebrata adalah...",
+    "q": "Mengapa keanekaragaman ekosistem penting?",
     "choices": [
-      "Ikan arwana",
-      "Katak",
-      "Singa",
-      "Spongia sp",
-      "Orang utan"
+      "Menunjukkan variasi genetik",
+      "Menambah varietas jenis",
+      "Menggambarkan keberagaman lingkungan & fungsi ekosistem",
+      "Menentukan jumlah individu",
+      "Menentukan kingdom"
     ],
-    "answer": 3
-  },
-  {
-    "q": "Contoh hewan vertebrata kelas Aves adalah...",
-    "choices": [
-      "Rana sp",
-      "Aquila achrysaetos",
-      "Scolopendra subspinipes",
-      "Planaria maculata",
-      "Hirudo medicinalis"
-    ],
-    "answer": 1
-  },
-  {
-    "q": "Contoh tumbuhan berbiji terbuka adalah...",
-    "choices": [
-      "Pinus",
-      "Jagung",
-      "Padi",
-      "Terong",
-      "Kacang tanah"
-    ],
-    "answer": 0
+    "answer": 2
   }
 ]
