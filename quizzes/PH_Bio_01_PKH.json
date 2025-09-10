@@ -12,13 +12,7 @@
   },
   {
     "q": "Tingkat keanekaragaman yang menunjukkan variasi gen dalam satu spesies disebut...",
-    "choices": [
-      "Jenis",
-      "Gen",
-      "Ekosistem",
-      "Populasi",
-      "Kingdom"
-    ],
+    "choices": ["Jenis", "Gen", "Ekosistem", "Populasi", "Kingdom"],
     "answer": 1
   },
   {
@@ -111,94 +105,46 @@
   },
   {
     "q": "Perhatikan gambar: menunjukkan keanekaragaman tingkat...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Populasi"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
     "answer": 0,
     "img": "https://cdn.rri.co.id/berita/Cirebon/o/1727754162757-WhatsApp_Image_2024-10-01_at_10.33.27/nsz0ks1hsebdpgp.jpeg"
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Bioma",
-      "Populasi"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Populasi"],
     "answer": 0,
     "img": "https://cdn-web.ruangguru.com/landing-pages/assets/hs/bunga%20mawar%20keanekaragaman%20tingkat%20gen.jpg"
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Populasi"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
     "answer": 2,
     "img": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Vegetation.png"
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Bioma",
-      "Kingdom"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Kingdom"],
     "answer": 2,
     "img": "https://i.pinimg.com/564x/b7/46/1d/b7461d43579054e6f05c08768d4b1a5a.jpg"
   },
   {
     "q": "Keanekaragaman jenis juga dikenal sebagai...",
-    "choices": [
-      "Varietas",
-      "Spesies",
-      "Genetik",
-      "Ekosistem",
-      "Strata biologis"
-    ],
+    "choices": ["Varietas", "Spesies", "Genetik", "Ekosistem", "Strata biologis"],
     "answer": 1
   },
   {
     "q": "Variasi antara spesies berbeda disebut...",
-    "choices": [
-      "Variasi genetik",
-      "Keanekaragaman jenis",
-      "Ekosistem",
-      "Varietas",
-      "Kingdom"
-    ],
+    "choices": ["Variasi genetik", "Keanekaragaman jenis", "Ekosistem", "Varietas", "Kingdom"],
     "answer": 1
   },
   {
     "q": "Mangrove dan terumbu karang adalah contoh...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Spesies",
-      "Strata lingkungan"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Spesies", "Strata lingkungan"],
     "answer": 2
   },
   {
     "q": "Varietas lokal dan hibrida dalam satu tanaman menunjukkan...",
-    "choices": [
-      "Keanekaragaman gen",
-      "Jenis",
-      "Ekosistem",
-      "Spesies",
-      "Kingdom"
-    ],
+    "choices": ["Keanekaragaman gen", "Jenis", "Ekosistem", "Spesies", "Kingdom"],
     "answer": 0
   },
   {
@@ -214,79 +160,37 @@
   },
   {
     "q": "Macan tutul, singa, harimau adalah contoh...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Domestikasi",
-      "Varietas"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Domestikasi", "Varietas"],
     "answer": 1
   },
   {
     "q": "Hutan hujan tropis di Indonesia dan savana di Afrika adalah contoh...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Keragaman global",
-      "Spesies"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Keragaman global", "Spesies"],
     "answer": 2
   },
   {
     "q": "Padi, jagung, gandum menunjukkan keanekaragaman...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Kingdom"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
     "answer": 1
   },
   {
     "q": "Perbedaan gen dalam populasi disebut...",
-    "choices": [
-      "Ekosistem",
-      "Gen",
-      "Jenis",
-      "Varietas",
-      "Kingdom"
-    ],
+    "choices": ["Ekosistem", "Gen", "Jenis", "Varietas", "Kingdom"],
     "answer": 1
   },
   {
     "q": "Spesies berbeda dalam komunitas disebut...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Kingdom"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
     "answer": 1
   },
   {
     "q": "Tipe habitat berbeda mencerminkan keanekaragaman...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Kingdom"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
     "answer": 2
   },
   {
     "q": "Hutan hujan, savana, dan padang pasir adalah contoh...",
-    "choices": [
-      "Gen",
-      "Jenis",
-      "Ekosistem",
-      "Varietas",
-      "Spesies"
-    ],
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Spesies"],
     "answer": 2
   },
   {
