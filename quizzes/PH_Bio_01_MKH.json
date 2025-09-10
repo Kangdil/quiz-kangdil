@@ -110,28 +110,10 @@
     "answer": 0
   },
   {
-    "q": "Gambar ini menunjukkan manfaat hayati sebagai...",
-    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
-    "answer": 1,
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK3RmyJDF42fiF4q4qJtZD0FupXyOMCPNnLQ&s"
-  },
-  {
     "q": "Gambar ini menunjukkan manfaat bagi manusia sebagai...",
     "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
     "answer": 2,
     "img": "https://www.perhutani.co.id/wp-content/uploads/2022/03/Jati.jpg"
-  },
-  {
-    "q": "Gambar kunyit dan jahe menunjukkan manfaat sebagai...",
-    "choices": ["Obat", "Sandang", "Papan", "Industri", "Ekologi"],
-    "answer": 0,
-    "img": "https://d1bpj0tv6vfxyp.cloudfront.net/kencur-jahe-dan-kunyit-apa-saja-manfaatnya.jpg"
-  },
-  {
-    "q": "Gambar ini mencerminkan manfaat hayati dalam bidang...",
-    "choices": ["Ekonomi", "Sosial budaya", "Estetika", "Ekologi", "Ilmu pengetahuan"],
-    "answer": 2,
-    "img": "https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/27/2024/02/29/WhatsApp-Image-2024-02-29-at-094137-1376046870.jpeg"
   },
   {
     "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
