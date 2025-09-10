@@ -1,0 +1,150 @@
+[
+  {
+    "q": "Pelestarian keanekaragaman hayati di habitat aslinya disebut...",
+    "choices": ["Ex-situ", "In-situ", "Laboratorium", "Konservasi buatan", "Teknologi genetik"],
+    "answer": 1
+  },
+  {
+    "q": "Contoh pelestarian in-situ adalah...",
+    "choices": ["Kebun binatang", "Cagar alam dan taman nasional", "Kebun raya", "Bank gen", "Museum zoologi"],
+    "answer": 1
+  },
+  {
+    "q": "Pelestarian ex-situ dilakukan dengan cara...",
+    "choices": ["Melestarikan di habitat aslinya", "Melestarikan di luar habitat aslinya", "Tidak melestarikan", "Membiarkan punah", "Membuat hutan lindung"],
+    "answer": 1
+  },
+  {
+    "q": "Contoh pelestarian ex-situ adalah...",
+    "choices": ["Taman nasional", "Kebun raya dan kebun binatang", "Suaka margasatwa", "Cagar alam", "Hutan lindung"],
+    "answer": 1
+  },
+  {
+    "q": "Kebun Raya Bogor adalah contoh pelestarian...",
+    "choices": ["In-situ", "Ex-situ", "Alami", "Hutan buatan", "Museum"],
+    "answer": 1
+  },
+  {
+    "q": "Taman Nasional Ujung Kulon melindungi hewan...",
+    "choices": ["Komodo", "Badak Jawa", "Orangutan", "Harimau Sumatra", "Anoa"],
+    "answer": 1
+  },
+  {
+    "q": "Pulau Komodo dijadikan taman nasional untuk melindungi...",
+    "choices": ["Komodo", "Gajah", "Harimau", "Badak", "Elang Jawa"],
+    "answer": 0
+  },
+  {
+    "q": "Pelestarian dengan cara bank gen dilakukan melalui...",
+    "choices": ["Pengawetan tubuh hewan", "Penyimpanan biji dan plasma nutfah", "Membangun hutan lindung", "Melepasliarkan hewan", "Pemanfaatan industri"],
+    "answer": 1
+  },
+  {
+    "q": "Kultur jaringan digunakan untuk...",
+    "choices": ["Melestarikan tumbuhan langka", "Melindungi satwa liar", "Menambah ekosistem", "Membuat hutan buatan", "Mencegah bencana"],
+    "answer": 0
+  },
+  {
+    "q": "Pelestarian in-situ bermanfaat karena...",
+    "choices": ["Spesies tetap di habitat aslinya", "Tidak butuh area khusus", "Hanya melibatkan laboratorium", "Tidak menjaga ekosistem", "Tidak diawasi"],
+    "answer": 0
+  },
+  {
+    "q": "Gambar taman nasional mencerminkan pelestarian...",
+    "choices": ["Ex-situ", "In-situ", "Kultur jaringan", "Bank gen", "Museum"],
+    "answer": 1,
+    "img": "https://wisato.id/wp-content/uploads/2023/11/Taman-Nasional-Ujung-Kulon.jpg"
+  },
+  {
+    "q": "Gambar kebun binatang menunjukkan contoh pelestarian...",
+    "choices": ["In-situ", "Ex-situ", "Ekologi alami", "Bank gen", "Hutan lindung"],
+    "answer": 1,
+    "img": "https://assets-a1.kompasiana.com/items/album/2022/06/01/1107564-720-6296d4e1bb44867109053492.jpg"
+  },
+  {
+    "q": "Gambar Kebun Raya Bogor mencerminkan upaya...",
+    "choices": ["In-situ", "Ex-situ", "Reboisasi", "Bank gen", "Laboratorium"],
+    "answer": 1,
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/06/7e/21/c4/hewan-kijang.jpg"
+  },
+  {
+    "q": "Undang-undang yang melindungi keanekaragaman hayati di Indonesia adalah...",
+    "choices": ["UU No. 5 Tahun 1990 tentang Konservasi", "UU No. 10 Tahun 1995 tentang Pajak", "UU No. 12 Tahun 2010 tentang Perpajakan", "UU No. 4 Tahun 2009 tentang Tambang", "UU No. 20 Tahun 2003 tentang Pendidikan"],
+    "answer": 0
+  },
+  {
+    "q": "CITES adalah perjanjian internasional yang mengatur...",
+    "choices": ["Perdagangan satwa liar", "Perdagangan minyak bumi", "Perdagangan pertanian", "Perdagangan ASEAN", "Perdagangan hasil tambang"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa pelestarian ex-situ dibutuhkan?",
+    "choices": ["Untuk melindungi spesies yang habitatnya rusak", "Karena habitat asli masih luas", "Karena lebih murah dari in-situ", "Karena tidak perlu ahli", "Karena lebih alami"],
+    "answer": 0
+  },
+  {
+    "q": "Reboisasi adalah upaya pelestarian dengan cara...",
+    "choices": ["Menanami hutan gundul", "Melepasliarkan hewan", "Menyimpan biji dalam bank gen", "Membangun kebun binatang", "Membiarkan alami"],
+    "answer": 0
+  },
+  {
+    "q": "Pembuatan taman kota dengan berbagai tanaman bermanfaat sebagai...",
+    "choices": ["Pelestarian ekosistem mini", "Pelestarian ex-situ", "Pelestarian in-situ", "Bank gen", "Laboratorium alam"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa masyarakat perlu dilibatkan dalam konservasi?",
+    "choices": ["Karena berperan langsung menjaga lingkungan", "Karena hanya pemerintah berhak", "Karena hanya ilmuwan mampu", "Karena masyarakat tidak penting", "Karena investor peduli"],
+    "answer": 0
+  },
+  {
+    "q": "Pelestarian penting dilakukan agar...",
+    "choices": ["Generasi mendatang tetap bisa menikmatinya", "Hanya dimanfaatkan sekarang", "Hanya untuk ekspor", "Tidak dimanfaatkan sama sekali", "Tidak berguna"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh pelestarian in-situ di Indonesia adalah...",
+    "choices": ["Taman Nasional Komodo", "Kebun Raya Bogor", "Kebun Binatang Ragunan", "Bank Gen IPB", "Laboratorium Biologi"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh pelestarian ex-situ di Indonesia adalah...",
+    "choices": ["Cagar Alam Leuser", "Taman Nasional Ujung Kulon", "Kebun Raya Bogor", "Taman Nasional Komodo", "Suaka Margasatwa Baluran"],
+    "answer": 2
+  },
+  {
+    "q": "Mengapa taman nasional disebut pelestarian in-situ?",
+    "choices": ["Karena spesies dilestarikan di habitat aslinya", "Karena dipindahkan ke kebun binatang", "Karena hanya tanaman dijaga", "Karena hanya satwa dijaga", "Karena ekosistem buatan"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa kebun binatang disebut pelestarian ex-situ?",
+    "choices": ["Karena hewan dipindahkan dari habitat aslinya", "Karena hewan hidup bebas", "Karena hewan tidak butuh makanan", "Karena habitat asli terjaga", "Karena tidak perlu pengawasan"],
+    "answer": 0
+  },
+  {
+    "q": "Kearifan lokal seperti 'sasi laut' di Maluku berfungsi untuk...",
+    "choices": ["Mengatur pemanfaatan sumber daya laut", "Melarang penebangan hutan", "Menyimpan benih di bank gen", "Membuat kebun binatang", "Menjual satwa"],
+    "answer": 0
+  },
+  {
+    "q": "Apa akibat jika pelestarian tidak dilakukan?",
+    "choices": ["Kepunahan spesies", "Keseimbangan ekosistem terjaga", "Manfaat hayati makin banyak", "Keanekaragaman meningkat", "Masyarakat sejahtera"],
+    "answer": 0
+  },
+  {
+    "q": "Konservasi penting secara global karena...",
+    "choices": ["Menjaga keanekaragaman dunia", "Agar semua spesies punah", "Agar negara maju sejahtera", "Agar semua hutan ditebang", "Agar perdagangan satwa liar bebas"],
+    "answer": 0
+  },
+  {
+    "q": "Program 'one man one tree' adalah contoh...",
+    "choices": ["Reboisasi masyarakat", "Ex-situ", "Kultur jaringan", "Bank gen", "CITES"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa pelestarian penting bagi kesejahteraan manusia?",
+    "choices": ["Karena keanekaragaman hayati memberi manfaat ekonomi, ekologi, dan sosial", "Karena hanya untuk penelitian", "Karena hanya untuk ekspor", "Karena tidak ada hubungannya", "Karena hanya untuk adat"],
+    "answer": 0
+  }
+]
