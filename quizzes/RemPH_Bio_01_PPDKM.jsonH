@@ -1,0 +1,222 @@
+[
+  {
+    "q": "Ilmu yang mempelajari pengelompokan dan penamaan makhluk hidup disebut...",
+    "choices": [
+      "Taksonomi",
+      "Ekologi",
+      "Morfologi",
+      "Anatomi",
+      "Genetika"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kelompok makhluk hidup yang terbentuk dari hasil pengklasifikasian disebut...",
+    "choices": [
+      "Spesies",
+      "Takson",
+      "Genus",
+      "Kingdom",
+      "Filum"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Urutan tingkatan takson menurut Linnaeus dari tertinggi sampai terendah adalah...",
+    "choices": [
+      "Spesies – Genus – Familia – Ordo – Classis – Filum – Kingdom",
+      "Kingdom – Filum – Classis – Ordo – Familia – Genus – Spesies",
+      "Kingdom – Classis – Ordo – Filum – Familia – Genus – Spesies",
+      "Filum – Kingdom – Classis – Ordo – Familia – Genus – Spesies",
+      "Genus – Spesies – Familia – Ordo – Filum – Kingdom – Classis"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Tujuan utama klasifikasi makhluk hidup adalah...",
+    "choices": [
+      "Menyederhanakan objek studi",
+      "Mengetahui hubungan kekerabatan",
+      "Memberi nama makhluk hidup",
+      "Mengelompokkan berdasarkan persamaan ciri",
+      "Semua jawaban benar"
+    ],
+    "answer": 4
+  },
+  {
+    "q": "Klasifikasi sistem alami menggunakan dasar...",
+    "choices": [
+      "Habitat dan manfaat organisme",
+      "Persamaan dan perbedaan morfologi",
+      "Struktur alat reproduksi",
+      "Perbedaan genetik",
+      "Ukuran tubuh organisme"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Contoh klasifikasi sistem alami adalah...",
+    "choices": [
+      "Tumbuhan berbiji satu dan berbiji dua",
+      "Tumbuhan pangan dan tanaman obat",
+      "Hewan darat dan hewan laut",
+      "Hewan bertulang belakang dan tidak bertulang belakang",
+      "Tanaman hias dan tanaman industri"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sistem artifisial (buatan) pertama kali dikembangkan oleh...",
+    "choices": [
+      "Aristoteles",
+      "Charles Darwin",
+      "Robert Whittaker",
+      "Carl Woese",
+      "Jean Baptiste Lamarck"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Tokoh yang mengelompokkan tumbuhan berdasarkan alat reproduksi adalah...",
+    "choices": [
+      "Aristoteles",
+      "Carolus Linnaeus",
+      "Ernst Haeckel",
+      "Robert Whittaker",
+      "Herbert Copeland"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Sistem filogenetik didasarkan pada...",
+    "choices": [
+      "Habitat dan kegunaan",
+      "Kekerabatan evolusioner",
+      "Bentuk morfologi luar",
+      "Ukuran tubuh organisme",
+      "Cara reproduksi"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Ahli yang pertama kali menghubungkan klasifikasi dengan teori evolusi adalah...",
+    "choices": [
+      "Aristoteles",
+      "Carolus Linnaeus",
+      "Charles Darwin",
+      "Robert Whittaker",
+      "Carl Woese"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Sistem dua kingdom membagi makhluk hidup menjadi...",
+    "choices": [
+      "Monera dan Protista",
+      "Animalia dan Plantae",
+      "Protista dan Animalia",
+      "Plantae dan Fungi",
+      "Protista dan Monera"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Sistem tiga kingdom menurut Ernst Haeckel terdiri atas...",
+    "choices": [
+      "Animalia, Plantae, Monera",
+      "Animalia, Plantae, Protista",
+      "Animalia, Protista, Fungi",
+      "Plantae, Protista, Fungi",
+      "Monera, Protista, Animalia"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kingdom yang ditambahkan dalam sistem empat kingdom adalah...",
+    "choices": [
+      "Fungi",
+      "Protista",
+      "Monera",
+      "Archaebacteria",
+      "Eubacteria"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Robert H. Whittaker pada tahun 1969 mengusulkan sistem...",
+    "choices": [
+      "Dua kingdom",
+      "Tiga kingdom",
+      "Empat kingdom",
+      "Lima kingdom",
+      "Enam kingdom"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Kingdom Fungi memiliki ciri...",
+    "choices": [
+      "Eukariotik, autotrof, berklorofil",
+      "Eukariotik, heterotrof, tidak berklorofil, dinding sel dari kitin",
+      "Prokariotik, autotrof, tidak memiliki klorofil",
+      "Eukariotik, multiseluler, dinding sel dari selulosa",
+      "Eukariotik, autotrof, hidup berkoloni"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kingdom Plantae memiliki dinding sel yang tersusun dari...",
+    "choices": [
+      "Kitin",
+      "Selulosa",
+      "Protein",
+      "Pektin",
+      "Lignin"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kingdom Animalia dicirikan oleh...",
+    "choices": [
+      "Sel eukariotik, tidak berklorofil, dapat bergerak aktif",
+      "Sel prokariotik, autotrof, tidak memiliki dinding sel",
+      "Sel eukariotik, autotrof, berklorofil",
+      "Sel eukariotik, berfotosintesis, memiliki dinding sel",
+      "Sel prokariotik, heterotrof, memiliki dinding sel"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh hewan invertebrata adalah...",
+    "choices": [
+      "Ikan arwana",
+      "Katak",
+      "Singa",
+      "Spongia sp",
+      "Orang utan"
+    ],
+    "answer": 3
+  },
+  {
+    "q": "Contoh hewan vertebrata kelas Aves adalah...",
+    "choices": [
+      "Rana sp",
+      "Aquila achrysaetos",
+      "Scolopendra subspinipes",
+      "Planaria maculata",
+      "Hirudo medicinalis"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Contoh tumbuhan berbiji terbuka adalah...",
+    "choices": [
+      "Pinus",
+      "Jagung",
+      "Padi",
+      "Terong",
+      "Kacang tanah"
+    ],
+    "answer": 0
+  }
+]
