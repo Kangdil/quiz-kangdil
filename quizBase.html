@@ -112,12 +112,10 @@ let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
 let maxScore = 0;
 let currentQuestion=null;
 
-async function restartQuiz(){
-  try {
+function restartQuiz(){
     const params = new URLSearchParams(window.location.search);
     const quizType = params.get('quiz');
     if(quizType!==null){ startQuiz(quizType); }
-}
 }
 
 async function startQuiz(type){
