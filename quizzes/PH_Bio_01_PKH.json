@@ -104,11 +104,11 @@
     "answer": 2
   },
   {
-    "q": "Perhatikan gambar: menunjukkan keanekaragaman tingkat...",
-    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
-    "answer": 0,
-    "img": "https://cdn.rri.co.id/berita/Cirebon/o/1727754162757-WhatsApp_Image_2024-10-01_at_10.33.27/nsz0ks1hsebdpgp.jpeg"
-  },
+  "q": "Perhatikan gambar: menunjukkan keanekaragaman tingkat...",
+  "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
+  "answer": 0,
+  "img": "https://cdn.rri.co.id/berita/Cirebon/o/1727754162757-WhatsApp_Image_2024-10-01_at-10.33.27/nsz0ks1hsebdpgp.jpeg"
+},
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
     "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Populasi"],
