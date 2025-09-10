@@ -208,4 +208,34 @@
   },
   {
     "q": "Pemanfaatan padi, jagung, dan kedelai merupakan contoh manfaat hayati dalam bidang...",
-    "choice
+    "choices": ["Sandang", "Pangan", "Papan", "Estetika", "Obat"],
+    "answer": 1
+  },
+  {
+    "q": "Manfaat hayati di bidang penelitian contohnya...",
+    "choices": [
+      "Pemuliaan tanaman untuk hasil unggul",
+      "Kayu untuk papan",
+      "Padi untuk pangan",
+      "Sapi untuk daging",
+      "Kapas untuk kain"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Burung cenderawasih dimanfaatkan dalam budaya Papua sebagai...",
+    "choices": ["Sandang", "Pangan", "Simbol adat & seni", "Papan", "Ekologi"],
+    "answer": 2
+  },
+  {
+    "q": "Taman nasional juga berperan dalam bidang ilmiah yaitu...",
+    "choices": [
+      "Sebagai laboratorium alam untuk penelitian",
+      "Sebagai tempat industri kayu",
+      "Sebagai pusat pertanian",
+      "Sebagai sumber pangan pokok",
+      "Sebagai pusat transportasi"
+    ],
+    "answer": 0
+  }
+]
