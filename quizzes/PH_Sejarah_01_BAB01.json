@@ -1,47 +1,255 @@
 [
-  {"q":"Dalam etimologi Arab, kata 'Syajara' berarti...","choices":["Pohon","Terjadi","Silsilah","Ilmu","Masa lampau"],"answer":1},
-  {"q":"Bentuk Arab 'Syajarah' atau 'Syajaratun' bermakna...","choices":["Terjadi","Pohon","Silsilah","Catatan","Peristiwa"],"answer":1},
-  {"q":"'Syajarah an nasab' mengacu pada...","choices":["Terjadi","Pohon","Pohon silsilah","Tulisan kuno","Sumber lisan"],"answer":2},
-  {"q":"Dalam bahasa Yunani kuno, istilah 'Istoria' berarti...","choices":["Silsilah","Ilmu atau belajar dengan bertanya","Catatan resmi","Peristiwa tunggal","Kronologi"],"answer":1},
-  {"q":"Menurut bahan ajar, 'History' dalam bahasa Inggris diartikan sebagai...","choices":["Ilmu tentang masa depan","Masa lampau umat manusia atau kejadian-kejadian yang dibuat oleh alam","Cerita fiksi","Catatan kerajaan","Hanya peristiwa politik"],"answer":1},
-  {"q":"Istilah Belanda 'Geschiedenis' paling tepat diartikan sebagai...","choices":["Kronologi peristiwa alam","Kejadian-kejadian yang telah dibuat oleh manusia","Ilmu sosial modern","Pohon silsilah","Cerita rakyat"],"answer":1},
-  {"q":"'Geschichte' dalam bahasa Jerman berarti...","choices":["Ilmu","Sesuatu yang telah terjadi","Rencana masa depan","Catatan ekonomi","Nama kitab"],"answer":1},
-  {"q":"Unsur dasar suatu peristiwa sejarah terdiri dari...","choices":["Manusia, Ruang, Waktu","Manusia, Dokumen, Artefak","Ruang, Alasan, Bukti","Waktu, Budaya, Ekonomi","Tokoh, Konflik, Solusi"],"answer":0},
-  {"q":"Peran unsur 'Manusia' dalam peristiwa sejarah adalah...","choices":["Tempat terjadinya peristiwa","Pelaku peristiwa sejarah","Urutan waktu","Bukti fisik","Alat produksi"],"answer":1},
-  {"q":"Yang dimaksud unsur 'Ruang' adalah...","choices":["Sumber tulisan","Tempat terjadinya suatu peristiwa","Jenis pelaku","Waktu kejadian","Saksi sejarah"],"answer":1},
-  {"q":"Unsur 'Waktu' menunjukkan...","choices":["Kapan terjadinya peristiwa","Siapa pelakunya","Dimana peristiwa terjadi","Apa yang dihasilkan","Siapa saksi"],"answer":0},
-  {"q":"Salah satu karakteristik sejarah yang berarti 'dikenang' adalah...","choices":["Unik","Abadi","Berulang","Tidak penting","Hipotesis"],"answer":1},
-  {"q":"Karakteristik sejarah 'Unik' artinya...","choices":["Terjadi berulang-ulang setiap waktu","Terjadi hanya satu kali (terjadi 1x)","Tidak dapat dibuktikan","Hanya mitos","Selalu benar"],"answer":1},
-  {"q":"Jika dikatakan sejarah 'Penting', maksudnya...","choices":["Tidak memiliki arti","Memiliki arti bagi masyarakat atau peristiwa lain","Hanya untuk akademisi","Selalu menguntungkan","Hanya bersifat lokal"],"answer":1},
-  {"q":"Pernyataan 'sebagai suatu peristiwa' pada karakteristik sejarah menekankan bahwa sejarah bersifat...","choices":["Teoretis semata","Kejadian nyata yang pernah berlangsung","Sastra fiksi","Selalu berulang tanpa perubahan","Hanya berupa data statistik"],"answer":1},
-  {"q":"Konsep berpikir 'Diakronis' dalam sejarah menekankan...","choices":["Analisis struktur pada waktu tertentu","Proses dan urutan peristiwa dalam waktu (kronologis)","Hanya perbandingan antar ruang","Penghapusan periodisasi","Mengabaikan sebab-akibat"],"answer":1},
-  {"q":"Ciri khas pendekatan diakronis adalah...","choices":["Melebar dalam ruang","Memanjang dalam waktu tetapi terbatas dalam ruang","Hanya meneliti satu hari","Mengabaikan kronologi","Berfokus pada sumber sekunder saja"],"answer":1},
-  {"q":"Contoh peristiwa yang cocok dipelajari secara diakronis adalah...","choices":["Tragedi G30S/PKI hari tertentu","Proses menuju Proklamasi Kemerdekaan 17 Agustus 1945","Analisis struktur sosial saat ini","Jenis artefak arkeologi","Daftar raja sebuah kerajaan"],"answer":1},
-  {"q":"Urutan peristiwa menuju Proklamasi 17 Agustus 1945 menurut bahan ajar adalah...","choices":["Pengeboman Hiroshima & Nagasaki → Berita penyerahan Jepang → Golongan pemuda mendesak golongan tua → Penculikan Soekarno & Hatta ke Rengasdengklok → Proklamasi 17 Agustus 1945","Penculikan Rengasdengklok → Bom Hiroshima → Proklamasi → Pemuda mendesak golongan tua → Jepang menyerah","Proklamasi → Bom Hiroshima → Pemuda dengar → Penculikan Rengasdengklok → Jepang menyerah","Pemuda mendesak golongan tua → Proklamasi → Bom Nagasaki → Penculikan → Jepang menyerah","Bom Hiroshima → Penculikan Rengasdengklok → Jepang menyerah → Proklamasi → Pemuda mendesak"],"answer":0},
-  {"q":"Konsep 'Sinkronik' dalam studi sejarah berarti...","choices":["Mempelajari proses dari waktu A sampai B","Mempelajari peristiwa pada kurun waktu tertentu dan melebar dalam ruang (fokus struktur)","Hanya mengumpulkan artefak","Membuat periodisasi panjang","Mencari sebab tunggal tanpa konteks"],"answer":1},
-  {"q":"Contoh peristiwa yang dipelajari secara sinkronik menurut bahan ajar adalah...","choices":["Proses Proklamasi 1945","Tragedi G30S/PKI (1 Oktober) dilihat pada struktur dan aktornya","Keruntuhan Majapahit sepanjang berabad-abad","Sejarah praaksara secara umum","Perbandingan periodisasi beberapa bangsa"],"answer":1},
-  {"q":"Salah satu tujuan periodisasi adalah...","choices":["Mengaburkan hubungan antar peristiwa","Mempermudah memahami sejarah dengan membagi babak/waktu","Menghapus kesinambungan peristiwa","Membatasi penelitian hanya pada satu abad","Menentukan kebenaran mutlak"],"answer":1},
-  {"q":"Periodisasi tidak boleh dipakai untuk memutus hubungan antar peristiwa karena sejarah juga mengenal...","choices":["Kebetulan semata","Aspek kesinambungan dan kontinuitas","Fiksi historiografis","Sumber sekunder yang salah","Hanya peristiwa politik"],"answer":1},
-  {"q":"Urutan periodisasi Sejarah Indonesia sesuai bahan ajar adalah...","choices":["Masa Praaksara, Masa Hindu-Buddha, Masa Islam, Masa kolonialisme Barat, Masa pendudukan Jepang, Masa Kemerdekaan","Zaman Batu, Zaman Besi, Zaman Atom, Zaman Digital","Masa Kuno, Masa Modern, Masa Posmodern","Zaman Raja, Zaman Kolonial, Zaman Mandiri, Zaman Global","Masa Saksi, Masa Bukti, Masa Interpretasi"],"answer":0},
-  {"q":"Konsep kausalitas dalam sejarah berarti...","choices":["Tidak ada hubungan antar peristiwa","Adanya hubungan sebab-akibat dan saling mempengaruhi antar peristiwa dari waktu ke waktu","Hanya urutan tanggal tanpa hubungan","Hanya fokus pada aktor utama","Hanya relevan untuk ekonomi"],"answer":1},
-  {"q":"Dalam contoh keruntuhan Majapahit, penyebab awal yang disebut dalam bahan ajar adalah...","choices":["Serangan asing dari Eropa","Kematian/sepeninggal Hayam Wuruk dan Gajah Mada sehingga tidak ada pemimpin kuat","Letusan gunung berapi","Penemuan teknologi baru","Perubahan iklim drastis"],"answer":1},
-  {"q":"Akibat konflik internal di tubuh Majapahit yang disebut adalah...","choices":["Menguatnya otoritas pusat","Kerajaan bawahan mulai melepaskan diri dan memisahkan diri","Bangkitnya kerajaan baru bernama Majapahit II","Penghapusan semua daerah bawahan","Perdamaian total"],"answer":1},
-  {"q":"Menurut bahan ajar, faktor eksternal yang mempercepat keruntuhan Majapahit adalah...","choices":["Masuknya pengaruh Islam ke pesisir di bawah komando Raden Patah","Kemajuan teknologi pertanian","Perjanjian damai dengan Demak","Invasi Portugis secara langsung","Bertambahnya jumlah penduduk"],"answer":0},
-  {"q":"Siapakah tokoh yang disebut memimpin pengaruh Islam di pesisir sehingga melemahkan Majapahit menurut bahan ajar?","choices":["Raden Patah","Hayam Wuruk","Gajah Mada","Gajah Putih","Wijaya"],"answer":0},
-  {"q":"Ketika pengaruh Demak di bawah Raden Patah semakin kuat, menurut bahan ajar terjadi...","choices":["Majapahit semakin kehilangan pengaruh dan kekuasaannya di Jawa","Majapahit mengalahkan Demak dan memperluas wilayah","Majapahit menjadi pusat Islam terbesar","Majapahit berdamai dan bersatu dengan Demak","Majapahit menjadi negara maritim terkuat"],"answer":0},
-  {"q":"Pernyataan mana yang paling tepat tentang hubungan sebab-akibat (kausalitas) dalam sejarah?","choices":["Sebab selalu satu dan langsung menyebabkan akibat","Sebab bisa bersifat ganda, berlapis, dan saling mempengaruhi dari waktu ke waktu","Sebab tidak perlu diuji","Akibat selalu muncul segera setelah sebab","Sebab hanya bersifat kebetulan"],"answer":1},
-  {"q":"Pernyataan 'Sejarah mementingkan proses; membicarakan satu peristiwa tertentu dengan tempat tertentu dari waktu A sampai waktu B' paling menggambarkan konsep...","choices":["Sinkronik","Diakronis","Kausalitas","Historiografi","Sumber sekunder"],"answer":1},
-  {"q":"Jika studi sejarah mempelajari struktur sosial pada satu waktu tertentu tanpa menelusuri proses waktu, pendekatan itu disebut...","choices":["Diakronis","Sinkronik","Periodisasi","Kausalitas","Heuristik"],"answer":1},
-  {"q":"Contoh berikut yang menekankan struktur dan aktor pada waktu tertentu (pendekatan sinkronik) adalah...","choices":["Penculikan dan pembunuhan 7 jenderal pada Tragedi G30S/PKI","Proses kemerdekaan Indonesia sejak kapitulasi Jepang hingga proklamasi","Kemunduran panjang sebuah kerajaan selama beberapa generasi","Perubahan masyarakat dari desa ke kota sepanjang ratusan tahun","Perdagangan maritim zaman kuno"],"answer":0},
-  {"q":"'Diakronis bersifat memanjang dalam waktu tetapi terbatas dalam ruang' maksudnya adalah...","choices":["Studi jangka panjang yang fokus pada satu tempat/peristiwa","Studi jangka pendek di banyak tempat","Tidak meneliti lokasi","Studi lintas negara tanpa memperhatikan waktu","Studi hanya pada sumber sekunder"],"answer":0},
-  {"q":"Proklamasi Kemerdekaan 17 Agustus 1945 disebut contoh diakronis karena...","choices":["Melibatkan rangkaian proses berurutan dari penyerahan Jepang hingga proklamasi","Hanya terjadi pada satu hari tanpa proses sebelumnya","Tidak berhubungan dengan faktor eksternal","Hanya bisa dipelajari secara sinkronik","Hanya masalah pernyataan tanpa konteks"],"answer":0},
-  {"q":"Pernyataan 'terjadi 1x' pada karakteristik sejarah paling tepat menggambarkan istilah...","choices":["Berulang","Unik","Abadi","Kontinuitas","Sinkronik"],"answer":1},
-  {"q":"Perbedaan ringkas antara definisi 'History' (Inggris) dan 'Geschiedenis' (Belanda) dalam bahan ajar adalah...","choices":["History meliputi masa lampau dan kejadian alam; Geschiedenis menekankan kejadian yang dibuat manusia","Keduanya identik tanpa perbedaan","History bahasa Yunani, Geschiedenis bahasa Latin","Geschiedenis selalu lebih luas dari History","History hanya untuk Inggris"],"answer":0},
-  {"q":"Menurut bahan ajar, tujuan penggunaan periodisasi adalah untuk...","choices":["Mempermudah pemahaman atas perkembangan peristiwa sejarah","Menghilangkan peristiwa yang tidak penting","Menentukan kebenaran satu-satunya","Menjadikan sejarah lebih subjektif","Menyederhanakan semua peristiwa menjadi satu tanggal"],"answer":0},
-  {"q":"Istilah 'kontinuum waktu' dalam pembahasan kausalitas berarti...","choices":["Peristiwa saling terkait dan mempengaruhi dari waktu ke waktu","Waktu tidak berpengaruh pada peristiwa","Peristiwa muncul secara acak tanpa sebab","Sebab dan akibat selalu berdiri sendiri","Waktu selalu linier dan tidak pernah berulang"],"answer":0},
-  {"q":"Urutan ringkas sebab-akibat (kausalitas) keruntuhan Majapahit yang ditunjukkan dalam bahan ajar adalah...","choices":["Hayam Wuruk & Gajah Mada meninggal → Konflik internal → Kerajaan bawahan melepaskan diri → Masuknya pengaruh Islam (Raden Patah/Demak) → Perang dan Majapahit kalah","Masuknya Islam → Hayam Wuruk & Gajah Mada meninggal → Majapahit meledak → Kemakmuran","Perang dengan Portugis → Hayam Wuruk lahir kembali → Runtuhnya Majapahit","Majapahit menang telak → Semua kerajaan menjadi bawahan","Tidak ada urutan sebab akibat yang jelas"],"answer":0},
-  {"q":"Istilah 'Istoria' berasal dari bahasa...","choices":["Arab","Yunani kuno","Belanda","Jerman","Latin"],"answer":1},
-  {"q":"Menurut bahan ajar, 'History' mencakup...","choices":["Hanya perbuatan manusia","Masa lampau umat manusia dan kejadian alam","Hanya mitos dan legenda","Hanya catatan resmi pemerintah","Hanya aspek ekonomi"],"answer":1},
-  {"q":"Menurut bahan ajar, arti 'Geschichte' (Jerman) paling dekat dengan...","choices":["Ilmu ekonomi","Sesuatu yang telah terjadi","Rencana pemerintah","Pohon silsilah","Masa depan yang direncanakan"],"answer":1},
-  {"q":"Pernyataan berikut: 'Periodisasi membantu memahami sejarah namun tidak memutus kesinambungan peristiwa' adalah...","choices":["Benar","Salah","Hanya berlaku untuk sejarah Eropa","Hanya berlaku untuk sejarah ekonomi","Hanya berlaku untuk sumber tertulis"],"answer":0}
+  {
+    "q": "Kata 'Syajara' dalam bahasa Arab berarti...",
+    "choices": ["Terjadi", "Pohon", "Ilmu", "Catatan", "Masa lalu"],
+    "answer": 0
+  },
+  {
+    "q": "Istilah 'Syajarah an-nasab' berarti...",
+    "choices": ["Pohon silsilah", "Kronologi sejarah", "Tulisan kuno", "Legenda", "Mitos keluarga"],
+    "answer": 0
+  },
+  {
+    "q": "Dalam bahasa Yunani kuno, 'Istoria' bermakna...",
+    "choices": ["Ilmu atau belajar dengan cara bertanya", "Mitos masyarakat kuno", "Catatan peperangan", "Cerita rakyat", "Ramalan masa depan"],
+    "answer": 0
+  },
+  {
+    "q": "'History' dalam bahasa Inggris diartikan sebagai...",
+    "choices": [
+      "Masa lampau umat manusia atau kejadian-kejadian yang dibuat oleh alam",
+      "Hanya catatan peperangan bangsa-bangsa",
+      "Kumpulan cerita rakyat",
+      "Cerita fiksi masa lampau",
+      "Data statistik penduduk"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Istilah 'Geschiedenis' dalam bahasa Belanda berarti...",
+    "choices": [
+      "Kejadian-kejadian yang dibuat oleh manusia",
+      "Mitos sejarah kerajaan",
+      "Ramalan masa depan",
+      "Hukum adat",
+      "Cerita rakyat turun-temurun"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Dalam bahasa Jerman, 'Geschichte' berarti...",
+    "choices": ["Sesuatu yang telah terjadi", "Cerita rakyat", "Mitos kuno", "Rencana", "Legenda"],
+    "answer": 0
+  },
+  {
+    "q": "Unsur dasar suatu peristiwa sejarah terdiri atas...",
+    "choices": ["Manusia, Ruang, Waktu", "Tokoh, Hasil, Tujuan", "Artefak, Tradisi, Budaya", "Dokumen, Fakta, Periode", "Saksi, Catatan, Cerita"],
+    "answer": 0
+  },
+  {
+    "q": "Unsur 'Manusia' dalam sejarah berperan sebagai...",
+    "choices": ["Pelaku peristiwa", "Tempat peristiwa", "Urutan waktu", "Sumber lisan", "Artefak"],
+    "answer": 0
+  },
+  {
+    "q": "Unsur 'Ruang' berkaitan dengan...",
+    "choices": ["Tempat terjadinya peristiwa", "Pelaku utama", "Kapan terjadinya", "Hasil budaya", "Urutan kronologi"],
+    "answer": 0
+  },
+  {
+    "q": "Unsur 'Waktu' dalam sejarah mengacu pada...",
+    "choices": ["Kapan peristiwa terjadi", "Siapa tokoh utama", "Dimana peristiwa terjadi", "Mengapa peristiwa terjadi", "Bagaimana proses berlangsung"],
+    "answer": 0
+  },
+  {
+    "q": "Karakteristik sejarah yang 'Abadi' berarti...",
+    "choices": [
+      "Dikenang sepanjang masa",
+      "Berlaku hanya sementara",
+      "Hilang tanpa catatan",
+      "Tidak penting bagi masyarakat",
+      "Sekadar legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Karakteristik sejarah 'Unik' berarti...",
+    "choices": ["Terjadi satu kali", "Berlaku umum", "Selalu berulang", "Hanya imajinasi", "Tidak berbeda dengan peristiwa lain"],
+    "answer": 0
+  },
+  {
+    "q": "Karakteristik sejarah 'Penting' artinya...",
+    "choices": [
+      "Memiliki arti bagi manusia atau peristiwa lain",
+      "Hanya bercerita tentang tokoh besar",
+      "Tidak berhubungan dengan kehidupan sekarang",
+      "Hanya menguntungkan satu pihak",
+      "Sekadar hiburan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Konsep berpikir diakronis dalam sejarah adalah...",
+    "choices": [
+      "Mempelajari peristiwa dalam kurun waktu berurutan",
+      "Mengkaji banyak tempat dalam satu waktu",
+      "Menghapus kronologi sejarah",
+      "Hanya melihat aspek ekonomi",
+      "Menganalisis tokoh tunggal"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Konsep berpikir sinkronik dalam sejarah adalah...",
+    "choices": [
+      "Mempelajari peristiwa dalam kurun waktu tertentu dan melebar dalam ruang",
+      "Meneliti sejarah dari masa lalu ke masa depan",
+      "Menghubungkan sebab dan akibat peristiwa",
+      "Menentukan siapa tokoh besar yang berperan",
+      "Menghapus kesinambungan sejarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Tujuan periodisasi adalah...",
+    "choices": [
+      "Mempermudah memahami sejarah",
+      "Memutus kesinambungan peristiwa",
+      "Menentukan tokoh utama",
+      "Menghapus fakta yang salah",
+      "Membatasi ruang lingkup sejarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Periodisasi tidak berarti memutus peristiwa karena sejarah mengenal...",
+    "choices": ["Kesinambungan", "Fiksi", "Mitos", "Subjektifitas", "Legenda"],
+    "answer": 0
+  },
+  {
+    "q": "Urutan periodisasi sejarah Indonesia adalah...",
+    "choices": [
+      "Praaksara, Hindu-Buddha, Islam, Kolonial, Jepang, Kemerdekaan",
+      "Masa batu, besi, baja, modern",
+      "Kuno, pertengahan, modern",
+      "Masa kerajaan, kolonial, globalisasi",
+      "Masa tradisi, industri, teknologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Konsep kausalitas berarti...",
+    "choices": [
+      "Hubungan sebab-akibat antar peristiwa",
+      "Hanya urutan tanggal",
+      "Hubungan mitos dengan cerita",
+      "Pemisahan fakta dengan opini",
+      "Hanya tokoh penting"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keruntuhan Majapahit disebabkan oleh...",
+    "choices": [
+      "Sepeninggal Hayam Wuruk dan Gajah Mada tidak ada pemimpin kuat",
+      "Bencana alam besar",
+      "Kekalahan melawan Portugis",
+      "Perang melawan Belanda",
+      "Migrasi besar-besaran penduduk"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Akibat konflik internal di Majapahit adalah...",
+    "choices": [
+      "Kerajaan bawahan melepaskan diri",
+      "Majapahit semakin kuat",
+      "Majapahit menguasai Malaka",
+      "Rakyat hidup makmur",
+      "Perdagangan meningkat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Faktor eksternal keruntuhan Majapahit adalah...",
+    "choices": [
+      "Masuknya Islam ke Jawa di bawah Raden Patah",
+      "Invasi Portugis besar-besaran",
+      "Serangan Belanda",
+      "Letusan gunung berapi",
+      "Wabah penyakit menular"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Tokoh Islam yang melemahkan Majapahit adalah...",
+    "choices": ["Raden Patah", "Sunan Kalijaga", "Hamzah Fansuri", "Sultan Agung", "Imam Bonjol"],
+    "answer": 0
+  },
+  {
+    "q": "Hubungan antara Demak dan Majapahit akhirnya...",
+    "choices": [
+      "Terjadi perang dan Majapahit kalah",
+      "Berdamai dan bersatu",
+      "Menjadi sekutu",
+      "Tidak pernah berhubungan",
+      "Berjalan damai tanpa konflik"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Konsep diakronis bersifat...",
+    "choices": [
+      "Memanjang dalam waktu, terbatas dalam ruang",
+      "Melebar dalam ruang",
+      "Mengabaikan waktu",
+      "Tidak memperhatikan proses",
+      "Hanya membicarakan tokoh"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh pendekatan diakronis adalah...",
+    "choices": [
+      "Proses menuju Proklamasi 17 Agustus 1945",
+      "Struktur sosial saat G30S/PKI",
+      "Jenis artefak prasejarah",
+      "Peninggalan candi",
+      "Hubungan dagang kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh pendekatan sinkronik adalah...",
+    "choices": [
+      "Tragedi G30S/PKI pada 1 Oktober 1965",
+      "Proses kemerdekaan Indonesia",
+      "Runtuhnya Majapahit berabad-abad",
+      "Migrasi manusia purba",
+      "Modernisasi Eropa abad ke-18"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kontinuum waktu berarti...",
+    "choices": [
+      "Peristiwa saling mempengaruhi dari waktu ke waktu",
+      "Peristiwa berdiri sendiri",
+      "Semua peristiwa tidak berhubungan",
+      "Hanya terjadi di masa lalu",
+      "Waktu tidak berpengaruh"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kesimpulan dari keruntuhan Majapahit adalah...",
+    "choices": [
+      "Majapahit kalah dan menjadi akhir kerajaan Hindu-Buddha di Indonesia",
+      "Majapahit semakin kuat",
+      "Majapahit berkembang pesat",
+      "Majapahit berdamai dengan Demak",
+      "Majapahit menguasai seluruh Nusantara"
+    ],
+    "answer": 0
+  }
 ]
