@@ -1,0 +1,255 @@
+[
+  {
+    "q": "Fisika adalah ilmu yang mempelajari...",
+    "choices": [
+      "Kehidupan hewan",
+      "Gejala alam beserta interaksinya",
+      "Cerita rakyat",
+      "Perubahan sosial",
+      "Sistem pemerintahan"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Besaran fisika adalah...",
+    "choices": [
+      "Segala sesuatu yang dapat diukur dan dinyatakan dengan angka dan satuan",
+      "Segala sesuatu yang dapat dilihat",
+      "Segala sesuatu yang abstrak",
+      "Hanya angka tanpa satuan",
+      "Simbol dalam matematika"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Satuan internasional disebut juga...",
+    "choices": ["SI", "CGS", "MKS", "ISO", "DIN"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran pokok adalah...",
+    "choices": [
+      "Besaran yang diturunkan dari besaran lain",
+      "Besaran yang ditetapkan satuannya terlebih dahulu",
+      "Besaran yang hanya berupa angka",
+      "Besaran yang berubah-ubah",
+      "Besaran yang tanpa dimensi"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Jumlah besaran pokok dalam SI adalah...",
+    "choices": ["5", "7", "8", "9", "10"],
+    "answer": 1
+  },
+  {
+    "q": "Contoh besaran pokok adalah...",
+    "choices": ["Massa, panjang, waktu", "Kecepatan, gaya, energi", "Volume, massa jenis", "Tekanan, usaha", "Kuat arus, kalor"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh besaran turunan adalah...",
+    "choices": ["Panjang", "Massa", "Waktu", "Luas", "Suhu"],
+    "answer": 3
+  },
+  {
+    "q": "Dimensi kecepatan adalah...",
+    "choices": ["[L][T]^-1", "[M][L][T]^-2", "[M][L]^2[T]^-2", "[T][M]^-1", "[L]^2[T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi percepatan adalah...",
+    "choices": ["[L][T]^-2", "[M][L][T]^-1", "[M][L][T]^-2", "[L][T]^-1", "[M][L]^2[T]^-2"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi gaya adalah...",
+    "choices": ["[M][L][T]^-2", "[M][L]^2[T]^-2", "[M][T]^-2", "[M][L][T]^-1", "[L][T]^-2"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi energi adalah...",
+    "choices": ["[M][L]^2[T]^-2", "[M][L][T]^-2", "[M][L]^2[T]^-1", "[M][T]^2", "[L][T]^-2"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi daya adalah...",
+    "choices": ["[M][L]^2[T]^-3", "[M][L][T]^-2", "[M][L]^2[T]^-2", "[M][T]^-2", "[L][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Satuan SI gaya adalah...",
+    "choices": ["Joule", "Newton", "Pascal", "Watt", "Meter"],
+    "answer": 1
+  },
+  {
+    "q": "Satuan SI energi adalah...",
+    "choices": ["Joule", "Newton", "Watt", "Pascal", "Meter"],
+    "answer": 0
+  },
+  {
+    "q": "Satuan SI tekanan adalah...",
+    "choices": ["Newton", "Pascal", "Joule", "Watt", "Ampere"],
+    "answer": 1
+  },
+  {
+    "q": "Dimensi tekanan adalah...",
+    "choices": ["[M][L]^-1[T]^-2", "[M][L]^2[T]^-2", "[M][L][T]^-2", "[M][T]^-2", "[L][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran pokok yang satuannya sekon adalah...",
+    "choices": ["Massa", "Panjang", "Waktu", "Kuat arus", "Suhu"],
+    "answer": 2
+  },
+  {
+    "q": "Besaran pokok yang satuannya kelvin adalah...",
+    "choices": ["Massa", "Panjang", "Waktu", "Suhu", "Kuat arus"],
+    "answer": 3
+  },
+  {
+    "q": "Besaran pokok yang satuannya ampere adalah...",
+    "choices": ["Massa", "Panjang", "Kuat arus", "Suhu", "Waktu"],
+    "answer": 2
+  },
+  {
+    "q": "Besaran pokok yang satuannya candela adalah...",
+    "choices": ["Intensitas cahaya", "Jumlah zat", "Kuat arus", "Panjang", "Massa"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran pokok yang satuannya mol adalah...",
+    "choices": ["Jumlah zat", "Intensitas cahaya", "Energi", "Kecepatan", "Tekanan"],
+    "answer": 0
+  },
+  {
+    "q": "Jangka sorong digunakan untuk mengukur...",
+    "choices": ["Ketebalan rambut", "Diameter koin", "Massa benda", "Waktu reaksi", "Kecepatan"],
+    "answer": 1
+  },
+  {
+    "q": "Ketelitian jangka sorong adalah...",
+    "choices": ["0,01 mm", "0,1 mm", "1 mm", "0,5 cm", "1 cm"],
+    "answer": 1
+  },
+  {
+    "q": "Mikrometer sekrup digunakan untuk mengukur...",
+    "choices": ["Diameter rambut", "Tinggi gedung", "Energi listrik", "Waktu tempuh", "Massa benda"],
+    "answer": 0
+  },
+  {
+    "q": "Ketelitian mikrometer sekrup adalah...",
+    "choices": ["0,1 cm", "0,1 mm", "0,01 mm", "0,001 cm", "1 mm"],
+    "answer": 2
+  },
+  {
+    "q": "Skala utama jangka sorong 2,3 cm, skala nonius garis ke-7. Hasil ukur adalah...",
+    "choices": ["2,30 cm", "2,37 cm", "2,07 cm", "2,73 cm", "2,70 cm"],
+    "answer": 1
+  },
+  {
+    "q": "Skala utama mikrometer sekrup 5,5 mm, skala putar garis ke-12. Hasil ukur adalah...",
+    "choices": ["5,50 mm", "5,62 mm", "5,12 mm", "6,12 mm", "5,70 mm"],
+    "answer": 1
+  },
+  {
+    "q": "Jika jangka sorong menunjukkan skala utama 1,5 cm dan skala nonius garis ke-5, hasil pengukuran adalah...",
+    "choices": ["1,55 cm", "1,50 cm", "1,05 cm", "1,15 cm", "1,25 cm"],
+    "answer": 0
+  },
+  {
+    "q": "Jika mikrometer sekrup menunjukkan skala utama 2 mm dan skala putar garis ke-35, hasil pengukuran adalah...",
+    "choices": ["2,35 mm", "2,30 mm", "2,05 mm", "3,50 mm", "2,00 mm"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran turunan yang satuannya Joule adalah...",
+    "choices": ["Energi", "Daya", "Tekanan", "Momentum", "Gaya"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran turunan yang satuannya Watt adalah...",
+    "choices": ["Daya", "Energi", "Tekanan", "Gaya", "Momentum"],
+    "answer": 0
+  },
+  {
+    "q": "Besaran turunan yang satuannya Pascal adalah...",
+    "choices": ["Tekanan", "Daya", "Energi", "Gaya", "Kecepatan"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi momentum adalah...",
+    "choices": ["[M][L][T]^-1", "[M][L][T]^-2", "[M][L]^2[T]^-2", "[M][T]", "[L][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Analisis dimensi digunakan untuk...",
+    "choices": ["Mengecek kebenaran persamaan fisika", "Mengukur panjang", "Mencatat waktu", "Menghitung massa", "Menentukan satuan SI"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kesalahan sistematis adalah...",
+    "choices": ["Jam terlambat 5 menit", "Salah membaca skala", "Beda reaksi antar orang", "Kesalahan menghitung cepat", "Terburu-buru mencatat"],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kesalahan acak adalah...",
+    "choices": ["Jam selalu terlambat 5 menit", "Reaksi manusia berbeda-beda", "Neraca rusak", "Alat tidak terkalibrasi", "Termometer pecah"],
+    "answer": 1
+  },
+  {
+    "q": "Ketelitian jangka sorong lebih besar daripada...",
+    "choices": ["Mikrometer sekrup", "Penggaris", "Stopwatch", "Neraca", "Amperemeter"],
+    "answer": 1
+  },
+  {
+    "q": "Ketelitian mikrometer sekrup lebih baik dibandingkan...",
+    "choices": ["Jangka sorong", "Stopwatch", "Termometer", "Neraca", "Penggaris"],
+    "answer": 0
+  },
+  {
+    "q": "Satuan SI dari usaha adalah...",
+    "choices": ["Joule", "Newton", "Watt", "Pascal", "Volt"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi usaha sama dengan dimensi...",
+    "choices": ["Energi", "Momentum", "Gaya", "Daya", "Tekanan"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi massa jenis adalah...",
+    "choices": ["[M][L]^-3", "[M][L]^2", "[M][L]^-2", "[M][T]^-2", "[L][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi percepatan gravitasi adalah...",
+    "choices": ["[L][T]^-2", "[M][L][T]^-2", "[M][L]^2[T]^-2", "[T]^-1", "[M][T]^-2"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi tegangan listrik adalah...",
+    "choices": ["[M][L]^2[T]^-3[I]^-1", "[M][L][T]^-3[I]^-1", "[M][L]^2[T]^-2[I]", "[M][T]^-2[I]", "[L]^2[T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi hambatan listrik adalah...",
+    "choices": ["[M][L]^2[T]^-3[I]^-2", "[M][L]^2[T]^-2[I]", "[M][L][T]^-3[I]^-1", "[M][T]^-2", "[L][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Dimensi muatan listrik adalah...",
+    "choices": ["[I][T]", "[M][I]", "[L][I]", "[M][L][T]", "[I][T]^-1"],
+    "answer": 0
+  },
+  {
+    "q": "Analisis dimensi pada persamaan v = s/t menunjukkan...",
+    "choices": ["Dimensi [L][T]^-1", "Dimensi [M][L][T]^-2", "Dimensi [M][L]^2[T]^-2", "Dimensi [M][T]^-1", "Dimensi [L][T]"],
+    "answer": 0
+  },
+  {
+    "q": "Analisis dimensi pada persamaan F = m·a menunjukkan...",
+    "choices": ["[M][L][T]^-2", "[M][L]^2[T]^-2", "[M][L][T]^-1", "[L][T]^-2", "[M][T]^-2"],
+    "answer": 0
+  }
+]
