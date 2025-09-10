@@ -111,11 +111,17 @@
   },
   {
     "q": "Gambar ini menunjukkan manfaat bagi manusia sebagai...",
-    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
+    "choices": [
+      "Sandang",
+      "Pangan",
+      "Papan",
+      "Obat",
+      "Industri"
+    ],
     "answer": 2
   },
   {
-   "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
+    "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
     "choices": [
       "Memberi pilihan sumber makanan yang beragam",
       "Hanya untuk simbol budaya",
@@ -127,32 +133,68 @@
   },
   {
     "q": "Sapi, kambing, dan ayam dimanfaatkan manusia sebagai sumber...",
-    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Estetika"],
+    "choices": [
+      "Sandang",
+      "Pangan",
+      "Papan",
+      "Obat",
+      "Estetika"
+    ],
     "answer": 1
   },
   {
     "q": "Pohon kapas, sutera, dan rami bermanfaat bagi manusia sebagai...",
-    "choices": ["Sandang", "Papan", "Pangan", "Obat", "Ekologi"],
+    "choices": [
+      "Sandang",
+      "Papan",
+      "Pangan",
+      "Obat",
+      "Ekologi"
+    ],
     "answer": 0
   },
   {
     "q": "Hewan seperti kerbau dan kuda membantu manusia dalam bidang...",
-    "choices": ["Pangan", "Transportasi & tenaga kerja", "Sandang", "Estetika", "Ekologi"],
+    "choices": [
+      "Pangan",
+      "Transportasi & tenaga kerja",
+      "Sandang",
+      "Estetika",
+      "Ekologi"
+    ],
     "answer": 1
   },
   {
     "q": "Hewan seperti gajah sering digunakan sebagai simbol...",
-    "choices": ["Ekonomi", "Ilmu pengetahuan", "Budaya & adat", "Ekologi", "Estetika"],
+    "choices": [
+      "Ekonomi",
+      "Ilmu pengetahuan",
+      "Budaya & adat",
+      "Ekologi",
+      "Estetika"
+    ],
     "answer": 2
   },
   {
     "q": "Wisata alam seperti taman nasional menunjukkan manfaat hayati dalam bidang...",
-    "choices": ["Ekologi", "Estetika & ekonomi", "Sandang", "Obat", "Industri"],
+    "choices": [
+      "Ekologi",
+      "Estetika & ekonomi",
+      "Sandang",
+      "Obat",
+      "Industri"
+    ],
     "answer": 1
   },
   {
     "q": "Peran tumbuhan hijau dalam siklus oksigen adalah contoh manfaat hayati dalam bidang...",
-    "choices": ["Ilmu pengetahuan", "Ekologi", "Pangan", "Estetika", "Ekonomi"],
+    "choices": [
+      "Ilmu pengetahuan",
+      "Ekologi",
+      "Pangan",
+      "Estetika",
+      "Ekonomi"
+    ],
     "answer": 1
   },
   {
@@ -168,12 +210,24 @@
   },
   {
     "q": "Karet, rotan, dan bambu adalah contoh pemanfaatan hayati di bidang...",
-    "choices": ["Sandang", "Pangan", "Papan & industri", "Obat", "Estetika"],
+    "choices": [
+      "Sandang",
+      "Pangan",
+      "Papan & industri",
+      "Obat",
+      "Estetika"
+    ],
     "answer": 2
   },
   {
     "q": "Ikan hias dan burung kicau adalah contoh manfaat hayati dalam bidang...",
-    "choices": ["Ekologi", "Estetika & ekonomi", "Sandang", "Obat", "Papan"],
+    "choices": [
+      "Ekologi",
+      "Estetika & ekonomi",
+      "Sandang",
+      "Obat",
+      "Papan"
+    ],
     "answer": 1
   },
   {
@@ -189,7 +243,13 @@
   },
   {
     "q": "Pemanfaatan padi, jagung, dan kedelai merupakan contoh manfaat hayati dalam bidang...",
-    "choices": ["Sandang", "Pangan", "Papan", "Estetika", "Obat"],
+    "choices": [
+      "Sandang",
+      "Pangan",
+      "Papan",
+      "Estetika",
+      "Obat"
+    ],
     "answer": 1
   },
   {
@@ -205,7 +265,13 @@
   },
   {
     "q": "Burung cenderawasih dimanfaatkan dalam budaya Papua sebagai...",
-    "choices": ["Sandang", "Pangan", "Simbol adat & seni", "Papan", "Ekologi"],
+    "choices": [
+      "Sandang",
+      "Pangan",
+      "Simbol adat & seni",
+      "Papan",
+      "Ekologi"
+    ],
     "answer": 2
   },
   {
