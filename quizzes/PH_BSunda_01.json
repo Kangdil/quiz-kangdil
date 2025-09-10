@@ -1,5 +1,5 @@
 [
-{
+  {
     "q": "Karajaan munggaran di Tatar Sunda nyaéta…",
     "choices": ["Salakanagara", "Tarumanagara", "Kendan", "Galuh"],
     "answer": 0
@@ -11,7 +11,7 @@
   },
   {
     "q": "Raja munggaran Karajaan Galuh nyaéta…",
-    "choices": ["Tarusbawa", "Limbur Kancana", "Prabu Darmaraksa", "Rakeyan Medang"],
+    "choices": ["Wretikandayun", "Tarusbawa", "Limbur Kancana", "Rakeyan Medang"],
     "answer": 0
   },
   {
@@ -35,6 +35,206 @@
     "answer": 1
   },
   {
+    "q": "Runtuhna Karajaan Pajajaran kajantenan nalika mangsa…",
+    "choices": ["Surawisesa", "Ragamulya Suryakancana", "Prabu Siliwangi", "Nilakendra"],
+    "answer": 1
+  },
+  {
+    "q": "Raja Tarumanagara nu ngadegkeun karajaan nyaéta…",
+    "choices": ["Jayasinghawarman", "Purnawarman", "Indrawarman", "Dewawarman VIII"],
+    "answer": 0
+  },
+  {
+    "q": "Prabu Gajah Kulon pamaréntahanana dina taun…",
+    "choices": ["819–891 M", "766–783 M", "915–916 M", "1482–1521 M"],
+    "answer": 0
+  },
+  {
+    "q": "Anu disebut **Mitoha** dina kulawarga Sunda nyaéta…",
+    "choices": ["Mertua ibu/bapa suami atanapi istri", "Anak pertama", "Cucu", "Saudara sepupu"],
+    "answer": 0
+  },
+  {
+    "q": "Anak panggedéna dina kulawarga disebut…",
+    "choices": ["Cikal", "Bungsu", "Pangais bungsu", "Incu"],
+    "answer": 0
+  },
+  {
+    "q": "Anak pangleutikna disebut…",
+    "choices": ["Bungsu", "Cikal", "Pangais bungsu", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Anak panengah disebut…",
+    "choices": ["Panengah", "Cikal", "Bungsu", "Mitoha"],
+    "answer": 0
+  },
+  {
+    "q": "Anak tina anak disebut…",
+    "choices": ["Incu", "Cikal", "Bungsu", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Saudara anu langkung kolot disebut…",
+    "choices": ["Lanceuk", "Adina", "Kapi lanceuk", "Kapi adi"],
+    "answer": 0
+  },
+  {
+    "q": "Saudara anu langkung ngora disebut…",
+    "choices": ["Adina", "Lanceuk", "Minantu", "Bapa"],
+    "answer": 0
+  },
+  {
+    "q": "Anak tina kakak atawa adik disebut…",
+    "choices": ["Alo/Suan", "Kapi lanceuk", "Kapi adi", "Incu ti gigir"],
+    "answer": 0
+  },
+  {
+    "q": "Kakak sepupu disebut…",
+    "choices": ["Kapi lanceuk", "Kapi adi", "Alo", "Suan"],
+    "answer": 0
+  },
+  {
+    "q": "Anu disebut **Minantu** dina kulawarga Sunda nyaéta…",
+    "choices": ["Menantu", "Cucu", "Mertua", "Bapa"],
+    "answer": 0
+  },
+  {
+    "q": "Bapa téh nyaéta…",
+    "choices": ["Lalaki anu gaduh anak", "Istri", "Cucu", "Mertua"],
+    "answer": 0
+  },
+  {
+    "q": "Indung téh nyaéta…",
+    "choices": ["Perempuan anu gaduh anak", "Bapa", "Minantu", "Cikal"],
+    "answer": 0
+  },
+  {
+    "q": "Bésan/Warang nyaéta…",
+    "choices": ["Mertua tina menantu", "Cucu", "Anak pertama", "Bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Popotongan dina kulawarga Sunda nyaéta…",
+    "choices": ["Mantan salaki/istri", "Anak panengah", "Bapa", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Karajaan Tarumanagara ngadeg dina taun…",
+    "choices": ["358 M", "130 M", "669 M", "1482 M"],
+    "answer": 0
+  },
+  {
+    "q": "Prabu Siliwangi pamaréntahanana dina taun…",
+    "choices": ["1482–1521 M", "1521–1535 M", "1543–1551 M", "1567–1579 M"],
+    "answer": 0
+  },
+  {
+    "q": "Raja anu ngadegkeun Karajaan Sunda nyaéta…",
+    "choices": ["Tarusbawa", "Sanjaya", "Rakeyan Medang", "Prabu Pucukwesi"],
+    "answer": 0
+  },
+  {
+    "q": "Raja Rakeyan Medang pamaréntahanana dina taun…",
+    "choices": ["766–783 M", "723–732 M", "819–891 M", "915–916 M"],
+    "answer": 0
+  },
+  {
+    "q": "Raja Limbur Kancana pamaréntahanana dina taun…",
+    "choices": ["954–964 M", "891–895 M", "1482–1521 M", "1535–1543 M"],
+    "answer": 0
+  },
+  {
+    "q": "Cucu tina anak disebut…",
+    "choices": ["Incu", "Bungsu", "Cikal", "Pangais bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Saudara tiri disebut…",
+    "choices": ["Dulur téré", "Dulur pituin", "Dulur teges", "Bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Ibu atawa bapak salaki/istri nu sanés urang sorangan disebut…",
+    "choices": ["Mitoha", "Bapa", "Indung", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Anak tina salaki/istri anu sanés disebut…",
+    "choices": ["Anak téré", "Cikal", "Bungsu", "Pangais bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Kakak tina salaki/istri disebut…",
+    "choices": ["Dahuan", "Adi beuteung", "Lanceuk", "Adina"],
+    "answer": 0
+  },
+  {
+    "q": "Anu disebut **Baraya** nyaéta…",
+    "choices": ["Orang anu gaduh hubungan kekerabatan", "Cucu", "Minantu", "Mertua"],
+    "answer": 0
+  },
+  {
+    "q": "Silsilah buyut disebut…",
+    "choices": ["Buyut", "Bao", "Janggawaréng", "Udeg-udeg"],
+    "answer": 0
+  },
+  {
+    "q": "Turunan pangheulana tina buyut disebut…",
+    "choices": ["Bao", "Janggawaréng", "Udeg-udeg", "Gantung-siwur"],
+    "answer": 0
+  },
+  {
+    "q": "Turunan panengah tina buyut disebut…",
+    "choices": ["Janggawaréng", "Udeg-udeg", "Bao", "Bau-sinduk"],
+    "answer": 0
+  },
+  {
+    "q": "Turunan pangahirna tina buyut disebut…",
+    "choices": ["Gantung-siwur", "Bao", "Udeg-udeg", "Janggawaréng"],
+    "answer": 0
+  },
+  {
+    "q": "Bau-sinduk dina silsilah téh hartina…",
+    "choices": ["Ibu/bapana gantung-siwur", "Cucu buyut", "Anak panggedé", "Bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Kakek buyut dina Pancakaki disebut…",
+    "choices": ["Uyut", "Nini", "Bapa", "Indung"],
+    "answer": 0
+  },
+  {
+    "q": "Nini dina Pancakaki téh nyaéta…",
+    "choices": ["Ibuna bapana atawa indungna bapana/indungna", "Indung sorangan", "Bapa sorangan", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Anak ti kakak atawa adik (keponakan) disebut…",
+    "choices": ["Alo/Suan", "Kapi lanceuk/Kapi adi", "Minantu", "Incu"],
+    "answer": 0
+  },
+  {
+    "q": "Anu disebut dulur pituin téh nyaéta…",
+    "choices": ["Saudara asli", "Saudara tiri", "Cucu", "Anak panggedé"],
+    "answer": 0
+  },
+  {
+    "q": "Dulur téré dina Pancakaki téh hartina…",
+    "choices": ["Saudara tiri", "Saudara asli", "Cucu", "Bungsu"],
+    "answer": 0
+  },
+  {
+    "q": "Anu disebut karuhun téh nyaéta…",
+    "choices": ["Leluhur nu geus indit heula", "Bapa sorangan", "Indung sorangan", "Minantu"],
+    "answer": 0
+  },
+  {
+    "q": "Deungeun haseum dina Pancakaki hartina…",
+    "choices": ["Henteu aya hubungan kulawarga", "Mertua", "Cucu", "Saudara"],
+    "answer": 0
+  }
+      ]  {
     "q": "Runtuhna Karajaan Pajajaran kajantenan nalika mangsa…",
     "choices": ["Surawisesa", "Ragamulya Suryakancana", "Prabu Siliwangi", "Nilakendra"],
     "answer": 1
