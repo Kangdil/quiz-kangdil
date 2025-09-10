@@ -1,254 +1,284 @@
 [
   {
-    "q": "Kata 'Syajara' dalam bahasa Arab berarti...",
-    "choices": ["Terjadi", "Pohon", "Ilmu", "Catatan", "Masa lalu"],
+    "q": "Dalam bahasa Arab, kata 'Syajara' berarti...",
+    "choices": ["Terjadi", "Pohon", "Silsilah", "Ilmu", "Masa lalu"],
     "answer": 0
   },
   {
-    "q": "Istilah 'Syajarah an-nasab' berarti...",
-    "choices": ["Pohon silsilah", "Kronologi sejarah", "Tulisan kuno", "Legenda", "Mitos keluarga"],
+    "q": "Istilah 'Syajaratun' dalam bahasa Arab bermakna...",
+    "choices": ["Pohon", "Peristiwa", "Tulisan kuno", "Ilmu sejarah", "Legenda rakyat"],
     "answer": 0
   },
   {
-    "q": "Dalam bahasa Yunani kuno, 'Istoria' bermakna...",
-    "choices": ["Ilmu atau belajar dengan cara bertanya", "Mitos masyarakat kuno", "Catatan peperangan", "Cerita rakyat", "Ramalan masa depan"],
+    "q": "Arti 'Syajarah an-nasab' dalam bahasa Arab adalah...",
+    "choices": [
+      "Pohon silsilah",
+      "Tulisan tentang peperangan",
+      "Kronologi kerajaan besar",
+      "Legenda tentang raja-raja",
+      "Cerita rakyat dari generasi ke generasi"
+    ],
     "answer": 0
   },
   {
-    "q": "'History' dalam bahasa Inggris diartikan sebagai...",
+    "q": "Dalam bahasa Yunani kuno, istilah 'Istoria' berarti...",
+    "choices": [
+      "Ilmu atau belajar dengan cara bertanya",
+      "Kumpulan legenda masyarakat Yunani",
+      "Catatan resmi peperangan",
+      "Kronologi tokoh besar Yunani",
+      "Cerita rakyat yang diwariskan lisan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "'History' dalam bahasa Inggris berarti...",
     "choices": [
       "Masa lampau umat manusia atau kejadian-kejadian yang dibuat oleh alam",
-      "Hanya catatan peperangan bangsa-bangsa",
-      "Kumpulan cerita rakyat",
-      "Cerita fiksi masa lampau",
-      "Data statistik penduduk"
+      "Cerita fiksi yang dianggap nyata",
+      "Legenda rakyat tanpa bukti",
+      "Hanya kisah raja dan bangsawan",
+      "Tulisan ilmiah modern"
     ],
     "answer": 0
   },
   {
-    "q": "Istilah 'Geschiedenis' dalam bahasa Belanda berarti...",
+    "q": "Kata 'Geschiedenis' dalam bahasa Belanda bermakna...",
     "choices": [
-      "Kejadian-kejadian yang dibuat oleh manusia",
-      "Mitos sejarah kerajaan",
-      "Ramalan masa depan",
-      "Hukum adat",
-      "Cerita rakyat turun-temurun"
+      "Kejadian-kejadian yang telah dibuat oleh manusia",
+      "Mitos yang dianggap fakta",
+      "Hanya ramalan masa depan",
+      "Catatan ekonomi kerajaan",
+      "Kumpulan lagu rakyat"
     ],
     "answer": 0
   },
   {
-    "q": "Dalam bahasa Jerman, 'Geschichte' berarti...",
-    "choices": ["Sesuatu yang telah terjadi", "Cerita rakyat", "Mitos kuno", "Rencana", "Legenda"],
+    "q": "Dalam bahasa Jerman, istilah 'Geschichte' berarti...",
+    "choices": ["Sesuatu yang telah terjadi", "Cerita rakyat", "Mitos", "Rencana masa depan", "Legenda"],
     "answer": 0
   },
   {
-    "q": "Unsur dasar suatu peristiwa sejarah terdiri atas...",
-    "choices": ["Manusia, Ruang, Waktu", "Tokoh, Hasil, Tujuan", "Artefak, Tradisi, Budaya", "Dokumen, Fakta, Periode", "Saksi, Catatan, Cerita"],
+    "q": "Unsur dasar dalam setiap peristiwa sejarah terdiri atas...",
+    "choices": [
+      "Manusia, Ruang, dan Waktu",
+      "Tokoh, Hasil, dan Tujuan",
+      "Artefak, Tradisi, dan Budaya",
+      "Sumber, Fakta, dan Teori",
+      "Kronologi, Tokoh, dan Lokasi"
+    ],
     "answer": 0
   },
   {
     "q": "Unsur 'Manusia' dalam sejarah berperan sebagai...",
-    "choices": ["Pelaku peristiwa", "Tempat peristiwa", "Urutan waktu", "Sumber lisan", "Artefak"],
+    "choices": ["Pelaku sejarah", "Lokasi peristiwa", "Urutan waktu", "Hasil budaya", "Artefak kuno"],
     "answer": 0
   },
   {
-    "q": "Unsur 'Ruang' berkaitan dengan...",
-    "choices": ["Tempat terjadinya peristiwa", "Pelaku utama", "Kapan terjadinya", "Hasil budaya", "Urutan kronologi"],
+    "q": "Unsur 'Ruang' dalam sejarah berarti...",
+    "choices": ["Tempat terjadinya peristiwa", "Pelaku utama", "Urutan kronologi", "Sumber lisan", "Artefak"],
     "answer": 0
   },
   {
-    "q": "Unsur 'Waktu' dalam sejarah mengacu pada...",
-    "choices": ["Kapan peristiwa terjadi", "Siapa tokoh utama", "Dimana peristiwa terjadi", "Mengapa peristiwa terjadi", "Bagaimana proses berlangsung"],
+    "q": "Unsur 'Waktu' dalam sejarah menunjukkan...",
+    "choices": ["Kapan peristiwa terjadi", "Siapa tokohnya", "Dimana lokasi peristiwa", "Mengapa terjadi", "Bagaimana prosesnya"],
     "answer": 0
   },
   {
-    "q": "Karakteristik sejarah yang 'Abadi' berarti...",
+    "q": "Mengapa unsur manusia sangat penting dalam sejarah?",
     "choices": [
-      "Dikenang sepanjang masa",
-      "Berlaku hanya sementara",
-      "Hilang tanpa catatan",
-      "Tidak penting bagi masyarakat",
-      "Sekadar legenda"
+      "Karena manusia adalah pelaku utama yang menciptakan peristiwa",
+      "Karena manusia hanya sebagai saksi yang tidak berpengaruh",
+      "Karena manusia menyimpan semua catatan sejarah",
+      "Karena manusia tidak dapat dipisahkan dari mitos",
+      "Karena manusia menentukan ramalan sejarah"
     ],
     "answer": 0
   },
   {
-    "q": "Karakteristik sejarah 'Unik' berarti...",
-    "choices": ["Terjadi satu kali", "Berlaku umum", "Selalu berulang", "Hanya imajinasi", "Tidak berbeda dengan peristiwa lain"],
-    "answer": 0
-  },
-  {
-    "q": "Karakteristik sejarah 'Penting' artinya...",
+    "q": "Mengapa unsur ruang dibutuhkan dalam sejarah?",
     "choices": [
-      "Memiliki arti bagi manusia atau peristiwa lain",
-      "Hanya bercerita tentang tokoh besar",
-      "Tidak berhubungan dengan kehidupan sekarang",
-      "Hanya menguntungkan satu pihak",
-      "Sekadar hiburan"
+      "Untuk menunjukkan dimana peristiwa terjadi",
+      "Untuk menentukan tokoh besar dalam sejarah",
+      "Untuk mengukur lamanya sebuah kerajaan",
+      "Untuk mengetahui hasil budaya masyarakat",
+      "Untuk membandingkan legenda antar bangsa"
     ],
     "answer": 0
   },
   {
-    "q": "Konsep berpikir diakronis dalam sejarah adalah...",
+    "q": "Unsur waktu membantu sejarah karena...",
     "choices": [
-      "Mempelajari peristiwa dalam kurun waktu berurutan",
-      "Mengkaji banyak tempat dalam satu waktu",
-      "Menghapus kronologi sejarah",
-      "Hanya melihat aspek ekonomi",
-      "Menganalisis tokoh tunggal"
+      "Menunjukkan kapan peristiwa berlangsung",
+      "Membedakan tokoh yang berperan",
+      "Menentukan siapa pemenang perang",
+      "Menjelaskan mitos dan legenda",
+      "Menentukan lokasi peristiwa"
     ],
     "answer": 0
   },
   {
-    "q": "Konsep berpikir sinkronik dalam sejarah adalah...",
+    "q": "Definisi 'Sejarah' menurut etimologi Jerman ('Geschichte') menekankan pada...",
     "choices": [
-      "Mempelajari peristiwa dalam kurun waktu tertentu dan melebar dalam ruang",
-      "Meneliti sejarah dari masa lalu ke masa depan",
-      "Menghubungkan sebab dan akibat peristiwa",
-      "Menentukan siapa tokoh besar yang berperan",
-      "Menghapus kesinambungan sejarah"
+      "Sesuatu yang telah terjadi",
+      "Ramalan tentang masa depan",
+      "Cerita rakyat yang diwariskan lisan",
+      "Mitologi tentang asal usul dunia",
+      "Rencana politik kerajaan"
     ],
     "answer": 0
   },
   {
-    "q": "Tujuan periodisasi adalah...",
+    "q": "Istilah 'Istoria' menunjukkan bahwa sejarah berkaitan dengan...",
     "choices": [
-      "Mempermudah memahami sejarah",
-      "Memutus kesinambungan peristiwa",
-      "Menentukan tokoh utama",
-      "Menghapus fakta yang salah",
-      "Membatasi ruang lingkup sejarah"
+      "Ilmu yang dipahami melalui pertanyaan",
+      "Hanya kisah mitologi kuno",
+      "Catatan perang antar kerajaan",
+      "Kronologi tanpa penjelasan",
+      "Ramalan nasib bangsa"
     ],
     "answer": 0
   },
   {
-    "q": "Periodisasi tidak berarti memutus peristiwa karena sejarah mengenal...",
-    "choices": ["Kesinambungan", "Fiksi", "Mitos", "Subjektifitas", "Legenda"],
-    "answer": 0
-  },
-  {
-    "q": "Urutan periodisasi sejarah Indonesia adalah...",
+    "q": "Mengapa kata 'History' dalam bahasa Inggris berbeda maknanya dari 'Geschiedenis' dalam bahasa Belanda?",
     "choices": [
-      "Praaksara, Hindu-Buddha, Islam, Kolonial, Jepang, Kemerdekaan",
-      "Masa batu, besi, baja, modern",
-      "Kuno, pertengahan, modern",
-      "Masa kerajaan, kolonial, globalisasi",
-      "Masa tradisi, industri, teknologi"
+      "Karena 'History' mencakup masa lampau manusia dan kejadian alam, sedangkan 'Geschiedenis' fokus pada kejadian yang dibuat manusia",
+      "Karena 'History' hanya merujuk pada mitos, sementara 'Geschiedenis' tentang fakta",
+      "Karena 'History' lebih menekankan tokoh, sedangkan 'Geschiedenis' pada ruang",
+      "Karena 'History' membicarakan masa depan, sedangkan 'Geschiedenis' masa lalu",
+      "Karena 'History' digunakan dalam ilmu alam, sedangkan 'Geschiedenis' dalam politik"
     ],
     "answer": 0
   },
   {
-    "q": "Konsep kausalitas berarti...",
+    "q": "Dalam sejarah, unsur manusia tidak hanya tokoh besar, tetapi juga...",
     "choices": [
-      "Hubungan sebab-akibat antar peristiwa",
-      "Hanya urutan tanggal",
-      "Hubungan mitos dengan cerita",
-      "Pemisahan fakta dengan opini",
-      "Hanya tokoh penting"
+      "Rakyat biasa yang terlibat dalam peristiwa",
+      "Mitos yang diceritakan masyarakat",
+      "Legenda kuno yang diwariskan",
+      "Artefak hasil kebudayaan",
+      "Cerita rakyat tradisional"
     ],
     "answer": 0
   },
   {
-    "q": "Keruntuhan Majapahit disebabkan oleh...",
+    "q": "Unsur waktu dalam sejarah bersifat penting karena...",
     "choices": [
-      "Sepeninggal Hayam Wuruk dan Gajah Mada tidak ada pemimpin kuat",
-      "Bencana alam besar",
-      "Kekalahan melawan Portugis",
-      "Perang melawan Belanda",
-      "Migrasi besar-besaran penduduk"
+      "Tanpa waktu, peristiwa tidak dapat dipahami secara kronologis",
+      "Semua peristiwa dapat berdiri sendiri tanpa waktu",
+      "Waktu hanya berfungsi sebagai angka statistik",
+      "Peristiwa tidak memerlukan urutan",
+      "Waktu hanya digunakan untuk tokoh besar"
     ],
     "answer": 0
   },
   {
-    "q": "Akibat konflik internal di Majapahit adalah...",
+    "q": "Mengapa etimologi sejarah dari berbagai bahasa penting dipelajari?",
     "choices": [
-      "Kerajaan bawahan melepaskan diri",
-      "Majapahit semakin kuat",
-      "Majapahit menguasai Malaka",
-      "Rakyat hidup makmur",
-      "Perdagangan meningkat"
+      "Karena memberikan pemahaman berbeda tentang konsep sejarah",
+      "Karena menentukan siapa tokoh terbesar dalam sejarah",
+      "Karena memutuskan peristiwa mana yang benar",
+      "Karena membuktikan bahwa semua sejarah sama",
+      "Karena hanya mitos yang dianggap sejarah"
     ],
     "answer": 0
   },
   {
-    "q": "Faktor eksternal keruntuhan Majapahit adalah...",
+    "q": "Apa hubungan antara 'Syajara' (Arab) dan sejarah?",
     "choices": [
-      "Masuknya Islam ke Jawa di bawah Raden Patah",
-      "Invasi Portugis besar-besaran",
-      "Serangan Belanda",
-      "Letusan gunung berapi",
-      "Wabah penyakit menular"
+      "Menunjukkan bahwa sejarah adalah sesuatu yang terjadi",
+      "Menunjukkan bahwa sejarah adalah pohon besar",
+      "Menunjukkan bahwa sejarah adalah mitos rakyat",
+      "Menunjukkan bahwa sejarah adalah hasil seni",
+      "Menunjukkan bahwa sejarah adalah ramalan"
     ],
     "answer": 0
   },
   {
-    "q": "Tokoh Islam yang melemahkan Majapahit adalah...",
-    "choices": ["Raden Patah", "Sunan Kalijaga", "Hamzah Fansuri", "Sultan Agung", "Imam Bonjol"],
-    "answer": 0
-  },
-  {
-    "q": "Hubungan antara Demak dan Majapahit akhirnya...",
+    "q": "Mengapa 'Syajarah an-nasab' relevan dengan sejarah?",
     "choices": [
-      "Terjadi perang dan Majapahit kalah",
-      "Berdamai dan bersatu",
-      "Menjadi sekutu",
-      "Tidak pernah berhubungan",
-      "Berjalan damai tanpa konflik"
+      "Karena berhubungan dengan silsilah keturunan",
+      "Karena berhubungan dengan ramalan kuno",
+      "Karena menggambarkan mitos keluarga",
+      "Karena menjelaskan legenda kerajaan",
+      "Karena hanya tradisi lisan"
     ],
     "answer": 0
   },
   {
-    "q": "Konsep diakronis bersifat...",
+    "q": "Penggunaan istilah 'Istoria' menegaskan bahwa...",
     "choices": [
-      "Memanjang dalam waktu, terbatas dalam ruang",
-      "Melebar dalam ruang",
-      "Mengabaikan waktu",
-      "Tidak memperhatikan proses",
-      "Hanya membicarakan tokoh"
+      "Sejarah dipelajari dengan bertanya dan mencari jawaban",
+      "Sejarah hanya berupa mitos dan cerita rakyat",
+      "Sejarah adalah bagian dari filsafat murni",
+      "Sejarah merupakan ramalan tentang masa depan",
+      "Sejarah adalah dongeng rakyat"
     ],
     "answer": 0
   },
   {
-    "q": "Contoh pendekatan diakronis adalah...",
+    "q": "Sejarah disebut ilmu karena...",
     "choices": [
-      "Proses menuju Proklamasi 17 Agustus 1945",
-      "Struktur sosial saat G30S/PKI",
-      "Jenis artefak prasejarah",
-      "Peninggalan candi",
-      "Hubungan dagang kuno"
+      "Mempelajari peristiwa masa lalu dengan metode tertentu",
+      "Hanya menceritakan tokoh besar",
+      "Berisi legenda dan mitos kuno",
+      "Tidak memerlukan bukti",
+      "Hanya berfokus pada masa depan"
     ],
     "answer": 0
   },
   {
-    "q": "Contoh pendekatan sinkronik adalah...",
+    "q": "Unsur ruang memberi konteks dalam sejarah karena...",
     "choices": [
-      "Tragedi G30S/PKI pada 1 Oktober 1965",
-      "Proses kemerdekaan Indonesia",
-      "Runtuhnya Majapahit berabad-abad",
-      "Migrasi manusia purba",
-      "Modernisasi Eropa abad ke-18"
+      "Setiap peristiwa terjadi di tempat tertentu",
+      "Semua peristiwa bisa terjadi di mana saja",
+      "Ruang tidak penting dalam sejarah",
+      "Ruang hanya penting dalam geografi",
+      "Ruang hanya dipakai untuk mitos"
     ],
     "answer": 0
   },
   {
-    "q": "Kontinuum waktu berarti...",
+    "q": "Manusia, ruang, dan waktu menjadi unsur dasar sejarah karena...",
     "choices": [
-      "Peristiwa saling mempengaruhi dari waktu ke waktu",
-      "Peristiwa berdiri sendiri",
-      "Semua peristiwa tidak berhubungan",
-      "Hanya terjadi di masa lalu",
-      "Waktu tidak berpengaruh"
+      "Tanpa ketiganya peristiwa tidak bisa dipahami",
+      "Hanya manusia yang menentukan sejarah",
+      "Ruang lebih penting dari manusia",
+      "Waktu dapat diabaikan",
+      "Sejarah bisa berdiri tanpa unsur ruang"
     ],
     "answer": 0
   },
   {
-    "q": "Kesimpulan dari keruntuhan Majapahit adalah...",
+    "q": "Peristiwa sejarah bisa dipahami utuh jika...",
     "choices": [
-      "Majapahit kalah dan menjadi akhir kerajaan Hindu-Buddha di Indonesia",
-      "Majapahit semakin kuat",
-      "Majapahit berkembang pesat",
-      "Majapahit berdamai dengan Demak",
-      "Majapahit menguasai seluruh Nusantara"
+      "Dikaji melalui manusia, ruang, dan waktu",
+      "Dihubungkan dengan legenda kuno",
+      "Dilihat hanya dari sisi tokoh besar",
+      "Dihubungkan dengan mitos masyarakat",
+      "Dipisahkan dari aspek ruang"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Istilah 'History' lebih luas dibanding 'Geschiedenis' karena...",
+    "choices": [
+      "History mencakup manusia dan alam, Geschiedenis fokus pada manusia",
+      "History hanya membicarakan mitos, Geschiedenis fakta",
+      "History tentang masa depan, Geschiedenis masa lalu",
+      "History berhubungan dengan politik, Geschiedenis budaya",
+      "History untuk ilmu sosial, Geschiedenis untuk ilmu alam"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa sejarah dipelajari dari berbagai bahasa?",
+    "choices": [
+      "Karena tiap bahasa memberi nuansa pemahaman berbeda tentang sejarah",
+      "Karena hanya bahasa Arab yang benar",
+      "Karena bahasa Yunani menentukan kebenaran sejarah",
+      "Karena bahasa Belanda paling ilmiah",
+      "Karena bahasa Inggris lebih populer"
     ],
     "answer": 0
   }
