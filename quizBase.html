@@ -70,7 +70,7 @@
     <div class="card">
       <h1>Quiz All-in-One</h1>
       <p>Pilih quiz yang ingin dimainkan:</p>
-      <button onclick="restart()">Ulang</button>
+      <button onclick="restartQuiz()">Ulang</button>
     </div>
   </div>
 
@@ -112,13 +112,14 @@ let correctRound1=0, correctRound2=0, totalQuestionsCount=0;
 let maxScore = 0;
 let currentQuestion=null;
 
-async function restart(){
+async function restartQuiz(){
   try {
     const params = new URLSearchParams(window.location.search);
     const quizType = params.get('quiz');
     if(quizType!==null){ startQuiz(quizType); }
-else{startQuiz("PH_Sosio_01"); }
+    else{startQuiz("PH_Sosio_01"); }
   }
+    catch() {startQuiz("PH_Sosio_01"); }
 }
 
 async function startQuiz(type){
