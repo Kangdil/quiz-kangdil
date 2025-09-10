@@ -1,0 +1,211 @@
+[
+  {
+    "q": "Salah satu manfaat keanekaragaman hayati bagi pangan adalah...",
+    "choices": [
+      "Sebagai sumber cerita rakyat",
+      "Sebagai sumber berbagai bahan makanan",
+      "Sebagai bahan bangunan rumah modern",
+      "Sebagai lambang negara",
+      "Sebagai alat musik tradisional"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Contoh keanekaragaman hayati sebagai sumber sandang adalah...",
+    "choices": [
+      "Kayu jati untuk furnitur",
+      "Kapas untuk bahan pakaian",
+      "Padi untuk makanan pokok",
+      "Obat dari daun sirih",
+      "Kunyit untuk bumbu"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Keanekaragaman hayati dimanfaatkan sebagai papan melalui...",
+    "choices": [
+      "Kayu jati, meranti, dan bambu",
+      "Ikan sebagai lauk",
+      "Sapi sebagai susu",
+      "Kapas untuk kain",
+      "Jagung untuk pangan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh tumbuhan obat dari keanekaragaman hayati adalah...",
+    "choices": [
+      "Mangga dan rambutan",
+      "Jahe, kunyit, temulawak",
+      "Jagung dan padi",
+      "Kelapa sawit dan karet",
+      "Jati dan meranti"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Manfaat ekologi dari keanekaragaman hayati adalah...",
+    "choices": [
+      "Meningkatkan nilai ekonomi",
+      "Menjaga keseimbangan ekosistem",
+      "Memberi bahan baku industri",
+      "Memberi keindahan wisata",
+      "Sebagai lambang adat"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Contoh manfaat hayati dalam bidang industri adalah...",
+    "choices": [
+      "Ikan untuk konsumsi",
+      "Kapas untuk tekstil",
+      "Sapi untuk peternakan",
+      "Padi untuk beras",
+      "Jagung untuk makanan"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Keseimbangan ekosistem terjaga karena adanya...",
+    "choices": [
+      "Padi sebagai makanan",
+      "Predator dan mangsa",
+      "Kayu sebagai papan",
+      "Obat dari herbal",
+      "Seni tradisional"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Keanekaragaman hayati mendukung ilmu pengetahuan karena...",
+    "choices": [
+      "Menjadi objek penelitian dan teknologi",
+      "Hanya digunakan sebagai simbol budaya",
+      "Hanya untuk bahan bangunan",
+      "Hanya digunakan di desa",
+      "Tidak berhubungan dengan manusia"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Salah satu manfaat sosial budaya dari keanekaragaman hayati adalah...",
+    "choices": [
+      "Tumbuhan obat untuk kesehatan",
+      "Hewan untuk upacara adat",
+      "Kayu untuk rumah",
+      "Padi untuk pangan",
+      "Kapas untuk sandang"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Manfaat estetika dari keanekaragaman hayati terlihat pada...",
+    "choices": [
+      "Taman bunga sebagai objek wisata",
+      "Hewan sebagai predator",
+      "Kayu sebagai bahan papan",
+      "Kapas sebagai sandang",
+      "Obat herbal tradisional"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Gambar ini menunjukkan manfaat hayati sebagai...",
+    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
+    "answer": 1,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK3RmyJDF42fiF4q4qJtZD0FupXyOMCPNnLQ&s"
+  },
+  {
+    "q": "Gambar ini menunjukkan manfaatk manusia sebagai...",
+    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Industri"],
+    "answer": 2,
+    "img": "https://www.perhutani.co.id/wp-content/uploads/2022/03/Jati.jpg"
+  },
+  {
+    "q": "Gambar kunyit dan jahe menunjukkan manfaat sebagai...",
+    "choices": ["Obat", "Sandang", "Papan", "Industri", "Ekologi"],
+    "answer": 0,
+    "img": "https://d1bpj0tv6vfxyp.cloudfront.net/kencur-jahe-dan-kunyit-apa-saja-manfaatnya.jpg"
+  },
+  {
+    "q": "Gambar ini mencerminkan manfaat hayati dalam bidang...",
+    "choices": ["Ekonomi", "Sosial budaya", "Estetika", "Ekologi", "Ilmu pengetahuan"],
+    "answer": 2,
+    "img": "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1522028746/ovjn0jq6qtkuy0s2gyfm.jpg"
+  },
+  {
+    "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
+    "choices": [
+      "Memberi pilihan sumber makanan yang beragam",
+      "Hanya untuk simbol budaya",
+      "Agar semua makanan sama",
+      "Tidak memengaruhi manusia",
+      "Hanya untuk ekspor"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sapi, kambing, dan ayam dimanfaatkan manusia sebagai sumber...",
+    "choices": ["Sandang", "Pangan", "Papan", "Obat", "Estetika"],
+    "answer": 1
+  },
+  {
+    "q": "Pohon kapas, sutera, dan rami bermanfaat bagi manusia sebagai...",
+    "choices": ["Sandang", "Papan", "Pangan", "Obat", "Ekologi"],
+    "answer": 0
+  },
+  {
+    "q": "Hewan seperti kerbau dan kuda membantu manusia dalam bidang...",
+    "choices": ["Pangan", "Transportasi & tenaga kerja", "Sandang", "Estetika", "Ekologi"],
+    "answer": 1
+  },
+  {
+    "q": "Hewan seperti gajah sering digunakan sebagai simbol...",
+    "choices": ["Ekonomi", "Ilmu pengetahuan", "Budaya & adat", "Ekologi", "Estetika"],
+    "answer": 2
+  },
+  {
+    "q": "Wisata alam seperti taman nasional menunjukkan manfaat hayati dalam bidang...",
+    "choices": ["Ekologi", "Estetika & ekonomi", "Sandang", "Obat", "Industri"],
+    "answer": 1
+  },
+  {
+    "q": "Peran tumbuhan hijau dalam siklus oksigen adalah contoh manfaat hayati dalam bidang...",
+    "choices": ["Ilmu pengetahuan", "Ekologi", "Pangan", "Estetika", "Ekonomi"],
+    "answer": 1
+  },
+  {
+    "q": "Keanekaragaman hayati mendukung pembangunan berkelanjutan karena...",
+    "choices": [
+      "Menjadi sumber daya terbarukan bila dikelola baik",
+      "Hanya digunakan sekali lalu habis",
+      "Tidak bisa dimanfaatkan manusia",
+      "Selalu merusak lingkungan",
+      "Tidak ada hubungannya dengan manusia"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Karet, rotan, dan bambu adalah contoh pemanfaatan hayati di bidang...",
+    "choices": ["Sandang", "Pangan", "Papan & industri", "Obat", "Estetika"],
+    "answer": 2
+  },
+  {
+    "q": "Ikan hias dan burung kicau adalah contoh manfaat hayati dalam bidang...",
+    "choices": ["Ekologi", "Estetika & ekonomi", "Sandang", "Obat", "Papan"],
+    "answer": 1
+  },
+  {
+    "q": "Mengapa tumbuhan obat penting bagi manusia?",
+    "choices": [
+      "Menyediakan senyawa bioaktif untuk kesehatan",
+      "Hanya sebagai simbol budaya",
+      "Tidak berpengaruh pada manusia",
+      "Hanya untuk bahan sandang",
+      "Hanya untuk bahan papan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Pemanfaatan padi, jagung, dan kedelai merupakan contoh manfaat hayati dalam bidang...",
+    "choice
