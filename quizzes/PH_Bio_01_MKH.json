@@ -116,7 +116,7 @@
     "img": "https://www.perhutani.co.id/wp-content/uploads/2022/03/Jati.jpg"
   },
   {
-    "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
+   "q": "Mengapa keanekaragaman hayati penting untuk pangan?",
     "choices": [
       "Memberi pilihan sumber makanan yang beragam",
       "Hanya untuk simbol budaya",
@@ -153,4 +153,71 @@
   },
   {
     "q": "Peran tumbuhan hijau dalam siklus oksigen adalah contoh manfaat hayati dalam bidang...",
-    "ch
+    "choices": ["Ilmu pengetahuan", "Ekologi", "Pangan", "Estetika", "Ekonomi"],
+    "answer": 1
+  },
+  {
+    "q": "Keanekaragaman hayati mendukung pembangunan berkelanjutan karena...",
+    "choices": [
+      "Menjadi sumber daya terbarukan bila dikelola baik",
+      "Hanya digunakan sekali lalu habis",
+      "Tidak bisa dimanfaatkan manusia",
+      "Selalu merusak lingkungan",
+      "Tidak ada hubungannya dengan manusia"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Karet, rotan, dan bambu adalah contoh pemanfaatan hayati di bidang...",
+    "choices": ["Sandang", "Pangan", "Papan & industri", "Obat", "Estetika"],
+    "answer": 2
+  },
+  {
+    "q": "Ikan hias dan burung kicau adalah contoh manfaat hayati dalam bidang...",
+    "choices": ["Ekologi", "Estetika & ekonomi", "Sandang", "Obat", "Papan"],
+    "answer": 1
+  },
+  {
+    "q": "Mengapa tumbuhan obat penting bagi manusia?",
+    "choices": [
+      "Menyediakan senyawa bioaktif untuk kesehatan",
+      "Hanya sebagai simbol budaya",
+      "Tidak berpengaruh pada manusia",
+      "Hanya untuk bahan sandang",
+      "Hanya untuk bahan papan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Pemanfaatan padi, jagung, dan kedelai merupakan contoh manfaat hayati dalam bidang...",
+    "choices": ["Sandang", "Pangan", "Papan", "Estetika", "Obat"],
+    "answer": 1
+  },
+  {
+    "q": "Manfaat hayati di bidang penelitian contohnya...",
+    "choices": [
+      "Pemuliaan tanaman untuk hasil unggul",
+      "Kayu untuk papan",
+      "Padi untuk pangan",
+      "Sapi untuk daging",
+      "Kapas untuk kain"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Burung cenderawasih dimanfaatkan dalam budaya Papua sebagai...",
+    "choices": ["Sandang", "Pangan", "Simbol adat & seni", "Papan", "Ekologi"],
+    "answer": 2
+  },
+  {
+    "q": "Taman nasional juga berperan dalam bidang ilmiah yaitu...",
+    "choices": [
+      "Sebagai laboratorium alam untuk penelitian",
+      "Sebagai tempat industri kayu",
+      "Sebagai pusat pertanian",
+      "Sebagai sumber pangan pokok",
+      "Sebagai pusat transportasi"
+    ],
+    "answer": 0
+  }
+]
