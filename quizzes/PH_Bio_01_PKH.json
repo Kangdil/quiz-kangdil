@@ -107,25 +107,25 @@
     "q": "Perhatikan gambar: menunjukkan keanekaragaman tingkat...",
     "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
     "answer": 0,
-    "img": "https://images.dreamstime.com/stock-photo-diversity-dog-breeds-illustrates-dog-variety-many-breeds-royalty-free-image-631940-1040824.jpg"
+    "img": "https://cdn.rri.co.id/berita/Cirebon/o/1727754162757-WhatsApp_Image_2024-10-01_at_10.33.27/nsz0ks1hsebdpgp.jpeg" 
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
     "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Populasi"],
     "answer": 0,
-    "img": "https://images.stockcake.com/i/diverse-dog-group_964824_964480.jpg"
+    "img": "https://cdn-web.ruangguru.com/landing-pages/assets/hs/bunga%20mawar%20keanekaragaman%20tingkat%20gen.jpg"
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
     "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Populasi"],
     "answer": 2,
-    "img": "https://commons.wikimedia.org/wiki/File:Biomes_of_the_World_-_Retouched.png"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Vegetation.png"
   },
   {
     "q": "Gambar ini menunjukkan keanekaragaman tingkat...",
     "choices": ["Gen", "Jenis", "Ekosistem", "Bioma", "Kingdom"],
     "answer": 2,
-    "img": "https://www.shutterstock.com/image-vector/biomes-color-map-main-world-vector-1786551896.jpg"
+    "img": "https://i.pinimg.com/564x/b7/46/1d/b7461d43579054e6f05c08768d4b1a5a.jpg"
   },
   {
     "q": "Keanekaragaman jenis juga dikenal sebagai...",
@@ -179,39 +179,4 @@
   },
   {
     "q": "Tipe habitat berbeda mencerminkan keanekaragaman...",
-    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Kingdom"],
-    "answer": 2
-  },
-  {
-    "q": "Hutan hujan, savana, dan padang pasir adalah contoh...",
-    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "Spesies"],
-    "answer": 2
-  },
-  {
-    "q": "Kesimpulan: Tingkat keanekaragaman hayati adalah...",
-    "choices": ["Gen, model, ekosistem", "Gen, spesies, ekosistem", "Kingdom, genus, spesies", "Gen, famili, kingdom", "Jenis, ekosistem, varietas"],
-    "answer": 1
-  },
-  {
-    "q": "Kenapa keanekaragaman gen penting?",
-    "choices": [
-      "Membantu spesies bertahan terhadap perubahan",
-      "Menunjukkan jumlah spesies",
-      "Menentukan ekosistem unik",
-      "Menambah kingdom",
-      "Menentukan iklim"
-    ],
-    "answer": 0
-  },
-  {
-    "q": "Mengapa keanekaragaman ekosistem penting?",
-    "choices": [
-      "Menunjukkan variasi genetik",
-      "Menambah varietas jenis",
-      "Menggambarkan keberagaman lingkungan & fungsi ekosistem",
-      "Menentukan jumlah individu",
-      "Menentukan kingdom"
-    ],
-    "answer": 2
-  }
-]
+    "choices": ["Gen", "Jenis", "Ekosistem", "Varietas", "King]()
