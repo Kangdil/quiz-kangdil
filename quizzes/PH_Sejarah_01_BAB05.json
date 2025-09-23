@@ -1,0 +1,338 @@
+[
+  {
+    "q": "Perubahan dalam sejarah berarti...",
+    "choices": [
+      "Adanya perbedaan kondisi antara masa lalu dan masa sesudahnya",
+      "Keadaan yang selalu sama dalam masyarakat",
+      "Cerita yang diwariskan turun-temurun",
+      "Peristiwa yang tidak pernah berubah",
+      "Mitos yang dipercaya masyarakat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keberlanjutan dalam sejarah berarti...",
+    "choices": [
+      "Adanya unsur masa lalu yang masih dipertahankan hingga kini",
+      "Perubahan besar yang menghapus masa lalu",
+      "Cerita fiksi yang dibuat sejarawan",
+      "Peristiwa yang berdiri sendiri",
+      "Mitos tanpa bukti"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh perubahan dalam sejarah Indonesia adalah...",
+    "choices": [
+      "Masuknya Islam menggantikan kepercayaan Hindu-Buddha",
+      "Upacara adat yang tetap dilakukan",
+      "Tradisi lisan yang masih diwariskan",
+      "Kebiasaan gotong royong",
+      "Sistem kerajaan yang tetap ada"
+    ],
+    "answer": 0,
+    "img": "https://garis.my.id/wp-content/uploads/2020/11/interior-masjiddemak1_optimized.jpg"
+  },
+  {
+    "q": "Contoh keberlanjutan dalam sejarah adalah...",
+    "choices": [
+      "Tradisi upacara adat yang tetap dipertahankan",
+      "Runtuhnya Majapahit",
+      "Proklamasi Kemerdekaan",
+      "Migrasi manusia purba",
+      "Masuknya pengaruh Barat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan besar yang mengubah struktur masyarakat disebut...",
+    "choices": [
+      "Revolusi",
+      "Reformasi",
+      "Keberlanjutan",
+      "Tradisi",
+      "Mitos"
+    ],
+    "answer": 0,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_FlWBaOQyutqA0H8yhataeCsIXpQrn-hog&s"
+  },
+  {
+    "q": "Perubahan yang berlangsung lambat disebut...",
+    "choices": [
+      "Evolusi",
+      "Revolusi",
+      "Tradisi",
+      "Keberlanjutan",
+      "Sinkronis"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh keberlanjutan dalam sistem hukum Indonesia adalah...",
+    "choices": [
+      "Hukum adat masih dipakai di masyarakat",
+      "Undang-Undang Dasar 1945",
+      "Konstitusi RIS",
+      "Dekrit Presiden 1959",
+      "Perubahan UUD 2002"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan pada masyarakat bisa disebabkan oleh...",
+    "choices": [
+      "Faktor internal dan eksternal",
+      "Cerita rakyat",
+      "Mitos masyarakat",
+      "Fiksi sejarah",
+      "Ramalan kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh faktor eksternal yang menyebabkan perubahan adalah...",
+    "choices": [
+      "Penjajahan bangsa asing",
+      "Kebiasaan gotong royong",
+      "Tradisi upacara",
+      "Kearifan lokal",
+      "Kebiasaan bertani"
+    ],
+    "answer": 0,
+    "img": "https://idsejarah.net/wp-content/uploads/2016/10/Sejarah-Penjajahan-Belanda-di-Indonesia.jpg"
+  },
+  {
+    "q": "Contoh faktor internal yang menyebabkan perubahan adalah...",
+    "choices": [
+      "Konflik dalam negeri",
+      "Invasi bangsa asing",
+      "Perdagangan internasional",
+      "Kolonialisme",
+      "Imperialisme"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan sosial politik besar di Indonesia tahun 1998 disebut...",
+    "choices": [
+      "Reformasi",
+      "Revolusi",
+      "Dekolonisasi",
+      "Transisi",
+      "Modernisasi"
+    ],
+    "answer": 0,
+    "img": "https://c.files.bbci.co.uk/E8D4/production/_129740695_4.jpg"
+  },
+  {
+    "q": "Modernisasi adalah...",
+    "choices": [
+      "Perubahan ke arah kehidupan yang lebih maju",
+      "Kembali ke masa lalu",
+      "Menghidupkan tradisi kuno",
+      "Mempertahankan adat lama",
+      "Cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Globalisasi adalah...",
+    "choices": [
+      "Proses mendunia yang mempengaruhi berbagai aspek kehidupan",
+      "Perubahan kecil dalam masyarakat lokal",
+      "Mitos dunia modern",
+      "Cerita rakyat yang mendunia",
+      "Tradisi daerah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh keberlanjutan dalam budaya adalah...",
+    "choices": [
+      "Batik yang tetap digunakan hingga sekarang",
+      "Revolusi industri",
+      "Masuknya teknologi internet",
+      "Kolonialisme Belanda",
+      "Proklamasi kemerdekaan"
+    ],
+    "answer": 0,
+    "img": "https://bcaf.telkomuniversity.ac.id/wp-content/uploads/2024/06/hx8fuvk0dzrstbo4mwyz.jpg"
+  },
+  {
+    "q": "Mengapa keberlanjutan penting dalam sejarah?",
+    "choices": [
+      "Karena menunjukkan kesinambungan identitas bangsa",
+      "Karena menghapus masa lalu",
+      "Karena tidak relevan lagi",
+      "Karena bersifat mitos",
+      "Karena hanya legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan dalam sejarah bisa bersifat...",
+    "choices": [
+      "Lambat atau cepat",
+      "Selalu cepat",
+      "Selalu lambat",
+      "Tidak ada",
+      "Mitos belaka"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh revolusi di dunia adalah...",
+    "choices": [
+      "Revolusi Perancis 1789",
+      "Upacara adat",
+      "Tradisi panen raya",
+      "Cerita rakyat",
+      "Migrasi prasejarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi Industri menyebabkan...",
+    "choices": [
+      "Perubahan besar dalam bidang ekonomi dan sosial",
+      "Tidak ada perubahan",
+      "Hanya mitos sejarah",
+      "Peristiwa lokal",
+      "Cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan akibat kolonialisme di Indonesia adalah...",
+    "choices": [
+      "Munculnya sistem tanam paksa",
+      "Tradisi lisan semakin kuat",
+      "Cerita rakyat bertambah",
+      "Adat istiadat tidak berubah",
+      "Kebiasaan lokal tetap sama"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh keberlanjutan dalam sistem pertanian adalah...",
+    "choices": [
+      "Gotong royong dalam bercocok tanam",
+      "Revolusi hijau",
+      "Mekanisasi modern",
+      "Perdagangan global",
+      "Kolonialisme"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Reformasi 1998 di Indonesia termasuk perubahan...",
+    "choices": [
+      "Cepat dan besar dalam bidang politik",
+      "Lambat dan kecil dalam budaya",
+      "Tidak berpengaruh",
+      "Hanya mitos sosial",
+      "Tidak nyata"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keberlanjutan dalam bidang bahasa di Indonesia adalah...",
+    "choices": [
+      "Bahasa daerah yang tetap digunakan",
+      "Bahasa Belanda yang mendominasi",
+      "Bahasa asing menggantikan bahasa lokal",
+      "Hilangnya semua bahasa tradisional",
+      "Bahasa tanpa tulisan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Modernisasi pendidikan di Indonesia terlihat dari...",
+    "choices": [
+      "Penggunaan teknologi dalam belajar mengajar",
+      "Tetap menggunakan metode kuno",
+      "Tidak ada perubahan sistem",
+      "Menghapuskan sekolah",
+      "Hanya berdasarkan cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keberlanjutan dalam bidang religi adalah...",
+    "choices": [
+      "Tradisi keagamaan yang masih dipraktikkan hingga kini",
+      "Semua agama berubah total",
+      "Tidak ada lagi upacara",
+      "Hanya cerita mitos",
+      "Perubahan seluruh keyakinan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh perubahan akibat globalisasi adalah...",
+    "choices": [
+      "Masuknya budaya populer asing",
+      "Upacara adat yang sama",
+      "Cerita rakyat tetap diwariskan",
+      "Bahasa lokal makin banyak digunakan",
+      "Tradisi tanpa pengaruh luar"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keberlanjutan dalam politik desa di Indonesia adalah...",
+    "choices": [
+      "Adanya sistem gotong royong dan musyawarah",
+      "Selalu otoriter",
+      "Hilangnya semua tradisi lokal",
+      "Munculnya budaya asing",
+      "Tidak ada organisasi masyarakat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Revolusi berbeda dengan evolusi karena...",
+    "choices": [
+      "Revolusi berlangsung cepat, evolusi lambat",
+      "Revolusi lambat, evolusi cepat",
+      "Keduanya sama saja",
+      "Revolusi hanya mitos",
+      "Evolusi tidak nyata"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Perubahan dalam sejarah bisa terjadi di bidang...",
+    "choices": [
+      "Politik, ekonomi, sosial, budaya",
+      "Hanya politik",
+      "Hanya budaya",
+      "Hanya ekonomi",
+      "Hanya mitos"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Keberlanjutan dalam kesenian Nusantara adalah...",
+    "choices": [
+      "Wayang kulit yang tetap dimainkan",
+      "Musik modern menggantikan semua",
+      "Tidak ada lagi seni tradisi",
+      "Seni hanya fiksi",
+      "Seni hilang total"
+    ],
+    "answer": 0,
+    "img": "https://tribratanews.polri.go.id/web/image/blog.post/55721/image"
+  },
+  {
+    "q": "Mengapa perubahan dan keberlanjutan perlu dipelajari?",
+    "choices": [
+      "Agar memahami dinamika sejarah bangsa",
+      "Agar melupakan masa lalu",
+      "Agar hanya percaya mitos",
+      "Agar menghapus tradisi",
+      "Agar sejarah berhenti"
+    ],
+    "answer": 0
+  }
+]
