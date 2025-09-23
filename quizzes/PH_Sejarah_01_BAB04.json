@@ -1,0 +1,323 @@
+[
+  {
+    "q": "Sumber sejarah lisan adalah...",
+    "choices": [
+      "Keterangan dari pelaku atau saksi sejarah secara langsung",
+      "Tulisan resmi yang diterbitkan pemerintah",
+      "Bukti peninggalan berupa artefak",
+      "Rekaman video dokumenter",
+      "Kumpulan legenda kuno tanpa bukti"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh sumber sejarah lisan adalah...",
+    "choices": [
+      "Wawancara dengan veteran perang",
+      "Naskah Proklamasi Kemerdekaan",
+      "Patung peninggalan Hindu-Buddha",
+      "Rekaman film perjuangan",
+      "Kronik kerajaan tertulis"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber sejarah tertulis dapat berupa...",
+    "choices": [
+      "Prasasti, naskah, dokumen, kronik",
+      "Cerita lisan rakyat",
+      "Bangunan bersejarah",
+      "Lagu perjuangan",
+      "Artefak arkeologi"
+    ],
+    "answer": 0,
+    "image": "https://assets-a1.kompasiana.com/items/album/2021/05/31/images-3-60b491ba8ede485d024cac82.jpg"
+  },
+  {
+    "q": "Sumber sejarah benda adalah...",
+    "choices": [
+      "Peninggalan berupa candi, patung, atau artefak",
+      "Dokumen resmi pemerintahan",
+      "Wawancara saksi sejarah",
+      "Rekaman audio wawancara",
+      "Cerita rakyat lisan"
+    ],
+    "answer": 0,
+    "image": "https://fatek.umsu.ac.id/wp-content/uploads/2023/06/Candi-Borobudur-Makna-Yang-Terkandung-di-Dalamnya.jpg"
+  },
+  {
+    "q": "Contoh sumber sejarah audiovisual adalah...",
+    "choices": [
+      "Film dokumenter perjuangan",
+      "Prasasti kuno",
+      "Patung perunggu",
+      "Cerita lisan rakyat",
+      "Tulisan di naskah kuno"
+    ],
+    "answer": 0,
+    "image": "https://cdn.rri.co.id/berita/Ranai/o/1720857668489-dokumenter/3fp6mizjw7gasha.jpeg"
+  },
+  {
+    "q": "Sumber sejarah primer adalah...",
+    "choices": [
+      "Sumber asli yang dibuat sezaman dengan peristiwa",
+      "Cerita rakyat yang diwariskan turun-temurun",
+      "Buku sejarah modern",
+      "Penafsiran dari sejarawan",
+      "Film sejarah produksi baru"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh sumber sejarah primer adalah...",
+    "choices": [
+      "Naskah Proklamasi 17 Agustus 1945",
+      "Buku sejarah sekolah",
+      "Cerita rakyat Malin Kundang",
+      "Film fiksi sejarah",
+      "Artikel internet"
+    ],
+    "answer": 0,
+    "image": "https://cdn-web.ruangguru.com/landing-pages/assets/hs/klad-proklamasi.jpg"
+  },
+  {
+    "q": "Sumber sekunder adalah...",
+    "choices": [
+      "Keterangan atau tulisan berdasarkan sumber primer",
+      "Sumber asli dari zaman peristiwa",
+      "Cerita rakyat yang dipercaya masyarakat",
+      "Artefak arkeologi yang ditemukan",
+      "Naskah kuno yang ditulis raja"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh sumber sekunder adalah...",
+    "choices": [
+      "Buku sejarah karya sejarawan modern",
+      "Prasasti peninggalan kerajaan",
+      "Foto asli Proklamasi",
+      "Wawancara saksi mata",
+      "Patung perunggu"
+    ],
+    "answer": 0,
+    "image": "https://penerbitombak.com/wp-content/uploads/2017/09/SEJARAH-INDONESIA-II.jpg"
+  },
+  {
+    "q": "Sumber sejarah benda disebut juga...",
+    "choices": [
+      "Artefak",
+      "Legenda",
+      "Dokumen",
+      "Cerita rakyat",
+      "Data statistik"
+    ],
+    "answer": 0,
+    "image": "https://branda.co.id/wp-content/uploads/2025/09/IMG_7918.jpeg"
+  },
+  {
+    "q": "Sumber sejarah lisan dapat menjadi lemah karena...",
+    "choices": [
+      "Dipengaruhi subjektivitas saksi",
+      "Selalu sama dengan fakta",
+      "Tidak pernah berubah",
+      "Selalu bersifat objektif",
+      "Tidak bisa diwawancarai"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber tertulis lebih kuat karena...",
+    "choices": [
+      "Meninggalkan bukti yang bisa diteliti kembali",
+      "Selalu benar tanpa kritik",
+      "Tidak bisa dipalsukan",
+      "Hanya ditulis oleh raja",
+      "Selalu berupa buku modern"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh sumber sejarah tertulis dari masa Hindu-Buddha adalah...",
+    "choices": [
+      "Prasasti Yupa dari Kutai",
+      "Film dokumenter kerajaan",
+      "Cerita rakyat tentang Malin Kundang",
+      "Patung modern",
+      "Legenda rakyat Bali"
+    ],
+    "answer": 0,
+    "image": "https://awsimages.detik.net.id/community/media/visual/2021/12/03/prasasti-yupa.jpeg?w=1200"
+  },
+  {
+    "q": "Contoh sumber sejarah benda dari masa Islam adalah...",
+    "choices": [
+      "Masjid Demak",
+      "Cerita rakyat",
+      "Buku sejarah modern",
+      "Wawancara ulama",
+      "Naskah kontemporer"
+    ],
+    "answer": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Masjid_demak.jpg"
+  },
+  {
+    "q": "Contoh sumber audiovisual perjuangan kemerdekaan adalah...",
+    "choices": [
+      "Rekaman pidato Soekarno",
+      "Prasasti kuno",
+      "Patung Majapahit",
+      "Cerita rakyat",
+      "Artefak batu"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber primer penting karena...",
+    "choices": [
+      "Memberikan informasi langsung dari peristiwa",
+      "Selalu netral dan objektif",
+      "Tidak pernah berubah",
+      "Bersifat fiksi",
+      "Berupa cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber sekunder berguna untuk...",
+    "choices": [
+      "Memberi penafsiran berdasarkan sumber primer",
+      "Menggantikan sumber primer",
+      "Menghapus fakta sejarah",
+      "Menciptakan mitos",
+      "Menyamakan legenda dengan fakta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber sejarah audiovisual dapat berupa...",
+    "choices": [
+      "Film, rekaman suara, foto",
+      "Prasasti, kitab kuno",
+      "Patung, candi",
+      "Cerita rakyat",
+      "Lagu daerah"
+    ],
+    "answer": 0,
+    "image": "https://indonews.id/images/posts/1/2023/2023-05-26/2999fabc1c684881ec2a6bf25df1b3f4_1.jpg"
+  },
+  {
+    "q": "Prasasti merupakan contoh sumber sejarah...",
+    "choices": [
+      "Tertulis",
+      "Lisan",
+      "Benda",
+      "Audiovisual",
+      "Sekunder"
+    ],
+    "answer": 0,
+    "image": "BUTUH GAMBAR - Prasasti Mulawarman"
+  },
+  {
+    "q": "Cerita rakyat tentang asal usul suatu daerah termasuk...",
+    "choices": [
+      "Sumber lisan",
+      "Sumber tertulis",
+      "Sumber benda",
+      "Sumber audiovisual",
+      "Sumber sekunder"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Bangunan bersejarah seperti candi termasuk sumber...",
+    "choices": [
+      "Benda",
+      "Lisan",
+      "Tertulis",
+      "Sekunder",
+      "Audiovisual"
+    ],
+    "answer": 0,
+    "image": "https://www.worldhistory.org/uploads/images/9249.jpg"
+  },
+  {
+    "q": "Foto asli peristiwa Proklamasi termasuk sumber...",
+    "choices": [
+      "Audiovisual primer",
+      "Sekunder",
+      "Tertulis sekunder",
+      "Cerita lisan",
+      "Artefak"
+    ],
+    "answer": 0,
+    "image": "https://support-api.ganeshaoperation.com/storage/images/ultpL0FSGaitYtWkHVGa1tTrKcGhfzTZOWHo280t.png"
+  },
+  {
+    "q": "Kitab Negarakertagama adalah contoh sumber...",
+    "choices": [
+      "Tertulis primer",
+      "Lisan sekunder",
+      "Benda sekunder",
+      "Audiovisual",
+      "Fiksi"
+    ],
+    "answer": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nagarakertagama.jpg"
+  },
+  {
+    "q": "Mengapa sumber sekunder tidak bisa menggantikan sumber primer?",
+    "choices": [
+      "Karena hanya memberi tafsir, bukan bukti langsung",
+      "Karena lebih tua dari primer",
+      "Karena selalu benar",
+      "Karena tidak ada nilainya",
+      "Karena hanya berupa mitos"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa sumber audiovisual penting dalam sejarah modern?",
+    "choices": [
+      "Karena bisa merekam peristiwa secara nyata",
+      "Karena lebih tua dari prasasti",
+      "Karena tidak bisa dipalsukan",
+      "Karena hanya untuk hiburan",
+      "Karena sama dengan mitos"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Naskah proklamasi yang ditulis tangan adalah contoh sumber...",
+    "choices": [
+      "Tertulis primer",
+      "Sekunder",
+      "Lisan",
+      "Benda",
+      "Fiksi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa sumber lisan perlu diuji dengan sumber lain?",
+    "choices": [
+      "Karena sering subjektif",
+      "Karena selalu benar",
+      "Karena tidak berguna",
+      "Karena sama dengan legenda",
+      "Karena tidak bisa diingat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sejarah membutuhkan sumber karena...",
+    "choices": [
+      "Tanpa sumber sejarah tidak bisa ditulis",
+      "Sumber hanya untuk mitos",
+      "Sumber tidak penting",
+      "Sumber bisa diganti legenda",
+      "Sumber selalu fiksi"
+    ],
+    "answer": 0
+  }
+]
