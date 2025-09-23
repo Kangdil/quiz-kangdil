@@ -1,0 +1,325 @@
+[
+  {
+    "q": "Langkah pertama dalam penelitian sejarah adalah...",
+    "choices": [
+      "Heuristik",
+      "Kritik sumber",
+      "Interpretasi",
+      "Historiografi",
+      "Penilaian moral"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Heuristik dalam sejarah berarti...",
+    "choices": [
+      "Mengumpulkan sumber sejarah",
+      "Menafsirkan peristiwa sejarah",
+      "Menulis hasil penelitian sejarah",
+      "Mengkritik keaslian sumber",
+      "Menyusun ulang mitos lama"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kritik sumber bertujuan untuk...",
+    "choices": [
+      "Menguji keaslian dan kredibilitas sumber",
+      "Menambah legenda dalam penulisan",
+      "Menghapus fakta sejarah",
+      "Mengubah data menjadi mitos",
+      "Menentukan tokoh paling besar"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kritik ekstern dilakukan untuk...",
+    "choices": [
+      "Menguji keaslian fisik sumber",
+      "Menguji isi dan konsistensi sumber",
+      "Menafsirkan makna sumber",
+      "Mencatat urutan kronologis",
+      "Membuat tafsir mitologis"
+    ],
+    "answer": 0,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScDXZTJPpBtbaTl9GYc_FX-nH84Q1qYw6BUg&s"
+  },
+  {
+    "q": "Kritik intern dilakukan untuk...",
+    "choices": [
+      "Menguji isi atau konten sumber",
+      "Menentukan umur prasasti",
+      "Mengukur bahan kertas",
+      "Mencatat tanda tangan",
+      "Menghubungkan dengan cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Interpretasi dalam sejarah berarti...",
+    "choices": [
+      "Menafsirkan makna dari fakta sejarah",
+      "Mengumpulkan sumber baru",
+      "Mengkritik keaslian dokumen",
+      "Menulis laporan keuangan",
+      "Mengubah mitos menjadi fakta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi adalah...",
+    "choices": [
+      "Penulisan sejarah berdasarkan penelitian",
+      "Cerita fiksi tentang masa lalu",
+      "Pembuatan legenda rakyat",
+      "Penggambaran tokoh mitologis",
+      "Kumpulan cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sumber primer dalam penelitian sejarah didapat dari...",
+    "choices": [
+      "Dokumen, prasasti, artefak sezaman",
+      "Buku pelajaran modern",
+      "Cerita rakyat turun-temurun",
+      "Artikel internet terbaru",
+      "Legenda tradisional"
+    ],
+    "answer": 0,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsTtV_sEaFykOMSE0jHIltSjQ6jUObWZ7CQ&s"
+  },
+  {
+    "q": "Sumber sekunder dalam penelitian sejarah contohnya...",
+    "choices": [
+      "Buku sejarah karya sejarawan",
+      "Naskah Proklamasi asli",
+      "Prasasti Mulawarman",
+      "Wawancara dengan saksi mata",
+      "Artefak perunggu"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Tujuan penelitian sejarah adalah...",
+    "choices": [
+      "Menemukan, memahami, dan menjelaskan peristiwa masa lalu",
+      "Membuat cerita fiksi untuk hiburan",
+      "Menghidupkan kembali mitos kuno",
+      "Menghapus tradisi lisan",
+      "Menentukan tokoh yang paling berjasa"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kritik ekstern pada naskah berarti...",
+    "choices": [
+      "Menguji bahan, tinta, dan bentuk tulisan",
+      "Menilai isi dan makna cerita",
+      "Mencatat urutan fakta",
+      "Membuat tafsir modern",
+      "Menambah kisah rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kritik intern pada sumber sejarah berarti...",
+    "choices": [
+      "Menilai isi apakah logis dan konsisten",
+      "Menentukan jenis kertas",
+      "Mengukur usia tinta",
+      "Mencatat cap kerajaan",
+      "Menghubungkan dengan legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi tradisional biasanya menekankan pada...",
+    "choices": [
+      "Peran tokoh besar dan raja",
+      "Analisis kehidupan rakyat kecil",
+      "Fakta ekonomi",
+      "Struktur masyarakat luas",
+      "Hubungan internasional"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi modern berbeda karena...",
+    "choices": [
+      "Memperhatikan aspek sosial, ekonomi, dan budaya",
+      "Hanya menulis tentang raja",
+      "Tidak memakai metode ilmiah",
+      "Mengutamakan mitos lokal",
+      "Menyajikan dongeng rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sejarawan harus objektif artinya...",
+    "choices": [
+      "Menulis berdasarkan fakta, bukan opini pribadi",
+      "Membela tokoh tertentu",
+      "Menyamakan fakta dengan mitos",
+      "Membuat legenda populer",
+      "Menghapus bukti yang tidak sesuai"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Langkah terakhir penelitian sejarah adalah...",
+    "choices": [
+      "Historiografi",
+      "Interpretasi",
+      "Heuristik",
+      "Kritik ekstern",
+      "Kritik intern"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh heuristik dalam penelitian sejarah adalah...",
+    "choices": [
+      "Mengumpulkan arsip dari Arsip Nasional",
+      "Menafsirkan makna Proklamasi",
+      "Menulis sejarah perjuangan",
+      "Mengkritik keaslian dokumen",
+      "Membuat cerita rakyat"
+    ],
+    "answer": 0,
+    "img": "https://3.bp.blogspot.com/-mWB1k5awI-E/VxlfOEIGyGI/AAAAAAAAHBg/7Iwkhx0s_AkGVJC0KPEZMlBAFUejtmyzgCLcB/s1600/Gedung%2BANRI.jpg"
+  },
+  {
+    "q": "Kritik ekstern pada prasasti adalah...",
+    "choices": [
+      "Menguji batu, bentuk huruf, dan umur prasasti",
+      "Mencatat isi dan makna prasasti",
+      "Menulis tafsir kontemporer",
+      "Menyusun kembali legenda",
+      "Menghapus sebagian teks"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa interpretasi penting dalam sejarah?",
+    "choices": [
+      "Karena memberi makna pada fakta yang ditemukan",
+      "Karena menghapus sumber asli",
+      "Karena menambah mitos",
+      "Karena membuat legenda baru",
+      "Karena menyamakan semua cerita"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi kolonial cenderung berpihak pada...",
+    "choices": [
+      "Kepentingan penjajah",
+      "Kepentingan rakyat",
+      "Kepentingan ilmiah",
+      "Tradisi lisan",
+      "Mitos kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi nasional muncul karena...",
+    "choices": [
+      "Adanya semangat kebangsaan",
+      "Tekanan penjajah",
+      "Keinginan membuat mitos",
+      "Pengaruh fiksi modern",
+      "Legenda rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi modern di Indonesia berkembang pesat pada...",
+    "choices": [
+      "Masa pasca kemerdekaan",
+      "Masa penjajahan",
+      "Zaman kerajaan",
+      "Era prasejarah",
+      "Zaman mitos"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Historiografi tradisional biasanya ditulis dalam bentuk...",
+    "choices": [
+      "Babad atau kronik",
+      "Artikel jurnal modern",
+      "Novel sejarah",
+      "Esai ilmiah",
+      "Cerita rakyat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa heuristik sangat penting dalam penelitian sejarah?",
+    "choices": [
+      "Karena tanpa sumber tidak ada sejarah",
+      "Karena menafsirkan fakta",
+      "Karena menulis kisah",
+      "Karena menyusun legenda",
+      "Karena membuat mitos"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh historiografi tradisional Indonesia adalah...",
+    "choices": [
+      "Babad Tanah Jawi",
+      "Kitab sejarah modern",
+      "Buku pelajaran IPS",
+      "Artikel ilmiah",
+      "Cerita rakyat Malin Kundang"
+    ],
+    "answer": 0,
+    "img": "https://static.wixstatic.com/media/89f178_814553a0727b4457a5106a8235786c8f~mv2.jpg/v1/fill/w_824,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/89f178_814553a0727b4457a5106a8235786c8f~mv2.jpg"
+  },
+  {
+    "q": "Kritik intern penting agar...",
+    "choices": [
+      "Fakta dalam sumber tidak bertentangan",
+      "Semua sumber dihapus",
+      "Cerita rakyat ditambahkan",
+      "Legenda dipertahankan",
+      "Mitos dijadikan fakta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sejarah yang ditulis dengan objektif akan...",
+    "choices": [
+      "Lebih dipercaya karena berdasarkan fakta",
+      "Sama dengan legenda",
+      "Berubah menjadi mitos",
+      "Menghapus masa lalu",
+      "Tidak berguna"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Salah satu tantangan sejarawan adalah...",
+    "choices": [
+      "Memilah fakta dari mitos",
+      "Membuat cerita fiksi",
+      "Menulis dongeng",
+      "Menghapus sumber",
+      "Mengikuti legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Hasil akhir penelitian sejarah harus...",
+    "choices": [
+      "Disajikan dalam bentuk historiografi",
+      "Diceritakan sebagai dongeng",
+      "Dibuat menjadi mitos",
+      "Dihapus agar netral",
+      "Tidak ditulis sama sekali"
+    ],
+    "answer": 0
+  }
+]
