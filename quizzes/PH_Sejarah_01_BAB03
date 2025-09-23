@@ -1,0 +1,310 @@
+[
+  {
+    "q": "Berpikir diakronis dalam sejarah berarti...",
+    "choices": [
+      "Mempelajari peristiwa sejarah secara berurutan dalam waktu",
+      "Mengkaji struktur masyarakat pada satu titik waktu",
+      "Menentukan tokoh besar yang paling berperan",
+      "Menceritakan mitos yang diyakini masyarakat",
+      "Menghubungkan fakta dengan opini tanpa urutan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ciri khas berpikir diakronis adalah...",
+    "choices": [
+      "Memanjang dalam waktu, terbatas dalam ruang",
+      "Melebar dalam ruang, terbatas dalam waktu",
+      "Tidak memperhatikan urutan waktu",
+      "Fokus pada mitos dan legenda",
+      "Mengabaikan peran tokoh sejarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh berpikir diakronis adalah...",
+    "choices": [
+      "Proses menuju Proklamasi 17 Agustus 1945",
+      "Analisis struktur sosial saat G30S/PKI",
+      "Jenis artefak prasejarah",
+      "Pengaruh iklim pada pola pertanian",
+      "Legenda asal-usul gunung"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Berpikir sinkronis berarti...",
+    "choices": [
+      "Mempelajari peristiwa pada satu waktu tertentu dengan menekankan struktur",
+      "Meneliti urutan peristiwa dari masa lalu ke masa kini",
+      "Menghubungkan semua mitos dengan fakta",
+      "Menentukan tokoh paling berpengaruh",
+      "Menyamakan peristiwa dari berbagai bangsa"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ciri khas berpikir sinkronis adalah...",
+    "choices": [
+      "Melebar dalam ruang, terbatas dalam waktu",
+      "Memanjang dalam waktu, terbatas dalam ruang",
+      "Mengabaikan latar tempat",
+      "Fokus pada ramalan masa depan",
+      "Tidak memperhatikan aspek sosial"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh berpikir sinkronis adalah...",
+    "choices": [
+      "Tragedi G30S/PKI pada 1 Oktober 1965",
+      "Proses kemerdekaan Indonesia",
+      "Runtuhnya Majapahit berabad-abad",
+      "Migrasi manusia purba ke Nusantara",
+      "Modernisasi Eropa abad ke-18"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Periodisasi dalam sejarah dibuat agar...",
+    "choices": [
+      "Mempermudah memahami peristiwa sejarah",
+      "Memutus hubungan antar peristiwa",
+      "Menghapus peristiwa yang tidak penting",
+      "Membedakan mitos dan fakta",
+      "Menentukan tokoh besar"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa periodisasi tidak memutus hubungan peristiwa?",
+    "choices": [
+      "Karena sejarah memiliki kesinambungan",
+      "Karena sejarah hanya berulang",
+      "Karena sejarah berdiri sendiri",
+      "Karena sejarah bersifat fiksi",
+      "Karena sejarah tidak relevan lagi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Urutan periodisasi sejarah Indonesia adalah...",
+    "choices": [
+      "Praaksara, Hindu-Buddha, Islam, Kolonial, Jepang, Kemerdekaan",
+      "Zaman batu, perunggu, besi, modern",
+      "Masa kuno, pertengahan, modern",
+      "Kerajaan, penjajahan, globalisasi",
+      "Tradisional, industri, teknologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Konsep kausalitas dalam sejarah adalah...",
+    "choices": [
+      "Hubungan sebab-akibat antar peristiwa",
+      "Hubungan mitos dengan legenda",
+      "Peristiwa yang terjadi karena kebetulan",
+      "Cerita fiksi tentang masa lalu",
+      "Data statistik sosial"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kausalitas dalam sejarah adalah...",
+    "choices": [
+      "Bom Hiroshima → Jepang menyerah → Indonesia memproklamasikan kemerdekaan",
+      "Ramalan kuno → Perang besar",
+      "Legenda → Berdirinya kerajaan",
+      "Cerita rakyat → Terjadinya bencana",
+      "Mitos → Perubahan budaya"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Berpikir kronologis dalam sejarah berarti...",
+    "choices": [
+      "Menyusun peristiwa berdasarkan urutan waktu",
+      "Menghubungkan mitos dengan fakta",
+      "Menceritakan sejarah tanpa urutan",
+      "Membandingkan tokoh dari berbagai bangsa",
+      "Menghapus perbedaan peristiwa"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Pentingnya berpikir kronologis adalah...",
+    "choices": [
+      "Agar urutan peristiwa dapat dipahami secara runtut",
+      "Agar sejarah bisa berdiri sendiri",
+      "Agar sejarah tidak perlu dicatat",
+      "Agar mitos dianggap benar",
+      "Agar peristiwa menjadi fiksi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Hubungan antara berpikir kronologis dan diakronis adalah...",
+    "choices": [
+      "Kronologis menyusun urutan, diakronis menjelaskan proses perubahan",
+      "Kronologis fokus ruang, diakronis fokus tokoh",
+      "Kronologis hanya mitos, diakronis fakta",
+      "Kronologis masa depan, diakronis masa lalu",
+      "Kronologis tokoh besar, diakronis budaya"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa berpikir diakronis penting?",
+    "choices": [
+      "Karena membantu memahami proses perubahan dari waktu ke waktu",
+      "Karena hanya berfokus pada tokoh besar",
+      "Karena mengabaikan unsur ruang",
+      "Karena mengutamakan mitos",
+      "Karena tidak perlu urutan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa berpikir sinkronis penting?",
+    "choices": [
+      "Karena membantu memahami struktur sosial pada suatu masa",
+      "Karena menekankan peran tokoh besar",
+      "Karena hanya memandang waktu",
+      "Karena menolak fakta sejarah",
+      "Karena memisahkan ruang dari manusia"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sinkronis lebih dekat dengan ilmu sosial karena...",
+    "choices": [
+      "Menganalisis struktur dalam suatu waktu tertentu",
+      "Mengkaji perkembangan sepanjang masa",
+      "Mempelajari peristiwa berulang-ulang",
+      "Menghubungkan fakta dengan mitos",
+      "Memprediksi masa depan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh berpikir kronologis adalah...",
+    "choices": [
+      "Rangkaian peristiwa menuju Sumpah Pemuda 1928",
+      "Struktur masyarakat Jawa pada abad ke-19",
+      "Pengaruh iklim pada pola bercocok tanam",
+      "Mitos asal-usul kerajaan",
+      "Perubahan musim di nusantara"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kesinambungan sejarah adalah...",
+    "choices": [
+      "Kebijakan kolonial meniru sistem upeti kerajaan lokal",
+      "Semua peristiwa berdiri sendiri",
+      "Majapahit tidak ada hubungannya dengan kerajaan lain",
+      "Tokoh besar selalu memulai peristiwa baru",
+      "Sejarah terjadi karena kebetulan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh perubahan sejarah adalah...",
+    "choices": [
+      "Masuknya Islam mengubah sistem kepercayaan Hindu-Buddha",
+      "Upacara adat yang terus dipertahankan",
+      "Sistem upeti yang tidak berubah",
+      "Mitos yang selalu diceritakan",
+      "Legenda yang diwariskan turun-temurun"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Periodisasi sejarah dunia sering dibagi menjadi...",
+    "choices": [
+      "Zaman kuno, pertengahan, modern, kontemporer",
+      "Zaman batu, perunggu, besi, baja",
+      "Kerajaan, penjajahan, globalisasi",
+      "Tradisional, modern, teknologi",
+      "Mitos, legenda, fakta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa kausalitas penting dalam sejarah?",
+    "choices": [
+      "Agar dapat memahami hubungan sebab dan akibat antar peristiwa",
+      "Agar peristiwa dianggap kebetulan",
+      "Agar sejarah hanya mitos",
+      "Agar sejarah menjadi ramalan",
+      "Agar fakta disamakan dengan legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kausalitas keruntuhan Majapahit adalah...",
+    "choices": [
+      "Sepeninggal Hayam Wuruk dan Gajah Mada, konflik internal melemahkan kerajaan",
+      "Keruntuhan akibat letusan gunung berapi",
+      "Kekalahan perang melawan Belanda",
+      "Penyakit menular yang memusnahkan penduduk",
+      "Migrasi besar-besaran keluar Jawa"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kausalitas Proklamasi Kemerdekaan Indonesia adalah...",
+    "choices": [
+      "Kekalahan Jepang dalam Perang Dunia II membuka peluang kemerdekaan",
+      "Ramalan tokoh tua tentang merdeka",
+      "Cerita rakyat tentang kejayaan bangsa",
+      "Mitos kuno yang dipercaya masyarakat",
+      "Kebetulan tanpa alasan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa hubungan periodisasi dengan kronologi?",
+    "choices": [
+      "Periodisasi membagi waktu, kronologi menyusun urutan peristiwa",
+      "Periodisasi menentukan tokoh, kronologi menentukan tempat",
+      "Periodisasi tentang ruang, kronologi tentang tokoh",
+      "Periodisasi fiksi, kronologi fakta",
+      "Periodisasi mitos, kronologi legenda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa manfaat periodisasi sejarah?",
+    "choices": [
+      "Mempermudah memahami proses sejarah yang panjang",
+      "Menghapus kesinambungan sejarah",
+      "Menentukan mitos yang benar",
+      "Menghapus tokoh kecil",
+      "Membedakan fakta dari fiksi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa kronologi penting bagi sejarawan?",
+    "choices": [
+      "Agar dapat menyusun fakta sesuai urutan waktunya",
+      "Agar dapat membuat cerita fiksi",
+      "Agar bisa mengabaikan urutan peristiwa",
+      "Agar menekankan peran mitos",
+      "Agar semua peristiwa disamakan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh kesinambungan sejarah Indonesia adalah...",
+    "choices": [
+      "Penggunaan sistem kerajaan diteruskan dalam sistem kolonial",
+      "Majapahit langsung berubah menjadi negara modern",
+      "Tradisi lisan menjadi fakta sejarah",
+      "Semua budaya hilang total",
+      "Rakyat melupakan sejarah"
+    ],
+    "answer": 0
+  }
+]
