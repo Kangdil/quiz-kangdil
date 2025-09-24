@@ -1,40 +1,335 @@
 [
   {
-    "q": "Perubahan dalam sejarah berarti...",
+    "q": "Apa yang dimaksud dengan ilmu bantu sejarah?",
     "choices": [
-      "Adanya perbedaan kondisi antara masa lalu dan masa sesudahnya",
-      "Keadaan yang selalu sama dalam masyarakat",
-      "Cerita yang diwariskan turun-temurun",
-      "Peristiwa yang tidak pernah berubah",
-      "Mitos yang dipercaya masyarakat"
+      "Cabang ilmu lain yang membantu penelitian sejarah",
+      "Ilmu yang hanya mempelajari cerita rakyat",
+      "Ilmu yang menggantikan sejarah sepenuhnya",
+      "Ilmu yang hanya digunakan untuk mitos",
+      "Ilmu yang fokus pada politik modern"
     ],
     "answer": 0
   },
   {
-    "q": "Keberlanjutan dalam sejarah berarti...",
+    "q": "Mengapa ilmu bantu sejarah penting?",
     "choices": [
-      "Adanya unsur masa lalu yang masih dipertahankan hingga kini",
-      "Perubahan besar yang menghapus masa lalu",
-      "Cerita fiksi yang dibuat sejarawan",
-      "Peristiwa yang berdiri sendiri",
-      "Mitos tanpa bukti"
+      "Agar rekonstruksi sejarah lebih akurat dan ilmiah",
+      "Agar sejarah menjadi cerita fiksi",
+      "Agar sejarah hanya mengandalkan mitos",
+      "Agar sejarah tidak menggunakan sumber",
+      "Agar sejarah berhenti berkembang"
     ],
     "answer": 0
   },
   {
-    "q": "Contoh perubahan dalam sejarah Indonesia adalah...",
+    "q": "Ilmu yang mempelajari peninggalan purbakala disebut...",
     "choices": [
-      "Masuknya Islam menggantikan kepercayaan Hindu-Buddha",
-      "Upacara adat yang tetap dilakukan",
-      "Tradisi lisan yang masih diwariskan",
-      "Kebiasaan gotong royong",
-      "Sistem kerajaan yang tetap ada"
+      "Arkeologi",
+      "Epigrafi",
+      "Filologi",
+      "Paleografi",
+      "Numismatik"
     ],
-    "answer": 0,
-    "img": "https://garis.my.id/wp-content/uploads/2020/11/interior-masjiddemak1_optimized.jpg"
+    "answer": 0
   },
   {
-    "q": "Contoh keberlanjutan dalam sejarah adalah...",
+    "q": "Ilmu yang meneliti tulisan pada prasasti adalah...",
+    "choices": [
+      "Epigrafi",
+      "Arkeologi",
+      "Numismatik",
+      "Filologi",
+      "Antropologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu yang mempelajari bentuk dan jenis tulisan kuno adalah...",
+    "choices": [
+      "Paleografi",
+      "Epigrafi",
+      "Filologi",
+      "Numismatik",
+      "Sosiologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Numismatik adalah ilmu bantu sejarah yang meneliti...",
+    "choices": [
+      "Mata uang kuno",
+      "Tulisan kuno",
+      "Struktur sosial",
+      "Budaya manusia",
+      "Peta sejarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu yang meneliti naskah lama disebut...",
+    "choices": [
+      "Filologi",
+      "Paleografi",
+      "Epigrafi",
+      "Numismatik",
+      "Geografi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Antropologi dalam sejarah berfungsi untuk...",
+    "choices": [
+      "Mempelajari budaya dan kehidupan manusia",
+      "Menafsirkan prasasti",
+      "Meneliti koin kuno",
+      "Menentukan letak geografis",
+      "Meneliti tulisan latin"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sosiologi membantu sejarah dengan cara...",
+    "choices": [
+      "Menganalisis struktur dan hubungan sosial masyarakat",
+      "Menentukan bentuk tulisan kuno",
+      "Menggali peninggalan purbakala",
+      "Mengumpulkan naskah lama",
+      "Menentukan arah peta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu bantu sejarah yang mempelajari letak dan kondisi geografis adalah...",
+    "choices": [
+      "Geografi",
+      "Arkeologi",
+      "Filologi",
+      "Sosiologi",
+      "Numismatik"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu yang meneliti fosil makhluk hidup purba adalah...",
+    "choices": [
+      "Paleontologi",
+      "Paleoantropologi",
+      "Arkeologi",
+      "Filologi",
+      "Epigrafi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu yang mempelajari asal-usul dan evolusi manusia purba adalah...",
+    "choices": [
+      "Paleoantropologi",
+      "Paleontologi",
+      "Antropologi budaya",
+      "Arkeologi",
+      "Sosiologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Arkeologi biasanya menggunakan metode...",
+    "choices": [
+      "Penggalian artefak",
+      "Analisis tulisan kuno",
+      "Studi naskah",
+      "Analisis mata uang",
+      "Studi sosial"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh objek kajian epigrafi adalah...",
+    "choices": [
+      "Prasasti Yupa",
+      "Fosil dinosaurus",
+      "Koin Majapahit",
+      "Naskah Nagarakretagama",
+      "Alat batu paleolitik"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh objek kajian numismatik adalah...",
+    "choices": [
+      "Uang kepeng dari Tiongkok",
+      "Tulisan Pallawa",
+      "Prasasti batu",
+      "Naskah Jawa kuno",
+      "Relief candi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Contoh objek kajian filologi adalah...",
+    "choices": [
+      "Naskah Nagarakretagama",
+      "Prasasti Ciaruteun",
+      "Koin kerajaan",
+      "Fosil Homo erectus",
+      "Relief Borobudur"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Paleografi membantu sejarawan dengan cara...",
+    "choices": [
+      "Menentukan usia dan bentuk tulisan kuno",
+      "Menentukan struktur sosial",
+      "Menggali benda arkeologi",
+      "Mengukur peta wilayah",
+      "Meneliti budaya manusia"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Antropologi penting dalam sejarah karena...",
+    "choices": [
+      "Membantu memahami kebudayaan dan adat masyarakat",
+      "Menentukan asal mula uang logam",
+      "Menafsirkan huruf kuno",
+      "Mengukur wilayah geografis",
+      "Menulis silsilah raja"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Sosiologi membantu penelitian sejarah dengan fokus pada...",
+    "choices": [
+      "Kehidupan sosial masyarakat masa lalu",
+      "Perubahan bentuk tulisan",
+      "Jenis fosil manusia",
+      "Penggalian artefak",
+      "Studi bahasa kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Geografi membantu sejarah dengan cara...",
+    "choices": [
+      "Menjelaskan hubungan peristiwa sejarah dengan lokasi",
+      "Menentukan jenis tulisan kuno",
+      "Mencatat hubungan keluarga raja",
+      "Menganalisis naskah kuno",
+      "Menentukan bentuk koin kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Paleontologi digunakan dalam sejarah untuk...",
+    "choices": [
+      "Mempelajari fosil hewan dan tumbuhan purba",
+      "Menganalisis mata uang kuno",
+      "Membaca naskah kuno",
+      "Menentukan letak geografis",
+      "Menggali prasasti batu"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Paleoantropologi berfokus pada penelitian...",
+    "choices": [
+      "Fosil manusia purba",
+      "Tulisan kuno",
+      "Uang logam kuno",
+      "Naskah sastra lama",
+      "Alat-alat pertanian"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Prasasti Yupa dari Kutai merupakan objek kajian...",
+    "choices": [
+      "Epigrafi",
+      "Arkeologi",
+      "Numismatik",
+      "Filologi",
+      "Geografi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Naskah Ramayana versi Jawa kuno adalah contoh kajian...",
+    "choices": [
+      "Filologi",
+      "Paleografi",
+      "Numismatik",
+      "Arkeologi",
+      "Antropologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Studi tentang uang kepeng Majapahit dilakukan oleh ilmu...",
+    "choices": [
+      "Numismatik",
+      "Epigrafi",
+      "Paleografi",
+      "Antropologi",
+      "Paleontologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Relief pada candi merupakan objek penelitian...",
+    "choices": [
+      "Arkeologi",
+      "Filologi",
+      "Epigrafi",
+      "Numismatik",
+      "Paleografi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu bantu sejarah yang meneliti jenis huruf Pallawa adalah...",
+    "choices": [
+      "Paleografi",
+      "Epigrafi",
+      "Filologi",
+      "Numismatik",
+      "Antropologi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa filologi penting bagi sejarah?",
+    "choices": [
+      "Karena membantu memahami isi naskah lama",
+      "Karena menentukan usia prasasti",
+      "Karena menggali fosil manusia purba",
+      "Karena meneliti koin kuno",
+      "Karena membuat peta kuno"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ilmu bantu sejarah yang mempelajari tradisi, adat, dan budaya masyarakat adalah...",
+    "choices": [
+      "Antropologi",
+      "Sosiologi",
+      "Arkeologi",
+      "Filologi",
+      "Geografi"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Fosil Homo erectus dari Sangiran merupakan objek kajian...",
+    "choices": [
+      "Paleoantropologi",
+      "Paleontologi",
+      "Arkeologi",
+      "Epigrafi",
+      "Sosiologi"
+    ],
+    "answer": 0
+  }
+    ]    "q": "Contoh keberlanjutan dalam sejarah adalah...",
     "choices": [
       "Tradisi upacara adat yang tetap dipertahankan",
       "Runtuhnya Majapahit",
