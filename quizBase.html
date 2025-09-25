@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quiz Modular All-in-One</title>
+<title>Quiz Kangdil</title>
 <style>
   body {
     margin:0;
@@ -321,7 +321,7 @@ for(let i=0;i<50;i++){
 }
 function draw(){
   cx.clearRect(0,0,c.width,c.height);
-  cx.fillStyle="rgba(255,255,255,0.5)";
+  cx.fillStyle="rgba(255,255,255,0.05)";
   particles.forEach(p=>{
     cx.beginPath();cx.arc(p.x,p.y,p.size,0,Math.PI*2);cx.fill();
     p.x+=p.vx;p.y+=p.vy;
