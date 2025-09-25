@@ -1,0 +1,217 @@
+[
+  {
+    "q": "Apa yang dimaksud dengan dinamika kelahiran Pancasila?",
+    "choices": ["Proses perdebatan, perumusan, hingga pengesahan Pancasila sebagai dasar negara", "Proses penghapusan UUD 1945", "Sejarah perang melawan Belanda", "Proses lahirnya proklamasi 10 November", "Kronologi perjanjian internasional"],
+    "answer": 0
+  },
+  {
+    "q": "Kapan sidang pertama BPUPK dilaksanakan?",
+    "choices": ["29 Mei – 1 Juni 1945", "17 Agustus 1945", "10 November 1945", "1 Maret 1942", "22 Juni 1945"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang menyampaikan pidato 1 Juni 1945 yang kemudian dikenal sebagai lahirnya Pancasila?",
+    "choices": ["Ir. Soekarno", "Mohammad Yamin", "Soepomo", "Mohammad Hatta", "Ki Bagoes Hadikoesoemo"],
+    "answer": 0
+  },
+  {
+    "q": "Berapa banyak tokoh yang menyampaikan pandangan dalam sidang pertama BPUPK?",
+    "choices": ["Lebih dari 35 tokoh", "Hanya 5 tokoh utama", "Sekitar 10 orang saja", "Kurang dari 20 tokoh", "100 tokoh perwakilan"],
+    "answer": 0
+  },
+  {
+    "q": "Apa semangat yang sama dimiliki oleh para tokoh bangsa dalam sidang pertama BPUPK?",
+    "choices": ["Kemerdekaan segera dan persatuan bangsa", "Dominasi kelompok tertentu", "Perlawanan terhadap sekutu", "Pembentukan negara federal", "Mengikuti pemerintahan Jepang"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa saja golongan yang hadir dalam sidang BPUPK?",
+    "choices": ["Birokrat, independen, ulama, nasionalis, dan perwakilan Jepang", "Hanya tokoh ulama", "Hanya kalangan militer", "Perwakilan sekutu", "Rakyat biasa tanpa organisasi"],
+    "answer": 0
+  },
+  {
+    "q": "Apa tugas Panitia 8 yang dibentuk setelah pidato Soekarno?",
+    "choices": ["Menampung saran dan usul anggota BPUPK", "Menghapus Piagam Jakarta", "Mengganti naskah proklamasi", "Menyusun anggaran belanja negara", "Membentuk organisasi militer"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa ketua Panitia 8?",
+    "choices": ["Ir. Soekarno", "Mohammad Yamin", "Mohammad Hatta", "Soepomo", "Otto Iskandar Dinata"],
+    "answer": 0
+  },
+  {
+    "q": "Panitia Sembilan menghasilkan naskah yang dikenal sebagai...",
+    "choices": ["Piagam Jakarta", "Proklamasi Rengasdengklok", "Maklumat Wakil Presiden", "Gentlemen’s Agreement", "Konstitusi RIS"],
+    "answer": 0
+  },
+  {
+    "q": "Tanggal berapakah Piagam Jakarta disepakati?",
+    "choices": ["22 Juni 1945", "1 Juni 1945", "29 Mei 1945", "18 Agustus 1945", "10 November 1945"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang menyebut Piagam Jakarta sebagai 'Gentlemen’s Agreement'?",
+    "choices": ["Soekiman", "Yamin", "Soekarno", "Hatta", "Soepomo"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang menamai Piagam Jakarta?",
+    "choices": ["Mohammad Yamin", "Ir. Soekarno", "Mohammad Hatta", "Ki Bagoes Hadikoesoemo", "Otto Iskandar Dinata"],
+    "answer": 0
+  },
+  {
+    "q": "Apa isi dari sila pertama dalam Piagam Jakarta sebelum diubah?",
+    "choices": ["Ketuhanan dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya", "Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kerakyatan dengan hikmat kebijaksanaan", "Keadilan sosial bagi seluruh rakyat Indonesia"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa tujuh kata dalam Piagam Jakarta dihapus pada 18 Agustus 1945?",
+    "choices": ["Untuk menjaga persatuan bangsa", "Karena salah tulis", "Karena tekanan asing", "Karena dianggap terlalu panjang", "Karena tidak sesuai konstitusi"],
+    "answer": 0
+  },
+  {
+    "q": "Siapakah tokoh yang menyarankan penghapusan tujuh kata tersebut?",
+    "choices": ["Mohammad Hatta", "Soekarno", "Yamin", "Soepomo", "Otto Iskandar Dinata"],
+    "answer": 0
+  },
+  {
+    "q": "Kapan PPKI mengesahkan UUD 1945 beserta Pancasila?",
+    "choices": ["18 Agustus 1945", "17 Agustus 1945", "22 Juni 1945", "1 Juni 1945", "29 Mei 1945"],
+    "answer": 0
+  },
+  {
+    "q": "Apa makna pengesahan Pancasila pada 18 Agustus 1945?",
+    "choices": ["Pancasila resmi menjadi dasar negara Indonesia", "Pancasila hanya sebagai semboyan", "Pancasila dipakai sementara", "Pancasila diganti dengan ideologi lain", "Pancasila menjadi hukum pidana"],
+    "answer": 0
+  },
+  {
+    "q": "Apa yang menjadi perdebatan utama dalam perumusan dasar negara di BPUPK?",
+    "choices": ["Dasar negara Islam atau nasional", "Pembagian provinsi", "Letak ibu kota", "Sistem pertahanan", "Hubungan luar negeri"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa wakil dari kalangan Kristen dalam Panitia Sembilan?",
+    "choices": ["A.A. Maramis", "Ki Bagoes Hadikoesoemo", "Otto Iskandar Dinata", "Mohammad Yamin", "Hatta"],
+    "answer": 0
+  },
+  {
+    "q": "Bagaimana sikap para pendiri bangsa terhadap perbedaan pendapat saat merumuskan Pancasila?",
+    "choices": ["Mengedepankan kompromi demi persatuan", "Mengutamakan kepentingan golongan sendiri", "Menghindari dialog", "Membiarkan konflik terbuka", "Menunda kemerdekaan"],
+    "answer": 0
+  },
+  {
+    "q": "Apa yang dimaksud dengan istilah 'Philosophische grondslag' dalam konteks Pancasila?",
+    "choices": ["Dasar filsafat negara", "Hukum positif tertinggi", "Undang-undang dasar", "Simbol kenegaraan", "Maklumat politik"],
+    "answer": 0
+  },
+  {
+    "q": "Tokoh yang memperkenalkan istilah 'Philosophische grondslag' adalah ...",
+    "choices": ["Soekarno", "Yamin", "Soepomo", "Hatta", "Syahrir"],
+    "answer": 0
+  },
+  {
+    "q": "Apa peran Soepomo dalam sidang BPUPK?",
+    "choices": ["Mengajukan konsep negara integralistik", "Membacakan teks proklamasi", "Menolak Piagam Jakarta", "Menjadi ketua PPKI", "Menjadi wakil panitia sembilan"],
+    "answer": 0
+  },
+  {
+    "q": "Apa alasan Soekarno mengusulkan lima sila pada 1 Juni 1945?",
+    "choices": ["Untuk dijadikan dasar negara Indonesia merdeka", "Untuk mengganti peraturan Jepang", "Sebagai bentuk propaganda politik", "Sebagai pidato penyemangat belaka", "Untuk menolak penjajahan Belanda"],
+    "answer": 0
+  },
+  {
+    "q": "Dalam dinamika kelahiran Pancasila, kompromi politik yang dihasilkan menunjukkan ...",
+    "choices": ["Semangat persatuan di atas kepentingan golongan", "Kemenangan salah satu kelompok", "Perpecahan bangsa", "Penolakan kemerdekaan", "Ketidakjelasan dasar negara"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang menjadi ketua BPUPK?",
+    "choices": ["Dr. Radjiman Wedyodiningrat", "Soekarno", "Hatta", "Soepomo", "Yamin"],
+    "answer": 0
+  },
+  {
+    "q": "Apa arti Piagam Jakarta bagi sejarah Indonesia?",
+    "choices": ["Dokumen kompromi yang menjadi cikal bakal Pembukaan UUD 1945", "Naskah proklamasi kemerdekaan", "Maklumat tentang perang Asia Timur Raya", "Kesepakatan dagang antar bangsa", "Peraturan ekonomi kolonial"],
+    "answer": 0
+  },
+  {
+    "q": "Apa nilai utama yang dapat diambil dari dinamika kelahiran Pancasila?",
+    "choices": ["Semangat musyawarah, kompromi, dan persatuan", "Keinginan memenangkan satu golongan", "Dominasi mayoritas", "Mengutamakan kepentingan asing", "Penolakan perbedaan"],
+    "answer": 0
+  },
+  {
+    "q": "Kapan Pancasila pertama kali dipidatokan oleh Soekarno?",
+    "choices": ["1 Juni 1945", "29 Mei 1945", "22 Juni 1945", "17 Agustus 1945", "18 Agustus 1945"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang mengusulkan lima asas dasar negara pada 29 Mei 1945?",
+    "choices": ["Mohammad Yamin", "Soepomo", "Soekarno", "Hatta", "Otto Iskandar Dinata"],
+    "answer": 0
+  },
+  {
+    "q": "Apa isi gagasan Mohammad Yamin pada sidang BPUPK?",
+    "choices": ["Lima asas dasar negara meliputi kebangsaan, kemanusiaan, ketuhanan, kerakyatan, kesejahteraan rakyat", "Negara integralistik", "Dasar negara Islam", "Demokrasi liberal penuh", "Sistem kerajaan"],
+    "answer": 0
+  },
+  {
+    "q": "Apa yang diusulkan Soepomo dalam sidang BPUPK?",
+    "choices": ["Negara integralistik", "Negara Islam", "Negara federal", "Negara liberal", "Negara komunis"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa Panitia Sembilan dibentuk?",
+    "choices": ["Untuk merumuskan kompromi dasar negara", "Untuk menyusun teks proklamasi", "Untuk mengurus anggaran negara", "Untuk menentukan presiden", "Untuk merancang simbol negara"],
+    "answer": 0
+  },
+  {
+    "q": "Apa kompromi yang dicapai dalam Piagam Jakarta?",
+    "choices": ["Ketuhanan dengan kewajiban syariat Islam bagi pemeluknya", "Negara federal", "Negara liberal", "Negara komunis", "Negara integralistik"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa Piagam Jakarta dianggap sebagai kompromi penting?",
+    "choices": ["Karena mengakomodasi perbedaan pandangan agama dan kebangsaan", "Karena ditulis oleh Jepang", "Karena hanya memuat satu sila", "Karena ditolak semua pihak", "Karena tidak ada perdebatan"],
+    "answer": 0
+  },
+  {
+    "q": "Apa alasan Hatta menyetujui penghapusan tujuh kata?",
+    "choices": ["Untuk menghindari perpecahan antara golongan Islam dan non-Islam", "Untuk menambah dukungan asing", "Karena perintah Jepang", "Karena Piagam Jakarta dianggap tidak sah", "Karena ingin mengganti UUD"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh Islam yang hadir dalam Panitia Sembilan?",
+    "choices": ["K.H. Wachid Hasjim", "A.A. Maramis", "Otto Iskandar Dinata", "Hatta", "Soepomo"],
+    "answer": 0
+  },
+  {
+    "q": "Bagaimana hubungan Piagam Jakarta dengan Pembukaan UUD 1945?",
+    "choices": ["Menjadi cikal bakal Pembukaan UUD 1945", "Tidak ada hubungan sama sekali", "Menggantikan UUD 1945", "Digunakan sebagai hukum ekonomi", "Menjadi teks proklamasi"],
+    "answer": 0
+  },
+  {
+    "q": "Siapa yang menyusun teks Piagam Jakarta?",
+    "choices": ["Panitia Sembilan", "Panitia 8", "BPUPK", "PPKI", "Panitia kecil"],
+    "answer": 0
+  },
+  {
+    "q": "Apa arti penting sidang BPUPK dalam sejarah Indonesia?",
+    "choices": ["Menjadi forum awal perumusan dasar negara", "Mengesahkan proklamasi", "Membentuk kabinet pertama", "Menentukan sistem federal", "Menghapus penjajahan Belanda"],
+    "answer": 0
+  },
+  {
+    "q": "Apa yang menunjukkan sifat demokratis dalam sidang BPUPK?",
+    "choices": ["Semua anggota diberi kesempatan mengemukakan pendapat", "Hanya ketua yang boleh berbicara", "Perdebatan ditutup rapat", "Tidak ada kebebasan berbicara", "Keputusan diambil sepihak"],
+    "answer": 0
+  },
+  {
+    "q": "Apa hasil akhir dinamika kelahiran Pancasila?",
+    "choices": ["Rumusan Pancasila yang sah pada 18 Agustus 1945", "Negara federal Indonesia", "UUD liberal", "Negara integralistik murni", "Konstitusi RIS"],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa kompromi dalam kelahiran Pancasila relevan hingga sekarang?",
+    "choices": ["Karena menekankan pentingnya toleransi dan persatuan", "Karena hanya menguntungkan satu pihak", "Karena menolak musyawarah", "Karena menutup ruang perbedaan", "Karena tidak sesuai dengan demokrasi"],
+    "answer": 0
+  }
+]
