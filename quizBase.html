@@ -3,74 +3,65 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quiz Modular All-in-One</title>
+<title>Quiz Modular All-in-One — Enhanced</title>
 <style>
-  body {
-    margin:0;
-    font-family:sans-serif;
-    background:#0f1724;
-    color:#e6eef6;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height:100vh;
+  :root{
+    --bg:#0f1724; --card:rgba(255,255,255,0.04); --muted:#9fb0c4;
+    --accent:#6ee7b7; --accent-dark:#16a34a; --danger:#dc2626;
+    --glass: rgba(255,255,255,0.03);
   }
-  .screen { display:none; width:100%; max-width:960px; padding:20px; }
-  .active { display:block; }
-  .card {
-    background:rgba(255,255,255,0.05);
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.5);
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:var(--bg);}
+  .app{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+  .screen{display:none;width:100%;max-width:980px}
+  .active{display:block}
+  .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+  h1,h2{margin:0 0 12px 0}
+  button{padding:10px 14px;border:none;border-radius:10px;background:var(--accent);color:#022;cursor:pointer;font-weight:700}
+  button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted)}
+  .choice{padding:12px;border-radius:10px;background:var(--glass);margin:8px 0;cursor:pointer;transition:transform .26s cubic-bezier(.2,.9,.3,1),opacity .26s;}
+  .choice:hover{transform:translateY(-4px)}
+  .choice.correct{background:linear-gradient(90deg,#10b98122,#16a34a33);box-shadow:0 6px 18px rgba(22,163,74,0.12);}
+  .choice.wrong{background:linear-gradient(90deg,#ef444422,#dc262633);box-shadow:0 6px 18px rgba(220,38,38,0.08);}
+  .toolbar{margin-top:16px;display:flex;justify-content:space-between;align-items:center}
+  .scoreboard{font-weight:800}
+  pre{white-space:pre-wrap;background:#071025;padding:12px;border-radius:8px;max-height:300px;overflow:auto}
+  .qimg{max-width:100%;max-height:260px;display:block;margin:10px auto;border-radius:8px}
+  .fade-in{animation:fadeIn .45s ease both}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  /* Result visual (like Quizizz) */
+  .result-wrap{display:flex;gap:18px;align-items:center;justify-content:space-between}
+  .result-card{flex:1;display:flex;gap:18px;align-items:center}
+  .radial{width:160px;height:160px;display:grid;place-items:center;position:relative}
+  .radial svg{width:160px;height:160px;transform:rotate(-90deg)}
+  .radial .center{position:absolute;display:flex;flex-direction:column;align-items:center}
+  .radial .percent{font-size:26px;font-weight:800}
+  .progress-bar{flex:1;height:18px;background:rgba(255,255,255,0.04);border-radius:10px;overflow:hidden}
+  .progress-bar > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#34d399);border-radius:10px;transition:width 1s cubic-bezier(.2,.9,.3,1)}
+  .summary{font-weight:700;color:var(--muted)}
+
+  /* Particles canvas full-bleed */
+  #particles{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:none;mix-blend-mode:screen;opacity:.7}
+
+  /* Small responsive tweaks */
+  @media (max-width:720px){
+    .result-wrap{flex-direction:column;align-items:center}
+    .radial{width:130px;height:130px}
+    .radial svg{width:130px;height:130px}
   }
-  h1,h2 { margin:0 0 16px 0; }
-  button {
-    padding:10px 16px;
-    border:none;
-    border-radius:8px;
-    background:#6ee7b7;
-    color:#042028;
-    font-weight:600;
-    cursor:pointer;
-    margin:4px;
-  }
-  button.ghost { background:transparent; border:1px solid rgba(255,255,255,0.2); color:#e6eef6; }
-  .choice {
-    padding:10px;
-    border-radius:8px;
-    background:rgba(255,255,255,0.05);
-    margin:6px 0;
-    cursor:pointer;
-    transition:all .3s ease;
-  }
-  .choice:hover { background:rgba(255,255,255,0.1); }
-  .choice.correct { background:#16a34a!important; animation:pulse .5s ease; }
-  .choice.wrong { background:#dc2626!important; animation:shake .3s ease; }
-  .toolbar { margin-top:20px; display:flex; justify-content:space-between; align-items:center; }
-  .scoreboard { font-weight:700; }
-  pre {
-    white-space:pre-wrap; word-break:break-word;
-    background:#0b1220; padding:12px; border-radius:8px;
-    max-height:300px; overflow:auto;
-  }
-  .qimg {
-    max-width:100%; max-height:240px;
-    display:block; margin:0 auto 16px auto;
-    border-radius:8px;
-  }
-  @keyframes shake {0%,100%{transform:translateX(0);}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
-  @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
-  .fade-in { animation:fade .4s ease; }
-  @keyframes fade { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:none;} }
 </style>
 </head>
 <body>
+<canvas id="particles"></canvas>
+<div class="app">
   <!-- Menu utama -->
   <div id="menu" class="screen active">
-    <div class="card">
+    <div class="card fade-in">
       <h1>Quiz All-in-One</h1>
-      <p>Pilih quiz yang ingin dimainkan:</p>
-      <button onclick="restartQuiz()">Mulai/Ulang</button>
+      <p>Pilih quiz yang ingin dimainkan — buka file lokal dengan parameter <code>?quiz=nama_quiz</code>.</p>
+      <div style="margin-top:12px"><button onclick="restartQuiz()">Mulai/Ulang</button>
+      <button class="ghost" onclick="gotoScreen('viewer')">Lihat Soal</button></div>
     </div>
   </div>
 
@@ -94,16 +85,57 @@
 
   <!-- Viewer Screen -->
   <div id="viewer" class="screen">
-    <div class="card">
+    <div class="card fade-in">
       <h2>Daftar Soal</h2>
       <div id="questionList"></div>
-      <div class="toolbar">
+      <div class="toolbar" style="margin-top:12px">
         <button onclick="gotoScreen('menu')">Kembali</button>
       </div>
     </div>
   </div>
 
+  <!-- Result Screen (hidden initially, shown at the end) -->
+  <div id="result" class="screen">
+    <div class="card fade-in">
+      <h2>Hasil Quiz</h2>
+      <div class="result-wrap" style="margin-top:12px">
+        <div class="result-card">
+          <div class="radial" id="radialWrap">
+            <svg viewBox="0 0 100 100" aria-hidden>
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#6ee7b7"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.06)" stroke-width="14" fill="none"></circle>
+              <circle id="radialArc" cx="50" cy="50" r="40" stroke="url(#g1)" stroke-width="14" stroke-linecap="round" fill="none" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+            </svg>
+            <div class="center">
+              <div class="percent" id="percentText">0%</div>
+              <div class="summary" id="summaryText">Memproses...</div>
+            </div>
+          </div>
+          <div style="flex:1">
+            <div class="progress-bar" aria-hidden>
+              <i id="barFill"></i>
+            </div>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">Benar ronde 1: <span id="r1">0</span> — Benar ronde 2: <span id="r2">0</span></div>
+          </div>
+        </div>
+        <div style="width:220px;text-align:center">
+          <div style="font-weight:800;font-size:20px">Skor Akhir</div>
+          <div id="scoreFinal" style="font-size:20px;margin-top:8px">0</div>
+          <div style="margin-top:12px">
+            <button onclick="gotoScreen('menu')">Kembali</button>
+            <button class="ghost" onclick="restartQuiz()">Main Lagi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <script>
+// ====== Original quiz logic (kept, slightly refactored) ======
 let QUESTIONS = [], QUESTIONS_BINDO = [], QUESTIONS_SUNDA = [];
 let idx=0, score=0, timer=null, remaining=0;
 const basePoint=500, bonusPerSecond=20, defaultTime=90;
@@ -127,72 +159,32 @@ async function startQuiz(type){
     secondRound = false; correctRound1 = 0; correctRound2 = 0;
     totalQuestionsCount = QUESTIONS.length;
     maxScore = QUESTIONS.length * (basePoint + (defaultTime * bonusPerSecond));
+    showScreen('quiz');
     renderQuestion();
-    gotoScreen('quiz');
   } catch(err) {
     alert("Gagal load quiz: " + err.message);
     console.error(err);
   }
 }
 
-function gotoScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  if(id==='viewer') renderViewer();
-}
+function gotoScreen(id){ showScreen(id); if(id==='viewer') renderViewer(); }
+function showScreen(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); document.getElementById(id).classList.add('active'); }
 
-function shuffleArray(arr){
-  for(let i=arr.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [arr[i],arr[j]]=[arr[j],arr[i]];
-  }
-  return arr;
-}
+function shuffleArray(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 
 function renderQuestion(){
-  if(idx>=QUESTIONS.length){
-    if(!secondRound && wrongQuestions.length>0){
-      secondRound = true;
-      QUESTIONS = wrongQuestions.map(i=>QUESTIONS[i]);
-      idx=0; wrongQuestions=[];
-      document.getElementById('roundInfo').textContent = "Ronde 2 - Soal Salah";
-      renderQuestion();
-      return;
-    } else {
-      let nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
-      let percent = Math.round(nilai);
-      document.getElementById('qtext').textContent = `Selesai! Skor akhir: ${score} / ${maxScore}`;
-      document.getElementById('choices').innerHTML =
-        `<div style="margin-top:10px;font-weight:bold;">
-          Nilai: ${percent}%<br>(Benar ronde 1: ${correctRound1}, Benar ronde 2: ${correctRound2})
-        </div>`;
-      document.getElementById('progress').textContent = "Selesai";
-      document.getElementById('timer').textContent='-';
-      document.getElementById('roundInfo').textContent='';
-      document.getElementById('qimg').style.display="none";
-      return;
-    }
-  }
-
+  if(idx>=QUESTIONS.length){ finishQuiz(); return; }
   const q=QUESTIONS[idx];
   let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
   optionObjs=shuffleArray(optionObjs);
   currentQuestion={q:q.q, options:optionObjs};
 
   document.getElementById('qtext').textContent=q.q;
-
-  // tampilkan gambar kalau ada
   const imgEl=document.getElementById('qimg');
-  if(q.img){
-    imgEl.src=q.img;
-    imgEl.style.display="block";
-    imgEl.onerror=()=>{ imgEl.style.display="none"; };
-  } else {
-    imgEl.style.display="none";
-  }
+  if(q.img){ imgEl.src=q.img; imgEl.style.display="block"; imgEl.onerror=()=>{ imgEl.style.display="none"; }; }
+  else imgEl.style.display="none";
 
-  const wrap=document.getElementById('choices');
-  wrap.innerHTML='';
+  const wrap=document.getElementById('choices'); wrap.innerHTML='';
   optionObjs.forEach((opt,i)=>{
     const div=document.createElement('div');
     div.className='choice fade-in';
@@ -206,54 +198,90 @@ function renderQuestion(){
   startTimer(defaultTime);
 }
 
-function startTimer(sec){
-  clearInterval(timer);
-  remaining=sec;
-  document.getElementById('timer').textContent=remaining+"s";
-  timer=setInterval(()=>{
-    remaining--;
-    if(remaining<=0){
-      clearInterval(timer);remaining=0;
-      lockAnswers();setTimeout(nextQuestion,1000);
-    }
-    document.getElementById('timer').textContent=remaining+"s";
-  },1000);
-}
+function startTimer(sec){ clearInterval(timer); remaining=sec; document.getElementById('timer').textContent=remaining+"s"; timer=setInterval(()=>{ remaining--; if(remaining<=0){ clearInterval(timer); remaining=0; lockAnswers(); setTimeout(nextQuestion,900); } document.getElementById('timer').textContent=remaining+"s"; },1000); }
 
-function selectAnswer(isCorrect,clickedNode){
-  clearInterval(timer);
+function selectAnswer(isCorrect,clickedNode){ clearInterval(timer);
   const nodes=Array.from(document.getElementById('choices').children);
   nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
   if(!isCorrect) clickedNode.classList.add('wrong');
-  if(isCorrect){
-    score+=basePoint+(remaining*bonusPerSecond);
-    if(secondRound) correctRound2++; else correctRound1++;
-  } else {
-    if(!secondRound){ wrongQuestions.push(idx); }
-  }
+  if(isCorrect){ score+=basePoint+(remaining*bonusPerSecond); if(secondRound) correctRound2++; else correctRound1++; }
+  else { if(!secondRound){ wrongQuestions.push(idx); } }
   document.getElementById('score').textContent=score;
-  setTimeout(nextQuestion,1200);
+  setTimeout(nextQuestion,900);
 }
 
-function lockAnswers(){
-  const nodes=Array.from(document.getElementById('choices').children);
-  nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); });
-}
+function lockAnswers(){ const nodes=Array.from(document.getElementById('choices').children); nodes.forEach((n,i)=>{ if(currentQuestion.options[i].isCorrect) n.classList.add('correct'); }); }
 
 function nextQuestion(){ idx++; renderQuestion(); }
 
-function renderViewer(){
-  const list=document.getElementById('questionList');
-  list.innerHTML='';
-  [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{
-    const d=document.createElement('div');
-    d.style.marginBottom='12px';
-    d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`;
-    list.appendChild(d);
-  });
+function renderViewer(){ const list=document.getElementById('questionList'); list.innerHTML=''; [...QUESTIONS_BINDO,...QUESTIONS_SUNDA].forEach((q,i)=>{ const d=document.createElement('div'); d.style.marginBottom='12px'; d.innerHTML=`<strong>${i+1}. ${q.q}</strong><br> Pilihan: ${q.choices.join(', ')}`; list.appendChild(d); }); }
+
+function finishQuiz(){
+  // handle second round logic
+  if(idx>=QUESTIONS.length){
+    if(!secondRound && wrongQuestions.length>0){
+      // map wrong indexes to question objects
+      const wrongs = wrongQuestions.map(i=>QUESTIONS[i]);
+      QUESTIONS = wrongs; idx=0; wrongQuestions=[]; secondRound=true; renderQuestion(); return;
+    }
+  }
+  // compute percent
+  const nilai = ((correctRound1 + (correctRound2/2)) / totalQuestionsCount) * 100;
+  const percent = Math.round(nilai);
+  // show result screen
+  showScreen('result');
+  document.getElementById('scoreFinal').textContent=score;
+  document.getElementById('r1').textContent=correctRound1;
+  document.getElementById('r2').textContent=correctRound2;
+  animateResult(percent, score);
 }
 
-// auto-start kalau ada ?quiz=Bindo/Sunda
+// ====== Result animation (radial + bar) ======
+function animateResult(percent, finalScore){
+  const arc = document.getElementById('radialArc');
+  const text = document.getElementById('percentText');
+  const fill = document.getElementById('barFill');
+  const summary = document.getElementById('summaryText');
+  const circumference = 2 * Math.PI * 40; // r=40
+  arc.style.strokeDasharray = circumference;
+  arc.style.strokeDashoffset = circumference;
+
+  // animate radial
+  let start = null; const dur = 1400;
+  function step(ts){ if(!start) start=ts; const t = Math.min(1,(ts-start)/dur); const eased = easeOutCubic(t);
+    const current = Math.round(eased * percent);
+    const offset = circumference * (1 - (current/100));
+    arc.style.strokeDashoffset = offset.toFixed(2);
+    text.textContent = current + '%';
+    fill.style.width = current + '%';
+    if(t<1) requestAnimationFrame(step); else { // done
+      summary.textContent = percent >= 70 ? 'Mantap!' : (percent >= 40 ? 'Cukup' : 'Perlu Latihan');
+      runBurstParticles(percent);
+    }}
+  requestAnimationFrame(step);
+}
+function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+// ====== Minimal particle system (background) ======
+const canvas = document.getElementById('particles'); const ctx = canvas.getContext('2d'); let W=0,H=0; let parts=[]; function resize(){ W=canvas.width = innerWidth; H=canvas.height = innerHeight; }
+window.addEventListener('resize', resize); resize();
+function initParticles(){ parts=[]; const count = Math.max(30, Math.floor((W*H)/80000)); for(let i=0;i<count;i++){ parts.push({x:Math.random()*W,y:Math.random()*H, vx:(Math.random()-0.5)*0.2, vy:(Math.random()-0.5)*0.2, r:Math.random()*2+0.5, a:Math.random()*0.6+0.15}); } }
+initParticles();
+function drawParticles(){ ctx.clearRect(0,0,W,H); for(const p of parts){ ctx.beginPath(); ctx.globalAlpha = p.a; ctx.fillStyle = '#6ee7b7'; ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); p.x += p.vx; p.y += p.vy; if(p.x<0) p.x=W; if(p.x>W) p.x=0; if(p.y<0) p.y=H; if(p.y>H) p.y=0; }
+  // subtle connections
+  for(let i=0;i<parts.length;i++){ for(let j=i+1;j<parts.length;j++){ const dx=parts[i].x-parts[j].x, dy=parts[i].y-parts[j].y; const d2=dx*dx+dy*dy; if(d2<10000){ ctx.beginPath(); ctx.globalAlpha = 0.02; ctx.moveTo(parts[i].x,parts[i].y); ctx.lineTo(parts[j].x,parts[j].y); ctx.strokeStyle='#6ee7b7'; ctx.lineWidth=1; ctx.stroke(); } } }
+  requestAnimationFrame(drawParticles);
+}
+requestAnimationFrame(drawParticles);
+
+// small burst when finishing
+function runBurstParticles(percent){ const burstCount = Math.min(60, Math.max(8, Math.floor(percent/2))); for(let i=0;i<burstCount;i++){ const p={x:W/2 + (Math.random()-0.5)*140, y:H/2 + (Math.random()-0.5)*80, vx:(Math.random()-0.5)*6, vy:(Math.random()-1.5)*6, r:Math.random()*4+1, life:60, a:1}; parts.push(p); }
+}
+
+// ====== small utility: create a gentle confetti using DOM elements? (not needed)
+
+// auto-start if ?quiz=... is present
+(function(){ const params = new URLSearchParams(window.location.search); const q = params.get('quiz'); if(q) { try{ startQuiz(q); }catch(e){ console.error(e);} }})();
 </script>
 </body>
 </html>
