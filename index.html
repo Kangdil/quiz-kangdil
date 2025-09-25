@@ -3,307 +3,84 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quiz Kangdil — WebGL Wavy Pixel Background</title>
+<title>Quiz Kangdil</title>
 <style>
-  html,body {
-    margin:0;
-    height:100%;
-    overflow:hidden;
-    background:black;
-  }
-  canvas { 
-    display:block;
-    width:100vw;
-    height:100vh;
-    image-rendering: pixelated; /* keep crisp when CSS-scaled */
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* allow scrolling */
   }
 
-  /* keep your nav on top later */
+  /* Background video setup */
+  #bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* push behind content */
+  }
+
+  /* Main content */
   nav {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    background: white;
+    max-width: 800px;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.9);
     padding: 24px 36px;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    text-align:center;
-    font-family: Arial, sans-serif;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  nav h1 {
+    margin-top: 0;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 18px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  nav a:hover {
+    background: #ddd;
   }
 </style>
 </head>
 <body>
-  <canvas id="gl"></canvas>
+  <!-- Background looping video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="homeBackground.mp4" type="video/mp4">
+  </video>
 
-  <!-- Your centered nav (example) -->
+  <!-- Scrollable content -->
   <nav>
     <h1>Quiz Kangdil</h1>
     <p style="margin:6px 0 14px; font-size:0.85rem;">Website &amp; soal dibuat oleh ChatGPT & disusun oleh Kangdil</p>
-    <a href="quizBase.html?quiz=PH_Sosio_01" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sosiologi 01</a>
-    <a href="quizBase.html?quiz=PH_BIndo_01" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH B. Indo 01</a>
-    <a href="quizBase.html?quiz=PH_BSunda_01" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH B. Sunda 01</a>
-    <a href="quizBase.html?quiz=PH_BSunda_01_Pancakaki" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH B. Sunda 01 (Pancakaki)</a>
-    <a href="quizBase.html?quiz=PH_Bio_01_PKH" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Biologi 01 (Pengertian Keanekaragaman Hayati)</a>
-    <a href="quizBase.html?quiz=PH_Bio_01_MKH" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Biologi 01 (Manfaat Keanekaragaman Hayati)</a>
-    <a href="quizBase.html?quiz=PH_Bio_01_UPKH" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Biologi 01 (Upaya Pelestarian Keanekaragaman Hayati)</a>
-    <a href="quizBase.html?quiz=PH_Fisika_01" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Fisika 01</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB01" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 1)</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB02" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 2)</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB03" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 3)</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB04" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 4)</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB05" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 5)</a>
-    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB06" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH Sejarah 01 (Bab 6)</a>
-    <a href="quizBase.html?quiz=PH_PKN_01_DKP" style="display:inline-block;margin:6px;padding:10px 18px;background:#f3f3f3;border-radius:10px;text-decoration:none;color:#333;font-weight:bold;">
-      PH PKN 01 (Dinamika Kelahiran Pancasila)</a>
+    
+    <a href="quizBase.html?quiz=PH_Sosio_01">PH Sosiologi 01</a>
+    <a href="quizBase.html?quiz=PH_BIndo_01">PH B. Indo 01</a>
+    <a href="quizBase.html?quiz=PH_BSunda_01">PH B. Sunda 01</a>
+    <a href="quizBase.html?quiz=PH_BSunda_01_Pancakaki">PH B. Sunda 01 (Pancakaki)</a>
+    <a href="quizBase.html?quiz=PH_Bio_01_PKH">PH Biologi 01 (Pengertian Keanekaragaman Hayati)</a>
+    <a href="quizBase.html?quiz=PH_Bio_01_MKH">PH Biologi 01 (Manfaat Keanekaragaman Hayati)</a>
+    <a href="quizBase.html?quiz=PH_Bio_01_UPKH">PH Biologi 01 (Upaya Pelestarian Keanekaragaman Hayati)</a>
+    <a href="quizBase.html?quiz=PH_Fisika_01">PH Fisika 01</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB01">PH Sejarah 01 (Bab 1)</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB02">PH Sejarah 01 (Bab 2)</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB03">PH Sejarah 01 (Bab 3)</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB04">PH Sejarah 01 (Bab 4)</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB05">PH Sejarah 01 (Bab 5)</a>
+    <a href="quizBase.html?quiz=PH_Sejarah_01_BAB06">PH Sejarah 01 (Bab 6)</a>
+    <a href="quizBase.html?quiz=PH_PKN_01_DKP">PH PKN 01 (Dinamika Kelahiran Pancasila)</a>
   </nav>
-
-<script>
-// ======= Utilities: compile shader, link program =======
-function createShader(gl, type, src){
-  const s = gl.createShader(type);
-  gl.shaderSource(s, src);
-  gl.compileShader(s);
-  if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)){
-    console.error(gl.getShaderInfoLog(s));
-    gl.deleteShader(s);
-    return null;
-  }
-  return s;
-}
-function createProgram(gl, vsSrc, fsSrc){
-  const vs = createShader(gl, gl.VERTEX_SHADER, vsSrc);
-  const fs = createShader(gl, gl.FRAGMENT_SHADER, fsSrc);
-  const prog = gl.createProgram();
-  gl.attachShader(prog, vs);
-  gl.attachShader(prog, fs);
-  gl.linkProgram(prog);
-  if(!gl.getProgramParameter(prog, gl.LINK_STATUS)){
-    console.error(gl.getProgramInfoLog(prog));
-    gl.deleteProgram(prog);
-    return null;
-  }
-  return prog;
-}
-
-// ======= Vertex shader: simple full-screen triangle/quad =======
-const vertexSrc = `#version 300 es
-in vec2 a_pos;
-out vec2 v_uv;
-void main(){
-  v_uv = a_pos * 0.5 + 0.5;
-  gl_Position = vec4(a_pos, 0.0, 1.0);
-}
-`;
-
-// ======= Fragment shader: texture + multi-layer sine warp + pixelation =======
-const fragmentSrc = `#version 300 es
-precision highp float;
-in vec2 v_uv;
-out vec4 outColor;
-
-uniform sampler2D u_tex;
-uniform vec2 u_resolution;     // viewport (pixels) used for final scaling
-uniform vec2 u_texSize;        // original texture size (pixels)
-uniform float u_time;          // seconds
-uniform float u_pixelSize;     // pixelation size (in pixels of the offscreen render)
-
-
-// helper: cover sampling coords (calc UV that fits-cover the viewport)
-vec2 coverUV(vec2 uv, vec2 texSize, vec2 viewSize){
-  // compute scale to cover
-  float scale = max(viewSize.x/texSize.x, viewSize.y/texSize.y);
-  vec2 scaledTex = texSize * scale;
-  // offset (in view space) where the texture origin maps
-  vec2 offset = (viewSize - scaledTex) * 0.5;
-  // convert uv (0..1 over view) -> position in texture space (pixels)
-  vec2 pxPos = uv * viewSize - offset;
-  // convert to texture uv (0..1)
-  return pxPos / scaledTex;
-}
-
-void main(){
-  // We'll perform distortions in 'cover' space so the image always fills screen.
-  vec2 viewSize = u_resolution;
-  // start uv in view-space (0..1)
-  vec2 uv = v_uv;
-
-  // convert to texture-space UV that corresponds to cover scaling
-  vec2 texUV = coverUV(uv, u_texSize, viewSize);
-
-  // Apply multiple layered warps (each reads and modifies texUV)
-  float t = u_time;
-
-  // layer 1: horizontal scan-wave (dominant)
-  float wave1 = sin(((uv.y * 20.0) + t * 1.8)/8.0) * 0.015; // small in UV space
-  texUV.x += wave1;
-
-  // layer 2: slower deeper offset
-  float wave2 = sin((uv.y * 8.0) - t * 0.9) * 0.02;
-  texUV.x += wave2 * (0.6 + 0.4*sin((t*0.5 + uv.x*10.0)/8.0));
-
-  // vertical jitter layer (gives Y wobble)
-  float vwave = cos((uv.x * 12.0) + t * 1.6) * 0.012;
-  texUV.y += vwave;
-
-  // small high-frequency ripple
-  float ripple = sin((uv.x*60.0 + uv.y*40.0) + t*6.0) * 0.002;
-  texUV += ripple;
-
-  // ---------------- pixelation step ----------------
-  // We want to keep the retro pixel look. We'll quantize sampling coordinates
-  // according to the chosen pixel size relative to the scaled texture.
-  // Convert texUV to scaled texture pixel coordinates, quantize, then back.
-  // Note: texUV is currently in [0..1] of scaledTex (after coverUV). We'll
-  // compute scaledTexSize:
-  float scale = max(viewSize.x/u_texSize.x, viewSize.y/u_texSize.y);
-  vec2 scaledTexSize = u_texSize * scale;
-
-  // pixel size in UV space of scaled texture:
-  vec2 pixUV = u_pixelSize / scaledTexSize;
-
-  // quantize texUV
-  texUV = floor(texUV / pixUV + 0.5) * pixUV;
-
-  // Finally sample
-  vec4 color = texture(u_tex, texUV);
-
-  outColor = color;
-}
-`;
-
-// ======= Setup WebGL2 context =======
-const canvas = document.getElementById('gl');
-const gl = canvas.getContext('webgl2', { antialias: false });
-if(!gl) {
-  alert('WebGL2 not supported in this browser.');
-  throw new Error('WebGL2 not supported');
-}
-
-// compile & link
-const program = createProgram(gl, vertexSrc, fragmentSrc);
-gl.useProgram(program);
-
-// fullscreen quad (two triangles) using triangle strip via 2 triangles technique
-const posLoc = gl.getAttribLocation(program, 'a_pos');
-const quad = new Float32Array([
-  -1, -1,
-   1, -1,
-  -1,  1,
-  -1,  1,
-   1, -1,
-   1,  1,
-]);
-const vbo = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
-gl.bufferData(gl.ARRAY_BUFFER, quad, gl.STATIC_DRAW);
-gl.enableVertexAttribArray(posLoc);
-gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
-
-// uniforms
-const u_timeLoc = gl.getUniformLocation(program, 'u_time');
-const u_resolutionLoc = gl.getUniformLocation(program, 'u_resolution');
-const u_texSizeLoc = gl.getUniformLocation(program, 'u_texSize');
-const u_pixelSizeLoc = gl.getUniformLocation(program, 'u_pixelSize');
-
-// texture setup
-const tex = gl.createTexture();
-gl.bindTexture(gl.TEXTURE_2D, tex);
-// placeholder 1x1 while image loads
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1,1,0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0,0,0,255]));
-
-// set nearest filtering to preserve pixels
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-
-// load image
-const image = new Image();
-image.crossOrigin = 'anonymous';
-image.src = 'https://kangdil.github.io/quiz-kangdil/earthboundbg.png';
-
-let startTime = performance.now();
-
-image.onload = () => {
-  // upload image to GPU
-  gl.bindTexture(gl.TEXTURE_2D, tex);
-  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0); // don't flip; our cover math expects normal orientation
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-
-  // set the texture resolution uniform
-  gl.useProgram(program);
-  gl.uniform2f(u_texSizeLoc, image.width, image.height);
-
-  // start rendering loop
-  requestAnimationFrame(render);
-};
-
-// resize handling: we will render at a low internal resolution (fast) and let CSS scale canvas
-// But for WebGL we should set drawing buffer size to match device pixel ratio * chosen internal size
-// We'll let internal render size be a fraction of the screen for speed; you can tweak `pixelScale`.
-let pixelScale = 1; // 1 = full resolution; >1 reduces render resolution (faster). We'll choose adaptively.
-function resize() {
-  // choose internal render size (smaller is faster)
-  const DPR = window.devicePixelRatio || 1;
-
-  // Base target: keep internal width around 512-1024 depending on screen
-  const vw = Math.max(window.innerWidth, 300);
-  const vh = Math.max(window.innerHeight, 200);
-
-  // compute a base resolution (cap to reasonable sizes)
-  const base = 512; // you can increase for sharper result
-  // scale down if very big screen for performance
-  const scaleFactor = Math.max(1, Math.min( Math.ceil(Math.max(window.innerWidth, window.innerHeight) / base), 3));
-
-  const internalW = Math.max(128, Math.round(window.innerWidth / scaleFactor));
-  const internalH = Math.max(128, Math.round(window.innerHeight / scaleFactor));
-
-  // set drawing buffer size
-  canvas.width = internalW * DPR;
-  canvas.height = internalH * DPR;
-  canvas.style.width = window.innerWidth + 'px';
-  canvas.style.height = window.innerHeight + 'px';
-
-  gl.viewport(0, 0, canvas.width, canvas.height);
-
-  // set uniforms: resolution is the view size in pixels used by coverUV
-  gl.useProgram(program);
-  gl.uniform2f(u_resolutionLoc, canvas.width, canvas.height);
-
-  // pick pixelation cell size in pixels of scaled texture: larger => chunkier
-  const pixelSize = 4.0; // try 2..8 (smaller = finer)
-  gl.uniform1f(u_pixelSizeLoc, pixelSize);
-}
-window.addEventListener('resize', resize);
-resize();
-
-// render loop
-function render(now){
-  const t = (now - startTime) * 0.001;
-  gl.useProgram(program);
-  gl.uniform1f(u_timeLoc, t);
-
-  // draw triangles (6 verts)
-  gl.drawArrays(gl.TRIANGLES, 0, 6);
-
-  requestAnimationFrame(render);
-}
-</script>
 </body>
 </html>
