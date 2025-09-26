@@ -1,0 +1,321 @@
+[
+  {
+    "q": "Siapa ketua BPUPK yang memimpin sidang-sidang awal perumusan dasar negara?",
+    "choices": [
+      "Radjiman Wedyodiningrat",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Soepomo",
+      "Mohammad Hatta"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa istilah yang digunakan Soekarno untuk menyebut dasar filsafat negara?",
+    "choices": [
+      "Philosophische Grondslag",
+      "Staatsidee",
+      "Panca Jiwa",
+      "Panca Dharma",
+      "Panca Negara"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh yang memperkenalkan istilah Pancasila pada 1 Juni 1945?",
+    "choices": [
+      "Soekarno",
+      "Soepomo",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Bagus Hadikusumo"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa saja asas yang diusulkan Mohammad Yamin secara lisan?",
+    "choices": [
+      "Peri Kebangsaan",
+      "Peri Kemanusiaan",
+      "Peri Ketuhanan",
+      "Peri Kerakyatan",
+      "Kesejahteraan Rakyat"
+    ],
+    "answer": [0,1,2,3,4]
+  },
+  {
+    "q": "Konsep negara integralistik menurut Soepomo menolak paham apa?",
+    "choices": [
+      "Individualisme",
+      "Liberalisme",
+      "Kapitalisme",
+      "Kebersamaan",
+      "Kekeluargaan"
+    ],
+    "answer": [0,1]
+  },
+  {
+    "q": "Apa tujuan utama Soekarno menempatkan kebangsaan sebagai sila pertama?",
+    "choices": [
+      "Menyatukan bangsa yang majemuk",
+      "Menghapus perbedaan kelas sosial",
+      "Mengikuti jejak kolonial Belanda",
+      "Mendorong negara federal",
+      "Mencegah demokrasi liberal"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh yang menekankan pentingnya musyawarah dalam kehidupan bernegara?",
+    "choices": [
+      "Soekarno",
+      "Soepomo",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Bagus Hadikusumo"
+    ],
+    "answer": [0,2]
+  },
+  {
+    "q": "Apa pokok pikiran Yamin tentang ketuhanan?",
+    "choices": [
+      "Ketuhanan Yang Maha Esa",
+      "Negara harus mengakui agama tunggal",
+      "Kebebasan beragama untuk semua rakyat",
+      "Negara sepenuhnya sekuler",
+      "Agama dihapuskan dari negara"
+    ],
+    "answer": [0,2]
+  },
+  {
+    "q": "Sila internasionalisme yang diusulkan Soekarno bermakna...",
+    "choices": [
+      "Penghargaan terhadap nilai kemanusiaan universal",
+      "Membentuk federasi dunia",
+      "Menguasai bangsa lain",
+      "Kerjasama ekonomi semata",
+      "Hubungan politik terbatas dengan Barat"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh yang menekankan negara sebagai kesatuan organis?",
+    "choices": [
+      "Soepomo",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Bagus Hadikusumo"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa perbedaan utama antara gagasan Yamin dan Soepomo?",
+    "choices": [
+      "Yamin menekankan kebangsaan",
+      "Soepomo menekankan integralistik",
+      "Yamin mengajukan lima asas",
+      "Soepomo menolak bentuk negara kesatuan",
+      "Yamin mendukung sekularisme mutlak"
+    ],
+    "answer": [0,1,2]
+  },
+  {
+    "q": "Apa makna kesejahteraan sosial dalam gagasan Soekarno?",
+    "choices": [
+      "Kesejahteraan merata bagi seluruh rakyat",
+      "Kesejahteraan khusus bagi pejabat negara",
+      "Kesejahteraan berbasis kapitalis",
+      "Kesejahteraan untuk golongan mayoritas saja",
+      "Kesejahteraan kolonial"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh yang menekankan keseimbangan lahir dan batin?",
+    "choices": [
+      "Soepomo",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Sutan Syahrir"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa perbedaan Soekarno dengan Yamin dalam dasar ketuhanan?",
+    "choices": [
+      "Soekarno menekankan beragama secara beradab",
+      "Yamin menyebut Ketuhanan Yang Maha Esa",
+      "Soekarno menolak agama dalam negara",
+      "Yamin menolak kebebasan beragama",
+      "Soekarno menempatkan ketuhanan sebagai dasar tunggal"
+    ],
+    "answer": [0,1]
+  },
+  {
+    "q": "Apa yang sama-sama ditekankan oleh Yamin, Soepomo, dan Soekarno?",
+    "choices": [
+      "Persatuan bangsa",
+      "Ketuhanan",
+      "Musyawarah",
+      "Individualisme",
+      "Liberalisme"
+    ],
+    "answer": [0,1,2]
+  },
+  {
+    "q": "Siapa yang menyampaikan gagasan tanpa teks selama satu jam pada 1 Juni 1945?",
+    "choices": [
+      "Soekarno",
+      "Soepomo",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Bagus Hadikusumo"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa ciri musyawarah menurut Yamin?",
+    "choices": [
+      "Dilakukan dengan mufakat",
+      "Menjadi ciri demokrasi Indonesia",
+      "Hanya melibatkan elit politik",
+      "Menghapus suara rakyat kecil",
+      "Menekankan dominasi mayoritas"
+    ],
+    "answer": [0,1]
+  },
+  {
+    "q": "Siapa tokoh yang mengusulkan dasar berupa Persatuan, Kekeluargaan, Keseimbangan lahir batin, Musyawarah, dan Keadilan Rakyat?",
+    "choices": [
+      "Soepomo",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Hajar Dewantara"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Mengapa gagasan Soepomo berbeda dari tokoh lain?",
+    "choices": [
+      "Menekankan negara sebagai kesatuan organis",
+      "Menolak liberalisme Barat",
+      "Menganggap negara dan masyarakat satu tubuh",
+      "Menekankan agama tunggal",
+      "Hanya fokus pada ekonomi"
+    ],
+    "answer": [0,1,2]
+  },
+  {
+    "q": "Apa tujuan kompromi penghapusan tujuh kata Piagam Jakarta?",
+    "choices": [
+      "Menjaga persatuan bangsa",
+      "Menghapus pengaruh Jepang",
+      "Membentuk negara federal",
+      "Menghapus seluruh peran agama",
+      "Mengutamakan kepentingan luar negeri"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Dasar pertama yang disebut Soekarno dalam pidatonya adalah...",
+    "choices": [
+      "Kebangsaan Indonesia",
+      "Ketuhanan Yang Maha Esa",
+      "Kesejahteraan Sosial",
+      "Demokrasi",
+      "Musyawarah"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa arti negara integralistik menurut Soepomo?",
+    "choices": [
+      "Negara menempatkan kepentingan bersama di atas individu",
+      "Negara federasi dengan otonomi penuh",
+      "Negara hanya mengakui satu agama resmi",
+      "Negara sekuler tanpa peran agama",
+      "Negara kolonial yang diwarisi Belanda"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa perbedaan pokok antara gagasan Soekarno dan Soepomo?",
+    "choices": [
+      "Soekarno menekankan philosophische grondslag",
+      "Soepomo menekankan integralistik",
+      "Soekarno menolak agama",
+      "Soepomo mendukung individualisme",
+      "Soekarno hanya membahas ekonomi"
+    ],
+    "answer": [0,1]
+  },
+  {
+    "q": "Siapa yang menekankan aspek kebangsaan dan kemanusiaan?",
+    "choices": [
+      "Mohammad Yamin",
+      "Soekarno",
+      "Soepomo",
+      "Mohammad Hatta",
+      "Ki Bagus Hadikusumo"
+    ],
+    "answer": [0,1]
+  },
+  {
+    "q": "Apa makna demokrasi menurut Soekarno?",
+    "choices": [
+      "Permusyawaratan dan perwakilan",
+      "Monarki parlementer",
+      "Sistem presidensial mutlak",
+      "Demokrasi liberal ala Barat",
+      "Demokrasi tanpa hukum"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Siapa tokoh yang paling menekankan aspek hukum adat dan tradisi?",
+    "choices": [
+      "Soepomo",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Ki Hajar Dewantara"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa nilai utama yang sama-sama diusulkan oleh ketiga tokoh pendiri bangsa?",
+    "choices": [
+      "Kebangsaan",
+      "Kemanusiaan",
+      "Ketuhanan",
+      "Ekonomi kapitalis",
+      "Musyawarah"
+    ],
+    "answer": [0,1,2,4]
+  },
+  {
+    "q": "Siapa tokoh yang paling jelas menolak individualisme dan liberalisme?",
+    "choices": [
+      "Soepomo",
+      "Soekarno",
+      "Mohammad Yamin",
+      "Mohammad Hatta",
+      "Sutan Syahrir"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Apa pokok pikiran Soekarno tentang Ketuhanan?",
+    "choices": [
+      "Beragama secara beradab dan saling menghormati",
+      "Negara hanya mengakui satu agama",
+      "Negara tanpa agama sama sekali",
+      "Agama dipisahkan total dari negara",
+      "Agama sebagai dasar tunggal konstitusi"
+    ],
+    "answer": 0
+  }
+]
