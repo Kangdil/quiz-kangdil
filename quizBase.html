@@ -197,41 +197,77 @@ function renderQuestion(){
   }
 
   const q=QUESTIONS[idx];
-  let optionObjs=q.choices.map((c,i)=>({text:c,isCorrect:(i===q.answer)}));
+  let multi = Array.isArray(q.answer);
+  let optionObjs=q.choices.map((c,i)=>({
+    text:c,
+    isCorrect: multi ? q.answer.includes(i) : (i===q.answer)
+  }));
   optionObjs=shuffleArray(optionObjs);
-  currentQuestion={q:q.q, options:optionObjs};
+  currentQuestion={q:q.q, options:optionObjs, multi};
 
   document.getElementById('qtext').textContent=q.q;
 
   const imgEl=document.getElementById('qimg');
-  if(q.img){
-    imgEl.src=q.img;
-    imgEl.style.display="block";
-    imgEl.onerror=()=>{ imgEl.style.display="none"; };
-  } else {
-    imgEl.style.display="none";
-  }
+  if(q.img){ imgEl.src=q.img; imgEl.style.display="block"; imgEl.onerror=()=>{ imgEl.style.display="none"; }; }
+  else imgEl.style.display="none";
 
   const wrap=document.getElementById('choices');
   wrap.innerHTML='';
-  optionObjs.forEach((opt,i)=>{
-    const div=document.createElement('div');
-    div.className='choice fade-in';
-    div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
-    div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
-    wrap.appendChild(div);
-  });
+  if(multi){
+    optionObjs.forEach((opt,i)=>{
+      const div=document.createElement('div');
+      div.className='choice fade-in';
+      div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
+      div.onclick=()=>{ div.classList.toggle("outlined"); };
+      wrap.appendChild(div);
+    });
+    // tombol konfirmasi
+    const btn=document.createElement("button");
+    btn.textContent="Konfirmasi Jawaban";
+    btn.style.marginTop="12px";
+    btn.onclick=()=>{ checkMultiAnswer(); };
+    wrap.appendChild(btn);
+  } else {
+    optionObjs.forEach((opt,i)=>{
+      const div=document.createElement('div');
+      div.className='choice fade-in';
+      div.textContent=`${String.fromCharCode(65+i)}. ${opt.text}`;
+      div.onclick=()=>{selectAnswer(opt.isCorrect,div);};
+      wrap.appendChild(div);
+    });
+  }
 
   document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
   document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
+
 	const params = new URLSearchParams(window.location.search);
   const quizType = params.get('quiz');
-	if(quizType==="PH_PKN_01_CAMPUR"){
-     startTimer(150);
-	} else {
-     startTimer(defaultTime);
-	}
+	if(quizType==="PH_PKN_01_CAMPUR"){ startTimer(150); } else { startTimer(defaultTime); }
 }
+
+function checkMultiAnswer(){
+  clearInterval(timer);
+  const nodes=Array.from(document.getElementById('choices').children)
+                   .filter(n=>n.classList.contains("choice"));
+  let correct=true;
+  nodes.forEach((n,i)=>{
+    const opt=currentQuestion.options[i];
+    const selected=n.classList.contains("outlined");
+    if(opt.isCorrect && selected){ n.classList.add("correct"); }
+    else if(opt.isCorrect && !selected){ n.classList.add("correct"); correct=false; }
+    else if(!opt.isCorrect && selected){ n.classList.add("wrong"); correct=false; }
+    else { n.classList.add("dimmed"); }
+  });
+  if(correct){
+    score+=basePoint+(remaining*bonusPerSecond);
+    if(secondRound) correctRound2++; else correctRound1++;
+  } else {
+    if(!secondRound){ wrongQuestions.push(idx); }
+  }
+  document.getElementById('score').textContent=score;
+  setTimeout(nextQuestion,1500);
+	}
+
 
 function startTimer(sec){
   clearInterval(timer);
