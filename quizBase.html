@@ -224,7 +224,13 @@ function renderQuestion(){
 
   document.getElementById('progress').textContent=`${idx+1}/${QUESTIONS.length}`;
   document.getElementById('roundInfo').textContent = secondRound ? "Ronde 2 - Soal Salah" : "Ronde 1 - Semua Soal";
-  startTimer(defaultTime);
+	const params = new URLSearchParams(window.location.search);
+  const quizType = params.get('quiz');
+	if(quizType==="PH_PKN_01_CAMPUR"){
+     startTimer(150);
+	} else {
+     startTimer(defaultTime);
+	}
 }
 
 function startTimer(sec){
