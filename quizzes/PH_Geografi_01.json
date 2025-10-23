@@ -1,0 +1,152 @@
+[
+  {
+    "q": "Siapa tokoh yang pertama kali memperkenalkan sistem koordinat dan menghitung keliling bumi?",
+    "choices": ["Hipparchus", "Claudius Ptolomeus", "Eratosthenes", "Aristoteles", "Herodotus"],
+    "answer": 2
+  },
+  {
+    "q": "Menurut Ptolomeus, geografi berfokus pada penyajian permukaan bumi dalam bentuk apa?",
+    "choices": ["Ilustrasi wilayah", "Peta dan penggambaran", "Model bumi", "Garis lintang dan bujur", "Data spasial"],
+    "answer": 1
+  },
+  {
+    "q": "Menurut Immanuel Kant, geografi mengkaji gejala yang tersebar dan berasosiasi dalam...",
+    "choices": ["Ruang", "Waktu", "Wilayah", "Fenomena alam", "Lingkungan"],
+    "answer": 0
+  },
+  {
+    "q": "Tokoh Indonesia yang menjelaskan geografi sebagai ilmu memahami persamaan dan perbedaan ruang muka bumi adalah...",
+    "choices": ["I Made Sandy", "Bintarto", "Soekadijo", "Sutanto", "Rhoad Murphey"],
+    "answer": 0
+  },
+  {
+    "q": "Istilah 'Graphien' dalam bahasa Yunani memiliki arti...",
+    "choices": ["Menulis bumi", "Menggambar bumi", "Pencitraan bumi", "Gambaran bumi", "Deskripsi bumi"],
+    "answer": 3
+  },
+  {
+    "q": "Lapisan yang berkaitan dengan kehidupan manusia dan segala aktivitasnya disebut...",
+    "choices": ["Antroposfer", "Biosfer", "Litosfer", "Atmosfer", "Geosfer"],
+    "answer": 0
+  },
+  {
+    "q": "Lapisan bumi yang terdiri atas batuan dan tanah termasuk dalam...",
+    "choices": ["Hidrosfer", "Litosfer", "Biosfer", "Atmosfer", "Pedosfer"],
+    "answer": 1
+  },
+  {
+    "q": "Pendekatan yang menggunakan hubungan antara makhluk hidup dan lingkungannya disebut...",
+    "choices": ["Keruangan", "Kelingkungan", "Ekologis", "Kewilayahan", "Sistemik"],
+    "answer": 1
+  },
+  {
+    "q": "Pendekatan yang menggabungkan unsur keruangan dan lingkungan dikenal sebagai...",
+    "choices": ["Kelingkungan", "Kompleks wilayah", "Gabungan spasial", "Interaksi wilayah", "Regional kompleks"],
+    "answer": 1
+  },
+  {
+    "q": "Aspek geografi yang mengkaji bentuk muka bumi dan lokasi termasuk aspek...",
+    "choices": ["Topologi", "Fisik", "Abiotik", "Regional", "Tektonik"],
+    "answer": 0
+  },
+  {
+    "q": "Aspek yang menelaah kondisi sosial, budaya, dan ekonomi masyarakat termasuk aspek...",
+    "choices": ["Fisik", "Manusia", "Sosial", "Non-fisik", "Budaya"],
+    "answer": 3
+  },
+  {
+    "q": "Menurut Rhoad Murphey, ruang lingkup geografi mencakup hal-hal berikut, kecuali...",
+    "choices": ["Interaksi manusia dengan lingkungan", "Persebaran penduduk", "Keterbatasan sumber daya", "Analisis wilayah", "Perdagangan internasional"],
+    "answer": 4
+  },
+  {
+    "q": "Cabang ilmu geografi yang mempelajari bentuk dan struktur permukaan bumi disebut...",
+    "choices": ["Geomorfologi", "Klimatologi", "Geodesi", "Topografi", "Kartografi"],
+    "answer": 0
+  },
+  {
+    "q": "Bidang yang mengkaji persebaran tumbuhan dan hewan di permukaan bumi adalah...",
+    "choices": ["Ekologi", "Biogeografi", "Lingkungan hidup", "Zoologi geografis", "Geobiologi"],
+    "answer": 1
+  },
+  {
+    "q": "Ilmu yang mempelajari teknik penggambaran permukaan bumi disebut...",
+    "choices": ["Kartografi", "Geodesi", "Pengindraan jauh", "Topografi", "Geostatistik"],
+    "answer": 0
+  },
+  {
+    "q": "Letak suatu wilayah berdasarkan garis lintang dan bujur disebut lokasi...",
+    "choices": ["Relatif", "Absolut", "Geologis", "Fisik", "Astronomis"],
+    "answer": 1
+  },
+  {
+    "q": "Jarak yang dinyatakan berdasarkan waktu tempuh termasuk jarak...",
+    "choices": ["Absolut", "Relatif", "Ekonomi", "Sosial", "Efektif"],
+    "answer": 1
+  },
+  {
+    "q": "Keterjangkauan tinggi berarti wilayah tersebut memiliki...",
+    "choices": ["Akses rendah", "Akses tinggi", "Kepadatan rendah", "Keterbatasan tinggi", "Hambatan geografis"],
+    "answer": 1
+  },
+  {
+    "q": "Konsep yang membahas bentuk muka bumi akibat tenaga endogen dan eksogen disebut...",
+    "choices": ["Morfologi", "Topologi", "Tektonik", "Struktur geologi", "Geomorfologi"],
+    "answer": 0
+  },
+  {
+    "q": "Hubungan timbal balik antarwilayah yang menimbulkan fenomena baru disebut konsep...",
+    "choices": ["Interaksi", "Interdependensi", "Keterkaitan ruang", "Pola", "Aglomerasi"],
+    "answer": 0
+  },
+  {
+    "q": "Hubungan saling ketergantungan antarwilayah disebut...",
+    "choices": ["Interaksi", "Interdependensi", "Integrasi", "Kolaborasi", "Konektivitas"],
+    "answer": 1
+  },
+  {
+    "q": "Kerusakan hutan di pegunungan menyebabkan banjir di daerah bawah. Hal ini menunjukkan konsep...",
+    "choices": ["Pola", "Keterkaitan ruang", "Nilai guna", "Interaksi", "Morfologi"],
+    "answer": 1
+  },
+  {
+    "q": "Konsep yang menggambarkan susunan atau sebaran fenomena di permukaan bumi disebut...",
+    "choices": ["Pola", "Struktur", "Morfologi", "Wilayah", "Keruangan"],
+    "answer": 0
+  },
+  {
+    "q": "Wilayah yang menjadi pusat kegiatan karena adanya pengelompokan ekonomi disebut konsep...",
+    "choices": ["Nilai guna", "Aglomerasi", "Interaksi", "Regionalisasi", "Persebaran"],
+    "answer": 1
+  },
+  {
+    "q": "Manfaat suatu wilayah bagi manusia berbeda-beda tergantung kebutuhannya. Ini menunjukkan konsep...",
+    "choices": ["Nilai guna", "Interaksi", "Diferensiasi area", "Keterjangkauan", "Pola"],
+    "answer": 0
+  },
+  {
+    "q": "Keunikan atau kekhasan fenomena antarwilayah disebut konsep...",
+    "choices": ["Pola", "Persebaran", "Diferensiasi area", "Keterkaitan ruang", "Nilai guna"],
+    "answer": 2
+  },
+  {
+    "q": "Soal cerita: Seorang peneliti meneliti dampak curah hujan terhadap banjir di kota besar. Pendekatan yang tepat digunakan adalah...",
+    "choices": ["Keruangan", "Kelingkungan", "Regional", "Fisik", "Analisis spasial"],
+    "answer": 1
+  },
+  {
+    "q": "Soal analisis: Suatu kawasan industri tumbuh karena banyaknya tenaga kerja dan fasilitas yang mendukung. Konsep geografi yang sesuai adalah...",
+    "choices": ["Interaksi", "Aglomerasi", "Keterkaitan ruang", "Morfologi", "Nilai guna"],
+    "answer": 1
+  },
+  {
+    "q": "Soal analisis: Penebangan hutan di daerah hulu menyebabkan longsor di daerah bawah. Fenomena ini berkaitan dengan konsep...",
+    "choices": ["Aglomerasi", "Keterkaitan ruang", "Pola", "Interdependensi", "Diferensiasi area"],
+    "answer": 1
+  },
+  {
+    "q": "Soal cerita: Jika dua kota saling bergantung dalam perdagangan dan transportasi, maka konsep geografi yang muncul adalah...",
+    "choices": ["Interaksi", "Keterkaitan ruang", "Interdependensi", "Keruangan", "Nilai guna"],
+    "answer": 2
+  }
+]
