@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Tujuan utama teks eksposisi hasil penelitian sederhana adalah ...",
+    "choices": [
+      "menyampaikan opini pribadi tanpa bukti nyata",
+      "menjelaskan hasil pengamatan atau survei terhadap fenomena sosial secara faktual",
+      "menghibur pembaca dengan cerita lucu berdasarkan data",
+      "menguraikan pendapat orang lain tanpa kesimpulan"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Bagian pembuka dalam teks eksposisi hasil penelitian disebut ...",
+    "choices": [
+      "argumentasi",
+      "penegasan ulang",
+      "pernyataan pendapat (tesis)",
+      "kesimpulan"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Bagian teks eksposisi yang berisi data, fakta, atau hasil observasi termasuk ke dalam struktur ...",
+    "choices": ["argumentasi", "tesis", "penegasan ulang", "penutup"],
+    "answer": 0
+  },
+  {
+    "q": "Bagian akhir teks eksposisi yang menegaskan kembali pandangan penulis disebut ...",
+    "choices": ["pendahuluan", "argumentasi", "penegasan ulang", "penjelasan"],
+    "answer": 2
+  },
+  {
+    "q": "Ciri utama bahasa dalam teks eksposisi adalah ...",
+    "choices": [
+      "menggunakan bahasa santai dan emotif",
+      "mengandung data objektif dan logis",
+      "mengutamakan ungkapan perasaan pribadi",
+      "menggunakan kalimat tanya retoris"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kata kerja yang menandakan proses berpikir seperti 'menyimpulkan' dan 'menganggap' termasuk jenis ...",
+    "choices": ["kata kerja material", "kata kerja mental", "kata kerja relasional", "kata kerja tindakan"],
+    "answer": 1
+  },
+  {
+    "q": "Kata penghubung seperti 'karena', 'sehingga', dan 'oleh sebab itu' termasuk konjungsi ...",
+    "choices": ["waktu", "kausalitas", "tujuan", "perbandingan"],
+    "answer": 1
+  },
+  {
+    "q": "Topik yang cocok untuk teks eksposisi hasil penelitian sederhana adalah ...",
+    "choices": [
+      "Kebiasaan membaca siswa di sekolah",
+      "Pengalaman lucu saat ujian",
+      "Cerita rakyat setempat",
+      "Pandangan pribadi tentang liburan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Langkah pertama dalam menulis teks eksposisi hasil penelitian adalah ...",
+    "choices": [
+      "mengolah data hasil penelitian",
+      "menentukan topik dan rumusan masalah",
+      "membuat kesimpulan akhir",
+      "menulis daftar pustaka"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Langkah terakhir dalam penyusunan teks eksposisi hasil penelitian adalah ...",
+    "choices": [
+      "mengumpulkan data responden",
+      "merumuskan masalah",
+      "menulis laporan dengan struktur eksposisi",
+      "menentukan variabel penelitian"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Tujuan menampilkan data dalam teks eksposisi adalah ...",
+    "choices": [
+      "menunjukkan kejujuran penulis dalam menyampaikan opini",
+      "menguatkan argumen agar pembaca percaya berdasarkan fakta",
+      "menambah panjang teks agar lebih ilmiah",
+      "menghias teks agar menarik dibaca"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Sebagian besar siswa lebih sering menggunakan ponsel untuk hiburan daripada belajar' termasuk bagian ...",
+    "choices": ["tesis", "argumentasi", "penegasan ulang", "judul"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Oleh karena itu, perlu adanya pengawasan orang tua dalam penggunaan gawai oleh remaja' termasuk bagian ...",
+    "choices": ["argumentasi", "tesis", "penegasan ulang", "pendahuluan"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Berdasarkan hasil wawancara, 70% siswa mengaku sulit fokus belajar di rumah' merupakan kalimat ...",
+    "choices": ["data hasil penelitian", "pendapat penulis", "pernyataan umum", "simpulan sementara"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Remaja merupakan kelompok usia yang paling rentan terhadap pengaruh media sosial' termasuk bagian ...",
+    "choices": ["tesis", "argumentasi", "penegasan ulang", "penutup"],
+    "answer": 0
+  },
+  {
+    "q": "Pernyataan yang mengandung angka atau persentase biasanya termasuk dalam ...",
+    "choices": ["data hasil penelitian", "kalimat perbandingan", "pendapat pribadi", "keterangan tambahan"],
+    "answer": 0
+  },
+  {
+    "q": "Bahasa yang digunakan dalam teks eksposisi sebaiknya ...",
+    "choices": [
+      "berlebihan dan bersifat emosional",
+      "objektif, logis, dan mudah dipahami",
+      "penuh majas dan ungkapan pribadi",
+      "mengandung perintah langsung kepada pembaca"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Fungsi data dalam teks eksposisi adalah untuk ...",
+    "choices": [
+      "menghibur pembaca dengan hasil penelitian",
+      "mendukung argumen agar lebih dapat dipercaya",
+      "menunjukkan kreativitas penulis",
+      "menggantikan pendapat pribadi"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Dalam teks eksposisi hasil penelitian, pendapat penulis harus ...",
+    "choices": [
+      "didukung oleh data dan fakta yang diperoleh dari penelitian",
+      "dibuat berdasarkan intuisi penulis",
+      "disusun seperti teks naratif",
+      "dinyatakan tanpa perlu bukti"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Penelitian ini menunjukkan bahwa kebersihan sekolah berpengaruh terhadap kenyamanan belajar' termasuk ...",
+    "choices": ["argumentasi", "tesis", "penegasan ulang", "judul"],
+    "answer": 1
+  },
+  {
+    "q": "Ciri teks eksposisi yang membedakannya dari teks anekdot adalah ...",
+    "choices": [
+      "menggunakan dialog lucu",
+      "berisi kritik sosial secara halus",
+      "menyajikan fakta hasil penelitian tanpa unsur humor",
+      "mengandung sindiran terhadap tokoh"
+    ],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Remaja yang terlalu sering bermain gim daring cenderung memiliki waktu belajar lebih sedikit' termasuk kalimat ...",
+    "choices": ["fakta", "opini", "sindiran", "perintah"],
+    "answer": 0
+  },
+  {
+    "q": "Pernyataan 'Peneliti melakukan observasi selama satu minggu di lingkungan sekolah' termasuk ...",
+    "choices": ["bagian latar penelitian", "pendapat penulis", "simpulan", "fakta hasil wawancara"],
+    "answer": 0
+  },
+  {
+    "q": "Sebelum menulis teks eksposisi hasil penelitian, siswa perlu menentukan ...",
+    "choices": [
+      "tema dan rumusan masalah yang akan diteliti",
+      "jumlah halaman laporan akhir",
+      "warna kertas laporan penelitian",
+      "judul karangan lucu untuk pembuka"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Dapat disimpulkan bahwa sebagian besar responden mendukung penerapan jam belajar malam' termasuk ...",
+    "choices": ["tesis", "argumentasi", "penegasan ulang", "judul"],
+    "answer": 2
+  },
+  {
+    "q": "Kaidah kebahasaan yang dominan dalam teks eksposisi hasil penelitian adalah ...",
+    "choices": [
+      "kata kerja material dan kata ganti orang pertama",
+      "kata kerja mental dan konjungsi sebab-akibat",
+      "kalimat tanya dan kata sapaan",
+      "majas hiperbola dan ironi"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Tujuan menulis teks eksposisi hasil penelitian bagi siswa adalah ...",
+    "choices": [
+      "melatih kemampuan berpikir kritis dan menyampaikan pendapat dengan bukti",
+      "menunjukkan kemampuan bercerita dengan gaya lucu",
+      "membuat karangan fiksi berdasarkan hasil wawancara",
+      "menulis laporan jurnalistik untuk diterbitkan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Data wawancara, hasil angket, atau observasi digunakan dalam teks eksposisi untuk ...",
+    "choices": [
+      "memperkuat pendapat penulis secara objektif",
+      "menggantikan bagian tesis",
+      "menjadi penutup cerita",
+      "membuat suasana menjadi humoris"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Berdasarkan penelitian sederhana, 8 dari 10 siswa merasa nyaman belajar kelompok' termasuk bagian ...",
+    "choices": ["argumentasi", "tesis", "penegasan ulang", "pendahuluan"],
+    "answer": 0
+  },
+  {
+    "q": "Teks eksposisi hasil penelitian sederhana yang baik harus bersifat ...",
+    "choices": [
+      "objektif dan berdasarkan data yang dapat dipertanggungjawabkan",
+      "menarik dan penuh permainan kata",
+      "singkat tanpa penjelasan data",
+      "subjektif sesuai pandangan pribadi"
+    ],
+    "answer": 0
+  }
+]
