@@ -1,0 +1,177 @@
+[
+  {
+    "q": "Majas yang menyatakan kebalikan dari keadaan sebenarnya secara halus adalah ...",
+    "choices": ["sinisme", "ironi", "sarkasme", "litotes"],
+    "answer": 1
+  },
+  {
+    "q": "Sindiran yang lebih tajam dan bernada meremehkan termasuk majas ...",
+    "choices": ["ironi", "sarkasme", "sinisme", "metafora"],
+    "answer": 2
+  },
+  {
+    "q": "Sindiran yang keras dan cenderung kasar disebut ...",
+    "choices": ["sarkasme", "ironi", "litotes", "personifikasi"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Wah hebat sekali, kamu datang setengah jam lebih terlambat' merupakan majas ...",
+    "choices": ["sarkasme", "sinisme", "ironi", "metafora"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Pekerjaanmu sangat rapi, sampai tidak ada satu pun yang selesai' merupakan ...",
+    "choices": ["ironi", "metafora", "sinisme", "sarkasme"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Pasti sangat berat ya hidupmu, sampai PR saja tidak sempat dikerjakan' termasuk ...",
+    "choices": ["sarkasme", "ironi", "sinisme", "hiperbola"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat sindiran: 'Dia memang jenius, tugas paling mudah saja tidak paham.' adalah ...",
+    "choices": ["litotes", "ironi", "sarkasme", "sinisme"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Kamu rajin sekali, setiap hari terlambat' merupakan ...",
+    "choices": ["ironi", "sinisme", "sarkasme", "metafora"],
+    "answer": 1
+  },
+  {
+    "q": "Pertanyaan seperti 'Siapa sih yang suka menyontek?' termasuk ...",
+    "choices": ["kalimat biasa", "pertanyaan retoris", "sarkasme", "ironi"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Siapa yang mau gagal dalam hidup?' adalah contoh ...",
+    "choices": ["retoris", "sinisme", "imperatif", "opini"],
+    "answer": 0
+  },
+  {
+    "q": "Majas yang digunakan untuk menegur secara halus agar tidak langsung menyinggung adalah ...",
+    "choices": ["sinisme", "ironi", "sarkasme", "metafora"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Dia sangat kuat, membawa satu buku saja minta bantuan' termasuk ...",
+    "choices": ["metafora", "ironi", "hiperbola", "sarkasme"],
+    "answer": 1
+  },
+  {
+    "q": "Kata kerja material terdapat pada kalimat ...",
+    "choices": [
+      "Ia memikirkan jawaban itu.",
+      "Ia berdiri lalu membuka jendela.",
+      "Ia berharap guru datang terlambat.",
+      "Ia merasa pelajaran itu sulit."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat dengan kata kerja tindakan adalah ...",
+    "choices": ["Ia berlari ke luar kelas.", "Ia mempertimbangkan jawabannya.", "Ia percaya hal itu benar.", "Ia mengira ulangan akan mudah."],
+    "answer": 0
+  },
+  {
+    "q": "Kata kerja mental terdapat pada kalimat ...",
+    "choices": [
+      "Mereka mengangkat semua kursi.",
+      "Siswa memikirkan solusi terbaik.",
+      "Ayah memotong kayu itu.",
+      "Petugas membersihkan halaman."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat yang menggunakan kata kerja mental adalah ...",
+    "choices": [
+      "Ia menutup buku pelajaran.",
+      "Mereka mempertanyakan keputusan itu.",
+      "Ia menyalakan lampu kelas.",
+      "Guru menempelkan kertas di dinding."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Ia menyadari kesalahannya' mengandung kata kerja ...",
+    "choices": ["material", "mental", "relasional", "pasif"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Mereka menilai acara itu cukup berhasil' menggunakan kata kerja ...",
+    "choices": ["material", "mental", "verbal", "imperatif"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Siswa itu mengambil buku dari meja' merupakan kata kerja ...",
+    "choices": ["mental", "material", "relasional", "verbal"],
+    "answer": 1
+  },
+  {
+    "q": "Kata kerja material digunakan untuk ...",
+    "choices": [
+      "menunjukkan aktivitas fisik",
+      "mengungkapkan pendapat",
+      "membandingkan dua hal",
+      "menunjukkan perasaan"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Kata kerja mental digunakan untuk ...",
+    "choices": [
+      "menyatakan tindakan langsung",
+      "menggambarkan proses berpikir dan perasaan",
+      "menjelaskan hubungan sebab-akibat",
+      "menghubungkan dua klausa"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Ia membayangkan liburan panjang' termasuk kata kerja ...",
+    "choices": ["material", "mental", "relasional", "aksional"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Dia memutuskan untuk tidak ikut' termasuk kata kerja ...",
+    "choices": ["material", "mental", "relasional", "imperatif"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Siswa itu mengangkat meja' termasuk ...",
+    "choices": ["material", "mental", "relasional", "verbal"],
+    "answer": 0
+  },
+  {
+    "q": "Kalimat 'Guru mempertanyakan kejujuran murid' termasuk ...",
+    "choices": ["material", "mental", "verbal", "pasif"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Ia mengagumi karya sahabatnya' termasuk ...",
+    "choices": ["material", "relasional", "mental", "imperatif"],
+    "answer": 2
+  },
+  {
+    "q": "Kalimat 'Ia menutup pintu sebelum pergi' termasuk ...",
+    "choices": ["verbal", "material", "relasional", "mental"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Ia merasa tugas itu terlalu banyak' mengandung kata kerja ...",
+    "choices": ["material", "mental", "relasional", "imperatif"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Mereka memikirkan rencana baru untuk acara' termasuk ...",
+    "choices": ["material", "mental", "relasional", "verbal"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Ia mengangkat tas yang berat' merupakan contoh ...",
+    "choices": ["material", "relasional", "mental", "verbal"],
+    "answer": 0
+  }
+]
