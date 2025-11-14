@@ -1,0 +1,202 @@
+[
+  {
+    "q": "Tujuan utama teks anekdot adalah ...",
+    "choices": [
+      "menjelaskan informasi ilmiah secara objektif",
+      "menghibur pembaca sambil menyampaikan kritik atau sindiran",
+      "menguraikan laporan penelitian secara lengkap",
+      "mengungkapkan pengalaman pribadi penulis"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Bagian teks anekdot yang memperkenalkan tokoh dan situasi awal disebut ...",
+    "choices": ["krisis", "orientasi", "koda", "reaksi"],
+    "answer": 1
+  },
+  {
+    "q": "Bagian teks anekdot yang memuat masalah utama atau konflik adalah ...",
+    "choices": ["orientasi", "krisis", "abstraksi", "penutup"],
+    "answer": 1
+  },
+  {
+    "q": "Tanggapan terhadap masalah dalam anekdot biasanya muncul pada bagian ...",
+    "choices": ["orientasi", "reaksi", "koda", "abstraksi"],
+    "answer": 1
+  },
+  {
+    "q": "Bagian akhir dalam anekdot yang menunjukkan hasil atau perubahan keadaan disebut ...",
+    "choices": ["reaksi", "koda", "orientasi", "krisis"],
+    "answer": 1
+  },
+  {
+    "q": "Sindiran halus yang menyatakan kebalikan dari keadaan sebenarnya merupakan majas ...",
+    "choices": ["ironi", "sinisme", "sarkasme", "litotes"],
+    "answer": 0
+  },
+  {
+    "q": "Sindiran yang lebih tajam dan bernada mengejek disebut ...",
+    "choices": ["ironi", "sinisme", "sarkasme", "metafora"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat yang paling keras dan langsung menyerang termasuk majas ...",
+    "choices": ["ironi", "sinisme", "sarkasme", "paradoks"],
+    "answer": 2
+  },
+  {
+    "q": "Pertanyaan seperti 'Siapa yang mau gagal ujian?' merupakan ...",
+    "choices": ["tanya murni", "pertanyaan retoris", "ungkapan perintah", "pernyataan umum"],
+    "answer": 1
+  },
+  {
+    "q": "Kata kerja material dapat ditemukan pada kalimat ...",
+    "choices": [
+      "Ia memikirkan cara terbaik untuk maju.",
+      "Siswa itu berdiri dan menutup pintu kelas.",
+      "Menurutnya, aturan sekolah terlalu ketat.",
+      "Ia berharap semua tugas segera selesai."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Teks yang menampilkan keresahan penulis terhadap fenomena sosial dengan cara jenaka adalah ...",
+    "choices": ["anekdot", "eksposisi", "argumentasi", "laporan"],
+    "answer": 0
+  },
+  {
+    "q": "Dalam lawakan tunggal, bagian yang memberi informasi awal adalah ...",
+    "choices": ["bit", "set up", "punchline", "penutup"],
+    "answer": 1
+  },
+  {
+    "q": "Unsur lawakan tunggal yang menimbulkan kejutan atau kelucuan disebut ...",
+    "choices": ["set up", "punchline", "abstraksi", "orientasi"],
+    "answer": 1
+  },
+  {
+    "q": "Sepasang set up–punch yang membahas satu topik tertentu disebut ...",
+    "choices": ["bit", "bagian penutup", "koda", "dialog"],
+    "answer": 0
+  },
+  {
+    "q": "Kesantunan bahasa dalam lawakan tunggal diperlukan agar ...",
+    "choices": [
+      "kritik tersampaikan tanpa menyinggung penonton",
+      "materi menjadi lebih panjang",
+      "penggunaan bahasa baku selalu terjaga",
+      "punchline menjadi lebih keras"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Teks eksposisi hasil penelitian digunakan untuk ...",
+    "choices": [
+      "melaporkan pengalaman pribadi",
+      "menyampaikan hasil pengamatan terhadap fenomena",
+      "menceritakan kejadian lucu",
+      "menyindir tokoh tertentu"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Bagian awal teks eksposisi yang memuat topik dan sudut pandang penulis adalah ...",
+    "choices": ["argumentasi", "tesis", "penegasan ulang", "pendapat umum"],
+    "answer": 1
+  },
+  {
+    "q": "Konjungsi 'sebab', 'oleh karena itu', dan 'akibatnya' digunakan untuk menunjukkan ...",
+    "choices": ["perbandingan", "kausalitas", "pilihan", "waktu"],
+    "answer": 1
+  },
+  {
+    "q": "Pernyataan yang berupa data seperti persentase atau jumlah responden termasuk ...",
+    "choices": ["tesis", "argumentasi/data", "penegasan ulang", "analogi"],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat yang menyimpulkan kembali hasil penelitian masuk ke bagian ...",
+    "choices": ["tesis", "argumentasi", "penegasan ulang", "pendahuluan"],
+    "answer": 2
+  },
+  {
+    "q": "Teks eksposisi berbeda dengan anekdot karena ...",
+    "choices": [
+      "berisi humor dan kritik sosial",
+      "menyajikan hasil data penelitian tanpa unsur jenaka",
+      "mengutamakan dialog antar tokoh",
+      "menggunakan kalimat retoris di setiap paragraf"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kata kerja mental muncul pada kalimat ...",
+    "choices": [
+      "Ia menutup pintu kelas.",
+      "Mereka menilai kebijakan itu kurang efektif.",
+      "Siswa berjalan menuju lapangan.",
+      "Guru menyiapkan soal ujian."
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Sebagian siswa mengaku sulit fokus belajar' termasuk ...",
+    "choices": ["pendapat umum", "data hasil penelitian", "kesimpulan", "tesis"],
+    "answer": 1
+  },
+  {
+    "q": "Agar hasil penelitian dapat dipercaya, penulis harus ...",
+    "choices": [
+      "menggunakan data yang sesuai fakta",
+      "menghindari penggunaan angka",
+      "mengubah data agar sesuai opini",
+      "menuliskan pendapat dulu baru data"
+    ],
+    "answer": 0
+  },
+  {
+    "q": "Ciri bahasa yang tepat untuk teks eksposisi adalah ...",
+    "choices": [
+      "imajinatif dan penuh ungkapan emosional",
+      "logis, objektif, dan didukung data",
+      "menyindir tokoh tertentu secara langsung",
+      "menggunakan dialog antar tokoh"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Kalimat 'Banyak siswa menggunakan gawai lebih dari 5 jam per hari' merupakan ...",
+    "choices": ["fakta/data", "opini", "sindiran", "simpulan"],
+    "answer": 0
+  },
+  {
+    "q": "Anekdot dapat digunakan untuk menyampaikan kritik sosial karena ...",
+    "choices": [
+      "menggunakan bahasa resmi dan baku",
+      "menghadirkan situasi lucu yang menyentil kenyataan",
+      "hanya berisi dialog tanpa narasi",
+      "menampilkan data yang lengkap"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Contoh kritik sosial dalam anekdot biasanya mengarah pada ...",
+    "choices": [
+      "kehidupan pribadi penulis",
+      "perilaku sosial yang tidak sesuai harapan",
+      "hasil penelitian ilmiah",
+      "data statistik pemerintah"
+    ],
+    "answer": 1
+  },
+  {
+    "q": "Salah satu kesamaan antara anekdot dan lawakan tunggal adalah ...",
+    "choices": [
+      "keduanya selalu menyajikan data penelitian",
+      "sama-sama menggunakan humor untuk menyoroti masalah",
+      "tidak mengandung kritik apa pun",
+      "tidak melibatkan perasaan penulis"
+    ],
+    "answer": 1
+  }
+]
